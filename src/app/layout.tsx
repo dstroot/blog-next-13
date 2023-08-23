@@ -58,9 +58,9 @@ export default function RootLayout({
 }) {
   return (
     // <html lang="en" className="light" style={{ colorScheme: 'light' }}>
-    // scroll padding for internal page links.
-    <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
-      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-white font-sans antialiased transition-colors dark:bg-gray-900">
+    // scroll padding for internal page links. suppressHydrationWarning
+    <html lang="en" className="scroll-pt-16">
+      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background font-sans text-foreground antialiased transition-colors">
         <Suspense>
           {/* <GoogleTagMgr /> */}
           {/* <Analytics /> */}
