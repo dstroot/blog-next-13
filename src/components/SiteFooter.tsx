@@ -23,7 +23,7 @@ export const SiteFooter = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex-1 text-center text-xl md:text-left md:text-2xl">
+          <div className="flex-1 text-center text-xl md:mr-16 md:text-left md:text-2xl">
             I love building things. Family man, technologist and Hacker News
             aficionado. Eternally curious.
           </div>
@@ -57,12 +57,10 @@ export const SiteFooter = () => {
               ))}
             </div>
           </div> */}
-          <div className="mt-4 flex items-center space-x-4 md:flex-col md:space-y-4">
-            <SocialLinks className="h-6 w-6 hover:text-gray-500" />
+          <div className="mt-4 flex md:flex-col">
+            <SocialLinks className="mx-2 mb-4 h-6 w-6 hover:text-gray-500" />
           </div>
         </div>
-
-        <hr className="border-y-primary-background mb-2" />
 
         {/*
             Bottom Section
