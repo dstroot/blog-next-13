@@ -56,10 +56,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    // <html lang="en" className="light" style={{ colorScheme: 'light' }}>
-    // scroll padding for internal page links. suppressHydrationWarning
+    // add scroll padding for internal page links.
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
-      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background font-sans text-foreground antialiased transition-colors">
+      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Suspense>
           {/* <GoogleTagMgr /> */}
           <Analytics />
