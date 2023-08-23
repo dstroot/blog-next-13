@@ -4,7 +4,7 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 86400,
     loader: 'custom',
-    loaderFile: './lib/imgixLoader.ts',
+    loaderFile: './src/lib/imgixLoader.ts',
   },
 }
 

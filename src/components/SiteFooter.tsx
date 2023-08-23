@@ -8,13 +8,13 @@ export const SiteFooter = () => {
   const year = new Date() // evergreen copyright year
 
   return (
-    <footer className="dark:bg-dark-4 bg-gray-100 text-gray-600 transition-colors dark:text-gray-300">
-      <div className="container mx-auto p-6">
-        <div className="my-2 flex flex-col content-center items-center gap-x-1 md:my-4 md:flex-row">
+    <footer className="text-gray-600 transition-colors bg-gray-100 dark:bg-dark-4 dark:text-gray-300">
+      <div className="container p-5 mx-auto">
+        <div className="flex flex-col items-center content-center my-2 gap-x-1 md:my-4 md:flex-row">
           {/*
             IMAGE & TAGLINE
           */}
-          <div className="mb-4 flex-none md:mb-0 md:mr-8">
+          <div className="flex-none mb-4 md:mb-0 md:mr-8">
             <Image
               src="/assets/blog/authors/dan.jpeg"
               alt={siteConfig.meta.name}
@@ -23,7 +23,7 @@ export const SiteFooter = () => {
               className="rounded-full"
             />
           </div>
-          <div className="flex-1 text-center text-xl md:text-left md:text-2xl">
+          <div className="flex-1 text-xl text-center md:text-left md:text-2xl">
             I love building things. Family man, technologist and Hacker News
             aficionado. Eternally curious.
           </div>
@@ -35,7 +35,7 @@ export const SiteFooter = () => {
             <div className="flex flex-col text-sm">
               {siteConfig.footerNav.map((item) => (
                 <div key={item.title} className="space-y-3">
-                  <h4 className="text-base font-bold uppercase">
+                  <h4 className="mt-4 mb-1 text-base font-bold text-gray-700 uppercase dark:text-gray-100 md:mt-0 ">
                     {item.title}
                   </h4>
                   <ul className="">
@@ -63,7 +63,7 @@ export const SiteFooter = () => {
             Bottom Section
         */}
         <div className="flex flex-col items-center justify-between md:flex-row md:items-end">
-          <div className="order-2 flex items-center text-xs tracking-wide dark:text-gray-400 md:order-1">
+          <div className="flex items-center order-2 text-xs tracking-wide dark:text-gray-400 md:order-1">
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
             {year.getFullYear()}
             {','}&nbsp;
@@ -71,7 +71,8 @@ export const SiteFooter = () => {
               Dan Stroot
             </Link>
           </div>
-          <div className="order-1 my-3 flex items-center space-x-4 text-2xl md:order-2 md:my-0">
+
+          <div className="flex items-center order-1 my-3 space-x-4 text-2xl md:order-2 md:my-0">
             <SocialLinks className="hover:text-gray-500" />
           </div>
         </div>

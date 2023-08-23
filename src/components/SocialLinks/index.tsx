@@ -13,7 +13,7 @@ export const SocialLinks = ({
           href={s.url}
           rel="noreferrer"
           target="_blank"
-          className={cn(className)}
+          className={cn('h-6 w-6 hover:text-gray-500', className)}
           key={s.name}
           aria-label={s.aria}
           {...props}

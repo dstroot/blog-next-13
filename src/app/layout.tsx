@@ -1,15 +1,3 @@
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode
-// }) {
-//   return (
-//     <html lang="en">
-//       <body className={inter.className}>{children}</body>
-//     </html>
-//   )
-// }
-
 import '@/styles/globals.css'
 
 import { Suspense } from 'react'
@@ -73,14 +61,13 @@ export default function RootLayout({
     // scroll padding for internal page links.
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-white font-sans antialiased transition-colors dark:bg-gray-900">
-        {/* <NextTopLoader /> */}
         <Suspense>
           {/* <GoogleTagMgr /> */}
           {/* <Analytics /> */}
         </Suspense>
         <Providers>
           <SiteHeader />
-          <main className="container mx-auto p-5">{children}</main>
+          {children}
           <SiteFooter />
           <TailwindIndicator />
         </Providers>
