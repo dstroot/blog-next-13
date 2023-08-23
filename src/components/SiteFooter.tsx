@@ -12,8 +12,9 @@ export const SiteFooter = () => {
       <div className="container mx-auto p-5">
         <div className="my-2 flex flex-col content-center items-center gap-x-1 md:my-4 md:flex-row">
           {/*
-            IMAGE & TAGLINE
+            IMAGE & TAGLINE ---------------------
           */}
+
           <div className="mb-4 flex-none md:mb-0 md:mr-8">
             <Image
               src="/assets/blog/authors/dan.jpeg"
@@ -29,42 +30,18 @@ export const SiteFooter = () => {
           </div>
 
           {/*
-            LINKS
+            SOCIAL LINKS ------------------------
           */}
-          {/* <div className="flex-none">
-            <div className="flex flex-col text-sm">
-              {siteConfig.footerNav.map((item) => (
-                <div key={item.title} className="space-y-3">
-                  <h4 className="mb-1 mt-4 text-base font-bold uppercase text-gray-700 dark:text-gray-100 md:mt-0 ">
-                    {item.title}
-                  </h4>
-                  <ul className="">
-                    {item.items.map((link) => (
-                      <li key={link.title}>
-                        <Link
-                          href={link.href}
-                          target={link?.external ? '_blank' : undefined}
-                          rel={link?.external ? 'noreferrer' : undefined}
-                          className="mt-2 text-sm font-medium transition-colors hover:text-gray-500 md:mt-0"
-                        >
-                          {link.title}
-                          <span className="sr-only">{link.title}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div> */}
+
           <div className="mt-4 flex md:flex-col">
             <SocialLinks className="mx-2 mb-4 h-6 w-6 hover:text-gray-500" />
           </div>
         </div>
 
         {/*
-            Bottom Section
+            Bottom Section ----------------------
         */}
+
         <div className="flex flex-col items-center justify-between md:flex-row md:items-end">
           <div className="order-2 flex items-center text-xs tracking-wide dark:text-gray-400 md:order-1">
             Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
@@ -74,10 +51,6 @@ export const SiteFooter = () => {
               Dan Stroot
             </Link>
           </div>
-
-          {/* <div className="order-1 my-3 flex items-center space-x-4 text-2xl md:order-2 md:my-0">
-            <SocialLinks className="hover:text-gray-500" />
-          </div> */}
         </div>
       </div>
     </footer>
