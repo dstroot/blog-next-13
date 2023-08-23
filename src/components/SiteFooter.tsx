@@ -31,7 +31,7 @@ export const SiteFooter = () => {
           {/*
             LINKS
           */}
-          <div className="flex-none">
+          {/* <div className="flex-none">
             <div className="flex flex-col text-sm">
               {siteConfig.footerNav.map((item) => (
                 <div key={item.title} className="space-y-3">
@@ -56,8 +56,13 @@ export const SiteFooter = () => {
                 </div>
               ))}
             </div>
+          </div> */}
+          <div className="mt-4 flex items-center space-x-4 md:flex-col md:space-y-4">
+            <SocialLinks className="h-6 w-6 hover:text-gray-500" />
           </div>
         </div>
+
+        <hr className="border-y-primary-background mb-2" />
 
         {/*
             Bottom Section
@@ -72,9 +77,9 @@ export const SiteFooter = () => {
             </Link>
           </div>
 
-          <div className="order-1 my-3 flex items-center space-x-4 text-2xl md:order-2 md:my-0">
+          {/* <div className="order-1 my-3 flex items-center space-x-4 text-2xl md:order-2 md:my-0">
             <SocialLinks className="hover:text-gray-500" />
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
