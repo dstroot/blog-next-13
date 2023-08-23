@@ -1,0 +1,111 @@
+---
+title: Lessons We All Learn
+excerpt: Anyone who has ever been responsible for supporting production systems learns many valuable things along the way. For example...
+coverImage: /assets/blog/img/sre.jpg
+date: '2022-10-30'
+published: true
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /_next/image?url=/assets/blog/img/sre.jpg&w=1200&q=75
+seoURL:
+---
+
+1. Email is the worst monitoring and alerting mechanism except for all the others.
+
+1. A good monitoring system is the basis of any good architecture.
+
+1. Do not make production changes on Fridays, you will gain enemies if you do.
+
+1. You cannot deliver a secure, maintainable, well-documented project if your biggest priority is delivering it as fast as possible.
+
+1. Your most critical services are kept alive by a handful of people whose job description does not mention those services at all.
+
+1. Most of your actual work is not covered by your OKRs.
+
+1. Absence of a signal is itself a signal.
+
+1. The severity of an incident is measured by the number of rules broken in resolving it.
+
+1. If a post-mortem follow-up task is not picked up within a week, it's unlikely to be completed at all.
+
+1. There is no cloud, it's just someone else's computer.
+
+1. Serverless isn't.
+
+1. When you determine "human error" as the root cause, then you're doing it wrong.
+
+1. Git should be your only source of truth. Discard any local files or changes, what's not pushed into the repository, does not exist.
+
+1. If you break it, you own it - for now. If you fix it you own it _forever_.
+
+1. "Obsolete" doesn't mean it's not in use and relied on heavily.
+
+1. If you see a big name company give a talk at a conference about some cool thing they made, it's probably already been abandoned by that company.
+
+1. "Prod" is just another name for "staging". In other words [you test in Prod](https://increment.com/testing/i-test-in-production/).
+
+![Testing in Prod](https://danstroot.imgix.net/assets/blog/img/prod_testing.jpg)
+
+1. Your infrastructure uses a lot more self-signed certificates than you think. A lot more. In places that make you weep.
+
+1. Self-signed certificates beget long lived certs, which beget lack of certificate validity monitoring, which begets curl -k, which begets a lack of certificate deployment automation, which begets self-signed certificates.
+
+1. Containers create at least as many problems as they solve.
+
+1. Kubernetes creates problems that aren't even invented yet.
+
+1. The source you're looking at is _not_ the code running in production.
+
+1. [One in a million is next Tuesday](https://docs.microsoft.com/en-us/archive/blogs/larryosterman/one-in-a-million-is-next-tuesday).
+
+1. Two is one, and one is none.
+
+1. Very few operations are truly idempotent.
+
+1. "Asserting state" beats "monitoring for compliance" any day.
+
+1. Your network team has a way into the network that your security team doesn't know about.
+
+1. There are very few network restrictions creative and determined use of ssh port forwarding can't overcome.
+
+1. It is tempting to jump right into implementing a solution when the right thing may well be to not do the thing that requires the solution in the first place.
+
+1. Turning things off permanently is surprisingly difficult.
+
+1. That "completely automated" solution you set up requires at least three manual steps you didn't document.
+
+1. Schrödinger's Backup -- "The condition of any backup is unknown until a restore is attempted." -- is overly optimistic. If you’ve never restored from a backup, you don’t actually have backups.
+
+1. If you’ve never failed over to another region, you don’t actually have failovers.
+
+1. If you’ve never rolled back a deploy, you don’t have a mature deploy pipeline.
+
+1. In any organization practicing continuous integration, half of all commits are to fake out CI tests.
+
+1. There's an [xkcd](https://xkcd.com/) for the precise situation you find yourself in.
+
+1. Eventual consistency doesn't help when the system you're debugging hasn't converged yet.
+
+1. Real change can only be implemented above [layer 7](https://en.wikipedia.org/wiki/OSI_model).
+
+![Layer 8](https://danstroot.imgix.net/assets/blog/img/layer8.jpg)
+
+1. Any sufficiently successful product launch is indistinguishable from a DDoS; any sufficiently advanced user indistinguishable from an attacker.
+
+1. Your herculean efforts to upgrade the OS across your entire fleet completed just in time for the EOL announcement of the version you upgraded to.
+
+1. Doubling your time estimate in the hopes of beating expectations won't work because your manager takes your estimate, has a hardy laugh, and then resets it back to what they already promised upchain.
+
+1. Management will always happily spend $$$ on outside consultants to tell them what you've been saying for years.
+
+1. Management will much rather invest in inventing a new, square wheel than fixing an old round one.
+
+1. A: However well you understand concurrency, you only need one coworker who doesn't understand concurrency to make your life an unending hell. B: You always have at least one coworker who doesn't completely understand concurrency.
+
+<span className='text-sm'>
+  Note: Many of these came from [Jan
+  Schaumann's](https://twitter.com/jschauma/status/1220902743482814467?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1220903052145778688%7Ctwgr%5E6c538ed5d741ce6cba744aa9970224fbf48cdfcb%7Ctwcon%5Es2_&ref_url=http%3A%2F%2Fentangled.systems%2Ffragments%2F20200126-1-email-is-the-worst-monitoring-and-alerting-mechanism-except-for-all-the-others-2-absence-of-a-signal-is-itself-a-signal-3.html)
+  Tweets :thumbsup:[.](https://www.netmeister.org/blog/ops-lessons.html)
+</span>
