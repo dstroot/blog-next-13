@@ -5,7 +5,7 @@ export default function PageNotFound() {
         404
       </div>
       <div className="pt-3 text-xl font-semibold italic md:pl-6 md:text-2xl">
-        This page could not be found.
+        This page could not be found. posts/[slug]
       </div>
     </div>
   )

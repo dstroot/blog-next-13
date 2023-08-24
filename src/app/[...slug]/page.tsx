@@ -4,7 +4,6 @@ import { allPages } from 'contentlayer/generated'
 
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
-// import { Separator } from '@/components/ui/separator'
 import { Mdx } from '@/components/mdx/mdx-components'
 import { PageHeader } from '@/components/PageHeader'
 
@@ -85,7 +84,6 @@ export default async function Page({ params }: PageProps) {
   return (
     <div className="mx-auto my-6 max-w-3xl md:my-12">
       <PageHeader title={page.title} description={page.description} size="lg" />
-      {/* <Separator className="my-4" /> */}
       <Mdx code={page.body.code} />
     </div>
   )

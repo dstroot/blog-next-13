@@ -41,11 +41,13 @@
 import {
   Check,
   Facebook,
+  Framer,
   Github,
   Linkedin,
   Moon,
   Share,
   SunMedium,
+  Timer,
   Twitter,
   type LucideIcon,
   type LucideProps,
@@ -53,7 +55,7 @@ import {
 
 export type Icon = LucideIcon
 
-export const Icons = {
+export const Icons: Record<string, any> = {
   sun: SunMedium,
   moon: Moon,
   twitter: Twitter,
@@ -62,6 +64,21 @@ export const Icons = {
   share: Share,
   github: Github,
   linkedin: Linkedin,
+  // opgp: <GiEarthAfricaEurope />,
+  //   ga: <SiGoogleanalytics />,
+  //   gtm: <SiGoogletagmanager />,
+  //   mdx: <BsMarkdownFill />,
+  timeout: Timer,
+  fm: Framer,
+  //   tailwind: <SiTailwindcss />,
+  //   js: <IoLogoJavascript />,
+  //   ts: <SiTypescript />,
+  //   // ts: <BiLogoTypescript />,
+  //   react: <IoLogoReact />,
+  //   html: <IoLogoHtml5 />,
+  //   css: <IoLogoCss3 />,
+  //   bash: <VscTerminalBash />,
+  //   next: <SiNextdotjs />,
 }
 
 type IconProps = React.HTMLAttributes<SVGElement>
