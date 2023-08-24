@@ -1,16 +1,13 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
-
-// import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
-
-import { Avatar } from './Avatar'
-import { MoreStats } from './MoreStats'
-import { ReadMore } from './ReadMore'
+import { Avatar } from '@/components/Avatar'
+import { MoreStats } from '@/components/MoreStats'
+import { ReadMore } from '@/components/ReadMore'
 
 interface PostPreviewProps {
   key: string
@@ -30,28 +27,12 @@ export const PostPreview = ({
   excerpt,
   author,
   slug,
-  stats, // onIsVisible,
+  stats,
 }: PostPreviewProps) => {
-  const [isVisible, setIsVisible] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  // const ref = useRef()
-
-  // useIntersectionObserver({
-  //   target: ref,
-  //   onIntersect: ([{ isIntersecting }], observerElement) => {
-  //     if (isIntersecting) {
-  //       if (!isVisible) {
-  //         onIsVisible()
-  //         setIsVisible(true)
-  //       }
-  //       observerElement.unobserve(ref.current)
-  //     }
-  //   },
-  // })
 
   return (
     <>
-      {/* <div ref={ref}> */}
       <div className="mb-5">
         <Link href={`/posts/${slug}`}>
           <div aria-label={title} className="sm:mx-0">
@@ -93,8 +74,7 @@ export const PostPreview = ({
         />
       </div>
       <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-      {/* isVisible && <ReadMore slug={slug} /> */}
-      {/* </div> */}
+      <ReadMore slug={slug} />
     </>
   )
 }
