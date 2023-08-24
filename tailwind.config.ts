@@ -70,6 +70,42 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      letterSpacing: {
+        tighter: '-.05em',
+      },
+      lineHeight: {
+        tight: '1.2',
+      },
+      outline: {
+        transparent: '2px #983799',
+      },
+      typography(theme: any) {
+        return {
+          DEFAULT: {
+            css: [
+              {
+                'blockquote p:first-of-type::before': false,
+                'blockquote p:last-of-type::after': false,
+                'code::before': false,
+                'code::after': false,
+              },
+            ],
+          },
+          lg: {
+            css: [
+              {
+                li: {
+                  marginTop: '0',
+                  marginBottom: '0',
+                },
+                cite: {
+                  fontSize: '1.0rem',
+                },
+              },
+            ],
+          },
+        }
+      },
     },
   },
   plugins: [animatePlugin, typographyPlugin],

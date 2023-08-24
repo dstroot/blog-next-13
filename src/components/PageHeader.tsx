@@ -55,7 +55,7 @@ export const PageHeader = ({
   const Description = balacedDescription ? Balancer : 'h2'
 
   return (
-    <div className={cn('grid gap-1', className)} {...props}>
+    <div className={cn('mb-6 grid gap-1 md:mb-12', className)} {...props}>
       <Title as="h1" className={cn(headerTitleVariants({ size }))}>
         {title}
       </Title>
