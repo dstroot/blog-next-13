@@ -20,7 +20,7 @@ export function SiteHeader() {
             href="/"
           >
             <Avatar>
-              <AvatarImage src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=50" />
+              <AvatarImage src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=80" />
               <AvatarFallback />
             </Avatar>
             {/* <span className="text-2xl font-medium leading-none">
