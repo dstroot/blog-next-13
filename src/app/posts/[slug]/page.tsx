@@ -5,10 +5,10 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
 import { GitHubLink } from '@/components/GitHubLink'
-// import { Header } from '@/components/Header'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PostHeader } from '@/components/PostHeader'
 
+// TODO fix this
 // import { SendPageView } from '@/components/SendPageView'
 // import { Sharable } from '@/components/Sharable'
 
@@ -16,6 +16,7 @@ export const generateStaticParams = async () => {
   return allPosts.map((post) => ({ slug: post.slugAsParams }))
 }
 
+// TODO Metadata needs a lot of work!
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post.slugAsParams === params.slug)
 
@@ -56,7 +57,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           stats={post.stats}
         />
         <div className="prose-lg mx-auto max-w-3xl">
-          <div className="prose prose-lg dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500 mb-8 max-w-none break-words">
+          <div className="prose prose-lg mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
             {/* TODO Fix - pass custom MDX components */}
             {/* @ts-ignore */}
             <Content components={components} />
