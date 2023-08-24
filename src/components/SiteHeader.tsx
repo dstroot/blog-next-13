@@ -16,9 +16,13 @@ export function SiteHeader() {
           <Link
             className="flex h-6 items-center space-x-2 rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             href="/"
+            aria-label="Link to home page"
           >
             <Avatar>
-              <AvatarImage src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=80" />
+              <AvatarImage
+                src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=80"
+                alt="Dan Stroot"
+              />
               <AvatarFallback />
             </Avatar>
             {/* <span className="text-2xl font-medium leading-none">

@@ -5,8 +5,10 @@ import NextImage, { ImageProps } from 'next/image'
 
 import { cn } from '@/lib/utils'
 
-export const CustomImage = (props: any) => {
-  let src = props.src
+export const CustomImage = (props: React.HTMLAttributes<HTMLImageElement>) => {
+  let imgProps = props as unknown as ImageProps
+  let src = imgProps.src as string
+
   const isInternalImage = src && src.startsWith('/')
   const [isLoading, setLoading] = useState(true)
 
@@ -22,7 +24,7 @@ export const CustomImage = (props: any) => {
       <div className="relative">
         {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image
-          {...props}
+          {...imgProps}
           loading="lazy"
           fill
           sizes="(max-width: 1280px) 90vw, 1496px"
@@ -44,8 +46,8 @@ export const CustomImage = (props: any) => {
     <img
       // className='object-contain max-h-max'
       className="max-h-[384px]"
-      src={props.src + '?w=768'}
-      alt={props.alt}
+      src={imgProps.src + '?w=768'}
+      alt={imgProps.alt}
       loading="lazy"
     />
   )

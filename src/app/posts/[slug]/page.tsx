@@ -7,10 +7,8 @@ import { env } from '@/config/env.mjs'
 import { GitHubLink } from '@/components/GitHubLink'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PostHeader } from '@/components/PostHeader'
-
-// TODO fix this
-// import { SendPageView } from '@/components/SendPageView'
-// import { Sharable } from '@/components/Sharable'
+import { SendPageView } from '@/components/SendPageView'
+import { Sharable } from '@/components/Sharable'
 
 export const generateStaticParams = async () => {
   return allPosts.map((post) => ({ slug: post.slugAsParams }))
@@ -42,7 +40,6 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
     Image: (props: ImageProps) => <NextImage {...props} />,
   }
 
-  //TODO: change "/data/_posts" to "/content/posts"
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/posts/${post.slugAsParams}.mdx`
 
   return (
@@ -58,15 +55,13 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         />
         <div className="prose-lg mx-auto max-w-3xl">
           <div className="prose prose-lg mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
-            {/* TODO Fix - pass custom MDX components */}
-            {/* @ts-ignore */}
             <Content components={components} />
           </div>
-          {/* <Sharable slug={post.slug} title={post.title} /> */}
+          <Sharable slug={post.slug} title={post.title} />
         </div>
         <GitHubLink path={github} />
       </article>
-      {/* <SendPageView slug={post.slugAsParams} /> */}
+      <SendPageView slug={post.slugAsParams} />
     </main>
   )
 }
