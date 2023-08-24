@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
+import Balancer from 'react-wrap-balancer'
 
 import { Avatar } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
@@ -51,7 +52,7 @@ export const HeroPost = ({
         <div className="flex-none md:max-w-[45%]">
           <h3 className="mb-4 text-3xl leading-tight group-hover:underline md:text-4xl">
             <Link href={`/posts/${slug}`}>
-              <div className="hover:underline">{title}</div>
+              <Balancer className="hover:underline">{title}</Balancer>
             </Link>
           </h3>
           <div className="mb-4 md:mb-0">

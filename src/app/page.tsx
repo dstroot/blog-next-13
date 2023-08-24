@@ -3,8 +3,7 @@ import { compareDesc } from 'date-fns'
 
 import { HeroPost } from '@/components/HeroPost'
 import { Intro } from '@/components/Intro'
-
-// import { MoreStories } from '@/components/MoreStories'
+import { MoreStories } from '@/components/MoreStories'
 
 export default function Home() {
   let posts = allPosts.sort((a, b) =>
@@ -32,7 +31,7 @@ export default function Home() {
         excerpt={heroPost.excerpt}
         stats={heroPost.stats}
       />
-      {/* <MoreStories posts={morePosts} /> */}
+      <MoreStories posts={morePosts} />
     </main>
   )
 }

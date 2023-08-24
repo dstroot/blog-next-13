@@ -16,17 +16,3 @@ export const TailwindIndicator = () => {
     </div>
   )
 }
-
-/*
-
-type Size = 'small' | 'medium' | 'large';
-
-interface Props {
-  size: Size;
-}
-
-function Component({ size }: Props) {
-  // render component with props
-}
-
-*/

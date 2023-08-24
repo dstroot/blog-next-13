@@ -1,14 +1,12 @@
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
-// import { Combobox } from './combobox'
-import { ThemeToggle } from './ThemeToggle'
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
-
-// // import { Combobox } from '@/components/combobox'
+// import { Combobox } from '@/components/combobox'
 // import { MainNav } from '@/components/layouts/main-nav'
-// // import { MobileNav } from '@/components/layouts/mobile-nav'
+// import { MobileNav } from '@/components/layouts/mobile-nav'
 
 export function SiteHeader() {
   return (
@@ -86,19 +84,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-    // <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur">
-    //   <div className="container flex items-center h-16">
-    //     <MainNav items={siteConfig.mainNav} />
-    //     {/* <MobileNav
-    //       mainNavItems={siteConfig.mainNav}
-    //       sidebarNavItems={dashboardConfig.sidebarNav}
-    //     /> */}
-    //     <div className="flex items-center justify-end flex-1 space-x-4">
-    //       <nav className="flex items-center space-x-2">
-    //         {/* <Combobox /> */}
-    //       </nav>
-    //     </div>
-    //   </div>
-    // </header>
   )
 }
