@@ -16,7 +16,7 @@ export default function Home() {
   const morePosts = posts.slice(1)
 
   return (
-    <div className="">
+    <main className="container mx-auto mt-6 p-5 md:mt-12">
       <Intro />
       <HeroPost
         title={heroPost.title}
@@ -28,6 +28,6 @@ export default function Home() {
         stats={heroPost.stats}
       />
       <MoreStories posts={morePosts} />
-    </div>
+    </main>
   )
 }
