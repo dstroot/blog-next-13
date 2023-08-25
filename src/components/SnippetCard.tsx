@@ -7,7 +7,7 @@ export const SnippetCard = (props: Snippet) => {
   // const Icon = Icons[props.icon as IconKeys]
 
   return (
-    <div className="flex w-full flex-col space-y-3 rounded bg-gray-100 p-5 shadow-md dark:bg-gray-700">
+    <div className="grid w-full grid-rows-[auto_1fr_auto] space-y-3 rounded bg-gray-100 p-5 shadow-md dark:bg-gray-700">
       <div className="flex items-center justify-between">
         <div className="w-3/4">
           <Link href={`/snippets/${props.slugAsParams}`}>
@@ -24,6 +24,7 @@ export const SnippetCard = (props: Snippet) => {
       </div>
 
       <p className="text-slate">{props.summary}</p>
+
       <div className="flex space-x-2 text-xs">
         {props.tags
           ? props.tags.map((tag) => (
