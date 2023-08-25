@@ -39,7 +39,7 @@ const Hits = ({ ...props }) => {
   return (
     <>
       {validQuery ? (
-        <div className="mb-6 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mb-6 grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
           {results.hits.map((hit) => (
             <PostCard key={hit.objectID} hit={hit}></PostCard>
           ))}
