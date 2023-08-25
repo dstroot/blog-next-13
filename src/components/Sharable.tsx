@@ -63,7 +63,7 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
         <span
           onClick={CopiedLinkMsg}
           className="hover:text-gray-500"
-          aria-label="Share this blog on Twitter."
+          aria-label="Share this blog everywhere."
         >
           <Icons.share />
         </span>

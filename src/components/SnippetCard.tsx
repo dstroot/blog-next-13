@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import type { Snippet } from 'contentlayer/generated'
 
-// import { Icons } from '@/components/icons'
+import { icons } from '@/components/icons'
 
 export const SnippetCard = (props: Snippet) => {
+  // const Icon = Icons[props.icon as IconKeys]
+
   return (
     <div className="flex w-full flex-col space-y-3 rounded bg-gray-100 p-5 shadow-md dark:bg-gray-700">
       <div className="flex items-center justify-between">
@@ -16,8 +18,7 @@ export const SnippetCard = (props: Snippet) => {
         </div>
         <div className="border-1 my-3 h-12 w-12 flex-none rounded-full bg-gray-300 dark:bg-gray-800 md:order-2 md:my-0">
           <span className="grid h-full w-full place-items-center text-3xl text-gray-700 dark:text-gray-300">
-            {/* @ts-ignore  */}
-            {/* {Icons[props.icon as keyof Icon]} */}
+            {icons[props.icon as keyof typeof icons]}
           </span>
         </div>
       </div>
