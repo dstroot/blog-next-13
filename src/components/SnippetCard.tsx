@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Snippet } from 'contentlayer/generated'
 
-import { IconKey, Icons } from '@/components/icons'
+import { IconKey, Icons } from '@/components/Icons'
 
 export const SnippetCard = (props: Snippet) => {
   const Icon = Icons[props.icon as IconKey]

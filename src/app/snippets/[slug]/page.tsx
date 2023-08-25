@@ -5,7 +5,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
 import { GitHubLink } from '@/components/GitHubLink'
-import { IconKey, Icons } from '@/components/icons'
+import { IconKey, Icons } from '@/components/Icons'
 import { MDXComponents } from '@/components/MDXComponents'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'

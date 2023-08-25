@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 import { env } from '@/config/env.mjs'
-import { Icons } from '@/components/icons'
+import { Icons } from '@/components/Icons'
 
 export function Sharable({ title, slug }: { title: string; slug: string }) {
   const [showAlert, setShowAlert] = useState(false)
