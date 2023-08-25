@@ -7,7 +7,7 @@ export const generateMetadata = () => {
 
 export default function Index() {
   return (
-    <div className="mx-auto my-6 max-w-3xl md:my-12">
+    <div className="mx-auto my-6 w-full max-w-3xl md:my-12">
       <PageHeader title="Search" description="Find anything fast." size="lg" />
       <Search />
     </div>
