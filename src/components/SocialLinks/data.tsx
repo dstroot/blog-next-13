@@ -28,10 +28,4 @@ export const socialLinks: SocialLink[] = [
     icon: <Icons.github />,
     aria: 'Join me on GitHub.',
   },
-  // {
-  //   name: 'Instagram',
-  //   url: 'https://instagram.com',
-  //   icon: <FaInstagram />,
-  //   aria: 'Join me on Instagram.',
-  // },
 ]

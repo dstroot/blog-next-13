@@ -10,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { Icons2 } from '@/components/icons'
+import { Icons } from '@/components/icons'
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
@@ -30,8 +30,8 @@ export function ThemeToggle() {
               size="sm"
               className="h-8 w-8 px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
-              {resolvedTheme === 'light' ? <Icons2.sun /> : null}
-              {resolvedTheme === 'dark' ? <Icons2.moon /> : null}
+              {resolvedTheme === 'light' ? <Icons.sun /> : null}
+              {resolvedTheme === 'dark' ? <Icons.moon /> : null}
               <span className="sr-only">Toggle theme</span>
             </Button>
           </DropdownMenuTrigger>
@@ -40,15 +40,15 @@ export function ThemeToggle() {
             className="bg-gray-50 dark:bg-gray-900"
           >
             <DropdownMenuItem onClick={() => setTheme('light')}>
-              <Icons2.sun className="mr-2 h-4 w-4" />
+              <Icons.sun className="mr-2 h-4 w-4" />
               <span>Light</span>
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setTheme('dark')}>
-              <Icons2.moon className="mr-2 h-4 w-4" />
+              <Icons.moon className="mr-2 h-4 w-4" />
               <span>Dark</span>
             </DropdownMenuItem>
             <DropdownMenuItem onClick={() => setTheme('system')}>
-              <Icons2.laptop className="mr-2 h-4 w-4" />
+              <Icons.laptop className="mr-2 h-4 w-4" />
               <span>System</span>
             </DropdownMenuItem>
           </DropdownMenuContent>

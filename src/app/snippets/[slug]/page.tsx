@@ -2,11 +2,10 @@ import { notFound } from 'next/navigation'
 import { allSnippets } from 'contentlayer/generated'
 import format from 'date-fns/format'
 import { useMDXComponent } from 'next-contentlayer/hooks'
-import { IconType } from 'react-icons/lib'
 
 import { env } from '@/config/env.mjs'
 import { GitHubLink } from '@/components/GitHubLink'
-import { icons } from '@/components/icons'
+import { IconKey, Icons } from '@/components/icons'
 import { MDXComponents } from '@/components/MDXComponents'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
@@ -40,7 +39,8 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
   const Content = useMDXComponent(snippet.body.code)
 
   //TODO: change "/data/_posts" to "/content/posts"
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/data/_snippets/${snippet.slugAsParams}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/snippts/${snippet.slugAsParams}.mdx`
+  const Icon = Icons[snippet.icon as IconKey]
 
   return (
     <>
@@ -51,7 +51,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
           </h2>
           <div className="border-1 my-3 h-16 w-16 flex-none rounded-full bg-gray-300 dark:bg-gray-700 md:order-2 md:ml-4">
             <span className="grid h-full w-full place-items-center text-4xl text-gray-700 dark:text-gray-300">
-              {icons[snippet.icon as keyof IconType]}
+              {Icon ? <Icon className="h-10 w-10" /> : null}
             </span>
           </div>
         </div>

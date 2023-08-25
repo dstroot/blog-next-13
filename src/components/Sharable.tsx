@@ -2,10 +2,6 @@
 
 import { useState } from 'react'
 
-// import { Check, Facebook, Share, Twitter } from 'lucide-react'
-
-// import { FaCheck, FaFacebookF, FaShareAlt, FaTwitter } from 'react-icons/fa'
-
 import { env } from '@/config/env.mjs'
 import { Icons } from '@/components/icons'
 
@@ -51,21 +47,21 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
           className="hover:text-gray-500"
           aria-label="Share this blog on Facebook."
         >
-          <Icons.facebook />
+          <Icons.facebook className="h-6 w-6" />
         </span>
         <span
           onClick={twShare}
           className="hover:text-gray-500"
           aria-label="Share this blog on Twitter."
         >
-          <Icons.twitter />
+          <Icons.twitter className="h-6 w-6" />
         </span>
         <span
           onClick={CopiedLinkMsg}
           className="hover:text-gray-500"
           aria-label="Share this blog everywhere."
         >
-          <Icons.share />
+          <Icons.share className="h-6 w-6" />
         </span>
       </div>
 

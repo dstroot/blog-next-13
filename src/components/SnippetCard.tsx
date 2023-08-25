@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import type { Snippet } from 'contentlayer/generated'
 
-import { icons } from '@/components/icons'
+import { IconKey, Icons } from '@/components/icons'
 
 export const SnippetCard = (props: Snippet) => {
-  // const Icon = Icons[props.icon as IconKeys]
+  const Icon = Icons[props.icon as IconKey]
 
   return (
     <div className="grid w-full grid-rows-[auto_1fr_auto] space-y-3 rounded bg-gray-100 p-5 shadow-md dark:bg-gray-700">
@@ -18,7 +18,7 @@ export const SnippetCard = (props: Snippet) => {
         </div>
         <div className="border-1 my-3 h-12 w-12 flex-none rounded-full bg-gray-300 dark:bg-gray-800 md:order-2 md:my-0">
           <span className="grid h-full w-full place-items-center text-3xl text-gray-700 dark:text-gray-300">
-            {icons[props.icon as keyof typeof icons]}
+            {Icon ? <Icon className="h-6 w-6" /> : null}
           </span>
         </div>
       </div>
