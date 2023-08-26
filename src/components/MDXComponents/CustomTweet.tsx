@@ -8,10 +8,7 @@ import { env } from '@/config/env.mjs'
 
 export const CustomTweet = ({ id }: { id: string }) => {
   let [tweet, setTweet] = useState({ status: 500 })
-  const URL =
-    env.NODE_ENV === 'development'
-      ? `http://localhost:3000/api/tweet/${id}`
-      : `${env.NEXT_PUBLIC_APP_URL}/api/tweet/${id}`
+  const URL = `${env.NEXT_PUBLIC_APP_URL}/api/tweet/${id}`
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +20,7 @@ export const CustomTweet = ({ id }: { id: string }) => {
   }, [URL])
 
   if (tweet?.status !== 200 && tweet?.status !== 201) {
-    return null
+    return <div className="text-sm">Oh no! Tweet not found...</div>
   }
 
   return (
