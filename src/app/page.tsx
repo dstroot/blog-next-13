@@ -1,16 +1,10 @@
-import { allPosts } from 'contentlayer/generated';
-import { compareDesc } from 'date-fns';
+import { allPosts } from 'contentlayer/generated'
+import { compareDesc } from 'date-fns'
 
-
-
-import { Container } from '@/components/Container';
-import { HeroPost } from '@/components/HeroPost';
+import { Container } from '@/components/Container'
+import { HeroPost } from '@/components/HeroPost'
 import { Intro } from '@/components/Intro'
 import { MoreStories } from '@/components/MoreStories'
-
-
-
-
 
 export default function Home() {
   let posts = allPosts.sort((a, b) =>
@@ -27,8 +21,7 @@ export default function Home() {
   const morePosts = posts.slice(1)
 
   return (
-        <Container variant="padded">
-
+    <Container variant="padded">
       <Intro />
       <HeroPost
         title={heroPost.title}
