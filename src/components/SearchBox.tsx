@@ -25,10 +25,10 @@ export const SearchBox = ({ ...props }) => {
       role="search"
       className="my-6 flex justify-center"
     >
-      <div className="relative mx-auto w-full text-gray-600 dark:text-gray-400 md:w-3/4">
+      <div className="relative mx-auto w-full md:w-3/4">
         <input
           type="search"
-          className="h-12 w-full rounded-full border-2 border-gray-300 bg-white px-5 pr-16 focus:outline-none focus:ring-0 focus:ring-indigo-500 dark:border-gray-500 dark:bg-gray-700"
+          className="h-12 w-full rounded-full border-2 border-input bg-background px-5 pr-16 focus:outline-none focus:ring"
           placeholder="Search..."
           aria-label="Search..."
           autoComplete="off"

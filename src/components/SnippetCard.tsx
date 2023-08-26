@@ -7,7 +7,7 @@ export const SnippetCard = (props: Snippet) => {
   const Icon = Icons[props.icon as IconKey]
 
   return (
-    <div className="grid w-full grid-rows-[auto_1fr_auto] space-y-3 rounded bg-gray-100 p-5 shadow-md dark:bg-gray-700">
+    <div className="grid w-full grid-rows-[auto_1fr_auto] space-y-3 rounded bg-card p-5 text-card-foreground shadow-md">
       <div className="flex items-center justify-between">
         <div className="w-3/4">
           <Link href={`/snippets/${props.slugAsParams}`}>
@@ -16,8 +16,8 @@ export const SnippetCard = (props: Snippet) => {
             </h1>
           </Link>
         </div>
-        <div className="border-1 my-3 h-12 w-12 flex-none rounded-full bg-gray-300 dark:bg-gray-800 md:order-2 md:my-0">
-          <span className="grid h-full w-full place-items-center text-3xl text-gray-700 dark:text-gray-300">
+        <div className="border-1 bg-accent2 text-accent-foreground2 my-3 h-12 w-12 flex-none rounded-full md:order-2 md:my-0">
+          <span className="grid h-full w-full place-items-center text-3xl">
             {Icon ? <Icon className="h-6 w-6" /> : null}
           </span>
         </div>
@@ -29,7 +29,7 @@ export const SnippetCard = (props: Snippet) => {
         {props.tags
           ? props.tags.map((tag) => (
               <span
-                className="rounded-full bg-gray-200 px-2 py-1 text-gray-900 dark:bg-gray-300 dark:text-gray-800"
+                className="bg-accent2 text-accent-foreground2 rounded-full px-2 py-1"
                 key={tag}
               >
                 #{tag}

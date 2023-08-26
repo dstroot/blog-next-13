@@ -19,6 +19,10 @@ const config: Config = {
         footerbg: 'hsl(var(--footerbg))',
         foreground: 'hsl(var(--foreground))',
         footerfg: 'hsl(var(--footerfg))',
+        accent2: {
+          DEFAULT: 'hsl(var(--accent2))',
+          foreground: 'hsl(var(--accent-foreground2))',
+        },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
