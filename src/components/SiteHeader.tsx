@@ -13,7 +13,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur">
       <Container variant="default">
-        <div className="flex h-12 items-center justify-between px-5">
+        <div className="flex h-12 items-center justify-between">
           <div className="flex items-center space-x-6">
             <Link
               className="flex h-6 items-center space-x-2 rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
