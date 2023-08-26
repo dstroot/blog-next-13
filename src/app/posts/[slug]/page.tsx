@@ -43,7 +43,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/posts/${post.slugAsParams}.mdx`
 
   return (
-    <main className="container mx-auto mt-6 p-5 md:mt-12">
+    <main className="container my-6 md:my-12">
       <article className="mb-6 md:mb-10">
         <PostHeader
           title={post.title}

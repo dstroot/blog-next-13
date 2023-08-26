@@ -8,7 +8,7 @@ export const generateMetadata = () => {
   return { title: 'Archive' }
 }
 
-export default function Index() {
+export default function ArchivePage() {
   let posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
@@ -20,7 +20,7 @@ export default function Index() {
   posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
 
   return (
-    <div className="mx-auto my-6 max-w-3xl md:my-12">
+    <div className="container my-6 md:my-12">
       <PageHeader
         title="Archive"
         description="Here's all my posts in chronological order. Cheers!"

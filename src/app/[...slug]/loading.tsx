@@ -3,5 +3,9 @@
 // used as a Client Component through the "use client" directive.
 
 export default function Loading() {
-  return <p className="text-muted text-xl font-medium">Loading...</p>
+  return (
+    <div className="container my-6 md:my-12">
+      <p className="text-xl font-medium text-muted">Loading...</p>
+    </div>
+  )
 }

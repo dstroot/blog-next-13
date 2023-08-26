@@ -3,9 +3,10 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Callout } from '@/components/mdx/callout'
-import { CodeBlock } from '@/components/mdx/code-block'
-import { MdxCard } from '@/components/mdx/mdx-card'
+// import { Callout } from '@/components/mdx/callout'
+import { CodeBlock } from '@/components/MDXComponents/CodeBlock2'
+
+// import { MdxCard } from '@/components/mdx/mdx-card'
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -21,8 +22,8 @@ type AspectRatioProps = React.ComponentProps<typeof AspectRatio>
 
 const components = {
   pre: CodeBlock,
-  Card: MdxCard,
-  Callout,
+  //   Card: MdxCard,
+  //   Callout,
 }
 
 interface MdxProps {

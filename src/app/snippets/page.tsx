@@ -11,7 +11,7 @@ export const generateMetadata = () => {
   return { title: 'Snippets' }
 }
 
-export default function Snippets() {
+export default function SnippetsPage() {
   let snippets = allSnippets.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
@@ -24,7 +24,7 @@ export default function Snippets() {
   )
 
   return (
-    <main className="container mx-auto mt-6 p-5 md:mt-12">
+    <main className="container my-6 md:my-12">
       <PageHeader
         title="Snippets"
         description="Short solutions to discrete problems."

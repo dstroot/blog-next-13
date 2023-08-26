@@ -44,7 +44,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <article className="mx-auto my-6 max-w-3xl md:my-10">
+      <article className="container my-6 md:my-12">
         <div className="mb-8 flex flex-col items-center justify-between md:flex-row">
           <h2 className="order-2 my-3 text-2xl font-black leading-tight tracking-tighter md:order-1 md:my-0 md:text-4xl md:leading-none lg:text-5xl">
             {snippet.title}

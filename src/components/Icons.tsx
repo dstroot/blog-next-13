@@ -1,5 +1,6 @@
 import {
   Check,
+  Copy,
   Facebook,
   Framer,
   Github,
@@ -26,6 +27,7 @@ export const Icons = {
   facebook: Facebook,
   js: IoLogoJavascript,
   check: Check,
+  copy: Copy,
   share: Share,
   github: Github,
   opgp: GiEarthAfricaEurope,

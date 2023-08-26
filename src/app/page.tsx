@@ -20,7 +20,8 @@ export default function Home() {
   const morePosts = posts.slice(1)
 
   return (
-    <main className="container mx-auto mt-6 p-5 md:mt-12">
+        <main className="container my-6 md:my-12">
+
       <Intro />
       <HeroPost
         title={heroPost.title}

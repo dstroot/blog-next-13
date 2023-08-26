@@ -4,15 +4,8 @@ import { allPages } from 'contentlayer/generated'
 
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
-import { Mdx } from '@/components/mdx/mdx-components'
+import { Mdx } from '@/components/MDXComponents/MDX'
 import { PageHeader } from '@/components/PageHeader'
-
-interface PageProps {
-  params: {
-    slug: string[]
-  }
-}
-
 
 async function getPageFromParams(params: PageProps['params']) {
   const slug = params?.slug?.join('/') ?? ''
@@ -67,11 +60,16 @@ export async function generateMetadata({
   }
 }
 
-
 export async function generateStaticParams(): Promise<PageProps['params'][]> {
   return allPages.map((page) => ({
     slug: page.slugAsParams.split('/'),
   }))
+}
+
+interface PageProps {
+  params: {
+    slug: string[]
+  }
 }
 
 export default async function Page({ params }: PageProps) {
@@ -82,7 +80,7 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <div className="mx-auto my-6 max-w-3xl md:my-12">
+    <div className="container my-6 md:my-12">
       <PageHeader title={page.title} description={page.description} size="lg" />
       <Mdx code={page.body.code} />
     </div>

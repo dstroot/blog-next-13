@@ -3,7 +3,7 @@
  */
 import * as React from 'react'
 
-// import { CopyButton } from "@/components/copy-button"
+// import { CopyButton } from '@/components/CopyButton'
 
 type CodeBlockProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLPreElement>,
@@ -17,7 +17,7 @@ export function CodeBlock({ children, raw, ...props }: CodeBlockProps) {
     <>
       {/* <CopyButton value={raw} /> */}
       <pre
-        className="bg-muted text-muted-foreground relative mb-4 mt-6 max-h-[640px] overflow-x-auto rounded-lg border p-4 font-mono text-sm font-semibold"
+        className="relative mb-4 mt-6 max-h-[640px] overflow-x-auto rounded-lg border bg-muted p-4 font-mono text-sm font-semibold text-muted-foreground"
         {...props}
       >
         {children}

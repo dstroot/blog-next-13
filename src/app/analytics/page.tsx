@@ -5,9 +5,9 @@ export const generateMetadata = () => {
   return { title: 'Analytics' }
 }
 
-export default function Index() {
+export default function AnalyticsPage() {
   return (
-    <div className="mx-auto my-6 md:my-12">
+    <div className="container my-6 md:my-12">
       <PageHeader
         title="Analytics"
         description="Measure what you treasure."
