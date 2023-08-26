@@ -2,6 +2,7 @@ import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
 import { Archive } from '@/components/Archive'
+import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
 export const generateMetadata = () => {
@@ -20,13 +21,13 @@ export default function ArchivePage() {
   posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
 
   return (
-    <div className="container my-6 md:my-12">
+    <Container variant="padded">
       <PageHeader
         title="Archive"
         description="Here's all my posts in chronological order. Cheers!"
         size="lg"
       />
       {posts.length > 0 && <Archive posts={posts} />}
-    </div>
+    </Container>
   )
 }

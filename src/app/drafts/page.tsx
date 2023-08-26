@@ -1,6 +1,7 @@
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
+import { Container } from '@/components/Container'
 import { HeroPost } from '@/components/HeroPost'
 import { Intro } from '@/components/Intro'
 import { MoreStories } from '@/components/MoreStories'
@@ -16,7 +17,7 @@ export default function DraftsPage() {
   const morePosts = posts.slice(1)
 
   return (
-    <main className="container my-6 md:my-12">
+    <Container variant="padded">
       <Intro />
       <HeroPost
         title={heroPost.title}
@@ -28,6 +29,6 @@ export default function DraftsPage() {
         stats={heroPost.stats}
       />
       <MoreStories posts={morePosts} />
-    </main>
+    </Container>
   )
 }

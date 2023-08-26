@@ -4,6 +4,7 @@ import { allPosts } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
+import { Container } from '@/components/Container'
 import { GitHubLink } from '@/components/GitHubLink'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PostHeader } from '@/components/PostHeader'
@@ -43,7 +44,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/posts/${post.slugAsParams}.mdx`
 
   return (
-    <main className="container my-6 md:my-12">
+    <Container variant="padded">
       <article className="mb-6 md:mb-10">
         <PostHeader
           title={post.title}
@@ -62,7 +63,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         <GitHubLink path={github} />
       </article>
       <SendPageView slug={post.slugAsParams} />
-    </main>
+    </Container>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { Stats } from '@/components/Stats'
 
@@ -7,7 +8,7 @@ export const generateMetadata = () => {
 
 export default function AnalyticsPage() {
   return (
-    <div className="container my-6 md:my-12">
+    <Container variant="padded">
       <PageHeader
         title="Analytics"
         description="Measure what you treasure."
@@ -38,6 +39,6 @@ export default function AnalyticsPage() {
           Vercel Analytics
         </a>
       </div>
-    </div>
+    </Container>
   )
 }

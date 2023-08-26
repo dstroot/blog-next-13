@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
+import { Container } from '@/components/Container'
 import { SocialLinks } from '@/components/SocialLinks'
 
 export const SiteFooter = () => {
@@ -9,7 +10,7 @@ export const SiteFooter = () => {
 
   return (
     <footer className="bg-footerbg text-footerfg">
-      <div className="container mx-auto p-5">
+      <Container variant="default">
         <div className="flex flex-col content-center items-center gap-x-2 md:flex-row">
           {/*
             IMAGE & TAGLINE ---------------------
@@ -52,7 +53,7 @@ export const SiteFooter = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   )
 }

@@ -1,3 +1,4 @@
+import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import Search from '@/components/Search'
 
@@ -7,9 +8,9 @@ export const generateMetadata = () => {
 
 export default function Index() {
   return (
-    <div className="container my-6 md:my-12">
+    <Container variant="padded">
       <PageHeader title="Search" description="Find anything fast." size="lg" />
       <Search />
-    </div>
+    </Container>
   )
 }

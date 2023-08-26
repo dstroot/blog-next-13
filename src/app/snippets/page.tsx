@@ -1,6 +1,7 @@
 import { allSnippets } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
+import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { SnippetCard } from '@/components/SnippetCard'
 
@@ -24,7 +25,7 @@ export default function SnippetsPage() {
   )
 
   return (
-    <main className="container my-6 md:my-12">
+    <Container variant="padded">
       <PageHeader
         title="Snippets"
         description="Short solutions to discrete problems."
@@ -37,6 +38,6 @@ export default function SnippetsPage() {
           <SnippetCard key={snippet.slugAsParams} {...snippets[_idx]} />
         ))}
       </div>
-    </main>
+    </Container>
   )
 }
