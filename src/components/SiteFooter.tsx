@@ -10,8 +10,8 @@ export const SiteFooter = () => {
 
   return (
     <footer className="bg-footerbg text-footerfg">
-      <Container variant="default">
-        <div className="my-4 flex flex-col content-center items-center gap-x-2 md:flex-row">
+      <Container variant="default" className="my-4">
+        <div className="flex flex-col content-center items-center gap-x-2 md:flex-row">
           {/*
             IMAGE & TAGLINE ---------------------
           */}
