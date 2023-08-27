@@ -1,0 +1,4 @@
+{
+  "importCost.timeout": 2000000,
+  "importCost.typescriptExtensions": ["\\.tsx?$"]
+}
