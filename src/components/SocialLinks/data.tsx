@@ -13,7 +13,7 @@ export const socialLinks: SocialLink[] = [
   {
     name: 'Twitter',
     url: 'https://twitter.com/danstroot',
-    icon: <Icons.twitter />,
+    icon: <Icons.twitterX />,
     aria: 'Join me on Twitter.',
   },
   {
