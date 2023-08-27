@@ -1,14 +1,16 @@
-import { Avatar } from './Avatar'
+import { Post } from 'contentlayer/generated'
+
 import { MoreStats } from '@/components/MoreStats'
 import { PostImage } from '@/components/PostImage'
 import { PostTitle } from '@/components/PostTitle'
-import { Post } from 'contentlayer/generated'
+
+import { Avatar } from './Avatar'
 
 interface PostHeaderProps {
-    title: string
+  title: string
   coverImage: string
   date: string
-    author: Post['author']
+  author: Post['author']
   slug: string
   stats: Post['stats']
 }

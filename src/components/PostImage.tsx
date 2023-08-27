@@ -5,7 +5,13 @@ import Image from 'next/image'
 
 import { cn } from '@/lib/utils'
 
-export const PostImage = ({ title, coverImage }:{ title: string, coverImage: string }) => {
+export const PostImage = ({
+  title,
+  coverImage,
+}: {
+  title: string
+  coverImage: string
+}) => {
   const [isLoading, setIsLoading] = useState(true)
   {
     /*

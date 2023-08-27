@@ -6,7 +6,7 @@ type NavItem = {
   disabled?: boolean
   external?: boolean
   new: boolean
-  //   icon?: keyof typeof Icons
+  //   icon?: IconKey
   description?: string
 }
 
