@@ -9,7 +9,7 @@ const headerTitleVariants = cva('font-bold tracking-tight', {
       default: 'text-3xl md:text-4xl',
       sm: 'text-2xl md:text-3xl',
       //   lg: 'text-4xl md:text-5xl',
-      lg: 'mb-6 md:mb-8 text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-6xl md:leading-none lg:text-7xl',
+      lg: 'mb-2 md:mb-4 text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-6xl md:leading-none lg:text-7xl',
     },
   },
   defaultVariants: {

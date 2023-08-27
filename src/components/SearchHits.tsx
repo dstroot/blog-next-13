@@ -27,7 +27,7 @@ export const Hits = ({ ...props }) => {
 const PostCard = ({ hit }: { hit: any }) => {
   return (
     <Link href={`/posts/${hit.slug}`}>
-      <div className="flex w-full flex-col space-y-3 rounded bg-card p-5 shadow-md">
+      <div className="flex w-full flex-col space-y-3 rounded bg-muted p-5 shadow-md">
         <div className="flex flex-col">
           <div className="w-100">
             <Image
@@ -41,14 +41,14 @@ const PostCard = ({ hit }: { hit: any }) => {
         </div>
         <p className="line-clamp-3 text-sm">{hit.excerpt}</p>
         <div className="flex space-x-2 text-xs">
-          <span className="bg-accent2 text-accent2-foreground rounded-full px-2 py-1">
+          <span className="rounded-full bg-accent px-2 py-1 text-accent2-foreground">
             {hit.date}
           </span>
-          <span className="bg-accent2 text-accent2-foreground rounded-full px-2 py-1">
+          <span className="rounded-full bg-accent px-2 py-1 text-accent2-foreground">
             {hit.readingTime}
           </span>
           {hit.views ? (
-            <span className="bg-accent2 text-accent2-foreground rounded-full px-2 py-1">
+            <span className="rounded-full bg-accent px-2 py-1 text-accent2-foreground">
               {hit.views} views
             </span>
           ) : null}

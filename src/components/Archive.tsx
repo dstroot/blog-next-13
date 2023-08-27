@@ -28,7 +28,7 @@ export const Archive = ({ posts }: { posts: Post[] }) => {
                 {year}
               </h3>
             )}
-            <div className="ml-8 grid grid-flow-col items-center gap-6 text-gray-800 dark:text-gray-200">
+            <div className="ml-8 grid grid-flow-col items-center gap-6">
               <div className="truncate">
                 <Link
                   className="hover:underline"

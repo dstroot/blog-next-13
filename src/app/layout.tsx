@@ -59,7 +59,7 @@ export default function RootLayout({
     // add scroll padding for internal page links.
     // TODO add google tag manager
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
-      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
+      <body className="grid min-h-screen grid-rows-[auto_1fr_auto]">
         <Suspense>
           {/* <GoogleTagMgr /> */}
           <Analytics />
