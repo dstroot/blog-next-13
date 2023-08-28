@@ -30,8 +30,12 @@ export function ThemeToggle() {
               size="sm"
               className="h-8 w-8 px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
-              {resolvedTheme === 'light' ? <Icons.sun /> : null}
-              {resolvedTheme === 'dark' ? <Icons.moon /> : null}
+              {resolvedTheme === 'light' ? (
+                <Icons.sun className="h-6 w-6" />
+              ) : null}
+              {resolvedTheme === 'dark' ? (
+                <Icons.moon className="h-6 w-6" />
+              ) : null}
               <span className="sr-only">Toggle theme</span>
             </Button>
           </DropdownMenuTrigger>

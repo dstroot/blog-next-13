@@ -46,29 +46,26 @@ export function SiteHeader() {
           <div className="flex items-center space-x-2 md:space-x-4">
             {/* <Combobox /> */}
 
-            <button className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-transparent p-0 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 xl:h-10 xl:w-60 xl:justify-start xl:px-3 xl:py-2">
+            <Link
+              href="/search"
+              className="f relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-4 w-4 xl:mr-2"
+                className="h-6 w-6"
                 aria-hidden="true"
               >
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.3-4.3"></path>
               </svg>
-              <span className="hidden xl:inline-flex">Search...</span>
               <span className="sr-only">Search</span>
-              <kbd className="pointer-events-none absolute right-1.5 top-2 hidden h-6 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 xl:flex">
-                <abbr title="Command">⌘</abbr>K
-              </kbd>
-            </button>
+            </Link>
 
             <ThemeToggle />
 

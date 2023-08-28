@@ -10,6 +10,7 @@ import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
+import { Hotkeys } from '@/components/Hotkeys'
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -60,6 +61,7 @@ export default function RootLayout({
     // TODO add google tag manager
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto]">
+        <Hotkeys />
         <Suspense>
           {/* <GoogleTagMgr /> */}
           <Analytics />
