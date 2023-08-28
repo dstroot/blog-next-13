@@ -57,3 +57,18 @@
     @apply bg-background text-foreground antialiased;
   }
 }
+
+/**
+ * Removes clear "X" from Algolia search box
+ * https://codesandbox.io/s/no-submit-no-reset-zihtl?file=/src/App.css:504-670
+ * https://discourse.algolia.com/t/not-have-button-on-search-bar/8963
+ */
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button {
+  @apply invisible hidden;
+}
+
+::-ms-clear {
+  @apply invisible hidden;
+}

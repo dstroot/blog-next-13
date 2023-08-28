@@ -1,0 +1,14 @@
+# Query: text-slate
+# ContextLines: 1
+
+2 results - 2 files
+
+src/components/Sharable.tsx:
+  69          <div className="fixed bottom-56 left-96 z-10 flex items-center space-x-2 rounded bg-gray-200 px-5 shadow dark:bg-gray-700">
+  70:           <p className="text-zinc">Link copied succesfully</p>
+  71            <span className="rounded-full bg-gray-800 p-1 dark:bg-gray-200">
+
+src/components/SnippetCard.tsx:
+  26  
+  27:       <p className="text-zinc flex-grow">{props.summary}</p>
+  28  

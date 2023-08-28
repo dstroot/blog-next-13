@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useSearchBox } from 'react-instantsearch'
+import { Input } from '@/components/ui/input'
 
 export const SearchBox = ({ ...props }) => {
   const [search, setSearch] = useState('')
@@ -15,7 +16,6 @@ export const SearchBox = ({ ...props }) => {
   const handleSubmit = (e: any) => {
     e.preventDefault()
     refine(search)
-    // setSearch('');
   }
 
   return (
@@ -26,9 +26,9 @@ export const SearchBox = ({ ...props }) => {
       className="my-6 flex justify-center"
     >
       <div className="relative mx-auto w-full md:w-3/4">
-        <input
+        <Input
           type="search"
-          className="h-12 w-full rounded-full border-2 border-input bg-background px-5 pr-16 focus:outline-none focus:ring"
+          className="h-12 w-full rounded-full px-5 pr-16"
           placeholder="Search..."
           aria-label="Search..."
           autoComplete="off"
@@ -37,7 +37,6 @@ export const SearchBox = ({ ...props }) => {
           autoFocus
           spellCheck="false"
           value={search}
-          // onChange={(e) => refine(e.currentTarget.value)}
           onChange={handleChange}
         />
         <button

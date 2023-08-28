@@ -6,7 +6,7 @@ TODO:
 - [ ] Standardize container/width
 - [ ] Cleanup the MDX Pages Like About
 - [x] Add Drafts capability
-- [ ] Ad sharing to code snippets
+- [ ] Add sharing to code snippets
 - [ ] Use new Meta API
 - [ ] Add Google Tag Manager
 - [x] Add Vercel Metrics
@@ -16,4 +16,4 @@ TODO:
 - [ ] Add og image (API?)
 - [ ] Add Analytics Route and ensure analytics are working
 - [ ] Add CSP
-- [ ] ?\
+- [ ] Fix menu to work on Mobile

@@ -9,7 +9,7 @@ export const SiteFooter = () => {
   const year = new Date() // evergreen copyright year
 
   return (
-    <footer className="bg-muted text-muted-foreground">
+    <footer className="bg-zinc-100 text-muted-foreground dark:bg-zinc-800">
       <Container variant="default" className="my-4">
         <div className="flex flex-col content-center items-center gap-x-2 md:flex-row">
           {/*
