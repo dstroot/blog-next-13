@@ -9,6 +9,7 @@ import {
   CardTitle,
   CardContent,
 } from '@/components/ui/card'
+
 export const SnippetCard = (props: Snippet) => {
   const Icon = Icons[props.icon as IconKey]
 
