@@ -56,7 +56,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
           </div>
         </div>
 
-        <p className="mb-4 text-xl text-gray-500">{snippet.summary}</p>
+        <p className="mb-4 text-xl text-muted-foreground">{snippet.summary}</p>
 
         <div className="mb-8 flex space-x-2 text-xs">
           <p className="rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700">

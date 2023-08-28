@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import millify from 'millify'
 
 import { cn } from '@/lib/utils'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 
 interface StatsCardProps {
   name: string
@@ -13,20 +14,21 @@ interface StatsCardProps {
 
 const StatsCard = ({ name, children, stats }: StatsCardProps) => {
   return (
-    <div className="flex w-full flex-col items-center space-y-5 rounded bg-gray-100 p-5 shadow-lg dark:bg-gray-800">
-      <h1 className="text-2xl font-black text-gray-500 dark:text-gray-500">
-        {name}
-      </h1>
-      <span
-        className={cn(
-          'text-4xl font-black text-gray-700 duration-300 ease-in-out dark:text-gray-300',
-          !stats ? 'scale-105 blur-lg' : 'scale-100 blur-0',
-        )}
-      >
-        {children}
-      </span>
-      {/* )} */}
-    </div>
+    <Card className="flex h-full flex-col bg-zinc-100 shadow-md dark:bg-zinc-900">
+      <CardHeader>
+        <CardTitle className="text-muted-foreground">{name}</CardTitle>
+      </CardHeader>
+      <CardContent className="text-zinc flex-grow">
+        <span
+          className={cn(
+            'text-4xl duration-300 ease-in-out',
+            !stats ? 'scale-105 blur-lg' : 'scale-100 blur-0',
+          )}
+        >
+          {children}
+        </span>
+      </CardContent>
+    </Card>
   )
 }
 
