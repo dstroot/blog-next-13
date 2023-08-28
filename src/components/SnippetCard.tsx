@@ -23,9 +23,9 @@ export const SnippetCard = (props: Snippet) => {
                   {props.title}
                 </h1>
               </div>
-              <div className="border-1 my-3 h-12 w-12 flex-none rounded-full bg-accent md:order-2 md:my-0">
+              <div className="h-12 w-12 flex-none rounded-full bg-accent md:order-2">
                 <span className="grid h-full w-full place-items-center">
-                  {Icon ? <Icon className="h-6 w-6" /> : null}
+                  {Icon ? <Icon className="h-8 w-8" /> : null}
                 </span>
               </div>
             </div>

@@ -44,7 +44,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <article className="container my-6 md:my-12">
+      <article className="container mx-auto my-6 max-w-3xl md:my-12">
         <div className="mb-8 flex flex-col items-center justify-between md:flex-row">
           <h2 className="order-2 my-3 text-2xl font-black leading-tight tracking-tighter md:order-1 md:my-0 md:text-4xl md:leading-none lg:text-5xl">
             {snippet.title}
@@ -70,13 +70,11 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
           </p>
         </div>
 
-        <div className="mx-auto max-w-3xl">
-          <div className="prose prose-lg prose-zinc mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
-            <Content components={{ ...MDXComponents }} />
-            <Sharable slug={snippet.slug} title={snippet.title} />
-          </div>
-          <GitHubLink path={github} />
+        <div className="prose prose-lg prose-zinc mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
+          <Content components={{ ...MDXComponents }} />
+          <Sharable slug={snippet.slug} title={snippet.title} />
         </div>
+        <GitHubLink path={github} />
       </article>
       <SendPageView slug={snippet.slugAsParams} />
     </>

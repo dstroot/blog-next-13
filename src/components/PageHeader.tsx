@@ -22,7 +22,7 @@ const headerDescriptionVariants = cva('text-muted', {
     size: {
       default: 'text-lg',
       sm: 'text-base',
-      lg: 'text-xl md:text-2xl text-muted-foreground',
+      lg: 'text-center md:text-left text-xl md:text-2xl text-muted-foreground',
     },
   },
   defaultVariants: {
