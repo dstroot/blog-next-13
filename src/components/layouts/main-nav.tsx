@@ -4,15 +4,15 @@ import * as React from 'react'
 import Link from 'next/link'
 // import type { MainNavItem } from '@/types'
 
-import { siteConfig } from '@/config/site'
+// import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import {
   NavigationMenu,
-  NavigationMenuContent,
+  //   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+  //   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
@@ -29,7 +29,7 @@ export interface NavItem {
 }
 
 interface MainNavProps {
-  items?: NavItem[]
+  items: NavItem[]
 }
 
 export function MainNav({ items }: MainNavProps) {
@@ -54,9 +54,13 @@ export function MainNav({ items }: MainNavProps) {
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
-          {siteConfig.mainNav.map((item) => (
+          {items.map((item) => (
             <NavigationMenuItem key={item.name}>
-              <Link href={item.href} legacyBehavior passHref>
+              <Link
+                href={encodeURIComponent(item.href as string)}
+                legacyBehavior
+                passHref
+              >
                 <NavigationMenuLink
                   className={cn(navigationMenuTriggerStyle(), 'h-auto')}
                 >
@@ -97,13 +101,3 @@ const ListItem = React.forwardRef<
   )
 })
 ListItem.displayName = 'ListItem'
-
-{
-  /* <NavigationMenuItem>
-  <Link href="/docs" legacyBehavior passHref>
-    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-      Documentation
-    </NavigationMenuLink>
-  </Link>
-</NavigationMenuItem> */
-}
