@@ -20,7 +20,7 @@ import { Icons } from '@/components/Icons'
 
 export interface NavItem {
   name: string
-  href?: string
+  href: string
   disabled?: boolean
   external?: boolean
   icon?: keyof typeof Icons
@@ -34,33 +34,12 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <div className="hidden gap-6 lg:flex">
-      <Link
-        aria-label="Home"
-        href="/"
-        className="hidden items-center space-x-2 lg:flex"
-      >
-        {/* <Icons.logo className="h-6 w-6" aria-hidden="true" /> */}
-        <Avatar>
-          <AvatarImage
-            src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=80"
-            alt="Dan Stroot"
-          />
-          <AvatarFallback />
-        </Avatar>
-        {/* <span className="hidden font-bold lg:inline-block">
-          {siteConfig.meta.name}
-        </span> */}
-      </Link>
+    <div className="hidden gap-6 md:flex">
       <NavigationMenu>
         <NavigationMenuList>
           {items.map((item) => (
             <NavigationMenuItem key={item.name}>
-              <Link
-                href={encodeURIComponent(item.href as string)}
-                legacyBehavior
-                passHref
-              >
+              <Link href={item.href} legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(navigationMenuTriggerStyle(), 'h-auto')}
                 >

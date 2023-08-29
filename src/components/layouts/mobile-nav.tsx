@@ -14,7 +14,6 @@ import { Icons } from '@/components/Icons'
 
 interface MobileNavProps {
   mainNavItems: NavItem[]
-  //   sidebarNavItems?: SidebarNavItem[]
 }
 
 export function MobileNav({ mainNavItems }: MobileNavProps) {
@@ -26,13 +25,13 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
+          className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring md:hidden"
         >
           <Icons.menu className="h-6 w-6" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pl-1 pr-0">
+      <SheetContent side="right" className="pl-0 pr-1">
         <div className="px-7">
           <Link
             aria-label="Home"
@@ -40,7 +39,6 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
             className="flex items-center"
             onClick={() => setIsOpen(false)}
           >
-            {/* <Icons.logo className="mr-2 h-4 w-4" aria-hidden="true" /> */}
             <span className="font-bold">{siteConfig.meta.name}</span>
           </Link>
         </div>
