@@ -73,7 +73,7 @@ export const PostPreview = ({
           date={date}
         />
       </div>
-      <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+      <p className="mb-4 leading-relaxed md:text-lg">{excerpt}</p>
       <ReadMore slug={slug} />
     </>
   )

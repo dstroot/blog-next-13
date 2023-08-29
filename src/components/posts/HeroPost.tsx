@@ -67,7 +67,7 @@ export const HeroPost = ({
 
         {/* Excerpt */}
         <div className="flex-1">
-          <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+          <p className="mb-4 leading-relaxed md:text-lg">{excerpt}</p>
           <ReadMore slug={slug} />
         </div>
       </div>
