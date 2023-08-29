@@ -56,7 +56,6 @@ export const siteConfig = {
     { href: '/archive', name: 'Archive', new: false, external: false },
     { href: '/snippets', name: 'Snippets', new: false, external: false },
     { href: '/uses', name: 'Uses', new: false, external: false },
-    { href: '/search', name: 'Search', new: false, external: false },
   ] satisfies NavItem[],
   footerNav: [
     {

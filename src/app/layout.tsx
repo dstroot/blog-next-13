@@ -8,7 +8,7 @@ import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
-import { SiteHeader } from '@/components/SiteHeader'
+import { SiteHeader } from '@/components/layouts/site-header'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
 import { Hotkeys } from '@/components/Hotkeys'
 
