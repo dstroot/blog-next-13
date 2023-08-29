@@ -48,7 +48,7 @@ export function SiteHeader() {
 
             <Link
               href="/search"
-              className="f relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring"
+              className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Icons } from '@/components/Icons'
 import { MainNav } from '@/components/layouts/main-nav'
 import { MobileNav } from '@/components/layouts/mobile-nav'
@@ -9,7 +9,7 @@ import { ThemeToggle } from '@/components/ThemeToggle'
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur">
       <div className="container flex h-12 items-center">
         <Link aria-label="Home" href="/">
           <Avatar className="mr-6">
