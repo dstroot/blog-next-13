@@ -6,10 +6,6 @@ const config: Config = {
   darkMode: ['class'],
   content: ['./src/**/*.{ts,tsx}', './content/**/*.{md,mdx}'],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',

@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Container } from '@/components/Container'
 import { Icons } from '@/components/Icons'
 import { MainNav } from '@/components/SiteHeader/MainNav'
 import { MobileNav } from '@/components/SiteHeader/MobileNav'
@@ -10,7 +11,8 @@ import { ThemeToggle } from '@/components/SiteHeader/ThemeToggle'
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur">
-      <div className="container flex h-12 items-center">
+      <Container className="flex h-12 items-center">
+        {/* <div className="container flex h-12 items-center"> */}
         <Link aria-label="Home" href="/">
           <Avatar className="mr-6">
             <AvatarImage
@@ -34,7 +36,8 @@ export function SiteHeader() {
             <MobileNav mainNavItems={siteConfig.mainNav} />
           </nav>
         </div>
-      </div>
+        {/* </div> */}
+      </Container>
     </header>
   )
 }

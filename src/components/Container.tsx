@@ -6,8 +6,8 @@ import { cn } from '@/lib/utils'
 const ContainerVariants = cva('container', {
   variants: {
     variant: {
-      default: '',
-      padded: 'my-6 md:my-12',
+      default: 'container mx-auto p-4 md:p-6',
+      padded: 'container mx-auto p-4 md:p-6 my-6 md:my-12',
     },
   },
   defaultVariants: {

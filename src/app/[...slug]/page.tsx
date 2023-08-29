@@ -4,6 +4,7 @@ import { allPages } from 'contentlayer/generated'
 
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
+import { Container } from '@/components/Container'
 import { Mdx } from '@/components/MDXComponents/MDX'
 import { PageHeader } from '@/components/PageHeader'
 
@@ -80,9 +81,9 @@ export default async function Page({ params }: PageProps) {
   }
 
   return (
-    <div className="container my-6 md:my-12">
+    <Container variant="padded">
       <PageHeader title={page.title} description={page.description} size="lg" />
       <Mdx code={page.body.code} />
-    </div>
+    </Container>
   )
 }
