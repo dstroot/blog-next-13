@@ -1,10 +1,9 @@
 import { Post } from 'contentlayer/generated'
 
+import { Avatar } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
-import { PostImage } from '@/components/PostImage'
-import { PostTitle } from '@/components/PostTitle'
-
-import { Avatar } from './Avatar'
+import { PostImage } from '@/components/posts/PostImage'
+import { PostTitle } from '@/components/posts/PostTitle'
 
 interface PostHeaderProps {
   title: string

@@ -4,8 +4,8 @@ import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch, useInstantSearch } from 'react-instantsearch'
 
 import { env } from '@/config/env.mjs'
-import { SearchBox } from '@/components/SearchBox'
-import { Hits } from '@/components/SearchHits'
+import { SearchBox } from '@/components/search/SearchBox'
+import { Hits } from '@/components/search/SearchHits'
 
 export const generateMetadata = () => {
   return { title: 'Search' }

@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Icons } from '@/components/Icons'
 import { MainNav } from '@/components/SiteHeader/MainNav'
 import { MobileNav } from '@/components/SiteHeader/MobileNav'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { ThemeToggle } from '@/components/SiteHeader/ThemeToggle'
 
 export function SiteHeader() {
   return (

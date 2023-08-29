@@ -5,7 +5,7 @@ import { useIntersection } from '@mantine/hooks'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import type { Post } from 'contentlayer/generated'
 
-import { PostPreview } from '@/components/PostPreview'
+import { PostPreview } from '@/components/posts/PostPreview'
 
 interface MoreStoriesProps {
   posts: Post[]

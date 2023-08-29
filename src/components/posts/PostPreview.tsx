@@ -7,7 +7,7 @@ import Balancer from 'react-wrap-balancer'
 import { cn } from '@/lib/utils'
 import { Avatar } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
-import { ReadMore } from '@/components/ReadMore'
+import { ReadMore } from '@/components/posts/ReadMore'
 
 interface PostPreviewProps {
   key: string

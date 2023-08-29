@@ -5,9 +5,9 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
 import { Container } from '@/components/Container'
-import { GitHubLink } from '@/components/GitHubLink'
 import { MDXComponents } from '@/components/MDXComponents'
-import { PostHeader } from '@/components/PostHeader'
+import { GitHubLink } from '@/components/posts/GitHubLink'
+import { PostHeader } from '@/components/posts/PostHeader'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
 

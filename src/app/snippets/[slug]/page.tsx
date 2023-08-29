@@ -4,9 +4,9 @@ import format from 'date-fns/format'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
-import { GitHubLink } from '@/components/GitHubLink'
 import { IconKey, Icons } from '@/components/Icons'
 import { MDXComponents } from '@/components/MDXComponents'
+import { GitHubLink } from '@/components/posts/GitHubLink'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
 

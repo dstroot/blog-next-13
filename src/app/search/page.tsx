@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
-import Search from '@/components/Search'
+import Search from '@/components/search/Search'
 
 export const generateMetadata = () => {
   return { title: 'Search' }

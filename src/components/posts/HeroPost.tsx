@@ -5,7 +5,7 @@ import Balancer from 'react-wrap-balancer'
 
 import { Avatar } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
-import { ReadMore } from '@/components/ReadMore'
+import { ReadMore } from '@/components/posts/ReadMore'
 
 interface HeroPostProps {
   title: string
