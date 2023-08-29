@@ -2,20 +2,15 @@
 
 import * as React from 'react'
 import Link from 'next/link'
-// import type { MainNavItem } from '@/types'
 
-// import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import {
   NavigationMenu,
-  //   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  //   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { Icons } from '@/components/Icons'
 
 export interface NavItem {
