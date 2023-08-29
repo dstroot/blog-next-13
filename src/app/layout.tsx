@@ -6,11 +6,11 @@ import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
+import { Hotkeys } from '@/components/Hotkeys'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
-import { SiteHeader } from '@/components/layouts/site-header'
+import { SiteHeader } from '@/components/SiteHeader'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
-import { Hotkeys } from '@/components/Hotkeys'
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),

@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { siteConfig } from '@/config/site'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Icons } from '@/components/Icons'
-import { MainNav } from '@/components/layouts/main-nav'
-import { MobileNav } from '@/components/layouts/mobile-nav'
+import { MainNav } from '@/components/SiteHeader/MainNav'
+import { MobileNav } from '@/components/SiteHeader/MobileNav'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
 export function SiteHeader() {

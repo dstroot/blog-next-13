@@ -3,14 +3,14 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import type { NavItem } from './main-nav'
 
-import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Icons } from '@/components/Icons'
+
+import type { NavItem } from './MainNav'
 
 interface MobileNavProps {
   mainNavItems: NavItem[]
