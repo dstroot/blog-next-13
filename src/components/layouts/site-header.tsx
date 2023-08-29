@@ -12,7 +12,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container flex h-12 items-center">
         <Link aria-label="Home" href="/">
-          <Avatar>
+          <Avatar className="mr-6">
             <AvatarImage
               src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=80"
               alt="Dan Stroot"

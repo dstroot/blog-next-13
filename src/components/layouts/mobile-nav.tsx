@@ -39,32 +39,23 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
             className="flex items-center"
             onClick={() => setIsOpen(false)}
           >
-            <span className="font-bold">{siteConfig.meta.name}</span>
+            <span className="text-2xl">Home</span>
           </Link>
         </div>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
           <div className="pl-1 pr-7">
-            <div className="flex flex-col space-y-2">
-              {mainNavItems.map((item, index) =>
-                item.href ? (
-                  <MobileLink
-                    key={index}
-                    href={String(item.href)}
-                    pathname={pathname}
-                    setIsOpen={setIsOpen}
-                    disabled={item.disabled}
-                  >
-                    {item.name}
-                  </MobileLink>
-                ) : (
-                  <div
-                    key={index}
-                    className="text-foreground/70 transition-colors"
-                  >
-                    {item.name}
-                  </div>
-                ),
-              )}
+            <div className="flex flex-col space-y-4 text-2xl">
+              {mainNavItems.map((item, index) => (
+                <MobileLink
+                  key={index}
+                  href={String(item.href)}
+                  pathname={pathname}
+                  setIsOpen={setIsOpen}
+                  disabled={item.disabled}
+                >
+                  {item.name}
+                </MobileLink>
+              ))}
             </div>
           </div>
         </ScrollArea>
