@@ -38,7 +38,7 @@ interface PageHeaderProps
   description?: string | null
   descriptionAs?: React.ElementType
   balancedTitle?: boolean
-  balacedDescription?: boolean
+  balancedDescription?: boolean
 }
 
 export const PageHeader = ({
@@ -48,11 +48,11 @@ export const PageHeader = ({
   className,
   size,
   balancedTitle = false,
-  balacedDescription = true,
+  balancedDescription = true,
   ...props
 }: PageHeaderProps) => {
   const Title = balancedTitle ? Balancer : 'h1'
-  const Description = balacedDescription ? Balancer : 'h2'
+  const Description = balancedDescription ? Balancer : 'h2'
 
   return (
     <div className={cn('mb-6 grid gap-1 md:mb-12', className)} {...props}>
