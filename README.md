@@ -11,7 +11,9 @@ TODO:
 - [ ] Add Google Tag Manager
 - [x] Add Vercel Metrics
 - [x] Add Views to pages (increment view count in DynamoDB)
-- [ ] Add robots, meta, sitemap, etc.
+- [ ] Add robots
+- [ ] meta
+- [x] sitemap, etc.
 - [ ] Add favicon and site images
 - [ ] Add og image (API?)
 - [ ] Add Analytics Route and ensure analytics are working
