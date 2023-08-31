@@ -6,8 +6,8 @@ summary: 'Import from folders like /components, /utils or /hooks from @/anywhere
 icon: js
 tags:
   - Javascript
-# - React Hook
-# - React Component
+  # - React Hook
+  # - React Component
   - Typescript
 # - CSS
 # - HTML
@@ -17,7 +17,7 @@ Let's assume you have a folder structure like this in your project:
 
 <CodeBlock>
 
-```sh:cn.ts
+```sh:example.sh
 my-app /
 ── pages /
 │   ├── about.jsx
@@ -41,7 +41,7 @@ This is how your imports will typically look:
 
 <CodeBlock>
 
-```JavaScript:cn.ts
+```JavaScript:example.ts
 import { SortByDate } from '../lib/sortPosts';
 ```
 
@@ -51,7 +51,7 @@ And it's gonna be even worse if you are importing in a file that is nested deepl
 
 <CodeBlock>
 
-```JavaScript:cn.ts
+```JavaScript:example.ts
 import { SortByDate } from '../../../lib/sortPosts';
 ```
 
@@ -61,7 +61,7 @@ To solve this, you can add a jsconfig.json (or tsconfig.json if you have a TypeS
 
 <CodeBlock>
 
-```JavaScript:cn.ts
+```JavaScript:example.ts
 {
     "baseUrl": ".",
     "paths": {
@@ -78,7 +78,7 @@ Now your imports will look like this:
 
 <CodeBlock>
 
-```JavaScript:cn.ts
+```JavaScript:example.ts
 import { SortByDate } from '@/lib/sortPosts';
 ```
 

@@ -93,18 +93,18 @@ input[type='search']::-webkit-search-cancel-button {
  * Fixes the bottom of the 'Terminal' CodeBlock component
  */
 
-pre[class*='language-'] {
-  @apply mb-0 overflow-x-auto text-sm;
-}
+/* pre {
+  @apply mb-0 overflow-x-auto;
+} */
 
 /**
  * rehype-code-titles
  */
 
 .rehype-code-title {
-  @apply absolute right-5 top-4 text-gray-300;
+  @apply absolute right-5 top-4 text-base text-gray-300;
 }
 
 .rehype-code-title + pre {
-  @apply mt-0 rounded-t-none;
+  @apply mb-0 mt-0 overflow-x-auto rounded-t-none;
 }
