@@ -9,7 +9,7 @@ export const SiteFooter = () => {
   const year = new Date() // evergreen copyright year
 
   return (
-    <footer className="bg-zinc-100 text-muted-foreground dark:bg-zinc-800">
+    <footer className="bg-zinc-50 text-muted-foreground dark:bg-zinc-900">
       <Container variant="default" className="my-4">
         <div className="flex flex-col content-center items-center gap-x-2 md:flex-row">
           {/*
@@ -45,7 +45,10 @@ export const SiteFooter = () => {
 
         <div className="flex flex-col items-center justify-between md:flex-row md:items-end">
           <div className="order-2 flex items-center text-xs tracking-wide dark:text-gray-400 md:order-1">
-            Crafted with ♥️ in California.&nbsp;&copy;&nbsp;
+            <span className="hidden md:inline">
+              Crafted with ♥️ in California.&nbsp;
+            </span>
+            &copy;&nbsp;
             {year.getFullYear()}
             {','}&nbsp;
             <Link className="font-medium" href="/analytics">
