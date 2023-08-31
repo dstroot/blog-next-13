@@ -14,7 +14,7 @@ export const MoreStats = ({ slug, stats }: MoreStatsProps) => {
   const { views, isLoading } = useViewCount(slug)
 
   return (
-    <div className="mt-2 flex items-center justify-between text-sm text-gray-600 transition-colors dark:text-gray-300">
+    <div className="mt-2 flex items-center justify-between text-sm text-muted-foreground">
       <div>
         <ReadStats stats={stats} />
       </div>

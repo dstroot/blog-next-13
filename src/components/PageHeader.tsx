@@ -6,9 +6,8 @@ import { cn } from '@/lib/utils'
 const headerTitleVariants = cva('font-bold tracking-tight', {
   variants: {
     size: {
-      default: 'text-3xl md:text-4xl',
-      sm: 'text-2xl md:text-3xl',
-      //   lg: 'text-4xl md:text-5xl',
+      default:
+        'mb-2 md:mb-4 text-center text-2xl font-bold leading-tight tracking-tighter md:text-left md:text-4xl md:leading-none lg:text-5xl',
       lg: 'mb-2 md:mb-4 text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-6xl md:leading-none lg:text-7xl',
     },
   },
@@ -20,8 +19,8 @@ const headerTitleVariants = cva('font-bold tracking-tight', {
 const headerDescriptionVariants = cva('text-muted', {
   variants: {
     size: {
-      default: 'text-lg',
-      sm: 'text-base',
+      default:
+        'text-center md:text-left text-lg md:text-xl text-muted-foreground',
       lg: 'text-center md:text-left text-xl md:text-2xl text-muted-foreground',
     },
   },
