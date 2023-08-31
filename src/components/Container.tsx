@@ -7,7 +7,7 @@ const ContainerVariants = cva('container', {
   variants: {
     variant: {
       default: 'container mx-auto p-4 md:p-6',
-      padded: 'container mx-auto p-4 md:p-6 my-6 md:my-12',
+      padded: 'container mx-auto p-4 md:p-6 mt-6 md:mt-12',
     },
   },
   defaultVariants: {

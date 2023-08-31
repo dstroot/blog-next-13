@@ -11,7 +11,7 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
   function fbShare() {
     window.open(
       encodeURI(
-        `https://www.facebook.com/sharer/sharer.php?u=${env.NEXT_PUBLIC_APP_URL}/${slug}`,
+        `https://www.facebook.com/sharer/sharer.php?u=${env.NEXT_PUBLIC_APP_URL}${slug}`,
       ),
       'sharer',
       'toolbar=0,status=0,width=548,height=325',
@@ -21,7 +21,7 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
   function twShare() {
     window.open(
       encodeURI(
-        `https://twitter.com/share?lang=en&text=${title}&url=${env.NEXT_PUBLIC_APP_URL}/${slug}`,
+        `https://twitter.com/share?lang=en&text=${title}&url=${env.NEXT_PUBLIC_APP_URL}${slug}`,
       ),
       'sharer',
       'toolbar=0,status=0,width=548,height=325',
@@ -30,7 +30,7 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
 
   function CopiedLinkMsg() {
     setShowAlert(true)
-    navigator.clipboard.writeText(`${env.NEXT_PUBLIC_APP_URL}/${slug}`)
+    navigator.clipboard.writeText(`${env.NEXT_PUBLIC_APP_URL}${slug}`)
     const timer = setTimeout(() => {
       setShowAlert(false)
     }, 1000)
