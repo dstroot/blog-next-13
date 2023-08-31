@@ -8,10 +8,10 @@ import snippets__framerMotionMdx from './snippets__framer-motion.mdx.json' asser
 import snippets__getLastSegmentMdx from './snippets__get-last-segment.mdx.json' assert { type: 'json' }
 import snippets__googleAnalyticsApiMdx from './snippets__google-analytics-api.mdx.json' assert { type: 'json' }
 import snippets__googleTagManagerMdx from './snippets__google-tag-manager.mdx.json' assert { type: 'json' }
-import snippets__hotkeysMdx from './snippets__hotkeys.mdx.json' assert { type: 'json' }
 import snippets__infiniteScrollMdx from './snippets__infinite-scroll.mdx.json' assert { type: 'json' }
 import snippets__intersectionObserverMdx from './snippets__intersection-observer.mdx.json' assert { type: 'json' }
 import snippets__mdxBundlerMdx from './snippets__mdx-bundler.mdx.json' assert { type: 'json' }
+import snippets__nextjsHotkeysMdx from './snippets__nextjs-hotkeys.mdx.json' assert { type: 'json' }
 import snippets__nextjsNavlinkComponentMdx from './snippets__nextjs-navlink-component.mdx.json' assert { type: 'json' }
 import snippets__parallelMdx from './snippets__parallel.mdx.json' assert { type: 'json' }
 import snippets__prismjsSyntaxHighlightingMdx from './snippets__prismjs-syntax-highlighting.mdx.json' assert { type: 'json' }
@@ -26,4 +26,4 @@ import snippets__usePrefersReducedMotionMdx from './snippets__use-prefers-reduce
 import snippets__waitMdx from './snippets__wait.mdx.json' assert { type: 'json' }
 import snippets__webVitalsMdx from './snippets__web-vitals.mdx.json' assert { type: 'json' }
 
-export const allSnippets = [snippets__classnamesMdx, snippets__debounceMdx, snippets__easierImportsMdx, snippets__embedTweetsMdxMdx, snippets__framerMotionMdx, snippets__getLastSegmentMdx, snippets__googleAnalyticsApiMdx, snippets__googleTagManagerMdx, snippets__hotkeysMdx, snippets__infiniteScrollMdx, snippets__intersectionObserverMdx, snippets__mdxBundlerMdx, snippets__nextjsNavlinkComponentMdx, snippets__parallelMdx, snippets__prismjsSyntaxHighlightingMdx, snippets__reactHooksMdx, snippets__recursiveTimeoutMdx, snippets__seoMdx, snippets__simpleAnalyticsMdx, snippets__testMdx, snippets__useHasMountedMdx, snippets__useMediaQueryMdx, snippets__usePrefersReducedMotionMdx, snippets__waitMdx, snippets__webVitalsMdx]
+export const allSnippets = [snippets__classnamesMdx, snippets__debounceMdx, snippets__easierImportsMdx, snippets__embedTweetsMdxMdx, snippets__framerMotionMdx, snippets__getLastSegmentMdx, snippets__googleAnalyticsApiMdx, snippets__googleTagManagerMdx, snippets__infiniteScrollMdx, snippets__intersectionObserverMdx, snippets__mdxBundlerMdx, snippets__nextjsHotkeysMdx, snippets__nextjsNavlinkComponentMdx, snippets__parallelMdx, snippets__prismjsSyntaxHighlightingMdx, snippets__reactHooksMdx, snippets__recursiveTimeoutMdx, snippets__seoMdx, snippets__simpleAnalyticsMdx, snippets__testMdx, snippets__useHasMountedMdx, snippets__useMediaQueryMdx, snippets__usePrefersReducedMotionMdx, snippets__waitMdx, snippets__webVitalsMdx]

@@ -59,7 +59,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
         <p className="mb-4 text-xl text-muted-foreground">{snippet.summary}</p>
 
-        <div className="mb-8 flex space-x-2 text-xs">
+        <div className="flex space-x-2 text-xs">
           <p className="rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700">
             Date: {format(new Date(snippet.date), 'yyyy-MM-dd')}
           </p>
@@ -70,6 +70,8 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
             Time: {snippet.stats.text}
           </p>
         </div>
+
+        <hr className="my-6" />
 
         <article className="prose prose-lg prose-zinc mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
           <Content components={{ ...MDXComponents }} />
