@@ -12,10 +12,10 @@ TODO:
 - [x] Add Vercel Metrics
 - [x] Add Views to pages (increment view count in DynamoDB)
 - [x] Add robots
-- [ ] meta & key words (NOTE: Good progress but og route and urls need work)
+- [x] meta & key words (NOTE: Good progress but og route and urls need work)
 - [x] sitemap, etc.
 - [x] Add favicon and site images
-- [ ] Add og image (API progress but needs work)
+- [x] Add og image (API progress but needs work)
 - [x] Add Analytics Route and ensure analytics are working
 - [x] Add CSP
 - [x] Add csp api route to post
