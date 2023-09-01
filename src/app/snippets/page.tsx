@@ -15,7 +15,7 @@ export const generateMetadata = () => {
     title: 'Snippets',
     description: 'Short solutions to discrete problems.',
     type: 'Page', // TODO is this right?
-    slug: '/snippets',
+    slug: 'snippets',
   }
 
   const ogUrl = new URL(`${url}/api/og`)

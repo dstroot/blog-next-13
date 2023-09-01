@@ -32,7 +32,7 @@ export async function generateMetadata({
 
   const url = absoluteUrl('/')
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const ogUrl = new URL(`${url}api/og`)
   ogUrl.searchParams.set('title', snippet.title)
   ogUrl.searchParams.set('type', 'page')
   ogUrl.searchParams.set('mode', 'light')

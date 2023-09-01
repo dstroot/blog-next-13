@@ -9,7 +9,7 @@ export const generateMetadata = () => {
     title: 'Search',
     description: "Search all Dan Stroot's blog posts... fast.",
     type: 'Page', // TODO is this right?
-    slug: '/search',
+    slug: 'search',
   }
 
   const ogUrl = new URL(`${url}/api/og`)
