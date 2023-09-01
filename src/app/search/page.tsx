@@ -4,15 +4,14 @@ import { PageHeader } from '@/components/PageHeader'
 import Search from '@/components/search/Search'
 
 export const generateMetadata = () => {
-  const url = absoluteUrl('/')
+  const url = absoluteUrl('')
   const page = {
     title: 'Search',
     description: "Search all Dan Stroot's blog posts... fast.",
-    type: 'Page', // TODO is this right?
     slug: 'search',
   }
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const ogUrl = new URL(`${url}api/og`)
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('description', page.description)
   ogUrl.searchParams.set('mode', 'light')

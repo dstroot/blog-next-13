@@ -17,7 +17,7 @@ export function GET(req: Request) {
     const parsedValues = ogImageSchema.parse(
       Object.fromEntries(url.searchParams),
     )
-    const { mode, title, description, type } = parsedValues
+    const { mode, title, description, location } = parsedValues
     const paint = mode === 'dark' ? '#fff' : '#000'
 
     // TODO needs some design work
@@ -65,7 +65,7 @@ export function GET(req: Request) {
             ) : (
               <div tw="flex flex-wrap mt-8">
                 {location && (
-                  <div tw="flex mb-2 mr-4">📍 {'Made in California'}</div>
+                  <div tw="flex mb-2 mr-4">📍 {location}</div>
                 )}
               </div>
             )}

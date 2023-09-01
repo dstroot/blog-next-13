@@ -1,8 +1,8 @@
-import * as z from "zod"
+import * as z from 'zod'
 
 export const ogImageSchema = z.object({
-  title: z.string(),
+  title: z.string().optional(),
   description: z.string().optional(),
-  type: z.string().optional(),
-  mode: z.enum(["light", "dark"]).default("dark"),
+  location: z.string().optional(),
+  mode: z.enum(['light', 'dark']).default('dark'),
 })

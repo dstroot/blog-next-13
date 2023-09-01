@@ -34,9 +34,9 @@ export async function generateMetadata({
 
   const url = absoluteUrl('')
 
-  const ogUrl = new URL(`${url}api/og`)
+  const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', page.title)
-  ogUrl.searchParams.set('description', page.description || '')
+  //   ogUrl.searchParams.set('description', page.description || '')
   ogUrl.searchParams.set('mode', 'light')
 
   return {
