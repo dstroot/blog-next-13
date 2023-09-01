@@ -39,7 +39,7 @@ export type Post = {
   /** Published indicator */
   published: boolean
   author: Author
-  ogImage?: OGImage | undefined
+  ogImage: OGImage
   /** SEO slug */
   seoURL?: string | undefined
   /** MDX file body */

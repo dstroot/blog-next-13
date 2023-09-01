@@ -1,9 +1,11 @@
+import { type Metadata } from 'next'
 import NextImage, { ImageProps } from 'next/image'
 import { notFound } from 'next/navigation'
 import { allPosts } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
+import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { MDXComponents } from '@/components/MDXComponents'
 import { GitHubLink } from '@/components/posts/GitHubLink'
@@ -15,26 +17,45 @@ export const generateStaticParams = async () => {
   return allPosts.map((post) => ({ slug: post.slugAsParams }))
 }
 
-// TODO Metadata needs a lot of work!
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const post = allPosts.find((post) => post.slugAsParams === params.slug)
 
   if (!post) {
     return {}
   }
 
-  //     const seo = {
-  //     title: `${CMS_NAME} · ${frontMatter.title}`,
-  //     url: `${BASE_URL}/posts/${frontMatter.slug}`,
-  //     description: frontMatter.excerpt,
-  //     image: `${BASE_URL}${frontMatter.ogImage.url}`,
-  //     publishedDate: frontMatter.date,
-  //     author: frontMatter.author.name,
-  //     ogType: 'article',
-  //     twHandle: '@danstroot',
-  //   };
+  const imgPath = 'https://danstroot.imgix.net'
+  const imgParams = '?auto=format&fit=crop&w=1200&h=630'
+  const imgUrl = imgPath + post.ogImage + imgParams
 
-  return { title: post.title }
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      url: absoluteUrl(post.slug),
+      images: [
+        {
+          url: imgUrl,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [imgUrl],
+    },
+  }
 }
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {

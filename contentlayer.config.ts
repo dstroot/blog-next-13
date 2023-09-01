@@ -70,7 +70,7 @@ const Post = defineDocumentType(() => ({
     ogImage: {
       type: 'nested',
       of: OGImage,
-      required: false,
+      required: true,
     },
     seoURL: {
       type: 'string',
