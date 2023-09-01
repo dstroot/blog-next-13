@@ -1,12 +1,49 @@
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
+import { absoluteUrl } from '@/lib/utils'
 import { Archive } from '@/components/Archive'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
 export const generateMetadata = () => {
-  return { title: 'Archive' }
+  const url = absoluteUrl('/')
+  const page = {
+    title: 'Archive',
+    description: "All Dan Stroot's blog posts in one place.",
+    type: 'Page', // TODO is this right?
+    slug: '/archive',
+  }
+
+  const ogUrl = new URL(`${url}/api/og`)
+  ogUrl.searchParams.set('title', page.title)
+  ogUrl.searchParams.set('type', page.type)
+  ogUrl.searchParams.set('mode', 'light')
+
+  return {
+    title: page.title,
+    description: page.description,
+    openGraph: {
+      title: page.title,
+      description: page.description,
+      type: 'article',
+      url: absoluteUrl(page.slug),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: page.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.title,
+      description: page.description,
+      images: [ogUrl.toString()],
+    },
+  }
 }
 
 export default function ArchivePage() {

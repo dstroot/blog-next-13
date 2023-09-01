@@ -19,6 +19,10 @@ async function getPageFromParams(params: PageProps['params']) {
   return page
 }
 
+/*
+NOTE: OG image is created by the og api route, there is no real
+      image associated with non-blog posts. So we generate one.
+*/
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {

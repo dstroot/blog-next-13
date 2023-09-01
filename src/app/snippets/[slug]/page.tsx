@@ -1,9 +1,11 @@
+import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { allSnippets } from 'contentlayer/generated'
 import format from 'date-fns/format'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
+import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { IconKey, Icons } from '@/components/Icons'
 import { MDXComponents } from '@/components/MDXComponents'
@@ -15,7 +17,11 @@ export const generateStaticParams = async () => {
   return allSnippets.map((snippet) => ({ slug: snippet.slugAsParams }))
 }
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
   const snippet = allSnippets.find(
     (snippet) => snippet.slugAsParams === params.slug,
   )
@@ -24,7 +30,38 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     return {}
   }
 
-  return { title: snippet.title }
+  const url = absoluteUrl('/')
+
+  const ogUrl = new URL(`${url}/api/og`)
+  ogUrl.searchParams.set('title', snippet.title)
+  ogUrl.searchParams.set('type', 'page')
+  ogUrl.searchParams.set('mode', 'light')
+  ogUrl.searchParams.set('icon', snippet.icon) // TODO: icon won't work yet
+
+  return {
+    title: snippet.title,
+    description: snippet.summary,
+    openGraph: {
+      title: snippet.title,
+      description: snippet.summary,
+      type: 'article',
+      url: absoluteUrl(snippet.slug),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: snippet.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: snippet.title,
+      description: snippet.summary,
+      images: [ogUrl.toString()],
+    },
+  }
 }
 
 const SnippetLayout = ({ params }: { params: { slug: string } }) => {

@@ -12,7 +12,7 @@ TODO:
 - [x] Add Vercel Metrics
 - [x] Add Views to pages (increment view count in DynamoDB)
 - [ ] Add robots
-- [ ] meta
+- [ ] meta & key words
 - [x] sitemap, etc.
 - [ ] Add favicon and site images
 - [ ] Add og image (API?)

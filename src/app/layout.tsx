@@ -13,7 +13,7 @@ import { SiteHeader } from '@/components/SiteHeader'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
+  metadataBase: new URL(env.NEXT_PUBLIC_IMGIX_URL),
   title: {
     default: `${siteConfig.meta.name} · Blog`,
     template: `${siteConfig.meta.name} · %s`,
@@ -38,12 +38,14 @@ export const metadata: Metadata = {
     title: siteConfig.meta.name,
     description: siteConfig.meta.description,
     siteName: siteConfig.meta.name,
+    images: [`${env.NEXT_PUBLIC_APP_URL}/og.jpg`],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.meta.name,
     description: siteConfig.meta.description,
     images: [`${env.NEXT_PUBLIC_APP_URL}/og.jpg`],
+    site: '@danstroot',
     creator: '@danstroot',
   },
   icons: {

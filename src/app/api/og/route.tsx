@@ -1,20 +1,21 @@
-import type { ServerRuntime } from "next"
-import { ImageResponse } from "@vercel/og"
+import type { ServerRuntime } from 'next'
+import { ImageResponse } from '@vercel/og'
 
-import { ogImageSchema } from "@/lib/validations/og"
+import { ogImageSchema } from '@/lib/validations/og'
 
-export const runtime: ServerRuntime = "edge"
+export const runtime: ServerRuntime = 'edge'
 
 export function GET(req: Request) {
   try {
     const url = new URL(req.url)
     const parsedValues = ogImageSchema.parse(
-      Object.fromEntries(url.searchParams)
+      Object.fromEntries(url.searchParams),
     )
 
     const { mode, title, description, type } = parsedValues
-    const paint = mode === "dark" ? "#fff" : "#000"
+    const paint = mode === 'dark' ? '#fff' : '#000'
 
+    // TODO needs some design work
     return new ImageResponse(
       (
         <div
@@ -22,9 +23,9 @@ export function GET(req: Request) {
           style={{
             color: paint,
             background:
-              mode === "dark"
-                ? "linear-gradient(90deg, #000 0%, #111 100%)"
-                : "white",
+              mode === 'dark'
+                ? 'linear-gradient(90deg, #000 0%, #111 100%)'
+                : 'white',
           }}
         >
           <div tw="flex items-center text-3xl justify-center flex-col">
@@ -43,7 +44,7 @@ export function GET(req: Request) {
           <div
             tw="flex max-w-4xl items-center justify-center flex-col mt-10"
             style={{
-              whiteSpace: "pre-wrap",
+              whiteSpace: 'pre-wrap',
             }}
           >
             {type ? (
@@ -65,7 +66,7 @@ export function GET(req: Request) {
       {
         width: 1200,
         height: 630,
-      }
+      },
     )
   } catch (error) {
     error instanceof Error

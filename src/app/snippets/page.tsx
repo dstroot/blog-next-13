@@ -1,6 +1,7 @@
 import { allSnippets } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
+import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { SnippetCard } from '@/components/SnippetCard'
@@ -9,7 +10,43 @@ import '@/styles/atom-one-dark.css'
 
 // TODO add SEO
 export const generateMetadata = () => {
-  return { title: 'Snippets' }
+  const url = absoluteUrl('/')
+  const page = {
+    title: 'Snippets',
+    description: 'Short solutions to discrete problems.',
+    type: 'Page', // TODO is this right?
+    slug: '/snippets',
+  }
+
+  const ogUrl = new URL(`${url}/api/og`)
+  ogUrl.searchParams.set('title', page.title)
+  ogUrl.searchParams.set('type', page.type)
+  ogUrl.searchParams.set('mode', 'light')
+
+  return {
+    title: page.title,
+    description: page.description,
+    openGraph: {
+      title: page.title,
+      description: page.description,
+      type: 'article',
+      url: absoluteUrl(page.slug),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: page.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.title,
+      description: page.description,
+      images: [ogUrl.toString()],
+    },
+  }
 }
 
 export default function SnippetsPage() {

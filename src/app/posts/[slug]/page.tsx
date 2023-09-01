@@ -28,9 +28,11 @@ export async function generateMetadata({
     return {}
   }
 
-  const imgPath = 'https://danstroot.imgix.net'
-  const imgParams = '?auto=format&fit=crop&w=1200&h=630'
-  const imgUrl = imgPath + post.ogImage + imgParams
+  const ogImgParams = '?auto=format&fit=crop&w=1200&h=630'
+  const ogImgUrl = post.ogImage.url + ogImgParams
+
+  //   const twitterImgParams = '?auto=format&fit=crop&w=1200&h=630'
+  //   const twitterImgUrl = post.ogImage.url + twitterImgParams
 
   return {
     title: post.title,
@@ -42,7 +44,7 @@ export async function generateMetadata({
       url: absoluteUrl(post.slug),
       images: [
         {
-          url: imgUrl,
+          url: ogImgUrl,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -53,7 +55,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
-      images: [imgUrl],
+      images: [ogImgUrl],
     },
   }
 }
