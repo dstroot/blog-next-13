@@ -16,7 +16,7 @@ export default function AnalyticsPage() {
       />
 
       <Stats />
-      <div className="mt-6 flex flex-col p-6 text-xl">
+      <div className="mt-6 flex flex-col p-6 text-lg">
         <span className="mb-1 mt-4 min-w-max font-bold uppercase text-gray-700 dark:text-gray-100 md:mt-0">
           Other Tools
         </span>

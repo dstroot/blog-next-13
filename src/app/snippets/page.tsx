@@ -10,14 +10,14 @@ import '@/styles/atom-one-dark.css'
 
 // TODO add SEO
 export const generateMetadata = () => {
-  const url = absoluteUrl('/')
+  const url = absoluteUrl('')
   const page = {
     title: 'Snippets',
     description: 'Short solutions to discrete problems.',
     slug: 'snippets',
   }
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const ogUrl = new URL(`${url}api/og`)
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('description', page.description)
   ogUrl.searchParams.set('mode', 'light')
