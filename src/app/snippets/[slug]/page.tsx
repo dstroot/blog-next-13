@@ -35,7 +35,7 @@ export async function generateMetadata({
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', snippet.title)
   ogUrl.searchParams.set('mode', 'light')
-  ogUrl.searchParams.set('icon', snippet.icon) // TODO: icon won't work yet
+  ogUrl.searchParams.set('icon', snippet.icon)
 
   return {
     title: snippet.title,

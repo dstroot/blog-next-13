@@ -6,6 +6,10 @@ import { Archive } from '@/components/Archive'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
+/*
+NOTE: OG image is created by the og api route, there is no real
+      image associated with the archive route. So we generate one.
+*/
 export const generateMetadata = () => {
   const url = absoluteUrl('')
   const page = {

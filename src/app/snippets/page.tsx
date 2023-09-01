@@ -8,7 +8,10 @@ import { SnippetCard } from '@/components/SnippetCard'
 
 import '@/styles/atom-one-dark.css'
 
-// TODO add SEO
+/*
+NOTE: OG image is created by the og api route, there is no real
+      image associated with the snippets route. So we generate one.
+*/
 export const generateMetadata = () => {
   const url = absoluteUrl('')
   const page = {

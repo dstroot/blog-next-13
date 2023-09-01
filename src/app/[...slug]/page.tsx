@@ -1,7 +1,6 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { allPages } from 'contentlayer/generated'
-import { useTheme } from 'next-themes'
 
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
@@ -33,11 +32,9 @@ export async function generateMetadata({
   }
 
   const url = absoluteUrl('')
-  const { resolvedTheme } = useTheme()
-
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', page.title)
-  ogUrl.searchParams.set('mode', resolvedTheme || 'light')
+  ogUrl.searchParams.set('mode', 'light')
 
   return {
     title: page.title,

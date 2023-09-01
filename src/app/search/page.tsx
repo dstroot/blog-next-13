@@ -3,6 +3,10 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import Search from '@/components/search/Search'
 
+/*
+NOTE: OG image is created by the og api route, there is no real
+      image associated with the search route. So we generate one.
+*/
 export const generateMetadata = () => {
   const url = absoluteUrl('')
   const page = {
