@@ -11,9 +11,8 @@ export const generateMetadata = () => {
     slug: 'search',
   }
 
-  const ogUrl = new URL(`${url}api/og`)
+  const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', page.title)
-  ogUrl.searchParams.set('description', page.description)
   ogUrl.searchParams.set('mode', 'light')
 
   return {

@@ -3,6 +3,7 @@ import { ImageResponse } from '@vercel/og'
 
 import { siteConfig } from '@/config/site'
 import { ogImageSchema } from '@/lib/validations/og'
+import { IconKey, Icons } from '@/components/Icons'
 
 export const runtime: ServerRuntime = 'edge'
 const IMAGE_WIDTH = 1200
@@ -17,8 +18,9 @@ export function GET(req: Request) {
     const parsedValues = ogImageSchema.parse(
       Object.fromEntries(url.searchParams),
     )
-    const { mode, title, description, location } = parsedValues
+    const { mode, title, description, location, icon } = parsedValues
     const paint = mode === 'dark' ? '#fff' : '#000'
+    const Icon = Icons[icon as IconKey]
 
     // TODO needs some design work
     return new ImageResponse(
@@ -35,11 +37,18 @@ export function GET(req: Request) {
         >
           <div tw="flex w-1/3 justify-end pb-12 mr-12">
             <div tw="flex flex-col items-center">
-              <img
-                src={avatarUrl}
-                tw="w-64 h-64 rounded-full shadow-2xl mt-8"
-                style={{ objectPosition: 'center', objectFit: 'cover' }}
-              />
+              {icon ? (
+                <Icon
+                  tw="w-64 h-64 mt-8"
+                  style={{ objectPosition: 'center', objectFit: 'cover' }}
+                />
+              ) : (
+                <img
+                  src={avatarUrl}
+                  tw="w-64 h-64 rounded-full shadow-2xl mt-8"
+                  style={{ objectPosition: 'center', objectFit: 'cover' }}
+                />
+              )}
             </div>
           </div>
           <div tw="flex w-2/3 flex-col">
@@ -64,9 +73,7 @@ export function GET(req: Request) {
               </div>
             ) : (
               <div tw="flex flex-wrap mt-8">
-                {location && (
-                  <div tw="flex mb-2 mr-4">📍 {location}</div>
-                )}
+                {location && <div tw="flex mb-2 mr-4">📍 {location}</div>}
               </div>
             )}
           </div>

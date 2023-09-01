@@ -38,13 +38,17 @@ export const metadata: Metadata = {
     title: siteConfig.meta.name,
     description: siteConfig.meta.description,
     siteName: siteConfig.meta.name,
-    images: [`${env.NEXT_PUBLIC_APP_URL}api/og?location="Made+in+California."`],
+    images: [
+      `${env.NEXT_PUBLIC_APP_URL}/api/og?location=Made+in+California.&mode=light`,
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.meta.name,
     description: siteConfig.meta.description,
-    images: [`${env.NEXT_PUBLIC_APP_URL}api/og?location="Made+in+California."`],
+    images: [
+      `${env.NEXT_PUBLIC_APP_URL}/api/og?location=Made+in+California.&mode=light`,
+    ],
     site: '@danstroot',
     creator: '@danstroot',
   },

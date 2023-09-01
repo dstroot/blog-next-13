@@ -31,9 +31,6 @@ export async function generateMetadata({
   const ogImgParams = '?auto=format&fit=crop&w=1200&h=630'
   const ogImgUrl = post.ogImage.url + ogImgParams
 
-  //   const twitterImgParams = '?auto=format&fit=crop&w=1200&h=630'
-  //   const twitterImgUrl = post.ogImage.url + twitterImgParams
-
   return {
     title: post.title,
     description: post.excerpt,

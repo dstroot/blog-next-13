@@ -1,8 +1,8 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { allPages } from 'contentlayer/generated'
+import { useTheme } from 'next-themes'
 
-import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { Mdx } from '@/components/MDXComponents/MDX'
@@ -33,11 +33,11 @@ export async function generateMetadata({
   }
 
   const url = absoluteUrl('')
+  const { resolvedTheme } = useTheme()
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', page.title)
-  //   ogUrl.searchParams.set('description', page.description || '')
-  ogUrl.searchParams.set('mode', 'light')
+  ogUrl.searchParams.set('mode', resolvedTheme || 'light')
 
   return {
     title: page.title,

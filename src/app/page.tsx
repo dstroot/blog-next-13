@@ -6,6 +6,8 @@ import { Intro } from '@/components/Intro'
 import { MoreStories } from '@/components/MoreStories'
 import { HeroPost } from '@/components/posts/HeroPost'
 
+// NOTE: meta comes from layout
+
 export default function Home() {
   let posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
