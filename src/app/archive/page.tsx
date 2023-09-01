@@ -7,14 +7,14 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
 export const generateMetadata = () => {
-  const url = absoluteUrl('/')
+  const url = absoluteUrl('')
   const page = {
     title: 'Archive',
     description: "All Dan Stroot's blog posts in one place.",
     slug: 'archive',
   }
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const ogUrl = new URL(`${url}api/og`)
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('description', page.description)
   ogUrl.searchParams.set('mode', 'light')
