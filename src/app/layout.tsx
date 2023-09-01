@@ -6,55 +6,59 @@ import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
+import { absoluteUrl } from '@/lib/utils'
 import { Hotkeys } from '@/components/Hotkeys'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(env.NEXT_PUBLIC_IMGIX_URL),
-  title: {
-    default: `${siteConfig.meta.name}`,
-    template: `${siteConfig.meta.name} · %s`,
-  },
-  description: siteConfig.meta.description,
-  keywords: siteConfig.meta.keywords,
-  authors: [
-    {
-      name: 'Dan Stroot',
-      url: 'https://github.com/dstroot',
+export async function generateMetadata(): Promise<Metadata> {
+  const url = absoluteUrl('')
+  const ogUrl = new URL(`${url}/api/og`)
+  ogUrl.searchParams.set('location', siteConfig.meta.location)
+  ogUrl.searchParams.set('mode', 'light')
+
+  return {
+    metadataBase: new URL(env.NEXT_PUBLIC_IMGIX_URL),
+    title: {
+      default: `${siteConfig.meta.name}`,
+      template: `${siteConfig.meta.name} · %s`,
     },
-  ],
-  creator: 'Dan Stroot',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: env.NEXT_PUBLIC_APP_URL,
-    title: siteConfig.meta.name,
     description: siteConfig.meta.description,
-    siteName: siteConfig.meta.name,
-    images: [
-      `${env.NEXT_PUBLIC_APP_URL}/api/og?location=Made+in+California.&mode=light`,
+    keywords: siteConfig.meta.keywords,
+    authors: [
+      {
+        name: 'Dan Stroot',
+        url: 'https://github.com/dstroot',
+      },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.meta.name,
-    description: siteConfig.meta.description,
-    images: [
-      `${env.NEXT_PUBLIC_APP_URL}/api/og?location=Made+in+California.&mode=light`,
+    creator: 'Dan Stroot',
+    themeColor: [
+      { media: '(prefers-color-scheme: light)', color: 'white' },
+      { media: '(prefers-color-scheme: dark)', color: 'black' },
     ],
-    site: '@danstroot',
-    creator: '@danstroot',
-  },
-  icons: {
-    icon: '/img/favicon.png',
-  },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: env.NEXT_PUBLIC_APP_URL,
+      title: siteConfig.meta.name,
+      description: siteConfig.meta.description,
+      siteName: siteConfig.meta.name,
+      images: [ogUrl.toString()],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: siteConfig.meta.name,
+      description: siteConfig.meta.description,
+      images: [ogUrl.toString()],
+      site: '@danstroot',
+      creator: '@danstroot',
+    },
+    icons: {
+      icon: '/img/favicon.png',
+    },
+  }
 }
 
 export default function RootLayout({

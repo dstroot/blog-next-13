@@ -1,3 +1,5 @@
+import { IconKey } from '@/components/Icons'
+
 export type SiteConfig = typeof siteConfig
 
 type NavItem = {
@@ -6,7 +8,7 @@ type NavItem = {
   disabled?: boolean
   external?: boolean
   new: boolean
-  //   icon?: IconKey
+  icon?: IconKey
   description?: string
 }
 
@@ -22,9 +24,11 @@ type FooterNavItem = {
 export const siteConfig = {
   meta: {
     lang: 'en',
+    location: 'Crafted with ♥️ in California.',
     name: 'Dan Stroot · Blog',
     tagline: 'I love building things',
-    description: 'Dan Stroot · The most obscure blog in the world.',
+    description:
+      'I love building things. Made in California. Family man, technologist and Hacker News aficionado. Eternally curious.',
     keywords: ['CIO Blog', 'Code Snippets'],
     themeColor: '##F5E1E6',
     backgroundColor: '#F5E1E6',

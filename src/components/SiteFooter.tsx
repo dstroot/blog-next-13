@@ -26,8 +26,7 @@ export const SiteFooter = () => {
             />
           </div>
           <div className="flex-1 text-center text-xl md:mr-16 md:text-left md:text-2xl">
-            I love building things. Family man, technologist and Hacker News
-            aficionado. Eternally curious.
+            {siteConfig.meta.description}
           </div>
 
           {/*
@@ -46,7 +45,7 @@ export const SiteFooter = () => {
         <div className="flex flex-col items-center justify-between md:flex-row md:items-end">
           <div className="order-2 flex items-center text-xs tracking-wide dark:text-gray-400 md:order-1">
             <span className="hidden md:inline">
-              Crafted with ♥️ in California.&nbsp;
+              {siteConfig.meta.location}&nbsp;
             </span>
             &copy;&nbsp;
             {year.getFullYear()}
