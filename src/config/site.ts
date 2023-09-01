@@ -22,7 +22,7 @@ type FooterNavItem = {
 export const siteConfig = {
   meta: {
     lang: 'en',
-    name: 'Dan Stroot',
+    name: 'Dan Stroot · Blog',
     tagline: 'I love building things',
     description: 'Dan Stroot · The most obscure blog in the world.',
     keywords: ['CIO Blog', 'Code Snippets'],

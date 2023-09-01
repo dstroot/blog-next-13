@@ -15,7 +15,7 @@ import { TailwindIndicator } from '@/components/TailwindIndicator'
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_IMGIX_URL),
   title: {
-    default: `${siteConfig.meta.name} · Blog`,
+    default: `${siteConfig.meta.name}`,
     template: `${siteConfig.meta.name} · %s`,
   },
   description: siteConfig.meta.description,

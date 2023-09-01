@@ -11,13 +11,12 @@ export const generateMetadata = () => {
   const page = {
     title: 'Archive',
     description: "All Dan Stroot's blog posts in one place.",
-    type: 'Page', // TODO is this right?
     slug: 'archive',
   }
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', page.title)
-  ogUrl.searchParams.set('type', page.type)
+  ogUrl.searchParams.set('description', page.description)
   ogUrl.searchParams.set('mode', 'light')
 
   return {

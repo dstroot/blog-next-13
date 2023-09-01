@@ -14,13 +14,12 @@ export const generateMetadata = () => {
   const page = {
     title: 'Snippets',
     description: 'Short solutions to discrete problems.',
-    type: 'Page', // TODO is this right?
     slug: 'snippets',
   }
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set('title', page.title)
-  ogUrl.searchParams.set('type', page.type)
+  ogUrl.searchParams.set('description', page.description)
   ogUrl.searchParams.set('mode', 'light')
 
   return {
