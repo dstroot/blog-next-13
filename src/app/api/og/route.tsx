@@ -59,7 +59,7 @@ export function GET(req: Request) {
               </div>
             )}
             {description ? (
-              <div tw="flex flex-wrap mt-5 text-3xl text-zinc-400 font-normal tracking-tight leading-tight">
+              <div tw="flex flex-wrap max-w-[650px] mt-5 text-3xl text-zinc-500 font-normal tracking-tight leading-tight">
                 {description}
               </div>
             ) : (
