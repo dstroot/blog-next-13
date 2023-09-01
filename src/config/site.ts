@@ -19,24 +19,13 @@ type FooterNavItem = {
   }[]
 }
 
-// TODO: implement OG API Route
 export const siteConfig = {
   meta: {
     lang: 'en',
     name: 'Dan Stroot',
     tagline: 'I love building things',
     description: 'Dan Stroot · The most obscure blog in the world.',
-    keywords: [
-      'Next.js',
-      'React',
-      'Tailwind CSS',
-      'Server Components',
-      'Server Actions',
-      'Skateshop',
-      'Skateboard',
-      'Skateboarding',
-      'Kickflip',
-    ],
+    keywords: ['CIO Blog', 'Code Snippets'],
     themeColor: '##F5E1E6',
     backgroundColor: '#F5E1E6',
     og: {
