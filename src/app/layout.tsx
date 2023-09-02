@@ -77,7 +77,7 @@ export default function RootLayout({
           <Analytics />
         </Suspense> */}
         <Providers>
-          {/* <SiteHeader /> */}
+          <SiteHeader />
           {children}
           {/* <SiteFooter /> */}
           <TailwindIndicator />
