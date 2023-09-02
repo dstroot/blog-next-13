@@ -37,7 +37,10 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
             <Link
               aria-label="Home"
               href="/"
-              //   className="mt-8 flex items-center"
+              className={cn(
+                'text-foreground/70 transition-colors hover:text-foreground',
+                pathname === '/' && 'text-foreground',
+              )}
               onClick={() => setIsOpen(false)}
             >
               <span className="text-2xl">Home</span>
