@@ -64,7 +64,7 @@ export const PostPreview = ({
         <Link href={`/posts/${slug}`} className="hover:underline">
           <Balancer>{title}</Balancer>
         </Link>
-      </h3>
+      </h3>*/}
       <div className="mb-4">
         <Avatar
           name={author.name}
@@ -72,7 +72,7 @@ export const PostPreview = ({
           size={50}
           date={date}
         />
-      </div> */}
+      </div>
       <p className="mb-4 leading-relaxed md:text-lg">{excerpt}</p>
       <ReadMore slug={slug} />
     </>
