@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) {
     child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
     style-src 'self' 'nonce-${nonce}' *.googleapis.com https://tagmanager.google.com;
     connect-src 'self' ws://localhost:3000  https://*.algolia.net https://*.algolianet.com;
-  font-src 'self' https://fonts.gstatic.com data: ;
+    font-src 'self' https://fonts.gstatic.com data: ;
     img-src 'self' blob: data:;
     font-src 'self';
     object-src 'none';
@@ -63,13 +63,13 @@ export function middleware(request: NextRequest) {
   //   )
   requestHeaders.set('Permissions-Policy', '')
   /** TODO: use env vars */
-  requestHeaders.set(
-    'Access-Control-Allow-Origin',
-    process.env.NODE_ENV === 'production'
-      ? "'https://next-blog-13.vercel.app/'"
-      : "'http://localhost:3000/'",
-  )
-  requestHeaders.set('Vary', 'Origin')
+//   requestHeaders.set(
+//     'Access-Control-Allow-Origin',
+//     process.env.NODE_ENV === 'production'
+//       ? "'https://next-blog-13.vercel.app/'"
+//       : "'http://localhost:3000/'",
+//   )
+//   requestHeaders.set('Vary', 'Origin')
   requestHeaders.set('Report-To', group)
   /* To opt in to a cross-origin isolated state, you need to send the following
       HTTP headers on the main document:
@@ -78,9 +78,9 @@ export function middleware(request: NextRequest) {
     You can determine whether a web page is in a cross-origin isolated state
     by examining "self.crossOriginIsolated" in the console.
   */
-  requestHeaders.set('Cross-Origin-Embedder-Policy', 'unsafe-none')
-  requestHeaders.set('Cross-Origin-Opener-Policy', 'same-origin')
-  requestHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin')
+//   requestHeaders.set('Cross-Origin-Embedder-Policy', 'unsafe-none')
+//   requestHeaders.set('Cross-Origin-Opener-Policy', 'same-origin')
+//   requestHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin')
 
   return NextResponse.next({
     headers: requestHeaders,
