@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
 
-import { Avatar } from '@/components/Avatar'
+import { Avatar2 } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
 
@@ -56,7 +56,7 @@ export const HeroPost = ({
             </Link>
           </div>
           <div className="mb-4 md:mb-0">
-            <Avatar
+            <Avatar2
               name={author.name}
               picture={author.picture}
               size={65}

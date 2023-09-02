@@ -1,6 +1,8 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import { format, parseISO } from 'date-fns'
+
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 interface AvatarProps {
   name: string
@@ -9,7 +11,7 @@ interface AvatarProps {
   date: string
 }
 
-export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
+export const Avatar2 = ({ name, picture, size, date }: AvatarProps) => {
   const parsedDate = parseISO(date)
 
   return (
@@ -19,8 +21,8 @@ export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
         You can use the class "group" to group behavior
         https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
       */}
-      {/* <div className="group flex items-center space-x-5">
-        <div>
+      <div className="group flex items-center space-x-5">
+        {/* <div>
           <Image
             src={picture}
             alt={name}
@@ -29,7 +31,15 @@ export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
             priority={true}
             className="flex-initial rounded-full"
           />
-        </div>
+        </div> */}
+
+        <Avatar className="h-14 w-14">
+          <AvatarImage
+            src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=112"
+            alt="Dan Stroot"
+          />
+          <AvatarFallback />
+        </Avatar>
         <div className="flex-auto">
           <p className="mb-0 text-xl font-semibold group-hover:underline">
             Dan Stroot
@@ -38,7 +48,7 @@ export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
             {format(parsedDate, 'LLLL d, yyyy')}
           </p>
         </div>
-      </div> */}
+      </div>
     </Link>
   )
 }

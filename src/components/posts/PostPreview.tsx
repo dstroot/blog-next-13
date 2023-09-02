@@ -5,7 +5,7 @@ import { Post } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
-import { Avatar } from '@/components/Avatar'
+import { Avatar2 } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
 
@@ -66,7 +66,7 @@ export const PostPreview = ({
         </Link>
       </div>
       {/** FIXME */}
-      <Avatar
+      <Avatar2
         name={author.name}
         picture={author.picture}
         size={50}

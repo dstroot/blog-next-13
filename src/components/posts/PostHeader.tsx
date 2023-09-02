@@ -1,6 +1,6 @@
 import { Post } from 'contentlayer/generated'
 
-import { Avatar } from '@/components/Avatar'
+import { Avatar2 } from '@/components/Avatar'
 import { MoreStats } from '@/components/MoreStats'
 import { PostImage } from '@/components/posts/PostImage'
 import { PostTitle } from '@/components/posts/PostTitle'
@@ -30,7 +30,7 @@ export const PostHeader = ({
       </div>
       <div className="mx-auto max-w-3xl">
         <div className="mb-6">
-          <Avatar
+          <Avatar2
             name={author.name}
             picture={author.picture}
             size={55}
