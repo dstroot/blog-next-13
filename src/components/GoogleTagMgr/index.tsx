@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { headers } from 'next/headers'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
 
@@ -10,6 +11,7 @@ import { GTM_ID, pageview } from '@/lib/gtm'
 export const GoogleTagMgr = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
+  const nonce = headers().get('x-nonce')
 
   useEffect(() => {
     if (pathname) {
@@ -32,6 +34,7 @@ export const GoogleTagMgr = () => {
         />
       </noscript>
       <Script
+        nonce={nonce || ''}
         id="gtm-script"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
