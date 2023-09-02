@@ -1,4 +1,3 @@
-// import Image from 'next/image'
 import Link from 'next/link'
 import { format, parseISO } from 'date-fns'
 
@@ -22,17 +21,6 @@ export const Avatar2 = ({ name, picture, size, date }: AvatarProps) => {
         https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
       */}
       <div className="group flex items-center space-x-5">
-        {/* <div>
-          <Image
-            src={picture}
-            alt={name}
-            width={size}
-            height={size}
-            priority={true}
-            className="flex-initial rounded-full"
-          />
-        </div> */}
-
         <Avatar className="h-14 w-14">
           <AvatarImage
             src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=112"
