@@ -56,8 +56,9 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
       <h2 className="mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-6xl lg:text-7xl">
         More Stories
       </h2>
-      <div className="grid min-h-screen grid-cols-1 gap-16 md:grid-cols-2 lg:gap-20">
+      {/* <div className="grid min-h-screen grid-cols-1 gap-16 md:grid-cols-2 lg:gap-20">
         {_posts?.map((post, index) => {
+          // if we are at the end include the ref for infinite scrolling
           if (index === _posts.length - 2) {
             return (
               <div key={`${post._id}-${index}`} ref={ref}>
@@ -89,7 +90,7 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
             </div>
           )
         })}
-      </div>
+      </div> */}
       <div className="my-12 text-center text-xl md:text-3xl">
         Wow! You made it to the end!
       </div>
