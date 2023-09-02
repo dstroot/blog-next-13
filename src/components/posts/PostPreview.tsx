@@ -65,12 +65,13 @@ export const PostPreview = ({
           <Balancer>{title}</Balancer>
         </Link>
       </div>
-      <Avatar
+      {/** FIXME */}
+      {/* <Avatar
         name={author.name}
         picture={author.picture}
         size={50}
         date={date}
-      />
+      /> */}
       <p className="my-4 leading-relaxed md:text-lg">{excerpt}</p>
       <ReadMore slug={slug} />
     </>
