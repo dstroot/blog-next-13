@@ -19,21 +19,23 @@ export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
         https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
       */}
       <div className="group flex items-center space-x-5">
-        <Image
-          src={picture}
-          alt={name}
-          width={size}
-          height={size}
-          priority={true}
-          className="flex-initial rounded-full"
-        />
+        {/* <div>
+          <Image
+            src={picture}
+            alt={name}
+            width={size}
+            height={size}
+            priority={true}
+            className="flex-initial rounded-full"
+          />
+        </div> */}
         <div className="flex-auto">
-          <div className="mb-0 text-xl font-semibold group-hover:underline">
+          <p className="mb-0 text-xl font-semibold group-hover:underline">
             Dan Stroot
-          </div>
-          <div className="text-sm text-muted-foreground">
+          </p>
+          <p className="text-sm text-muted-foreground">
             {format(parsedDate, 'LLLL d, yyyy')}
-          </div>
+          </p>
         </div>
       </div>
     </Link>
