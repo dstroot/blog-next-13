@@ -60,7 +60,7 @@ export const PostPreview = ({
           </div>
         </Link>
       </div>
-      <h3 className="mb-3 text-3xl leading-snug">
+      {/* <h3 className="mb-3 text-3xl leading-snug">
         <Link href={`/posts/${slug}`} className="hover:underline">
           <Balancer>{title}</Balancer>
         </Link>
@@ -74,7 +74,7 @@ export const PostPreview = ({
         />
       </div>
       <p className="mb-4 leading-relaxed md:text-lg">{excerpt}</p>
-      <ReadMore slug={slug} />
+      <ReadMore slug={slug} /> */}
     </>
   )
 }
