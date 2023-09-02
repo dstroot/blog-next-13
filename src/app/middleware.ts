@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// import { env } from '@/config/env.mjs'
-
 // export const config = {
 //   matcher: [
 //     /*
@@ -59,14 +57,11 @@ export function middleware(request: NextRequest) {
   requestHeaders.set('X-Frame-Options', 'SAMEORIGIN')
   requestHeaders.set('X-Content-Type-Options', 'nosniff')
   requestHeaders.set('X-DNS-Prefetch-Control', 'on')
-  requestHeaders.set(
-    'Strict-Transport-Security',
-    'max-age=31536000; includeSubDomains; preload',
-  )
-  requestHeaders.set(
-    'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=()',
-  )
+  //   requestHeaders.set(
+  //     'Strict-Transport-Security',
+  //     'max-age=31536000; includeSubDomains; preload',
+  //   )
+  requestHeaders.set('Permissions-Policy', '')
   /** TODO: use env vars */
   requestHeaders.set(
     'Access-Control-Allow-Origin',
@@ -95,24 +90,23 @@ export function middleware(request: NextRequest) {
   })
 }
 
-const ContentSecurityPolicy = `
-  script-src ${
-    process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-eval' 'unsafe-inline'"
-      : "'self' 'unsafe-eval' 'unsafe-inline'"
-  } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com https://umami-production-3f4a.up.railway.app;
+// const ContentSecurityPolicy = `
+//   script-src ${
+//     process.env.NODE_ENV === 'production'
+//       ? "'self' 'unsafe-eval' 'unsafe-inline'"
+//       : "'self' 'unsafe-eval' 'unsafe-inline'"
+//   } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com https://umami-production-3f4a.up.railway.app;
 
-  child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
+//   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
 
-  style-src ${
-    process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-inline' 'report-sample'"
-      : "'self' 'unsafe-inline'"
-  } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
+//   style-src ${
+//     process.env.NODE_ENV === 'production'
+//       ? "'self' 'unsafe-inline' 'report-sample'"
+//       : "'self' 'unsafe-inline'"
+//   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
 
-  img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
+//   img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
 
-  connect-src 'self' ws://localhost:3000 https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com https://umami-production-3f4a.up.railway.app https://vercel-vitals.axiom.co;
-  font-src 'self' ht
-tps://fonts.gstatic.com data: ;
-`.replace(/\n/g, '')
+//   connect-src 'self' ws://localhost:3000 https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com https://umami-production-3f4a.up.railway.app https://vercel-vitals.axiom.co;
+//   font-src 'self' https://fonts.gstatic.com data: ;
+// `.replace(/\n/g, '')
