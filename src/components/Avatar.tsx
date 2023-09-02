@@ -28,12 +28,12 @@ export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
             className="flex-initial rounded-full"
           />
           <div className="flex-auto">
-            <p className="mb-0 text-xl font-semibold group-hover:underline">
+            <div className="mb-0 text-xl font-semibold group-hover:underline">
               Dan Stroot
-            </p>
-            <p className="text-sm text-muted-foreground">
+            </div>
+            <div className="text-sm text-muted-foreground">
               <DateFormatter dateString={date} />
-            </p>
+            </div>
           </div>
         </div>
       </div>
