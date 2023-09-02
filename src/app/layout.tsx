@@ -74,7 +74,7 @@ export default function RootLayout({
         <Hotkeys />
         <Suspense>
           <GoogleTagMgr />
-          <Analytics />
+          {/* <Analytics /> */}
         </Suspense>
         <Providers>
           <SiteHeader />
