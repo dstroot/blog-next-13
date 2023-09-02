@@ -14,6 +14,7 @@ export const Avatar = ({ name, picture, size, date }: AvatarProps) => {
 
   return (
     <Link href="/about" aria-label="About">
+      {/** FIXME */}
       {/*
         You can use the class "group" to group behavior
         https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
