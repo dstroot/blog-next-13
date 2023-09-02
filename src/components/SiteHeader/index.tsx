@@ -22,7 +22,7 @@ export function SiteHeader() {
           </Avatar>
         </Link>
         <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-end">
           <nav className="flex items-center space-x-2">
             <Link
               href="/search"

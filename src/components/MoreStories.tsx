@@ -53,9 +53,9 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
 
   return (
     <section>
-      <h2 className="mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-6xl lg:text-7xl">
+      <h1 className="mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-6xl lg:text-7xl">
         More Stories
-      </h2>
+      </h1>
       <div className="grid min-h-screen grid-cols-1 gap-16 md:grid-cols-2 lg:gap-20">
         {_posts?.map((post, index) => {
           // if we are at the end include the ref for infinite scrolling

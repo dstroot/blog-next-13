@@ -21,7 +21,7 @@ export function ThemeToggle() {
   }, [])
 
   // if not mounted return a placeholder to avoid CLS
-  if (!mounted) return <div className="h-6 w-6"></div>
+  if (!mounted) return <div className="h-8 w-8"> </div>
 
   return (
     <>
@@ -31,7 +31,7 @@ export function ThemeToggle() {
             <Button
               variant="ghost"
               size="sm"
-              className="h-8 w-8 px-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="h-8 w-8 p-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
               {resolvedTheme === 'light' ? (
                 <Icons.sun className="h-6 w-6" />
