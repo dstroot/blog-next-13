@@ -32,18 +32,16 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="pl-20">
-        <div className="mt-8">
-          <Link
-            aria-label="Home"
-            href="/"
-            className="flex items-center"
-            onClick={() => setIsOpen(false)}
-          >
-            <span className="text-2xl">Home</span>
-          </Link>
-        </div>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10">
           <div className="flex flex-col space-y-4 text-2xl">
+            <Link
+              aria-label="Home"
+              href="/"
+              //   className="mt-8 flex items-center"
+              onClick={() => setIsOpen(false)}
+            >
+              <span className="text-2xl">Home</span>
+            </Link>
             {mainNavItems.map((item, index) => (
               <MobileLink
                 key={index}

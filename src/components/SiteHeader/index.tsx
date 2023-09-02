@@ -12,7 +12,6 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur">
       <Container className="flex h-12 items-center">
-        {/* <div className="container flex h-12 items-center"> */}
         <Link aria-label="Home" href="/">
           <Avatar className="mr-6">
             <AvatarImage
@@ -27,16 +26,15 @@ export function SiteHeader() {
           <nav className="flex items-center space-x-2">
             <Link
               href="/search"
+              aria-label="Search"
               className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring"
             >
               <Icons.search className="h-6 w-6" />
-              <span className="sr-only">Search</span>
             </Link>
             <ThemeToggle />
             <MobileNav mainNavItems={siteConfig.mainNav} />
           </nav>
         </div>
-        {/* </div> */}
       </Container>
     </header>
   )
