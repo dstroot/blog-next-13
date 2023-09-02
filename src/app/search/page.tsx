@@ -8,14 +8,14 @@ NOTE: OG image is created by the og api route, there is no real
       image associated with the search route. So we generate one.
 */
 export const generateMetadata = () => {
-  const url = absoluteUrl('')
   const page = {
     title: 'Search',
     description: "Search all Dan Stroot's blog posts... fast.",
     slug: 'search',
   }
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const url = absoluteUrl('/api/og')
+  const ogUrl = new URL(url)
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('mode', 'light')
 

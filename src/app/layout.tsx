@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
+import { GoogleTagMgr } from '@/components/GoogleTagMgr'
 import { Hotkeys } from '@/components/Hotkeys'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
@@ -14,8 +15,8 @@ import { SiteHeader } from '@/components/SiteHeader'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const url = absoluteUrl('')
-  const ogUrl = new URL(`${url}/api/og`)
+  const url = absoluteUrl('/api/og')
+  const ogUrl = new URL(url)
   ogUrl.searchParams.set('location', siteConfig.meta.location)
   ogUrl.searchParams.set('mode', 'light')
 
@@ -67,13 +68,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    // add scroll padding for internal page links.
-    // TODO add google tag manager
+    // scroll padding necessary for internal page links to leave room for navbar
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
-      <body className="grid min-h-screen grid-rows-[auto_1fr_auto]">
+      <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
         <Suspense>
-          {/* <GoogleTagMgr /> */}
+          <GoogleTagMgr />
           <Analytics />
         </Suspense>
         <Providers>

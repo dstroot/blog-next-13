@@ -3,10 +3,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-// import { Callout } from '@/components/mdx/callout'
 import { CodeBlock } from '@/components/MDXComponents/CodeBlock2'
-
-// import { MdxCard } from '@/components/mdx/mdx-card'
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -20,6 +17,7 @@ type AlertTitleProps = React.ComponentProps<typeof AlertTitle>
 type AlertDescriptionProps = React.ComponentProps<typeof AlertDescription>
 type AspectRatioProps = React.ComponentProps<typeof AspectRatio>
 
+// add any mdx components you need here
 const components = {
   pre: CodeBlock,
   //   Card: MdxCard,
@@ -34,7 +32,7 @@ export function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code)
 
   return (
-    <div className="prose prose-lg prose-zinc max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
+    <div className="converted-html">
       <Component components={components} />
     </div>
   )

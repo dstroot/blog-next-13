@@ -11,14 +11,14 @@ NOTE: OG image is created by the og api route, there is no real
       image associated with the archive route. So we generate one.
 */
 export const generateMetadata = () => {
-  const url = absoluteUrl('')
   const page = {
     title: 'Archive',
     description: "All Dan Stroot's blog posts in one place.",
     slug: 'archive',
   }
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const url = absoluteUrl('/api/og')
+  const ogUrl = new URL(url)
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('mode', 'light')
 

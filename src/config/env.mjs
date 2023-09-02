@@ -38,6 +38,7 @@ export const env = createEnv({
 
     // Public URL
     NEXT_PUBLIC_APP_URL: z.string(),
+    NEXT_PUBLIC_VERCEL_ENV: z.enum(['production', 'preview', 'development']),
 
     // Github
     NEXT_PUBLIC_GITHUB_REPO: z.string(),
@@ -55,6 +56,7 @@ export const env = createEnv({
   experimental__runtimeEnv: {
     NEXT_PUBLIC_IMGIX_URL: process.env.NEXT_PUBLIC_IMGIX_URL,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
+    NEXT_PUBLIC_VERCEL_ENV: process.env.NEXT_PUBLIC_VERCEL_ENV,
     NEXT_PUBLIC_GITHUB_REPO: process.env.NEXT_PUBLIC_GITHUB_REPO,
     NEXT_PUBLIC_ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY:

@@ -28,6 +28,7 @@ export async function generateMetadata({
     return {}
   }
 
+  // setup og image url
   const ogImgParams = '?auto=format&fit=crop&w=1200&h=630'
   const ogImgUrl = post.ogImage.url + ogImgParams
 
@@ -85,8 +86,8 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           slug={post.slugAsParams}
           stats={post.stats}
         />
-        <div className="prose-lg mx-auto max-w-3xl">
-          <div className="prose prose-zinc mb-8 max-w-none text-ellipsis break-words dark:prose-invert md:prose-lg prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
+        <div className="mx-auto max-w-3xl">
+          <div className="converted-html">
             <Content components={components} />
           </div>
           <Sharable slug={post.slug} title={post.title} />

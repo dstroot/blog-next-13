@@ -53,9 +53,6 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground antialiased;
-  }
 }
 
 /**
@@ -74,7 +71,7 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 /**
- *  Colors
+ *  Colors for code block
  */
 
 .mac-cls {
@@ -90,14 +87,6 @@ input[type='search']::-webkit-search-cancel-button {
 }
 
 /**
- * Fixes the bottom of the 'Terminal' CodeBlock component
- */
-
-/* pre {
-  @apply mb-0 overflow-x-auto;
-} */
-
-/**
  * rehype-code-titles
  */
 
@@ -107,4 +96,16 @@ input[type='search']::-webkit-search-cancel-button {
 
 .rehype-code-title + pre {
   @apply mb-0 mt-0 overflow-x-auto rounded-t-none;
+}
+
+/**
+ * Prose
+ */
+
+.converted-html {
+  @apply prose prose-lg mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500;
+}
+
+.footnotes {
+  @apply text-sm;
 }

@@ -1,4 +1,5 @@
 import { type Metadata } from 'next'
+import NextImage, { ImageProps } from 'next/image'
 import { notFound } from 'next/navigation'
 import { allSnippets } from 'contentlayer/generated'
 import format from 'date-fns/format'
@@ -30,9 +31,8 @@ export async function generateMetadata({
     return {}
   }
 
-  const url = absoluteUrl('')
-
-  const ogUrl = new URL(`${url}/api/og`)
+  const url = absoluteUrl('/api/og')
+  const ogUrl = new URL(url)
   ogUrl.searchParams.set('title', snippet.title)
   ogUrl.searchParams.set('mode', 'light')
   ogUrl.searchParams.set('icon', snippet.icon)
@@ -74,14 +74,17 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
   // Parse the MDX file via the useMDXComponent hook.
   const Content = useMDXComponent(snippet.body.code)
+  const components = {
+    ...MDXComponents,
+    Image: (props: ImageProps) => <NextImage {...props} />,
+  }
 
-  //TODO: change "/data/_posts" to "/content/posts"
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/snippts/${snippet.slugAsParams}.mdx`
   const Icon = Icons[snippet.icon as IconKey]
 
   return (
-    <>
-      <Container>
+    <Container>
+      <div className="mx-auto max-w-3xl">
         <div className="mb-8 flex flex-col items-center justify-between md:flex-row">
           <h2 className="order-2 my-3 text-2xl font-black leading-tight tracking-tighter md:order-1 md:my-0 md:text-4xl md:leading-none lg:text-5xl">
             {snippet.title}
@@ -109,14 +112,16 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
         <hr className="my-6" />
 
-        <article className="prose prose-lg prose-zinc mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500">
-          <Content components={{ ...MDXComponents }} />
+        <article>
+          <div className="converted-html">
+            <Content components={components} />
+          </div>
           <Sharable slug={snippet.slug} title={snippet.title} />
         </article>
         <GitHubLink path={github} />
-      </Container>
+      </div>
       <SendPageView slug={snippet.slugAsParams} />
-    </>
+    </Container>
   )
 }
 

@@ -13,14 +13,14 @@ NOTE: OG image is created by the og api route, there is no real
       image associated with the snippets route. So we generate one.
 */
 export const generateMetadata = () => {
-  const url = absoluteUrl('')
   const page = {
     title: 'Snippets',
     description: 'Short solutions to discrete problems.',
     slug: 'snippets',
   }
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const url = absoluteUrl('/api/og')
+  const ogUrl = new URL(url)
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('mode', 'light')
 
