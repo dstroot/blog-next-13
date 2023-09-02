@@ -21,12 +21,14 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(request: NextRequest) {
   const nonce = crypto.randomUUID()
+
   const group = `
   {
     "group": "csp-endpoint",
     "max_age": 30,
     "endpoints": [{ "url": "/api/csp" }]
   }`.replace(/[\n\s]/g, '')
+
   const cspHeader = `
     base-uri 'self';
     default-src 'self';
@@ -43,9 +45,10 @@ export function middleware(request: NextRequest) {
     form-action 'self';
     frame-src 'self' *.youtube-nocookie.com *.twitter.com;
     frame-ancestors 'self';
-    block-all-mixed-content;
-    ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
-`
+    block-all-mixed-content;`
+  // ${
+  //   process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''
+  // }`
 
   const requestHeaders = new Headers()
   requestHeaders.set('x-nonce', nonce)
@@ -53,24 +56,24 @@ export function middleware(request: NextRequest) {
     'Content-Security-Policy',
     cspHeader.replace(/\s{2,}/g, ' ').trim(),
   )
-  requestHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin')
-  requestHeaders.set('X-Frame-Options', 'SAMEORIGIN')
-  requestHeaders.set('X-Content-Type-Options', 'nosniff')
-  requestHeaders.set('X-DNS-Prefetch-Control', 'on')
+  //   requestHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+  //   requestHeaders.set('X-Frame-Options', 'SAMEORIGIN')
+  //   requestHeaders.set('X-Content-Type-Options', 'nosniff')
+  //   requestHeaders.set('X-DNS-Prefetch-Control', 'on')
   //   requestHeaders.set(
   //     'Strict-Transport-Security',
   //     'max-age=31536000; includeSubDomains; preload',
   //   )
-  requestHeaders.set('Permissions-Policy', '')
+  //   requestHeaders.set('Permissions-Policy', '')
   /** TODO: use env vars */
-//   requestHeaders.set(
-//     'Access-Control-Allow-Origin',
-//     process.env.NODE_ENV === 'production'
-//       ? "'https://next-blog-13.vercel.app/'"
-//       : "'http://localhost:3000/'",
-//   )
-//   requestHeaders.set('Vary', 'Origin')
-  requestHeaders.set('Report-To', group)
+  //   requestHeaders.set(
+  //     'Access-Control-Allow-Origin',
+  //     process.env.NODE_ENV === 'production'
+  //       ? "'https://next-blog-13.vercel.app/'"
+  //       : "'http://localhost:3000/'",
+  //   )
+  //   requestHeaders.set('Vary', 'Origin')
+  //   requestHeaders.set('Report-To', group)
   /* To opt in to a cross-origin isolated state, you need to send the following
       HTTP headers on the main document:
          Cross-Origin-Embedder-Policy: require-corp
@@ -78,9 +81,9 @@ export function middleware(request: NextRequest) {
     You can determine whether a web page is in a cross-origin isolated state
     by examining "self.crossOriginIsolated" in the console.
   */
-//   requestHeaders.set('Cross-Origin-Embedder-Policy', 'unsafe-none')
-//   requestHeaders.set('Cross-Origin-Opener-Policy', 'same-origin')
-//   requestHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin')
+  //   requestHeaders.set('Cross-Origin-Embedder-Policy', 'unsafe-none')
+  //   requestHeaders.set('Cross-Origin-Opener-Policy', 'same-origin')
+  //   requestHeaders.set('Cross-Origin-Resource-Policy', 'cross-origin')
 
   return NextResponse.next({
     headers: requestHeaders,
