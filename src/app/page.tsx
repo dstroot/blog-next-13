@@ -34,7 +34,7 @@ export default function Home() {
         excerpt={heroPost.excerpt}
         stats={heroPost.stats}
       />
-      <MoreStories posts={morePosts} />
+      {/* <MoreStories posts={morePosts} /> */}
     </Container>
   )
 }
