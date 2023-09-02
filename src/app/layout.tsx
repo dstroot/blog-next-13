@@ -72,14 +72,14 @@ export default function RootLayout({
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
-        <Suspense>
+        {/* <Suspense>
           <GoogleTagMgr />
           <Analytics />
-        </Suspense>
+        </Suspense> */}
         <Providers>
           {/* <SiteHeader /> */}
           {children}
-          <SiteFooter />
+          {/* <SiteFooter /> */}
           <TailwindIndicator />
         </Providers>
       </body>
