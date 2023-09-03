@@ -66,7 +66,7 @@ export const PostPreview = ({
       </div>
       {/** FIXME */}
       <Byline name={author.name} picture={author.picture} date={date} />
-      <p className="my-4 leading-relaxed md:text-lg">{excerpt}</p>
+      <div className="my-4 leading-relaxed md:text-lg">{excerpt}</div>
       <ReadMore slug={slug} />
     </>
   )

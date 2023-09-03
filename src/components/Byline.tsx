@@ -31,12 +31,12 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
           />
         </div>
         <div className="flex-auto">
-          <p className="mb-0 text-xl font-semibold group-hover:underline">
+          <div className="mb-0 text-xl font-semibold group-hover:underline">
             Dan Stroot
-          </p>
-          <p className="text-sm text-muted-foreground">
+          </div>
+          <div className="text-sm text-muted-foreground">
             {format(parsedDate, 'LLLL d, yyyy')}
-          </p>
+          </div>
         </div>
       </div>
     </Link>
