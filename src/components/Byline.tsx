@@ -22,7 +22,7 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
       <div className="group flex items-center space-x-5">
         <Avatar className="h-14 w-14">
           <AvatarImage
-            src={picture} // "https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=112"
+            src={`https://danstroot.imgix.net${picture}?auto=format&fit=max&w=112`}
             alt={name}
           />
           <AvatarFallback />
