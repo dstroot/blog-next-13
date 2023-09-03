@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { format, parseISO } from 'date-fns'
 
@@ -19,13 +20,16 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
         https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
       */}
       <div className="flex items-center space-x-4">
-        <Avatar className="h-12 w-12">
-          <AvatarImage
-            src={`https://danstroot.imgix.net${picture}?auto=format&fit=max&w=112`}
+        <div className="relative h-12 w-12">
+          <Image
+            sizes="10vw"
+            priority={false}
+            className="overflow-hidden rounded-full object-cover duration-300 ease-in-out group-hover:opacity-[85%]"
+            src={picture}
             alt={name}
+            fill
           />
-          <AvatarFallback />
-        </Avatar>
+        </div>
         <div className="flex-auto">
           <p className="mb-0 text-xl font-semibold group-hover:underline">
             Dan Stroot

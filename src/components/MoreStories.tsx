@@ -61,9 +61,8 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
           // if we are at the end include the ref for infinite scrolling
           if (index === _posts.length - 2) {
             return (
-              <div key={`${post._id}-${index}`} ref={ref}>
+              <div key={`${post._id}`} ref={ref}>
                 <PostPreview
-                  key={post.slug}
                   title={post.title}
                   coverImage={post.coverImage}
                   date={post.date}
@@ -76,9 +75,8 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
             )
           }
           return (
-            <div key={`${post._id}-${index}`}>
+            <div key={`${post._id}`}>
               <PostPreview
-                key={post.slug}
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}

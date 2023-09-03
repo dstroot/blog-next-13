@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
@@ -12,14 +13,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur">
       <Container className="flex h-12 items-center">
-        <Link aria-label="Home" href="/">
-          <Avatar className="mr-6">
-            <AvatarImage
-              src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=80"
-              alt="Dan Stroot"
-            />
-            <AvatarFallback />
-          </Avatar>
+        <Link aria-label="Home" href="/" className="relative mr-2 h-8 w-8">
+          <Image
+            sizes="10vw"
+            priority={true}
+            className="overflow-hidden rounded-full object-cover duration-300 ease-in-out group-hover:opacity-[85%]"
+            src="/assets/blog/authors/dan.jpeg"
+            alt="Dan Stroot"
+            fill
+          />
         </Link>
         <MainNav items={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end">

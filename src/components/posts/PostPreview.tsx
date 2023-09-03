@@ -10,7 +10,6 @@ import { MoreStats } from '@/components/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
 
 interface PostPreviewProps {
-  key: string
   title: string
   coverImage: string
   date: string
