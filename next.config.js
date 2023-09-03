@@ -49,9 +49,9 @@ const ContentSecurityPolicy = `
   frame-ancestors 'self';
   script-src ${
     process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-eval' 'unsafe-inline'"
-      : "'self' 'unsafe-eval' 'unsafe-inline'"
-  } https://gmail.us5.list-manage.com *.google-analytics.com *.googletagmanager.com *.twitter.com https://umami-production-3f4a.up.railway.app;
+      ? "'self' 'unsafe-inline'"
+      : "'self' 'unsafe-inline' 'unsafe-eval'"
+  }  *.google-analytics.com *.googletagmanager.com *.twitter.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
     process.env.NODE_ENV === 'production'

@@ -13,14 +13,13 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
   const parsedDate = parseISO(date)
 
   return (
-    <Link href="/about" aria-label="About">
-      {/** FIXME */}
+    <Link href="/about" aria-label="About" className="group">
       {/*
         You can use the class "group" to group behavior
         https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
       */}
-      <div className="group flex items-center space-x-5">
-        <Avatar className="h-14 w-14">
+      <div className="flex items-center space-x-4">
+        <Avatar className="h-12 w-12">
           <AvatarImage
             src={`https://danstroot.imgix.net${picture}?auto=format&fit=max&w=112`}
             alt={name}
