@@ -5,7 +5,7 @@ import { Post } from 'contentlayer/generated'
 import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
-import { Avatar2 } from '@/components/Avatar'
+import { Byline } from '@/components/Byline'
 import { MoreStats } from '@/components/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
 
@@ -66,12 +66,7 @@ export const PostPreview = ({
         </Link>
       </div>
       {/** FIXME */}
-      {/* <Avatar2
-        name={author.name}
-        picture={author.picture}
-        size={50}
-        date={date}
-      /> */}
+      <Byline name={author.name} picture={author.picture} date={date} />
       <p className="my-4 leading-relaxed md:text-lg">{excerpt}</p>
       <ReadMore slug={slug} />
     </>

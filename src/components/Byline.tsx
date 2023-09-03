@@ -6,11 +6,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 interface AvatarProps {
   name: string
   picture: string
-  size: number
   date: string
 }
 
-export const Avatar2 = ({ name, picture, size, date }: AvatarProps) => {
+export const Byline = ({ name, picture, date }: AvatarProps) => {
   const parsedDate = parseISO(date)
 
   return (
@@ -23,8 +22,8 @@ export const Avatar2 = ({ name, picture, size, date }: AvatarProps) => {
       <div className="group flex items-center space-x-5">
         <Avatar className="h-14 w-14">
           <AvatarImage
-            src="https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=112"
-            alt="Dan Stroot"
+            src={picture} // "https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=112"
+            alt={name}
           />
           <AvatarFallback />
         </Avatar>
