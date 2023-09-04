@@ -18,7 +18,7 @@ Note: I am intentionally ignoring the broad topic of "security" because that alo
 
 ## Table of Contents
 
-<div className="px-2 w-full md:w-2/3 xl:w-1/2">
+<div className="px-2 w-full md:w-2/3 xl:w-1/2 overflow-x-auto">
 
 | No. | Section                                  |
 | --- | ---------------------------------------- |
@@ -42,7 +42,9 @@ Note: I am intentionally ignoring the broad topic of "security" because that alo
 
 This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this:
 
-<div className="text-sm">0.0001100110011001100110011001100110011...</div>
+<div className="overflow-x-auto text-sm">
+  0.0001100110011001100110011001100110011...
+</div>
 
 If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Start with $10.00 USD and divide it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You made a penny disappear into thin air (0.1% of the total value!).
 
@@ -76,11 +78,15 @@ This is where **double entry accounting** comes into play. Double-entry accounti
 
 In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. Thus, every transaction is _balanced_ – it sums to zero. For example, if we sell a $100 widget but haven't been paid yet, we are owed $100, and we have $100 in revenue:
 
+<div class="overflow-x-auto">
+
 | Ledger Account      | Debit       | Credit      |
 | ------------------- | ----------- | ----------- |
 | accounts_receivable | $100.00     | $0          |
 | revenue_general     | $0          | $100.00     |
 | **Balance**         | **$100.00** | **$100.00** |
+
+</div>
 
 To understand this further let's introduce some terms:
 
