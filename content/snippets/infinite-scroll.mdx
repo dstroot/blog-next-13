@@ -2,7 +2,7 @@
 title: Infinite Scroll
 summary: This is a clean, understandable way to implement an infinite scroll in a React/Next application. Cheers!
 date: '2021-12-23'
-published: False
+published: true
 icon: react
 tags:
   - Javascript
@@ -22,7 +22,7 @@ This simple function drives our "infinite scroll". If the visible image in the v
 
 <CodeBlock>
 
-```javascript
+```js:isVisible.js
 const onIsVisible = (index) => {
   if (index === images.length - 1) {
     setPage((page) => page + 1);
@@ -32,87 +32,92 @@ const onIsVisible = (index) => {
 
 </CodeBlock>
 
-<Step number={2} title='When the page changes run the effect and get more photos!' />
+<Step
+  number={2}
+  title="When the page changes run the effect and get more photos!"
+/>
 
 This effect is run each time a page changes (is incremented). It will fetch more photos from the API and concatenate them to our images array.
 
 <CodeBlock>
 
-```javascript
+```javascript:loadMore.js
 useEffect(() => {
   const fetchPhotos = async (page) => {
-    setLoading(true);
+    setLoading(true)
     try {
-      const data = await fetch(`/api/photos?page=${page}`);
-      const morePhotos = await data.json();
+      const data = await fetch(`/api/photos?page=${page}`)
+      const morePhotos = await data.json()
       setImages((photos) => {
-        return photos.concat(morePhotos); // notice concatination for infinite scroll
-      });
+        return photos.concat(morePhotos) // notice concatination for infinite scroll
+      })
     } catch (e) {
-      setError(true);
+      setError(true)
     }
-    setLoading(false);
-  };
-  fetchPhotos(page);
-}, [page]); // if the page changes run the effect
+    setLoading(false)
+  }
+  fetchPhotos(page)
+}, [page]) // if the page changes run the effect
 ```
 
 </CodeBlock>
 
-<Step number={3} title='Map the array of images' />
+<Step number={3} title="Map the array of images" />
 
 This puts it all together. Get some images, and as the user scrolls down, when the next to last image is visible, get more images and concatenate them to our images array. This will cause React to update the DOM with the new images.
 
 <CodeBlock>
 
-```javascript
-import React, { useEffect } from 'react';
-import { ImageContainer } from './components/ImageContainer';
-import './App.css';
+```javascript:example.js
+import React, { useEffect } from 'react'
+
+import { ImageContainer } from './components/ImageContainer'
+
+import './App.css'
 
 function App() {
-  const [loading, setLoading] = React.useState(false);
-  const [images, setImages] = React.useState([]);
-  const [error, setError] = React.useState(false);
-  const [page, setPage] = React.useState(1);
+  const [loading, setLoading] = React.useState(false)
+  const [images, setImages] = React.useState([])
+  const [error, setError] = React.useState(false)
+  const [page, setPage] = React.useState(1)
 
   // This is our "infinite scroll".  If the visible image is the next
   // to last image, then increment the page, which kicks off another API call
   const onIsVisible = (index) => {
     if (index === images.length - 1) {
-      setPage((page) => page + 1);
+      setPage((page) => page + 1)
     }
-  };
+  }
 
   const checkForError = (response) => {
-    if (!response.ok) throw Error(response.statusText);
-    return response;
-  };
+    if (!response.ok) throw Error(response.statusText)
+    return response
+  }
 
   useEffect(() => {
     const fetchPhotos = async (page) => {
-      setLoading(true);
+      setLoading(true)
       try {
-        const result = await fetch(`/.netlify/functions/photos?page=${page}`);
-        const photoResult = await checkForError(result).json();
+        const result = await fetch(`/.netlify/functions/photos?page=${page}`)
+        const photoResult = await checkForError(result).json()
         setImages((photos) => {
-          return photos.concat(photoResult); // notice concatination for infinite scroll
-        });
+          return photos.concat(photoResult) // notice concatination for infinite scroll
+        })
       } catch (e) {
-        setError(true);
+        setError(true)
       }
-      setLoading(false);
-    };
-    fetchPhotos(page);
-  }, [page]); // if "page" changes run effect
+      setLoading(false)
+    }
+    fetchPhotos(page)
+  }, [page]) // if "page" changes run effect
 
   return (
-    <div className='app'>
-      <div className='container'>
+    <div className="app">
+      <div className="container">
         {error && <div>Error occured. Please refresh page and try again.</div>}
         {images.map((res, index) => {
           return (
-            <div key={`${res.id}-${index}`} className='wrapper'>
+            <div key={`${res.id}-${index}`} className="wrapper">
               <ImageContainer
                 src={res.urls.regular}
                 thumb={res.urls.thumb}
@@ -123,77 +128,87 @@ function App() {
                 onIsVisible={() => onIsVisible(index)}
               />
             </div>
-          );
+          )
         })}
         {loading && <div>Loading...</div>}
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 </CodeBlock>
 
 <CodeBlock>
 
-```javascript
-import React from 'react';
-import { Image } from '../Image';
-import useIntersectionObserver from '../../hooks/use-intersection-observer';
-import './image-container.css';
+```javascript:ImageContainer.js
+import React from 'react'
 
-export const ImageContainer = ({ src, thumb, height, width, alt, url, onIsVisible }) => {
-  const ref = React.useRef();
-  const [isVisible, setIsVisible] = React.useState(false);
+import useIntersectionObserver from '../../hooks/use-intersection-observer'
+import { Image } from '../Image'
+
+import './image-container.css'
+
+export const ImageContainer = ({
+  src,
+  thumb,
+  height,
+  width,
+  alt,
+  url,
+  onIsVisible,
+}) => {
+  const ref = React.useRef()
+  const [isVisible, setIsVisible] = React.useState(false)
 
   useIntersectionObserver({
     target: ref,
     onIntersect: ([{ isIntersecting }], observerElement) => {
       if (isIntersecting) {
         if (!isVisible) {
-          onIsVisible();
-          setIsVisible(true);
+          onIsVisible()
+          setIsVisible(true)
         }
-        observerElement.unobserve(ref.current);
+        observerElement.unobserve(ref.current)
       }
     },
-  });
+  })
 
-  const aspectRatio = (height / width) * 100;
+  const aspectRatio = (height / width) * 100
 
   return (
     <a
       href={url}
       ref={ref}
-      rel='noopener noreferrer'
-      target='_BLANK'
-      className='image-container'
+      rel="noopener noreferrer"
+      target="_BLANK"
+      className="image-container"
       style={{ paddingBottom: `${aspectRatio}%` }}
     >
       {isVisible && <Image src={src} thumb={thumb} alt={alt} />}
     </a>
-  );
-};
+  )
+}
 ```
 
 </CodeBlock>
 
 <CodeBlock>
 
-```javascript
-import { useEffect } from 'react';
+```javascript:useIntersectionObserver.js
+import { useEffect } from 'react'
 
 /**
-The Intersection Observer API allows you to configure a callback that is called whenever 
-one element, called the target, intersects either the device viewport or a specified 
-element; for the purpose of this API, this is called the root element or root. 
+The Intersection Observer API allows you to configure a callback that is called whenever
+one element, called the target, intersects either the device viewport or a specified
+element; for the purpose of this API, this is called the root element or root.
 
-rootMargin: Margin around the root. Serves to grow or shrink each side of the root 
-element's bounding box before computing intersections. 
+rootMargin: Margin around the root. Serves to grow or shrink each side of the root
+element's bounding box before computing intersections.
 
-threshold: at what percentage of the target's visibility the observer's callback 
+threshold: at what percentage of the target's visibility the observer's callback
 should be executed
  */
 
@@ -201,30 +216,30 @@ const useIntersectionObserver = ({
   target,
   onIntersect, // callback
   threshold = 0.2, // when 20% visible
-  rootMargin = '0px', // don't adjust viewport margin
+  rootMargin = '0px',
 }) => {
   useEffect(() => {
     if (!target) {
-      return;
+      return
     }
 
     const observer = new IntersectionObserver(onIntersect, {
       rootMargin,
       threshold,
-    });
+    })
 
     // Once you have created the observer, you need to give it a target element to watch
-    const current = target.current;
-    observer.observe(current);
+    const current = target.current
+    observer.observe(current)
 
     // clean up our observer
     return () => {
-      observer.unobserve(current);
-    };
-  });
-};
+      observer.unobserve(current)
+    }
+  })
+}
 
-export default useIntersectionObserver;
+export default useIntersectionObserver
 ```
 
 </CodeBlock>

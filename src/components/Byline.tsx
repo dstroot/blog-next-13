@@ -1,7 +1,9 @@
-import { Suspense } from 'react'
+// import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { format, parseISO } from 'date-fns'
+// import { format, parseISO } from 'date-fns'
+
+import { DateFormatter } from './DateFormatter'
 
 interface AvatarProps {
   name: string
@@ -33,11 +35,12 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
           </div>
           <div className="text-sm text-muted-foreground">
             {/* https://paulie.dev/posts/2022/10/react-hydration-error-425-text-content-does-not-match-server-rendered-html/ */}
-            <time>
+            <DateFormatter dateString={date} formatString="LLLL d, yyyy" />
+            {/* <time>
               <Suspense fallback={null}>
                 {format(parseISO(date), 'LLLL d, yyyy')}
               </Suspense>
-            </time>
+            </time> */}
           </div>
         </div>
       </div>

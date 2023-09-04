@@ -14,19 +14,20 @@ tags:
 
 The Intersection Observer API allows you to configure a callback that is called whenever an element, called the target, intersects either the device viewport or a specified element; for the purpose of this API, this is called the root element or root.
 
+- onIntersect: Callback function
 - rootMargin: Margin around the root. Serves to grow or shrink each side of the root element's bounding box before computing intersections.
 - threshold: at what percentage of the target's visibility the observer's callback should be executed.
 
 <CodeBlock>
 
-```js
+```js:useIntersectionObserver.js
 import { useEffect } from 'react';
 
 const useIntersectionObserver = ({
   target,
-  onIntersect, // callback
-  threshold = 0.2, // when 20% visible
-  rootMargin = '0px', // don't adjust viewport margin
+  onIntersect,
+  threshold = 0.2,
+  rootMargin = '0px',
 }) => {
   useEffect(() => {
     if (!target) {
@@ -50,18 +51,6 @@ const useIntersectionObserver = ({
 };
 
 export default useIntersectionObserver;
-```
-
-</CodeBlock>
-
-<CodeBlock>
-
-```jsx
-<GitGist
-  gistURL={
-    'https://gist.githubusercontent.com/dstroot/94c152da31201f41ee8b550442ddbc0b/raw/3a23e00f7c861fe9d36d9e12289a6904ce2ad15e/useIntersectionObserver.js'
-  }
-/>
 ```
 
 </CodeBlock>

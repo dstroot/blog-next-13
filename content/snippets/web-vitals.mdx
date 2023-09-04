@@ -1,6 +1,6 @@
 ---
 title: 'Web Vitals'
-published: false
+published: true
 date: '2021-10-23'
 summary: 'Web Vitals is an initiative by Google to provide unified
   guidance for quality signals that are essential to delivering a
@@ -36,36 +36,36 @@ Each of the Core Web Vitals metrics represents a distinct facet of the user expe
 
 <CodeBlock>
 
-```js
+```js:exFunc.js
 export const reportWebVitals = (onPerfEntry) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
+      getCLS(onPerfEntry)
+      getFID(onPerfEntry)
+      getFCP(onPerfEntry)
+      getLCP(onPerfEntry)
+      getTTFB(onPerfEntry)
+    })
   }
-};
+}
 ```
 
 </CodeBlock>
 
 <CodeBlock>
 
-```js
-import { reportWebVitals } from './reportWebVitals';
+```js:sendData.js
+import { reportWebVitals } from './reportWebVitals'
 
 function sendToAnalytics(metric) {
-  const body = JSON.stringify(metric);
+  const body = JSON.stringify(metric)
 
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
-    fetch('/analytics', { body, method: 'POST', keepalive: true });
+  ;(navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
+    fetch('/analytics', { body, method: 'POST', keepalive: true })
 }
 
-reportWebVitals(sendToAnalytics);
+reportWebVitals(sendToAnalytics)
 ```
 
 </CodeBlock>

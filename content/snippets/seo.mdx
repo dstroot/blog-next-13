@@ -12,11 +12,13 @@ tags:
 #   - HTML
 ---
 
+> 2023-08-01: This is no longer the preferred way as Nextjs has implemented a full [metadata solution](https://nextjs.org/docs/app/building-your-application/optimizing/metadata).
+
 Use this wrapper _Container_ component in the HOC
 
 <CodeBlock>
 
-```jsx
+```jsx:seo.jsx
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -73,7 +75,7 @@ Usage in a Dynamic route
 
 <CodeBlock>
 
-```jsx
+```jsx:example.jsx
 import { useMemo } from 'react'
 import BlogLayout from '@/layouts/Blog'
 import { getMDXComponent } from 'mdx-bundler/client'
