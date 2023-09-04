@@ -6,8 +6,6 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { SnippetCard } from '@/components/SnippetCard'
 
-import '@/styles/atom-one-dark.css'
-
 /*
 NOTE: OG image is created by the og api route, there is no real
       image associated with the snippets route. So we generate one.

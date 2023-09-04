@@ -2,7 +2,6 @@ import { type Metadata } from 'next'
 import NextImage, { ImageProps } from 'next/image'
 import { notFound } from 'next/navigation'
 import { allSnippets } from 'contentlayer/generated'
-import format from 'date-fns/format'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
@@ -106,7 +105,6 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
               dateString={snippet.date}
               formatString="yyyy-MM-dd"
             />
-            {/* {format(new Date(snippet.date), 'yyyy-MM-dd')} */}
           </p>
           <p className="hidden rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700 md:block">
             Words: {snippet.stats.words}
