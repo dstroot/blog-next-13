@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { format, parseISO } from 'date-fns'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+// import { format, parseISO } from 'date-fns'
 
 interface AvatarProps {
   name: string
@@ -11,7 +10,7 @@ interface AvatarProps {
 }
 
 export const Byline = ({ name, picture, date }: AvatarProps) => {
-  const parsedDate = parseISO(date)
+  //   const parsedDate = parseISO(date)
 
   return (
     <Link href="/about" aria-label="About" className="group">
@@ -35,7 +34,7 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
             Dan Stroot
           </div>
           <div className="text-sm text-muted-foreground">
-            {format(parsedDate, 'LLLL d, yyyy')}
+            {/* {format(parsedDate, 'LLLL d, yyyy')} */}
           </div>
         </div>
       </div>
