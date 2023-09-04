@@ -36,7 +36,7 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
     },
   )
 
-  // create ref
+  // create ref to trigger another page load
   const lastPostRef = useRef<HTMLElement>(null)
   const { ref, entry } = useIntersection({
     root: lastPostRef.current,

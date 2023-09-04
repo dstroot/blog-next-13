@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -48,7 +49,11 @@ export const SiteFooter = () => {
               {siteConfig.meta.location}&nbsp;
             </span>
             &copy;&nbsp;
-            {year.getFullYear()}
+            {/* https://paulie.dev/posts/2022/10/react-hydration-error-425-text-content-does-not-match-server-rendered-html/ */}
+            <time>
+              <Suspense fallback={null}>{new Date().getFullYear()}</Suspense>
+            </time>
+            {/* {year.getFullYear()} */}
             {','}&nbsp;
             <Link className="font-medium" href="/analytics">
               Dan Stroot

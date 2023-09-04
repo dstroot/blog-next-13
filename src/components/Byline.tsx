@@ -1,7 +1,7 @@
+import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-// import { format, parseISO } from 'date-fns'
+import { format, parseISO } from 'date-fns'
 
 interface AvatarProps {
   name: string
@@ -34,6 +34,11 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
             Dan Stroot
           </div>
           <div className="text-sm text-muted-foreground">
+            <time>
+              <Suspense fallback={null}>
+                {format(parseISO(date), 'LLLL d, yyyy')}
+              </Suspense>
+            </time>
             {/* {format(parsedDate, 'LLLL d, yyyy')} */}
           </div>
         </div>
