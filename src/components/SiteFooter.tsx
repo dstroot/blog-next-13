@@ -7,8 +7,6 @@ import { Container } from '@/components/Container'
 import { SocialLinks } from '@/components/SocialLinks'
 
 export const SiteFooter = () => {
-  const year = new Date() // evergreen copyright year
-
   return (
     <footer className="bg-zinc-50 text-muted-foreground dark:bg-zinc-900">
       <Container variant="default" className="my-4">
@@ -53,7 +51,6 @@ export const SiteFooter = () => {
             <time>
               <Suspense fallback={null}>{new Date().getFullYear()}</Suspense>
             </time>
-            {/* {year.getFullYear()} */}
             {','}&nbsp;
             <Link className="font-medium" href="/analytics">
               Dan Stroot

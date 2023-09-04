@@ -10,8 +10,6 @@ interface AvatarProps {
 }
 
 export const Byline = ({ name, picture, date }: AvatarProps) => {
-  //   const parsedDate = parseISO(date)
-
   return (
     <Link href="/about" aria-label="About" className="group">
       {/*
@@ -34,12 +32,12 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
             Dan Stroot
           </div>
           <div className="text-sm text-muted-foreground">
+            {/* https://paulie.dev/posts/2022/10/react-hydration-error-425-text-content-does-not-match-server-rendered-html/ */}
             <time>
               <Suspense fallback={null}>
                 {format(parseISO(date), 'LLLL d, yyyy')}
               </Suspense>
             </time>
-            {/* {format(parsedDate, 'LLLL d, yyyy')} */}
           </div>
         </div>
       </div>

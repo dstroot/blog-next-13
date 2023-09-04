@@ -1,7 +1,14 @@
+import { Suspense } from 'react'
 import { format, parseISO } from 'date-fns'
 
-export const DateFormatter = ({ dateString }: { dateString: string }) => {
-  const date = parseISO(dateString)
+// https://paulie.dev/posts/2022/10/react-hydration-error-425-text-content-does-not-match-server-rendered-html/
 
-  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+export const DateFormatter = ({ dateString }: { dateString: string }) => {
+  return (
+    <time dateTime={dateString}>
+      <Suspense fallback={null}>
+        {format(parseISO(dateString), 'LLLL d, yyyy')}
+      </Suspense>
+    </time>
+  )
 }
