@@ -8,6 +8,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import { env } from '@/config/env.mjs'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
+import { DateFormatter } from '@/components/DateFormatter'
 import { IconKey, Icons } from '@/components/Icons'
 import { MDXComponents } from '@/components/MDXComponents'
 import { GitHubLink } from '@/components/posts/GitHubLink'
@@ -100,7 +101,12 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
         <div className="flex space-x-2 text-xs">
           <p className="rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700">
-            Date: {format(new Date(snippet.date), 'yyyy-MM-dd')}
+            Date:{' '}
+            <DateFormatter
+              dateString={snippet.date}
+              formatString="yyyy-MM-dd"
+            />
+            {/* {format(new Date(snippet.date), 'yyyy-MM-dd')} */}
           </p>
           <p className="hidden rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700 md:block">
             Words: {snippet.stats.words}
