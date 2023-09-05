@@ -7,6 +7,7 @@ import readingTime from 'reading-time'
 import RehypeCodeTitles from 'rehype-code-titles'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeSlug from 'rehype-slug'
+import emoji from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
 
 const Author = defineNestedType(() => ({
@@ -183,7 +184,7 @@ export default makeSource({
   contentDirPath: './content',
   documentTypes: [Post, Snippet, Page],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, emoji],
     rehypePlugins: [rehypeSlug, RehypeCodeTitles, rehypeHighlight],
   },
 })

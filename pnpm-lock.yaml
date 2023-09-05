@@ -18,8 +18,8 @@ dependencies:
     specifier: ^4.1.0
     version: 4.1.0(prettier@3.0.3)
   '@mantine/hooks':
-    specifier: ^6.0.19
-    version: 6.0.19(react@18.2.0)
+    specifier: ^6.0.20
+    version: 6.0.20(react@18.2.0)
   '@radix-ui/react-aspect-ratio':
     specifier: ^1.0.3
     version: 1.0.3(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)
@@ -45,8 +45,8 @@ dependencies:
     specifier: ^0.6.1
     version: 0.6.1(typescript@5.2.2)(zod@3.22.2)
   '@tailwindcss/typography':
-    specifier: ^0.5.9
-    version: 0.5.9(tailwindcss@3.3.3)
+    specifier: ^0.5.10
+    version: 0.5.10(tailwindcss@3.3.3)
   '@tanstack/react-query':
     specifier: ^4.33.0
     version: 4.33.0(react-dom@18.2.0)(react@18.2.0)
@@ -123,8 +123,8 @@ dependencies:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
   react-instantsearch:
-    specifier: ^7.0.1
-    version: 7.0.1(algoliasearch@4.19.1)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^7.0.2
+    version: 7.0.2(algoliasearch@4.19.1)(react-dom@18.2.0)(react@18.2.0)
   react-wrap-balancer:
     specifier: ^1.1.0
     version: 1.1.0(react@18.2.0)
@@ -135,11 +135,14 @@ dependencies:
     specifier: ^1.2.0
     version: 1.2.0
   rehype-highlight:
-    specifier: ^6.0.0
+    specifier: 6.0.0
     version: 6.0.0
   rehype-slug:
     specifier: ^6.0.0
     version: 6.0.0
+  remark-emoji:
+    specifier: ^4.0.0
+    version: 4.0.0
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
@@ -267,7 +270,7 @@ packages:
     resolution: {integrity: sha512-IlYgIaCUEkz9ezNbwugwKv991oOHhveyq6nzL0F1jDzg1p3q5Yj/vO4KpNG910r2dwGCG3nEm5GtChcLnarhFA==}
     dependencies:
       '@algolia/ui-components-shared': 1.2.1
-      '@babel/runtime': 7.22.10
+      '@babel/runtime': 7.22.15
     dev: false
 
   /@algolia/ui-components-shared@1.2.1:
@@ -911,6 +914,13 @@ packages:
       regenerator-runtime: 0.14.0
     dev: false
 
+  /@babel/runtime@7.22.15:
+    resolution: {integrity: sha512-T0O+aa+4w0u06iNmapipJXMV4HoUir03hpx3/YqXXhu9xim3w+dVphjFWl1OH8NbZHw5Lbm9k45drDkgq2VNNA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.0
+    dev: false
+
   /@babel/template@7.22.5:
     resolution: {integrity: sha512-X7yV7eiwAxdj9k94NEylvbVHLiVG1nvzCV2EAowhxLTwODV1jl9UzZ48leOC0sH7OnuHrIkllaBgneUykIcZaw==}
     engines: {node: '>=6.9.0'}
@@ -1538,8 +1548,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@mantine/hooks@6.0.19(react@18.2.0):
-    resolution: {integrity: sha512-YkmuB6kmoenU1PVuE8tLBA+6RJIY9hIsGyIQG1yuPAy6SLWNFT8g2T9YvI/psqsUbVIYGaNEXg8zq42xbxnD8Q==}
+  /@mantine/hooks@6.0.20(react@18.2.0):
+    resolution: {integrity: sha512-Sys2qr6KwyNjAWgzm94F9rGG94l709G69pO3iofQXwzKX/fZushk1NMIt5g9De9F+qXm+67wa0DpA0QWLNLxlg==}
     peerDependencies:
       react: '>=16.8.0'
     dependencies:
@@ -2616,6 +2626,11 @@ packages:
       string.prototype.codepointat: 0.2.1
     dev: false
 
+  /@sindresorhus/is@3.1.2:
+    resolution: {integrity: sha512-JiX9vxoKMmu8Y3Zr2RVathBL1Cdu4Nt4MuNWemt1Nc06A0RAin9c5FArkhGsyMBWfCu4zj+9b+GxtjAnE4qqLQ==}
+    engines: {node: '>=10'}
+    dev: false
+
   /@smithy/abort-controller@2.0.5:
     resolution: {integrity: sha512-byVZ2KWLMPYAZGKjRpniAzLcygJO4ruClZKdJTuB0eCB76ONFTdptBHlviHpAZXknRz7skYWPfcgO9v30A1SyA==}
     engines: {node: '>=14.0.0'}
@@ -2987,8 +3002,8 @@ packages:
       zod: 3.22.2
     dev: false
 
-  /@tailwindcss/typography@0.5.9(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-t8Sg3DyynFysV9f4JDOVISGsjazNb48AeIYQwcL+Bsq5uf4RYL75C1giZ43KISjeDGBaTN3Kxh7Xj/vRSMJUUg==}
+  /@tailwindcss/typography@0.5.10(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:
@@ -3081,6 +3096,12 @@ packages:
       '@types/unist': 2.0.8
     dev: false
 
+  /@types/mdast@4.0.0:
+    resolution: {integrity: sha512-YLeG8CujC9adtj/kuDzq1N4tCDYKoZ5l/bnjq8d74+t/3q/tHquJOJKUQXJrLCflOHpKjXgcI/a929gpmLOEng==}
+    dependencies:
+      '@types/unist': 3.0.0
+    dev: false
+
   /@types/mdx@2.0.7:
     resolution: {integrity: sha512-BG4tyr+4amr3WsSEmHn/fXPqaCba/AYZ7dsaQTiavihQunHSIxk+uAtqsjvicNpyHN6cm+B9RVrUOtW9VzIKHw==}
     dev: false
@@ -3101,8 +3122,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: false
 
-  /@types/qs@6.9.7:
-    resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
+  /@types/qs@6.9.8:
+    resolution: {integrity: sha512-u95svzDlTysU5xecFNTgfFG5RUWu1A9P0VzgpcIiGZA9iraHOdSzcxMxQ55DyeRaGCSxQi7LxXDI4rzq/MYfdg==}
     dev: false
 
   /@types/react-dom@18.2.7:
@@ -3677,6 +3698,11 @@ packages:
       supports-color: 7.2.0
     dev: false
 
+  /char-regex@1.0.2:
+    resolution: {integrity: sha512-kWWXztvZ5SBQV+eRgKFeh8q5sLuZY2+8WUIzlxWVTg+oGwY14qylx1KbKzHd8P6ZYkAg0xyIDU9JMHhyJMZ1jw==}
+    engines: {node: '>=10'}
+    dev: false
+
   /character-entities-html4@2.1.0:
     resolution: {integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==}
     dev: false
@@ -4043,6 +4069,14 @@ packages:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
     dev: false
 
+  /emojilib@2.4.0:
+    resolution: {integrity: sha512-5U0rVMU5Y2n2+ykNLQqMoqklN9ICBT/KsvC1Gz6vqHbz2AXXGkG+Pm5rMWk/8Vjrr/mY9985Hi8DYzn1F09Nyw==}
+    dev: false
+
+  /emoticon@4.0.1:
+    resolution: {integrity: sha512-dqx7eA9YaqyvYtUhJwT4rC1HIp82j5ybS1/vQ42ur+jBe17dJMwZE4+gvL1XadSFfxaPFFGt3Xsw+Y8akThDlw==}
+    dev: false
+
   /encoding@0.1.13:
     resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
     dependencies:
@@ -4334,7 +4368,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      '@babel/runtime': 7.22.10
+      '@babel/runtime': 7.22.15
       aria-query: 5.3.0
       array-includes: 3.1.6
       array.prototype.flatmap: 1.3.1
@@ -5252,8 +5286,8 @@ packages:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
-  /instantsearch.js@4.56.9(algoliasearch@4.19.1):
-    resolution: {integrity: sha512-jyRbByRUPm/ISVdRknCUDenZh65IDO2KE3GMP+RLSpcl3PV9TRfqFCbzoaSAwholbZW7sm3InBP7isCWyQMPlw==}
+  /instantsearch.js@4.56.10(algoliasearch@4.19.1):
+    resolution: {integrity: sha512-ViW2JGUgxcDaQ9/3CRBPrw0fK63XalsZnZhohYgdVZLAdacgGUPO8txWLJ5g2477XHtMS1T4sTYlyCyDIcCQ8A==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
     dependencies:
@@ -5263,14 +5297,14 @@ packages:
       '@types/dom-speech-recognition': 0.0.1
       '@types/google.maps': 3.54.0
       '@types/hogan.js': 3.0.1
-      '@types/qs': 6.9.7
+      '@types/qs': 6.9.8
       algoliasearch: 4.19.1
       algoliasearch-helper: 3.14.0(algoliasearch@4.19.1)
       hogan.js: 3.0.2
       htm: 3.1.1
       preact: 10.17.1
       qs: 6.9.7
-      search-insights: 2.7.0
+      search-insights: 2.8.2
     dev: false
 
   /internal-slot@1.0.5:
@@ -5804,6 +5838,15 @@ packages:
       unist-util-visit-parents: 5.1.3
     dev: false
 
+  /mdast-util-find-and-replace@3.0.0:
+    resolution: {integrity: sha512-8wLPIKAvGdA5jgkI8AYKfSorV3og3vE6HA+gKeKEZydbi1EtUu2g4XCxIBj3R+AsFqY/uRtoYbH30tiWsFKkBQ==}
+    dependencies:
+      '@types/mdast': 4.0.0
+      escape-string-regexp: 5.0.0
+      unist-util-is: 6.0.0
+      unist-util-visit-parents: 6.0.1
+    dev: false
+
   /mdast-util-from-markdown@1.3.1:
     resolution: {integrity: sha512-4xTO/M8c82qBcnQc1tgpNtubGUW/Y1tBQ1B0i5CtSoelOLKFYlElIr3bvgREYYO5iRqbMY1YuqZng0GVOI8Qww==}
     dependencies:
@@ -5987,7 +6030,7 @@ packages:
     peerDependencies:
       esbuild: 0.*
     dependencies:
-      '@babel/runtime': 7.22.10
+      '@babel/runtime': 7.22.15
       '@esbuild-plugins/node-resolve': 0.1.4(esbuild@0.19.2)
       '@fal-works/esbuild-plugin-global-externals': 2.1.2
       '@mdx-js/esbuild': 2.3.0(esbuild@0.19.2)
@@ -6559,6 +6602,15 @@ packages:
     engines: {node: '>=10.5.0'}
     dev: false
 
+  /node-emoji@2.1.0:
+    resolution: {integrity: sha512-tcsBm9C6FmPN5Wo7OjFi9lgMyJjvkAeirmjR/ax8Ttfqy4N8PoFic26uqFTIgayHPNI5FH4ltUvfh9kHzwcK9A==}
+    dependencies:
+      '@sindresorhus/is': 3.1.2
+      char-regex: 1.0.2
+      emojilib: 2.4.0
+      skin-tone: 2.0.0
+    dev: false
+
   /node-fetch@2.7.0(encoding@0.1.13):
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
     engines: {node: 4.x || >=6.0.0}
@@ -7089,33 +7141,33 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-instantsearch-core@7.0.1(algoliasearch@4.19.1)(react@18.2.0):
-    resolution: {integrity: sha512-qKe8sV03kyoc3HjEYmpGF2k038uaBV5Mzdxgf3ZUP1B7OyCPnzeC7YPvjZFZV89rvcfxr0lwzdExKVFV1GMR7g==}
+  /react-instantsearch-core@7.0.2(algoliasearch@4.19.1)(react@18.2.0):
+    resolution: {integrity: sha512-g1yDcEiKTKs6U8VbiqmM0tcBLWvi7lPLIWgOSGfWe5hqh62Z8U0WEhtdQwVxiNf5W0I1DGxWzgBJ/V8m9MBtaA==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
     dependencies:
-      '@babel/runtime': 7.22.10
+      '@babel/runtime': 7.22.15
       algoliasearch: 4.19.1
       algoliasearch-helper: 3.14.0(algoliasearch@4.19.1)
-      instantsearch.js: 4.56.9(algoliasearch@4.19.1)
+      instantsearch.js: 4.56.10(algoliasearch@4.19.1)
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  /react-instantsearch@7.0.1(algoliasearch@4.19.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Xi09wk3mjJ2/8TPm2/hbWPJLr7VtPv18JY73NGzUsVY6d5m9oRhOyLHTZUfyfnq641G8ROupQo7Vum5Csm8CLw==}
+  /react-instantsearch@7.0.2(algoliasearch@4.19.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-RDaOJzkVTQ0TSLnvYqFmuQyTUh2FmSyNRsDMQ/CVv3BxsMS9bRR6xn8bo31vnDu7Eg95S5ydt/1JBl+uqt0PAA==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
       react-dom: '>= 16.8.0 < 19'
     dependencies:
-      '@babel/runtime': 7.22.10
+      '@babel/runtime': 7.22.15
       algoliasearch: 4.19.1
-      instantsearch.js: 4.56.9(algoliasearch@4.19.1)
+      instantsearch.js: 4.56.10(algoliasearch@4.19.1)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-instantsearch-core: 7.0.1(algoliasearch@4.19.1)(react@18.2.0)
+      react-instantsearch-core: 7.0.2(algoliasearch@4.19.1)(react@18.2.0)
     dev: false
 
   /react-is@16.13.1:
@@ -7291,6 +7343,15 @@ packages:
 
   /reinterval@1.1.0:
     resolution: {integrity: sha512-QIRet3SYrGp0HUHO88jVskiG6seqUGC5iAG7AwI/BV4ypGcuqk9Du6YQBUOUqm9c8pw1eyLoIaONifRua1lsEQ==}
+    dev: false
+
+  /remark-emoji@4.0.0:
+    resolution: {integrity: sha512-lQP1lFaYOz6zyJTBfOwYChM1YkgJEVcxSnUBkjo9qujqWwpY36MRFzDjYDk9YNdHqkw5yExB8MnVVHb6wX9QNA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      emoticon: 4.0.1
+      mdast-util-find-and-replace: 3.0.0
+      node-emoji: 2.1.0
     dev: false
 
   /remark-frontmatter@4.0.1:
@@ -7506,9 +7567,8 @@ packages:
       loose-envify: 1.4.0
     dev: false
 
-  /search-insights@2.7.0:
-    resolution: {integrity: sha512-GLbVaGgzYEKMvuJbHRhLi1qoBFnjXZGZ6l4LxOYPCp4lI2jDRB3jPU9/XNhMwv6kvnA9slTreq6pvK+b3o3aqg==}
-    engines: {node: '>=8.16.0'}
+  /search-insights@2.8.2:
+    resolution: {integrity: sha512-PxA9M5Q2bpBelVvJ3oDZR8nuY00Z6qwOxL53wNpgzV28M/D6u9WUbImDckjLSILBF8F1hn/mgyuUaOPtjow4Qw==}
     dev: false
 
   /section-matter@1.0.0:
@@ -7550,6 +7610,13 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.2.1
       object-inspect: 1.12.3
+    dev: false
+
+  /skin-tone@2.0.0:
+    resolution: {integrity: sha512-kUMbT1oBJCpgrnKoSr0o6wPtvRWT9W9UKvGLwfJYO2WuahZRHOpEyL1ckyMGgMWh0UdpmaoFqKKD29WTomNEGA==}
+    engines: {node: '>=8'}
+    dependencies:
+      unicode-emoji-modifier-base: 1.0.0
     dev: false
 
   /slash@3.0.0:
@@ -7996,6 +8063,11 @@ packages:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+    dev: false
+
+  /unicode-emoji-modifier-base@1.0.0:
+    resolution: {integrity: sha512-yLSH4py7oFH3oG/9K+XWrz1pSi3dfUrWEnInbxMfArOfc1+33BlGPQtLsOYwvdMy11AwUBetYuaRxSPqgkq+8g==}
+    engines: {node: '>=4'}
     dev: false
 
   /unicode-trie@2.0.0:
