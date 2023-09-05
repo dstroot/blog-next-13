@@ -11,7 +11,7 @@ import { ThemeToggle } from '@/components/SiteHeader/ThemeToggle'
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b bg-background/75 backdrop-blur">
       <Container className="flex h-12 items-center">
         <Link aria-label="Home" href="/" className="relative mr-2 h-8 w-8">
           <Image

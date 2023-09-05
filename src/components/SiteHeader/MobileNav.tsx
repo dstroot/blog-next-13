@@ -34,7 +34,7 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
       <SheetContent side="right" className="pl-20">
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10">
           <div className="flex flex-col space-y-4 text-2xl">
-            <Link
+            {/* <Link
               aria-label="Home"
               href="/"
               className={cn(
@@ -44,7 +44,7 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
               onClick={() => setIsOpen(false)}
             >
               <span className="text-2xl">Home</span>
-            </Link>
+            </Link> */}
             {mainNavItems.map((item, index) => (
               <MobileLink
                 key={index}
