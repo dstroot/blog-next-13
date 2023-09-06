@@ -33,4 +33,4 @@ TODO:
 5. Middleware for CSP headers
 6. Shadcn/ui components
 7. NavBar
-8.
+8. All config moved to src/config, and .env vars are typed.

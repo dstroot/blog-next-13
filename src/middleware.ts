@@ -74,7 +74,7 @@ export function middleware(request: NextRequest) {
     'Strict-Transport-Security',
     'max-age=31536000; includeSubDomains; preload',
   )
-  requestHeaders.set('Permissions-Policy', 'none')
+  requestHeaders.set('Permissions-Policy', 'microphone=(), geolocation=()')
   requestHeaders.set(
     'Access-Control-Allow-Origin',
     process.env.NODE_ENV === 'production'
