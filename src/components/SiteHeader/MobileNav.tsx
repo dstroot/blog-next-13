@@ -24,7 +24,7 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground md:hidden"
+          className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 outline-none transition-colors hover:bg-accent hover:text-accent-foreground md:hidden"
         >
           <Icons.menu className="h-6 w-6" />
           <span className="sr-only">Toggle Menu</span>
