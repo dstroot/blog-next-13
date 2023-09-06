@@ -9,14 +9,14 @@ const nextConfig = {
     loader: 'custom',
     loaderFile: './src/lib/imgixLoader.ts',
   },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders,
-      },
-    ]
-  },
+  //   async headers() {
+  //     return [
+  //       {
+  //         source: '/(.*)',
+  //         headers: securityHeaders,
+  //       },
+  //     ]
+  //   },
   // https://nextjs.org/docs/api-reference/next.config.js/redirects
   async redirects() {
     return [

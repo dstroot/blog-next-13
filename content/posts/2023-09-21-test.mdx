@@ -1,0 +1,66 @@
+---
+title: Fintech Engineering Challenges
+excerpt: Having worked in financial services for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
+coverImage: /assets/blog/img/fintech.jpg
+date: '2023-09-21'
+published: false
+author:
+  name: Dan Stroot
+  picture: /assets/blog/authors/dan.jpeg
+ogImage:
+  url: /assets/blog/img/fintech.jpg
+seoURL:
+---
+
+## being a modern software explorer
+
+Using open source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning between quality projects and junk… this experience is a hard-won component of being a modern software explorer. It can take you further than you might realize.
+
+If you build modern software, you’re well-versed in composition: grab a handful of existing projects—a database here, a UI framework there, an HTTP library to round it all out—and arrange them together. You write your custom logic—the stuff unique to your project—and let other people’s code do work that’s common across all projects.
+
+## Community is everything to learning emerging skills.
+
+## Table of Contents
+
+<div className="px-2 w-full md:w-2/3 xl:w-1/2 overflow-x-auto">
+
+| No. | Section                                  |
+| --- | ---------------------------------------- |
+| 1   | [Significant Digits/Rounding](#1)        |
+| 2   | [Ledgers, Accounts and Transactions](#2) |
+| 3   | [Reporting Periods](#reporting-periods)  |
+| 4   | [Reconciliation](#4)                     |
+| 5   | [Transaction States](#5)                 |
+| 6   | [Immutability](#6)                       |
+| 7   | [Currency Codes](#7)                     |
+| 8   | [Time/Timestamps](#8)                    |
+| 9   | [Retry Logic](#9)                        |
+| 10  | [Architecture](#10)                      |
+| 11  | [Identity Management](#11)               |
+| 11  | [Testing and Release Management](#12)    |
+| 12  | [Application Monitoring](#13)            |
+
+</div>
+
+## <a name='1'></a>Significant Digits/Rounding
+
+This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this:
+
+<div className="overflow-x-auto text-sm">
+  0.0001100110011001100110011001100110011...
+</div>
+
+### References
+
+- [Double-entry accounting for software engineers](https://www.balanced.software/double-entry-bookkeeping-for-programmers/)
+- [Storing Money and Float Precision](https://lashewi.medium.com/storing-currency-values-and-float-precision-99029c1e8b71)
+- [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)
+- [Decimal and Thousands Separators](https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html)
+- [Books, an immutable double-entry accounting database service](https://developer.squareup.com/blog/books-an-immutable-double-entry-accounting-database-service/)
+- [Double-entry Bookkeeping for Programmers](https://dev.to/kallmanation/double-entry-bookkeeping-for-programmers-3ok9)
+- [An Engineer's Guide to Double-Entry Bookkeeping](https://anvil.works/blog/double-entry-accounting-for-engineers)
+- [Things I Wish I Knew Before Building a Ledger](https://www.andriosrobert.com/p/things-i-wish-i-knew-before-building)
+- [Twisp - The core accounting engine to power any financial product](https://www.twisp.com)
+- [An Elegant DB Schema for Double-Entry Accounting](https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/)
+- [Uber Ledger on DynamoDB and S3](https://www.youtube.com/watch?v=iN6mhI5hFt4&t=45s)
+- [Reconciliation: A game designed to frustrate the player](https://www.bitsaboutmoney.com/archive/a-game-that-intentionally-frustrates-the-player/)
