@@ -9,11 +9,10 @@ import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Icons } from '@/components/Icons'
-
-import type { NavItem } from './MainNav'
+import type { NavLink } from '@/components/SiteHeader/MainNav'
 
 interface MobileNavProps {
-  mainNavItems: NavItem[]
+  mainNavItems: NavLink[]
 }
 
 export function MobileNav({ mainNavItems }: MobileNavProps) {

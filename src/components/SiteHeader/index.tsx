@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { siteConfig } from '@/config/site'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Container } from '@/components/Container'
 import { Icons } from '@/components/Icons'
 import { MainNav } from '@/components/SiteHeader/MainNav'
@@ -23,7 +22,7 @@ export function SiteHeader() {
             fill
           />
         </Link>
-        <MainNav items={siteConfig.mainNav} />
+        <MainNav navLinks={siteConfig.mainNav} />
         <div className="flex flex-1 items-center justify-end">
           <nav className="flex items-center space-x-2">
             <Link
