@@ -22,4 +22,15 @@ TODO:
 - [x] Fix menu to work on Mobile
 - [ ] Any other API's to move over?
 - [ ] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
-- [ ] Fix "uses" page. 
+- [ ] Fix "uses" page.
+
+## Changelog
+
+1. Src directory
+2. App Router
+3. All Typescript
+4. ContentLayer for .md and .mdx processing
+5. Middleware for CSP headers
+6. Shadcn/ui components
+7. NavBar
+8.
