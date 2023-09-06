@@ -19,12 +19,14 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = React.useState(false)
 
+  // focus-visible:ring-1 focus-visible:ring-ring md:hidden
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring md:hidden"
+          className="relative inline-flex h-8 w-8 items-center justify-center rounded-md  bg-transparent p-0 transition-colors hover:bg-accent hover:text-accent-foreground"
         >
           <Icons.menu className="h-6 w-6" />
           <span className="sr-only">Toggle Menu</span>
