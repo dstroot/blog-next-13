@@ -21,7 +21,7 @@ TODO:
 - [x] Add csp api route to post
 - [x] Fix menu to work on Mobile
 - [ ] Any other API's to move over?
-- [x]] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
+- [x] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
 - [ ] Fix "uses" page.
 
 ## Changelog
