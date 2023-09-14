@@ -33,6 +33,9 @@ export const env = createEnv({
    * 💡 You'll get type errors if these are not prefixed with NEXT_PUBLIC_.
    */
   client: {
+    // Google Tag Manager
+    NEXT_PUBLIC_GTM_ACCOUNT: z.string(11),
+
     // IMGIX
     NEXT_PUBLIC_IMGIX_URL: z.string(),
 
@@ -54,6 +57,7 @@ export const env = createEnv({
    * start with "NEXT_PUBLIC_")
    */
   experimental__runtimeEnv: {
+    NEXT_PUBLIC_GTM_ACCOUNT: process.env.NEXT_PUBLIC_GTM_ACCOUNT,
     NEXT_PUBLIC_IMGIX_URL: process.env.NEXT_PUBLIC_IMGIX_URL,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_VERCEL_ENV: process.env.NEXT_PUBLIC_VERCEL_ENV,

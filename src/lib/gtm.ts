@@ -1,16 +1,23 @@
 import { env } from '@/config/env.mjs'
 
-export const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID
+type WindowWithDataLayer = Window & {
+  dataLayer: Record<string, any>[]
+}
 
-declare const window: Window & { dataLayer: Record<string, unknown>[] }
+export const GTM_ID = env.NEXT_PUBLIC_GTM_ACCOUNT
+
+declare const window: WindowWithDataLayer
 
 export const pageview = (url: string) => {
-  if (env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
-    return
+  if (typeof window.dataLayer !== 'undefined') {
+    window.dataLayer.push({
+      event: 'pageview',
+      page: url,
+    })
+  } else {
+    console.log({
+      event: 'pageview: ',
+      page: url,
+    })
   }
-
-  window.dataLayer.push({
-    event: 'pageview',
-    page: url,
-  })
 }

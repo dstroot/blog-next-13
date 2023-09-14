@@ -1,14 +1,13 @@
 import '@/styles/globals.css'
 
-// import { Suspense } from 'react'
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
-
-// import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
-// import { GoogleTagMgr } from '@/components/GoogleTagMgr'
+import { GoogleTagMgr } from '@/components/GoogleTagMgr'
 import { Hotkeys } from '@/components/Hotkeys'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
@@ -73,10 +72,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
-        {/* <Suspense> */}
-        {/* <GoogleTagMgr /> */}
-        {/* <Analytics /> */}
-        {/* </Suspense> */}
+        <Suspense>
+          <GoogleTagMgr />
+          <Analytics />
+        </Suspense>
         <Providers>
           <SiteHeader />
           {children}
