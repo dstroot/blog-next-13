@@ -73,7 +73,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
     Image: (props: ImageProps) => <NextImage {...props} />,
   }
 
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/posts/${post.slugAsParams}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${post._id}`
 
   return (
     <Container variant="padded">
