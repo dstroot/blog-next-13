@@ -2,7 +2,7 @@
 title: Fintech Engineering Challenges
 excerpt: Having worked in financial services for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
 coverImage: /assets/blog/img/fintech.jpg
-date: '2023-08-21'
+date: '2023-08-19'
 published: true
 author:
   name: Dan Stroot
@@ -42,9 +42,7 @@ Note: I am intentionally ignoring the broad topic of "security" because that alo
 
 This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this:
 
-<div className="overflow-x-auto text-sm">
-  0.0001100110011001100110011001100...
-</div>
+<div className="text-sm">0.0001100110011001100110011001100...</div>
 
 If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Start with $10.00 USD and divide it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You made a penny disappear into thin air (0.1% of the total value!).
 
@@ -78,15 +76,11 @@ This is where **double entry accounting** comes into play. Double-entry accounti
 
 In fact, the term "balance" comes from double entry accounting - credits must always balance with debits. Thus, every transaction is _balanced_ – it sums to zero. For example, if we sell a $100 widget but haven't been paid yet, we are owed $100, and we have $100 in revenue:
 
-<div class="overflow-x-auto">
-
-| Ledger Account      | Debit       | Credit      |
-| ------------------- | ----------- | ----------- |
-| accounts_receivable | $100.00     | $0          |
-| revenue_general     | $0          | $100.00     |
-| **Balance**         | **$100.00** | **$100.00** |
-
-</div>
+| Ledger Account | Debit       | Credit      |
+| -------------- | ----------- | ----------- |
+| receivables    | $100.00     | $0          |
+| revenue        | $0          | $100.00     |
+| **Balance**    | **$100.00** | **$100.00** |
 
 To understand this further let's introduce some terms:
 

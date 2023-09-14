@@ -46,6 +46,7 @@
     "next": "^13.4.19",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
+    "plaiceholder": "^3.0.0",
     "postcss": "^8.4.29",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
