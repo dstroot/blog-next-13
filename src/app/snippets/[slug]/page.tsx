@@ -79,7 +79,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
     Image: (props: ImageProps) => <NextImage {...props} />,
   }
 
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/snippts/${snippet.slugAsParams}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/snippets/${snippet.slugAsParams}.mdx`
   const Icon = Icons[snippet.icon as IconKey]
 
   return (
