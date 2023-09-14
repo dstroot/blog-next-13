@@ -2,10 +2,12 @@ import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { allPages } from 'contentlayer/generated'
 
+import { env } from '@/config/env.mjs'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { Mdx } from '@/components/MDXComponents/MDX'
 import { PageHeader } from '@/components/PageHeader'
+import { GitHubLink } from '@/components/posts/GitHubLink'
 
 async function getPageFromParams(params: PageProps['params']) {
   const slug = params?.slug?.join('/') ?? ''
@@ -81,10 +83,13 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${page._id}`
+
   return (
     <Container variant="padded">
       <PageHeader title={page.title} description={page.description} size="lg" />
       <Mdx code={page.body.code} />
+      <GitHubLink path={github} />
     </Container>
   )
 }
