@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 
 export const useViewCount = (slug: string) => {
-  const { data, error, isLoading } = useQuery({
+  const { data, error, isError, isLoading } = useQuery({
     queryKey: [slug],
     queryFn: async () => {
       const response = await fetch(`/api/views/${slug}`)
@@ -13,11 +13,10 @@ export const useViewCount = (slug: string) => {
     refetchInterval: 15000,
   })
 
-  //TODO pass "isError"
   return {
     views: data?.viewCount,
     isLoading: isLoading,
-    isError: error,
+    isError: isError,
     error: error,
   }
 }

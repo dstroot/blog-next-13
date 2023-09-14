@@ -38,7 +38,7 @@ export const HeroPost = ({
                 src={coverImage}
                 alt={`Hero image for ${title}`}
                 fill
-                sizes="(max-width: 1280px) 90vw, 1496px"
+                sizes="(min-width: 1540px) 1488px, (min-width: 1280px) 1232px, (min-width: 1040px) 976px, (min-width: 780px) 720px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
                 priority={true}
                 className="overflow-hidden object-cover duration-300 ease-in-out group-hover:opacity-[85%]"
               />

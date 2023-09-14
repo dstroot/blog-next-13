@@ -46,19 +46,12 @@ export async function GET() {
 
   return NextResponse.json(
     {
-      // TODO Fix Errors
-      // @ts-expect-error
-      totalUsers: totalReport[0]?.rows[0]?.metricValues[0]?.value ?? 0,
-      // @ts-expect-error
-      activeUsers: totalReport[0]?.rows[0]?.metricValues[1]?.value ?? 0,
-      // @ts-expect-error
-      pageViews: totalReport[0]?.rows[0]?.metricValues[2]?.value ?? 0,
-      // @ts-expect-error
-      engagedSessions: totalReport[0]?.rows[0]?.metricValues[3]?.value ?? 0,
-      // @ts-expect-error
-      engagementDuration: totalReport[0]?.rows[0]?.metricValues[4]?.value ?? 0,
-      // @ts-expect-error
-      engagementRate: totalReport[0]?.rows[0]?.metricValues[5]?.value ?? 0,
+      totalUsers: totalReport[0].rows![0].metricValues![0].value || 0,
+      activeUsers: totalReport[0].rows![0].metricValues![1].value || 0,
+      pageViews: totalReport[0].rows![0].metricValues![2].value || 0,
+      engagedSessions: totalReport[0].rows![0].metricValues![3].value || 0,
+      engagementDuration: totalReport[0].rows![0].metricValues![4].value || 0,
+      engagementRate: totalReport[0].rows![0].metricValues![5].value || 0,
     },
     { status: 200 },
   )

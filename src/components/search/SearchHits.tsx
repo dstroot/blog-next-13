@@ -1,13 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useInstantSearch } from 'react-instantsearch'
+
 import {
   Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
   CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card'
+
+type Hit = {
+  content: string
+  date: string
+  excerpt: string
+  image: string
+  objectID: string
+  readingTime: string
+  slug: string
+  title: string
+  views: number
+}
 
 export const Hits = ({ ...props }) => {
   const { results, indexUiState } = useInstantSearch(props)
@@ -30,8 +43,7 @@ export const Hits = ({ ...props }) => {
   )
 }
 
-//TODO fix  type checking
-const PostCard = ({ hit }: { hit: any }) => {
+const PostCard = ({ hit }: { hit: Hit }) => {
   return (
     <Link href={`/posts/${hit.slug}`}>
       <Card className="flex h-full flex-col bg-zinc-100 shadow-md dark:bg-zinc-800">

@@ -14,7 +14,7 @@ export function SiteHeader() {
       <Container className="flex h-12 items-center">
         <Link aria-label="Home" href="/" className="relative mr-2 h-8 w-8">
           <Image
-            sizes="10vw"
+            sizes="32px"
             priority={true}
             className="overflow-hidden rounded-full object-cover duration-300 ease-in-out group-hover:opacity-[85%]"
             src="/assets/blog/authors/dan.jpeg"

@@ -1,6 +1,7 @@
 // import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
 // import { format, parseISO } from 'date-fns'
 
 import { DateFormatter } from './DateFormatter'
@@ -21,7 +22,7 @@ export const Byline = ({ name, picture, date }: AvatarProps) => {
       <div className="flex items-center space-x-4">
         <div className="relative h-12 w-12">
           <Image
-            sizes="10vw"
+            sizes="48px"
             priority={false}
             className="overflow-hidden rounded-full object-cover duration-300 ease-in-out group-hover:opacity-[85%]"
             src={picture}
