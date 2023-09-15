@@ -59,7 +59,6 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
         >
           <Icons.twitterX className="h-6 w-6" />
         </Button>
-
         <Button
           variant="ghost"
           size="icon"
@@ -68,16 +67,15 @@ export function Sharable({ title, slug }: { title: string; slug: string }) {
         >
           <Icons.share className="h-6 w-6" />
         </Button>
+        {showAlert ? (
+          <div className="z-10 flex items-center space-x-2 rounded bg-gray-200 px-4 py-1 shadow dark:bg-gray-700">
+            <span className="rounded-full bg-gray-800 p-1 dark:bg-gray-200">
+              <Icons.check className="h-4 w-4 text-gray-200 dark:text-gray-800" />
+            </span>
+            <p className="text-slate">Link copied succesfully</p>
+          </div>
+        ) : null}
       </div>
-
-      {showAlert ? (
-        <div className="fixed bottom-56 left-96 z-10 flex items-center space-x-2 rounded bg-gray-200 p-6 shadow dark:bg-gray-700">
-          <p className="text-slate">Link copied succesfully</p>
-          <span className="rounded-full bg-gray-800 p-1 dark:bg-gray-200">
-            <Icons.check className="h-6 w-6 text-gray-200 dark:text-gray-800" />
-          </span>
-        </div>
-      ) : null}
     </div>
   )
 }
