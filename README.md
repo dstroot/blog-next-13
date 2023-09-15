@@ -24,6 +24,7 @@ TODO:
 - [x] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
 - [ ] Fix "uses" page.
 - [ ] Add blur to images?
+- [x] Update script to feed Algolia Index
 
 ## Changelog
 

@@ -9,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+import { DateFormatter } from '@/components/DateFormatter'
 
 type Hit = {
   content: string
@@ -65,7 +66,7 @@ const PostCard = ({ hit }: { hit: Hit }) => {
         <CardFooter className="flex space-x-2 text-xs">
           <div className="flex space-x-2 text-xs">
             <span className="rounded-full bg-accent px-2 py-1 text-accent2-foreground">
-              {hit.date}
+              <DateFormatter dateString={hit.date} />
             </span>
             <span className="rounded-full bg-accent px-2 py-1 text-accent2-foreground">
               {hit.readingTime}
