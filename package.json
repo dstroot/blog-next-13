@@ -12,8 +12,8 @@
     "node": ">=18.7.0 <19.0.0"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.410.0",
-    "@aws-sdk/lib-dynamodb": "^3.410.0",
+    "@aws-sdk/client-dynamodb": "^3.413.0",
+    "@aws-sdk/lib-dynamodb": "^3.413.0",
     "@google-analytics/data": "^4.0.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@mantine/hooks": "^6.0.20",
