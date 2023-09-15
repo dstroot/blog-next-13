@@ -22,7 +22,7 @@ function transformPostsToSearchObjects(posts) {
       title: post.title,
       excerpt: post.excerpt,
       content: post.body,
-      slug: `${BASE_URL}${post.slug}`,
+      slug: post.slugAsParams,
       image: post.coverImage,
       date: post.date,
       readingTime: post.stats.text,
