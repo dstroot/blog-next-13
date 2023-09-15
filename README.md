@@ -8,7 +8,7 @@ TODO:
 - [x] Add Drafts capability
 - [x] Add sharing to code snippets
 - [x] Use new Meta API
-- [ ] Add Google Tag Manager
+- [x] Add Google Tag Manager
 - [x] Add Vercel Metrics
 - [x] Add Views to pages (increment view count in DynamoDB)
 - [x] Add robots
@@ -28,8 +28,8 @@ TODO:
 ## Changelog
 
 1. Src directory
-2. App Router
-3. All Typescript
+2. Uses new Next.js App Router
+3. All code is Typescript
 4. ContentLayer for .md and .mdx processing
 5. Middleware for CSP headers
 6. Shadcn/ui components
