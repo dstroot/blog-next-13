@@ -31,8 +31,11 @@ TODO:
 1. Src directory
 2. Uses new Next.js App Router
 3. All code is Typescript
+4. Uses new Metadata for SEO
 4. ContentLayer for .md and .mdx processing
 5. Middleware for CSP headers
 6. Shadcn/ui components
 7. NavBar
 8. All config moved to src/config, and .env vars are typed.
+9. No longer using next-sitemap - built it directly.
+10. Switched from rehype-prism to rehype-highlight
