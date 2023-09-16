@@ -23,7 +23,7 @@ TODO:
 - [ ] Any other API's to move over?
 - [x] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
 - [ ] Fix "uses" page.
-- [ ] Add blur to images?
+- [ ] Add blur to images? No, effect is not smooth, see "blur" branch
 - [x] Update script to feed Algolia Index
 
 ## Changelog

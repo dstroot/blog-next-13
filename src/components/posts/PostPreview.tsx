@@ -49,7 +49,7 @@ export const PostPreview = ({
                 fill
                 sizes="(min-width: 1540px) 704px, (min-width: 1280px) 576px, (min-width: 1040px) 448px, (min-width: 780px) 328px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
                 className={cn(
-                  'overflow-hidden object-cover transition-opacity	duration-500',
+                  'overflow-hidden object-cover transition-opacity	duration-300',
                   isLoading ? 'opacity-0' : 'opacity-100',
                 )}
                 onLoadingComplete={() => setIsLoading(false)}
