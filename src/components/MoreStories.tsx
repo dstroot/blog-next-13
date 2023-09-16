@@ -37,10 +37,10 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
   )
 
   // create ref to trigger another page load
-  const lastPostRef = useRef<HTMLElement>(null)
+  const lastPostRef = useRef<HTMLDivElement>(null)
   const { ref, entry } = useIntersection({
     root: lastPostRef.current,
-    rootMargin: '0rem',
+    rootMargin: '0px',
     threshold: 0.9,
   })
 
