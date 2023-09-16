@@ -40,7 +40,8 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
   const lastPostRef = useRef<HTMLElement>(null)
   const { ref, entry } = useIntersection({
     root: lastPostRef.current,
-    threshold: 1,
+    rootMargin: '0rem',
+    threshold: 0.9,
   })
 
   useEffect(() => {
