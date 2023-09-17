@@ -25,6 +25,7 @@ TODO:
 - [ ] Fix "uses" page.
 - [ ] Add blur to images? No, effect is not smooth, see "blur" branch
 - [x] Update script to feed Algolia Index
+- [ ] Generate RSS Feed
 
 ## Changelog
 

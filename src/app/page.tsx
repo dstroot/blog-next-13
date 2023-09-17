@@ -1,14 +1,15 @@
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
+import { generateRSSFeed } from '@/lib/feed'
 import { Container } from '@/components/Container'
 import { Intro } from '@/components/Intro'
 import { MoreStories } from '@/components/MoreStories'
 import { HeroPost } from '@/components/posts/HeroPost'
 
-// NOTE: meta comes from layout
+// NOTE: metadata comes from layout - don't need anything else for the home page
 
-export default function Home() {
+export default async function Home() {
   let posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
@@ -18,6 +19,9 @@ export default function Home() {
 
   // Remove any future posts
   posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
+
+  // TODO Generate RSS feed
+  await generateRSSFeed(posts)
 
   const heroPost = posts[0]
   const morePosts = posts.slice(1)

@@ -27,6 +27,7 @@ export const siteConfig = {
     location: 'Crafted with ♥️ in California.',
     name: 'Dan Stroot · Blog',
     tagline: 'I love building things',
+    author: 'Dan Stroot',
     description:
       'I love building things. Made in California. Family man, technologist and Hacker News aficionado. Eternally curious.',
     keywords: ['CIO Blog', 'Code Snippets'],
