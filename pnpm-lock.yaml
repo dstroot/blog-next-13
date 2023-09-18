@@ -150,7 +150,7 @@ dependencies:
     specifier: ^6.0.0
     version: 6.0.0
   remark-emoji:
-    specifier: 4.0.0
+    specifier: ^4.0.0
     version: 4.0.0
   remark-gfm:
     specifier: 3.0.1
