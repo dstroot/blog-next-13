@@ -36,7 +36,7 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
       })
     }
     fetchPosts(page)
-  }, [page])
+  }, [page, posts])
 
   useEffect(() => {
     if (entry?.isIntersecting) {
