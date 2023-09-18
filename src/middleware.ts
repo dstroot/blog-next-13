@@ -43,7 +43,7 @@ export function middleware(request: NextRequest) {
     process.env.NODE_ENV === 'production'
       ? "'self' 'unsafe-inline'"
       : "'self' 'unsafe-inline' 'unsafe-eval'"
-  }  *.google-analytics.com *.googletagmanager.com *.twitter.com;
+  }  *.google-analytics.com *.googletagmanager.com *.twitter.com https://va.vercel-scripts.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
     process.env.NODE_ENV === 'production'

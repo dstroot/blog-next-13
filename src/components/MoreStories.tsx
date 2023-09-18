@@ -1,8 +1,7 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useIntersection } from '@mantine/hooks'
-import { useInfiniteQuery } from '@tanstack/react-query'
 import type { Post } from 'contentlayer/generated'
 
 import { PostPreview } from '@/components/posts/PostPreview'
@@ -11,32 +10,11 @@ interface MoreStoriesProps {
   posts: Post[]
 }
 export const MoreStories = ({ posts }: MoreStoriesProps) => {
+  const [page, setPage] = useState(1)
+  const [postList, setPostList] = useState<Post[]>([])
   const chunkSize = 6
 
-  // get another chunk of posts to display
-  const fetchMorePosts = async (page: number) => {
-    return posts.slice((page - 1) * chunkSize, page * chunkSize)
-  }
-
-  // setup infinite query
-  const { data, fetchNextPage } = useInfiniteQuery(
-    ['query'],
-    async ({ pageParam = 1 }) => {
-      const response = await fetchMorePosts(pageParam)
-      return response
-    },
-    {
-      getNextPageParam: (_, pages) => {
-        return pages.length + 1
-      },
-      initialData: {
-        pages: [posts.slice(0, chunkSize)],
-        pageParams: [1],
-      },
-    },
-  )
-
-  // create ref to trigger another page load
+  // create ref to trigger page loads
   const lastPostRef = useRef<HTMLDivElement>(null)
   const { ref, entry } = useIntersection({
     root: lastPostRef.current,
@@ -45,12 +23,26 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
   })
 
   useEffect(() => {
-    if (entry?.isIntersecting) {
-      fetchNextPage()
-    }
-  }, [entry, fetchNextPage])
+    const fetchPosts = (page: number) => {
+      let start = page * chunkSize - chunkSize
+      let end = page * chunkSize
 
-  const _posts = data?.pages.flatMap((page) => page)
+      // get another slice of posts
+      const morePosts = posts.slice(start, end)
+
+      // and append them
+      setPostList((postList) => {
+        return postList.concat(morePosts) // concatination = infinite scroll
+      })
+    }
+    fetchPosts(page)
+  }, [page])
+
+  useEffect(() => {
+    if (entry?.isIntersecting) {
+      setPage((page) => page + 1)
+    }
+  }, [entry])
 
   return (
     <section>
@@ -58,9 +50,9 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
         More Stories
       </h1>
       <div className="grid min-h-screen grid-cols-1 gap-16 md:grid-cols-2 lg:gap-20">
-        {_posts?.map((post, index) => {
+        {postList.map((post, index) => {
           // if we are at the end include the ref for infinite scrolling
-          if (index === _posts.length - 2) {
+          if (index === postList.length - 2) {
             return (
               <div key={`${post._id}`} ref={ref}>
                 <PostPreview

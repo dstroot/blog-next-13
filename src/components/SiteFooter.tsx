@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 import { Container } from '@/components/Container'
 import { SocialLinks } from '@/components/SocialLinks'
@@ -17,7 +18,7 @@ export const SiteFooter = () => {
 
           <div className="mb-4 flex-none md:mb-0 md:mr-8">
             <Image
-              src="/assets/blog/authors/dan.jpeg"
+              src="/assets/blog/authors/dan.jpeg?auto=format&amp;fit=max&amp;w=85"
               alt={siteConfig.meta.name}
               width={85}
               height={85}

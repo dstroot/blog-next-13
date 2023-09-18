@@ -40,3 +40,4 @@ TODO:
 9. All config moved to src/config, and .env vars are typed.
 10. No longer using next-sitemap - built it directly.
 11. Switched from rehype-prism to rehype-highlight
+12. Switched from SWC to Tanstack-Query (React Query)
