@@ -23,6 +23,12 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
   })
 
   useEffect(() => {
+    if (entry?.isIntersecting) {
+      setPage((page) => page + 1)
+    }
+  }, [entry])
+
+  useEffect(() => {
     const fetchPosts = (page: number) => {
       let start = page * chunkSize - chunkSize
       let end = page * chunkSize
@@ -37,12 +43,6 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
     }
     fetchPosts(page)
   }, [page, posts])
-
-  useEffect(() => {
-    if (entry?.isIntersecting) {
-      setPage((page) => page + 1)
-    }
-  }, [entry])
 
   return (
     <section>
