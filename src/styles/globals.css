@@ -110,6 +110,11 @@ input[type='search']::-webkit-search-cancel-button {
   @apply text-sm;
 }
 
+.converted-html
+  :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  @apply bg-black;
+}
+
 /*
 
 Atom One Dark by Daniel Gamage

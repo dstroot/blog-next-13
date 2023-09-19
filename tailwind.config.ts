@@ -2,6 +2,16 @@ import typographyPlugin from '@tailwindcss/typography'
 import type { Config } from 'tailwindcss'
 import animatePlugin from 'tailwindcss-animate'
 
+const disabledCss = {
+  'code::before': false,
+  'code::after': false,
+  'blockquote p:first-of-type::before': false,
+  'blockquote p:last-of-type::after': false,
+  pre: false,
+  code: false,
+  'pre code': false,
+}
+
 const config: Config = {
   darkMode: ['class'],
   content: ['./src/**/*.{ts,tsx}', './content/**/*.{md,mdx}'],
@@ -85,6 +95,8 @@ const config: Config = {
                 'blockquote p:last-of-type::after': false,
                 'code::before': false,
                 'code::after': false,
+                pre: false,
+                code: false,
               },
             ],
           },
