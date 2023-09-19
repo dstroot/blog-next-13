@@ -89,16 +89,7 @@ const config: Config = {
       typography(theme: any) {
         return {
           DEFAULT: {
-            css: [
-              {
-                'blockquote p:first-of-type::before': false,
-                'blockquote p:last-of-type::after': false,
-                'code::before': false,
-                'code::after': false,
-                pre: false,
-                code: false,
-              },
-            ],
+            css: [disabledCss],
           },
           lg: {
             css: [
