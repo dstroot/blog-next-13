@@ -18,7 +18,7 @@ In the example below I will use the "/" key to navigate to my application's sear
 
 <CodeBlock>
 
-```JavaScript:hotkeys.ts
+```js title="hotkeys.ts"
 'use client'
 
 import { useRouter } from 'next/navigation'
@@ -40,7 +40,7 @@ Then simply import the Hotkeys component in your layout, or maybe in your site h
 
 <CodeBlock>
 
-```JavaScript:layout.tsx
+```js title="layout.tsx"
 import '@/styles/globals.css'
 import { Hotkeys } from '@/components/Hotkeys'
 
@@ -67,4 +67,4 @@ export default function RootLayout({
 
 </CodeBlock>
 
-And Voila! Instant hotkeys in your app. Just press the "/" key and navigate to search. 
+And Voila! Instant hotkeys in your app. Just press the "/" key and navigate to search.

@@ -4,14 +4,18 @@ import {
   makeSource,
 } from 'contentlayer/source-files'
 import readingTime from 'reading-time'
-import RehypeCodeTitles from 'rehype-code-titles'
-import rehypeHighlight from 'rehype-highlight'
+import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import emoji from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
 
-// Maybe better than rehype-highlight?
-// https://rehype-pretty-code.netlify.app/
+// https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype
+
+const rehypePrettyCodeOptions: Options = {
+  // Themes list: https://github.com/shikijs/shiki/blob/main/docs/themes.md
+  theme: 'one-dark-pro',
+  keepBackground: false,
+}
 
 const Author = defineNestedType(() => ({
   name: 'Author',
@@ -188,6 +192,6 @@ export default makeSource({
   documentTypes: [Post, Snippet, Page],
   mdx: {
     remarkPlugins: [remarkGfm, emoji],
-    rehypePlugins: [rehypeSlug, RehypeCodeTitles, rehypeHighlight],
+    rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
 })
