@@ -10,6 +10,9 @@ import rehypeSlug from 'rehype-slug'
 import emoji from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
 
+// Maybe better than rehype-highlight?
+// https://rehype-pretty-code.netlify.app/
+
 const Author = defineNestedType(() => ({
   name: 'Author',
   fields: {
