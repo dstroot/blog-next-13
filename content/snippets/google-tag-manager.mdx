@@ -57,19 +57,21 @@ The Next example also shows that you can manually fire a page view based on a ro
 
 <CodeBlock>
 
-```js:_app.js {1, 9-22} showLineNumbers
-import Script from 'next/script';
-import { ThemeProvider } from 'next-themes';
-import { Layout } from '../components/Layout';
-import '../styles/index.css';
+```js title="_app.js"
+import Script from 'next/script'
+import { ThemeProvider } from 'next-themes'
+
+import { Layout } from '../components/Layout'
+
+import '../styles/index.css'
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* Google Tag Manager */}
       <Script
-        id='gtm'
-        strategy='afterInteractive'
+        id="gtm"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -80,13 +82,13 @@ export default function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <ThemeProvider attribute='class'>
+      <ThemeProvider attribute="class">
         <Layout>
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
     </>
-  );
+  )
 }
 ```
 

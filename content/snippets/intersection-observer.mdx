@@ -20,8 +20,8 @@ The Intersection Observer API allows you to configure a callback that is called 
 
 <CodeBlock>
 
-```js:useIntersectionObserver.js
-import { useEffect } from 'react';
+```js title="useIntersectionObserver.js"
+import { useEffect } from 'react'
 
 const useIntersectionObserver = ({
   target,
@@ -31,26 +31,26 @@ const useIntersectionObserver = ({
 }) => {
   useEffect(() => {
     if (!target) {
-      return;
+      return
     }
 
     const observer = new IntersectionObserver(onIntersect, {
       rootMargin,
       threshold,
-    });
+    })
 
     // Once you have created the observer, you need to give it a target element to watch
-    const current = target.current;
-    observer.observe(current);
+    const current = target.current
+    observer.observe(current)
 
     // clean up our observer
     return () => {
-      observer.unobserve(current);
-    };
-  });
-};
+      observer.unobserve(current)
+    }
+  })
+}
 
-export default useIntersectionObserver;
+export default useIntersectionObserver
 ```
 
 </CodeBlock>

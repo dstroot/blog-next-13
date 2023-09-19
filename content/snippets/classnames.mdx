@@ -6,15 +6,15 @@ summary: 'There is no need to import classnames from NPM - instead use this simp
 icon: js
 tags:
   - Javascript
-#   - React Hook
-#   - React Component
+  #   - React Hook
+  #   - React Component
   - CSS
 #   - HTML
 ---
 
 <CodeBlock>
 
-```JavaScript:cn.ts
+```js title="cn.ts"
 export function cn(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -24,7 +24,7 @@ export function cn(...classes: string[]) {
 
 ### Context
 
-There is a highly used NPM package called [classnames](https://www.npmjs.com/package/classnames) - however I like to keep external dependencies low where possible and I like to know what my code is doing. There is no need to import classnames as you can duplicate the code with the simple function above. 
+There is a highly used NPM package called [classnames](https://www.npmjs.com/package/classnames) - however I like to keep external dependencies low where possible and I like to know what my code is doing. There is no need to import classnames as you can duplicate the code with the simple function above.
 
 #### What does .filter(Boolean) do on Arrays?
 
@@ -34,7 +34,7 @@ In short, it's a bit of functional programming which is used to remove false, nu
 
 <CodeBlock>
 
-```JavaScript:cnExample.tsx
+```js title="cnExample.tsx"
 import { cn } from "../lib/cn";
 
 export const Navbar = ({ fixed }: { fixed: boolean }) => {
@@ -47,5 +47,3 @@ export const Navbar = ({ fixed }: { fixed: boolean }) => {
 ```
 
 </CodeBlock>
-
-

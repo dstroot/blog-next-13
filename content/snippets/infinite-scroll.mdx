@@ -22,12 +22,12 @@ This simple function drives our "infinite scroll". If the visible image in the v
 
 <CodeBlock>
 
-```js:isVisible.js
+```js title="isVisible.js"
 const onIsVisible = (index) => {
   if (index === images.length - 1) {
-    setPage((page) => page + 1);
+    setPage((page) => page + 1)
   }
-};
+}
 ```
 
 </CodeBlock>
@@ -41,7 +41,7 @@ This effect is run each time a page changes (is incremented). It will fetch more
 
 <CodeBlock>
 
-```javascript:loadMore.js
+```js title="loadMore.js"
 useEffect(() => {
   const fetchPhotos = async (page) => {
     setLoading(true)
@@ -68,7 +68,7 @@ This puts it all together. Get some images, and as the user scrolls down, when t
 
 <CodeBlock>
 
-```javascript:example.js
+```js title="example.js"
 import React, { useEffect } from 'react'
 
 import { ImageContainer } from './components/ImageContainer'
@@ -143,7 +143,7 @@ export default App
 
 <CodeBlock>
 
-```javascript:ImageContainer.js
+```js title="ImageContainer.js"
 import React from 'react'
 
 import useIntersectionObserver from '../../hooks/use-intersection-observer'
@@ -197,7 +197,7 @@ export const ImageContainer = ({
 
 <CodeBlock>
 
-```javascript:useIntersectionObserver.js
+```js title="useIntersectionObserver.js"
 import { useEffect } from 'react'
 
 /**

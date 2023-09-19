@@ -41,8 +41,8 @@ This is how your imports will typically look:
 
 <CodeBlock>
 
-```JavaScript:example.ts
-import { SortByDate } from '../lib/sortPosts';
+```js title="example.ts"
+import { SortByDate } from '../lib/sortPosts'
 ```
 
 </CodeBlock>
@@ -51,8 +51,8 @@ And it's gonna be even worse if you are importing in a file that is nested deepl
 
 <CodeBlock>
 
-```JavaScript:example.ts
-import { SortByDate } from '../../../lib/sortPosts';
+```js title="example.ts"
+import { SortByDate } from '../../../lib/sortPosts'
 ```
 
 </CodeBlock>
@@ -61,7 +61,7 @@ To solve this, you can add a jsconfig.json (or tsconfig.json if you have a TypeS
 
 <CodeBlock>
 
-```JavaScript:example.ts
+```js title="example.ts"
 {
     "baseUrl": ".",
     "paths": {
@@ -78,8 +78,8 @@ Now your imports will look like this:
 
 <CodeBlock>
 
-```JavaScript:example.ts
-import { SortByDate } from '@/lib/sortPosts';
+```js title="example.ts"
+import { SortByDate } from '@/lib/sortPosts'
 ```
 
 </CodeBlock>

@@ -49,7 +49,7 @@ yarn add mdx-bundler esbuild
 
 </CodeBlock>
 
-<Step number={3} title='Install necessary Plugins' />
+<Step number={3} title="Install necessary Plugins" />
 
 <CodeBlock>
 
@@ -72,37 +72,35 @@ yarn add reading-time gray-matter rehype-slug rehype-code-titles rehype-autolink
 - [rehype-prism-plus](https://www.npmjs.com/package/rehype-prism-plus/v/1.0.0) Plugin to add code highlighting
 - [rehype-autolink-headings](https://www.npmjs.com/package/rehype-autolink-headings) Plugin to automatically add link to headings
 
-<Step number={4} title='Parse all MDX files' />
+<Step number={4} title="Parse all MDX files" />
 
 <CodeBlock>
 
-```Javascript:mdx.js
-import matter from 'gray-matter';
-import readingTime from 'reading-time';
-import { join } from 'path';
-import { bundleMDX } from 'mdx-bundler';
-import { readdirSync, readFileSync } from 'fs';
-
+```js title="mdx.js"
+import { readdirSync, readFileSync } from 'fs'
+import { join } from 'path'
+import matter from 'gray-matter'
+import { bundleMDX } from 'mdx-bundler'
+import readingTime from 'reading-time'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeCodeTitles from 'rehype-code-titles'
+import rehypePrism from 'rehype-prism-plus'
 /* Rehype Plugins */
-import rehypeSlug from 'rehype-slug';
-import rehypeCodeTitles from 'rehype-code-titles';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypePrism from 'rehype-prism-plus';
+import rehypeSlug from 'rehype-slug'
 
 export async function getFiles() {
-  return readdirSync(join(process.cwd(), 'posts'));
+  return readdirSync(join(process.cwd(), 'posts'))
 }
 
 export async function getFileBySlug(slug) {
   const source = readFileSync(
     join(process.cwd(), 'posts', `${slug}.mdx`),
-    'utf8'
-  );
+    'utf8',
+  )
 
   const { code, frontmatter } = await bundleMDX(source, {
     xdmOptions(options) {
       options.rehypePlugins = [
-
         // some good and popular plugins
         ...(options?.rehypePlugins ?? []),
         rehypeSlug,
@@ -112,14 +110,14 @@ export async function getFileBySlug(slug) {
           rehypeAutolinkHeadings,
           {
             properties: {
-              className: ['heading_title']
-            }
-          }
-        ]
-      ];
-      return options;
-    }
-  });
+              className: ['heading_title'],
+            },
+          },
+        ],
+      ]
+      return options
+    },
+  })
 
   return {
     code,
@@ -127,30 +125,27 @@ export async function getFileBySlug(slug) {
       wordCount: source.split(/\s+/gu).length,
       readingTime: readingTime(source),
       slug: slug || null,
-      ...frontmatter
-    }
-  };
+      ...frontmatter,
+    },
+  }
 }
 
 export async function getAllFilesFrontMatter() {
-  const files = readdirSync(join(process.cwd(), 'posts'));
+  const files = readdirSync(join(process.cwd(), 'posts'))
 
   return files.reduce((allPosts, postSlug) => {
-    const source = readFileSync(
-      join(process.cwd(), 'posts', postSlug),
-      'utf8'
-    );
-    const { data } = matter(source);
+    const source = readFileSync(join(process.cwd(), 'posts', postSlug), 'utf8')
+    const { data } = matter(source)
 
     return [
       {
         ...data,
         slug: postSlug.replace('.mdx', ''),
-        readingTime: readingTime(source)
+        readingTime: readingTime(source),
       },
-      ...allPosts
-    ];
-  }, []);
+      ...allPosts,
+    ]
+  }, [])
 }
 ```
 

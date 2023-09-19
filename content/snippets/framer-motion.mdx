@@ -31,8 +31,8 @@ yarn add framer-motion
 
 <CodeBlock>
 
-```Javascript:index.js
-import { m, LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
+```js title="index.js"
+import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion'
 ```
 
 </CodeBlock>
@@ -41,31 +41,31 @@ import { m, LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
 
 <CodeBlock>
 
-```Javascript:index.js
-import { m, LazyMotion, domAnimation, AnimatePresence } from "framer-motion";
+```js title="index.js"
+import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion'
 
 const Home = () => {
-return (
+  return (
+    <LazyMotion features={domAnimation}>
+      <Container>
+        <AnimatePresence>
+          {/_ Animated Left Pane _/}
+          <m.div
+            key="left-pane"
+            initial={{ x: -500 }}
+            animate={{ x: 0 }}
+            exit={{ x: -500 }}
+            className="max-h-100 hidden h-full w-1/4 justify-center rounded-3xl bg-gray-800 lg:flex"
+          >
+            // Custom component
+          </m.div>
+        </AnimatePresence>
+      </Container>
+    </LazyMotion>
+  )
+}
 
-<LazyMotion features={domAnimation}>
-  <Container>
-    <AnimatePresence>
-      {/_ Animated Left Pane _/}
-      <m.div
-        key='left-pane'
-        initial={{ x: -500 }}
-        animate={{ x: 0 }}
-        exit={{ x: -500 }}
-        className='hidden justify-center w-1/4 h-full bg-gray-800 rounded-3xl max-h-100 lg:flex'
-      >
-        // Custom component
-      </m.div>
-    </AnimatePresence>
-  </Container>
-</LazyMotion>
-); };
-
-export default Home;
+export default Home
 ```
 
 </CodeBlock>

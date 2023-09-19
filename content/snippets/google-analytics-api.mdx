@@ -43,8 +43,8 @@ This may be a little confusing but you are just granting the service account you
 
 <CodeBlock>
 
-```JavaScript:analytics.js
-import { BetaAnalyticsDataClient } from '@google-analytics/data';
+```js title="analytics.js"
+import { BetaAnalyticsDataClient } from '@google-analytics/data'
 
 export default async function handler(req, res) {
   const analyticsDataClient = new BetaAnalyticsDataClient({
@@ -53,15 +53,15 @@ export default async function handler(req, res) {
       private_key: process.env.ANALYTICS_PRIVATE_KEY.replace(/\\n/g, '\n'),
     },
     projectId: process.env.ANALYTICS_PROJECT_ID,
-  });
+  })
 
-  const propertyId = PROPERTY_ID; // place your property id here available in analytics console.
-  let today = new Date().getTime() - 60 * 60 * 24 * 60 * 1000;
-  let day = new Date(today).getDate();
-  let month = new Date(today).getMonth() + 1;
-  let year = new Date(today).getFullYear();
+  const propertyId = PROPERTY_ID // place your property id here available in analytics console.
+  let today = new Date().getTime() - 60 * 60 * 24 * 60 * 1000
+  let day = new Date(today).getDate()
+  let month = new Date(today).getMonth() + 1
+  let year = new Date(today).getFullYear()
 
-  let dayFormat = `${year}-${month}-${day}`;
+  let dayFormat = `${year}-${month}-${day}`
 
   const totalReport = await analyticsDataClient.runReport({
     property: 'properties/' + propertyId,
@@ -83,13 +83,13 @@ export default async function handler(req, res) {
         name: 'totalUsers',
       },
     ],
-  });
+  })
 
   return res.status(200).json({
     pageViews: totalReport[0].rows[0].metricValues[0].value,
     engagmentRate: totalReport[0].rows[0].metricValues[1].value,
     totalUsers: totalReport[0].rows[0].metricValues[2].value,
-  });
+  })
 }
 ```
 
@@ -101,7 +101,7 @@ Here's the exact React component I used as linked above. The markup is styled us
 
 <CodeBlock>
 
-```JavaScript:stats.jsx
+```js title="stats.jsx"
 import millify from 'millify'
 import useSWR from 'swr'
 
