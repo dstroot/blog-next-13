@@ -2,17 +2,18 @@
 /* eslint-disable @next/next/no-img-element */
 
 import type { ServerRuntime } from 'next'
-import { ImageResponse } from '@vercel/og'
+import { ImageResponse } from 'next/server'
 
 import { siteConfig } from '@/config/site'
 import { ogImageSchema } from '@/lib/validations/og'
 import { IconKey, Icons } from '@/components/Icons'
 
 export const runtime: ServerRuntime = 'edge'
+
 const IMAGE_WIDTH = 1200
 const IMAGE_HEIGHT = 630
 
-export function GET(req: Request) {
+export async function GET(req: Request) {
   const avatarUrl =
     'https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=128&h=128'
 
