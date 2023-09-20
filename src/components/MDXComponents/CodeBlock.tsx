@@ -1,7 +1,8 @@
-import { ReactNode } from 'react'
-
-type CodeBlockProps = {
-  children: ReactNode
+type CodeBlockProps = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLPreElement>,
+  HTMLPreElement
+> & {
+  raw?: string
 }
 
 export const CodeBlock = (props: CodeBlockProps) => {

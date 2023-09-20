@@ -3,7 +3,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { CodeBlock } from '@/components/MDXComponents/CodeBlock2'
+import { CodeBlock } from '@/components/MDXComponents/CodeBlock'
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx

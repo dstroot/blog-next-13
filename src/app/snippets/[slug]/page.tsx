@@ -76,7 +76,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
   const Content = useMDXComponent(snippet.body.code)
   const components = {
     ...MDXComponents,
-    Image: (props: ImageProps) => <NextImage {...props} />,
+    // Image: (props: ImageProps) => <NextImage {...props} />,
   }
 
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${snippet._id}`

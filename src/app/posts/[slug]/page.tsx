@@ -70,7 +70,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
 
   const components = {
     ...MDXComponents,
-    Image: (props: ImageProps) => <NextImage {...props} />,
+    // Image: (props: ImageProps) => <NextImage {...props} />,
   }
 
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${post._id}`
