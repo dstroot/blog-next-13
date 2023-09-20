@@ -68,11 +68,11 @@ What about for our animations in JavaScript, though? For example, when we use a 
 
 <CodeBlock>
 
-```jsx:prefersReducedMotionExample.jsx
-import { useSpring, animated } from 'react-spring';
+```js title="prefersReducedMotionExample.jsx"
+import { animated, useSpring } from 'react-spring'
 
 const Box = ({ isBig }) => {
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion()
 
   const styles = useSpring({
     width: 100,
@@ -80,10 +80,10 @@ const Box = ({ isBig }) => {
     background: 'rebeccapurple',
     transform: isBig ? 'scale(2)' : 'scale(1)',
     immediate: prefersReducedMotion,
-  });
+  })
 
-  return <animated.div style={styles}>Box!</animated.div>;
-};
+  return <animated.div style={styles}>Box!</animated.div>
+}
 ```
 
 </CodeBlock>

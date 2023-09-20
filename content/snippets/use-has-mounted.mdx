@@ -22,7 +22,7 @@ The trick here is that `useEffect` only triggers on the client side _inside_ the
 
 <CodeBlock>
 
-```js:hookExample.js
+```js title="hookExample.js"
 const hasMounted = useHasMounted()
 
 if (hasMounted) {
@@ -36,17 +36,17 @@ if (hasMounted) {
 
 <CodeBlock>
 
-```javascript:useHasMounted.js
-import { useState, useEffect } from 'react';
+```js title="useHasMounted.js"
+import { useEffect, useState } from 'react'
 
 export const useHasMounted = () => {
-  const [hasMounted, setHasMounted] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false)
   useEffect(() => {
-    setHasMounted(true);
-  }, []);
+    setHasMounted(true)
+  }, [])
 
-return hasMounted;
-};
+  return hasMounted
+}
 ```
 
 </CodeBlock>

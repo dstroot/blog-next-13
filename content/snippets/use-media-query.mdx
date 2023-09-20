@@ -16,37 +16,34 @@ tags:
 
 <CodeBlock>
 
-```JavaScript:useMediaQuery.js
-import { useState, useEffect } from 'react';
+```js title="useMediaQuery.js"
+import { useEffect, useState } from 'react'
 
-export const useMediaQuery = query => {
-  const [state, setState] = useState(false);
+export const useMediaQuery = (query) => {
+  const [state, setState] = useState(false)
 
-  useEffect(
-    () => {
-      let mounted = true;
+  useEffect(() => {
+    let mounted = true
 
-      // Returns a MediaQueryList object
-      const mql = window.matchMedia(query);
-      const onChange = () => {
-        if (!mounted) return;
-        setState(!!mql.matches);
-      };
+    // Returns a MediaQueryList object
+    const mql = window.matchMedia(query)
+    const onChange = () => {
+      if (!mounted) return
+      setState(!!mql.matches)
+    }
 
-      mql.addListener(onChange);
-      setState(mql.matches);
+    mql.addListener(onChange)
+    setState(mql.matches)
 
-      // clean up
-      return () => {
-        mounted = false;
-        mql.removeListener(onChange);
-      };
-    },
-    [query]
-  );
+    // clean up
+    return () => {
+      mounted = false
+      mql.removeListener(onChange)
+    }
+  }, [query])
 
-  return state;
-};
+  return state
+}
 ```
 
 </CodeBlock>
@@ -59,7 +56,7 @@ If you have a special case, when you need to get media query result inside you r
 
 <CodeBlock>
 
-```jsx:useMediaQueryExample.jsx
+```js title="useMediaQueryExample.jsx"
 const EffecfulComponent = () => {
   const result = useMediaQuery(`screen and (max-width: 400px)`);
   return <span>{result.toString()}</span>;

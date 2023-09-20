@@ -77,19 +77,18 @@ OpenAI's Codex was trained on publicly available source code and natural languag
 
 <CodeBlock>
 
-```JavaScript:debounce.js {1,4-7} showLineNumbers
+```js title="debounce.js"
 const debounce = (callback, wait) => {
-    let timeoutId = null;
+  let timeoutId = null
 
-    return (...args) => {
-        window.clearTimeout(timeoutId);
+  return (...args) => {
+    window.clearTimeout(timeoutId)
 
-        timeoutId = window.setTimeout(() => {
-            callback.apply(null, args);
-        }, wait);
-    };
-
-};
+    timeoutId = window.setTimeout(() => {
+      callback.apply(null, args)
+    }, wait)
+  }
+}
 ```
 
 </CodeBlock>

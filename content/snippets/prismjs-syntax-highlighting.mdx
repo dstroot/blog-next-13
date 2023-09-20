@@ -1,6 +1,7 @@
 ---
 title: Adding Syntax Highlighting in Nextjs
-summary: If you want to show example code on a page in Nextjs you will help your readers by
+summary:
+  If you want to show example code on a page in Nextjs you will help your readers by
   implemeting some form of syntax highlighting. Here's how.
 date: '2021-12-03'
 published: false
@@ -15,18 +16,18 @@ tags:
 
 ## Adding highlighting in a markdown-based blog
 
-<Step number={1} title='Add syntax highlights to markdown code' />
+<Step number={1} title="Add syntax highlights to markdown code" />
 
 If you are using something like Remark you can simply add remark-prism to your markdown processing as follows.
 
 <CodeBlock>
 
-```JavaScript:markdownToHTML.js {4, 18} showLineNumbers
-import { remark } from 'remark';
-import html from 'remark-html';
-import gfm from 'remark-gfm';
-import prism from 'remark-prism';
-import emoji from 'remark-emoji';
+```js title="markdownToHTML.js"
+import { remark } from 'remark'
+import emoji from 'remark-emoji'
+import gfm from 'remark-gfm'
+import html from 'remark-html'
+import prism from 'remark-prism'
 
 /*
 Using remark to convert markdown to HTML:
@@ -41,29 +42,26 @@ export async function markdownToHTML(markdown) {
     .use(gfm)
     .use(prism)
     .use(emoji)
-    .process(markdown);
-  return result.toString();
+    .process(markdown)
+  return result.toString()
 }
 ```
 
 </CodeBlock>
 
-<Step number={2} title='Add css' />
+<Step number={2} title="Add css" />
 
 Then, make sure you load a prism css theme to actually colorize your code.
 
 <CodeBlock>
 
-```JavaScript:/pages/_app.js {1} showLineNumbers
-import 'prismjs/themes/prism-tomorrow.css';
-import '../styles/index.css';
+```js title="/pages/_app.js"
+import 'prismjs/themes/prism-tomorrow.css'
+import '../styles/index.css'
 
 export default function MyApp({ Component, pageProps }) {
-  return (
-    <Component {...pageProps} />
-  );
+  return <Component {...pageProps} />
 }
-
 ```
 
 </CodeBlock>
@@ -72,23 +70,23 @@ export default function MyApp({ Component, pageProps }) {
 
 In this case we will be moving some of the work from the server to the client
 
-<Step number={1} title='Install prism js using npm / yarn' />
+<Step number={1} title="Install prism js using npm / yarn" />
 
-```Shell
+```sh
 npm i prismjs
 yarn add prismjs
 ```
 
 Prismjs also provides TypeScript support, `npm i @types/prismjs` or yarn add `@types/prismjs`
 
-<Step number={1} title='Use prismjs on your page' />
+<Step number={1} title="Use prismjs on your page" />
 
 Import prismjs into your blog page and highlight all.
 The next step is just import prismjs into your codes and call the highlightAll function in your useEffect / componentDidMount.
 
 <CodeBlock>
 
-```Javascript:/pages/page.js
+```js title="/pages/page.js"
 import Prism from 'prismjs';
 import "prismjs/components/prism-java"; // if you need a specific language
 import 'prismjs/themes/prism-tomorrow.css'; // css theme
