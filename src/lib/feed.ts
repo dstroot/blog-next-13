@@ -65,6 +65,7 @@ export async function generateRSSFeed(posts: Post[]) {
 
   feed.addCategory('Technology')
 
-  // Write the RSS output to a public file, making it accessible at root/rss.xml
+  // Write the RSS output to a public file
   fs.writeFileSync('public/feed.xml', feed.rss2())
+  fs.writeFileSync('public/atom.xml', feed.atom1())
 }
