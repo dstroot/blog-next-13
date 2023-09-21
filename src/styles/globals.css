@@ -107,6 +107,11 @@ input[type='search']::-webkit-search-cancel-button {
   @apply my-0 overflow-x-auto bg-black;
 }
 
+.converted-html
+  :where(img):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  @apply m-0;
+}
+
 .footnotes {
   @apply text-sm;
 }

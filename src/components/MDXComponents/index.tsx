@@ -1,4 +1,6 @@
 /* ---  Custom MDX Components --- */
+import Image from 'next/image'
+
 import { CodeBlock } from './CodeBlock'
 import { CustomImage } from './CustomImage'
 import { CustomLink } from './CustomLink'
@@ -11,6 +13,14 @@ export const MDXComponents = {
   // Override standard HTML Tags
   a: CustomLink,
   img: CustomImage,
+
+  // img: (props: any) => {
+  //   return (
+  //     <div className="relative">
+  //       <Image {...props} layout="fill" loading="lazy" />
+  //     </div>
+  //   )
+  // },
 
   // add MDX components
   CodeBlock,
