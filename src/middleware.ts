@@ -37,7 +37,7 @@ export function middleware(request: NextRequest) {
   object-src 'none';
   worker-src 'self';
   form-action 'self';
-  frame-src 'self' *.youtube-nocookie.com *.twitter.com;
+  frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
   frame-ancestors 'self';
   script-src ${
     process.env.NODE_ENV === 'production'
