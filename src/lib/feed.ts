@@ -3,9 +3,7 @@ import { Post } from 'contentlayer/generated'
 import { Feed } from 'feed'
 
 import { env } from '@/config/env.mjs'
-import { SiteConfig, siteConfig } from '@/config/site'
-
-// import { BASE_URL, CMS_NAME, TAGLINE } from '../lib/constants'
+import { siteConfig } from '@/config/site'
 
 // TODO: this cannot return actual post content because it is still in markdown format.  It would have to be run through remark first.  However, I like just giving the excerpt and then a link back to the article on the blog anyway.
 
@@ -22,8 +20,8 @@ export async function generateRSSFeed(posts: Post[]) {
     id: env.NEXT_PUBLIC_APP_URL,
     link: env.NEXT_PUBLIC_APP_URL,
     language: 'en',
-    image: `${env.NEXT_PUBLIC_APP_URL}/assets/blog/authors/dan.jpeg`,
-    favicon: `${env.NEXT_PUBLIC_APP_URL}/favicon/favicon.png`,
+    image: `${env.NEXT_PUBLIC_IMGIX_URL}/assets/blog/authors/dan.jpeg`,
+    favicon: `${env.NEXT_PUBLIC_APP_URL}/img/favicon.png`,
     copyright:
       'All rights reserved ' +
       year.getFullYear() +
@@ -49,7 +47,7 @@ export async function generateRSSFeed(posts: Post[]) {
 
     feed.addItem({
       title: post.title,
-      id: post.slug,
+      id: `${env.NEXT_PUBLIC_APP_URL}${post.slug}`,
       link: `${env.NEXT_PUBLIC_APP_URL}/posts/${post.slugAsParams}`,
       description: `<img src="${env.NEXT_PUBLIC_IMGIX_URL}${post.coverImage}" alt="post image" /><br><br>${post.excerpt}${afterContent}`,
       //   content: post.content,
