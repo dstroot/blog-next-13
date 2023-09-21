@@ -1,6 +1,4 @@
 /* ---  Custom MDX Components --- */
-import Image from 'next/image'
-
 import { CodeBlock } from './CodeBlock'
 import { CustomImage } from './CustomImage'
 import { CustomLink } from './CustomLink'
@@ -14,14 +12,6 @@ export const MDXComponents = {
   a: CustomLink,
   img: CustomImage,
 
-  // img: (props: any) => {
-  //   return (
-  //     <div className="relative">
-  //       <Image {...props} layout="fill" loading="lazy" />
-  //     </div>
-  //   )
-  // },
-
   // add MDX components
   CodeBlock,
   YouTube,
@@ -31,6 +21,5 @@ export const MDXComponents = {
 }
 
 /*
-  MDX Bundler will "bundle" these components along with any other directly imported
-  components for the MDX files to use.
+  NOTE: MDX Bundler will "bundle" these components for the MDX files to use.
 */
