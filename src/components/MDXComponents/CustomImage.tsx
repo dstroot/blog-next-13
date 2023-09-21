@@ -15,7 +15,7 @@ export const CustomImage = (props: React.HTMLAttributes<HTMLImageElement>) => {
           {...imgProps}
           fill
           loading="lazy"
-          sizes="(max-width: 1280px) 90vw, 1496px"
+          sizes="(min-width: 1040px) 768px, (min-width: 780px) 720px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
           className="m-0 object-contain"
         />
       </div>

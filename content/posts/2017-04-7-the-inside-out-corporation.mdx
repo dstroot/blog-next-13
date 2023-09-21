@@ -95,25 +95,33 @@ Here are some of the companies that specialize in turning organizations "inside-
 <table>
   <tr>
     <td>
-      <a href='https://auth0.com/'>
-        <img src='/assets/blog/img/auth0_logo.png' alt='Auth0' width='150' />
+      <a href="https://auth0.com/">
+        <img src="/assets/blog/img/auth0_logo.png" alt="Auth0" width="150" />
       </a>
     </td>
     <td>
-      <a href='https://www.okta.com/'>
-        <img src='/assets/blog/img/okta_logo.svg' alt='Okta' width='150' />
+      <a href="https://www.okta.com/">
+        <img src="/assets/blog/img/okta_logo.svg" alt="Okta" width="150" />
       </a>
     </td>
   </tr>
   <tr>
     <td>
-      <a href='https://www.onelogin.com/'>
-        <img src='/assets/blog/img/onelogin_logo.png' alt='Onelogin' width='150' />
+      <a href="https://www.onelogin.com/">
+        <img
+          src="/assets/blog/img/onelogin_logo.png"
+          alt="Onelogin"
+          width="150"
+        />
       </a>
     </td>
     <td>
-      <a href='https://www.pingidentity.com/en.html'>
-        <img src='/assets/blog/img/ping_logo.png' alt='Ping Identity' width='150' />
+      <a href="https://www.pingidentity.com/en.html">
+        <img
+          src="/assets/blog/img/ping_logo.png"
+          alt="Ping Identity"
+          width="150"
+        />
       </a>
     </td>
   </tr>
@@ -131,7 +139,7 @@ As a result, web applications behind the proxy don't have to have any identity o
 
 Google has made this **available as a free product** called the [Identity-Aware Proxy](https://cloud.google.com/iap/). It works like this:
 
-![Identity-Aware Proxy](https://danstroot.imgix.net/assets/blog/img/iap-lead_2x.png)
+![Identity-Aware Proxy](/assets/blog/img/iap-lead_2x.png)
 
 Bitly has also open-sourced a project called [oauth2_proxy](https://github.com/bitly/oauth2_proxy). which is described as "a reverse proxy and static file server that provides authentication using Providers (Google, Azure, Facebook, GitHub, and others) to validate accounts by email, domain or group".
 
@@ -145,18 +153,21 @@ Isn't it time all companies decide to live "outside the wall"? The corporate per
 
 Here are the main components summarized:
 
-<Step number={1} title='Unified User Directory and Centralized Access Controls' />
+<Step
+  number={1}
+  title="Unified User Directory and Centralized Access Controls"
+/>
 
 We must have a single, unified repository of all users and user data and simple ways to control
 access to corporate applications.
 
-<Step number={2} title='Identity-Aware Proxy' />
+<Step number={2} title="Identity-Aware Proxy" />
 
 A "smart" reverse proxy is placed in front of internal applications, where policies handle
 authentication and authorization in a consistent manner. The proxy is controlled through our
 Unified Directory and access controls.
 
-<Step number={3} title='Perimeterless Architecture/Zero Trust' />
+<Step number={3} title="Perimeterless Architecture/Zero Trust" />
 
 By making internal applications public facing, there is no longer the concept of a privileged
 network as the primary gatekeeper. Every connection is encrypted, and every request is
