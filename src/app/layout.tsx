@@ -28,6 +28,11 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: siteConfig.meta.description,
     keywords: siteConfig.meta.keywords,
+    alternates: {
+      types: {
+        'application/rss+xml': [{ url: '/feed.xml', title: 'Blog Posts RSS' }],
+      },
+    },
     authors: [
       {
         name: 'Dan Stroot',

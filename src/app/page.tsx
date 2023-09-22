@@ -20,7 +20,7 @@ export default async function Home() {
   // Remove any future posts
   posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
 
-  // TODO Generate RSS feed
+  // Generate RSS feed
   await generateRSSFeed(posts)
 
   const heroPost = posts[0]

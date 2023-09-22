@@ -8,6 +8,8 @@ import { siteConfig } from '@/config/site'
 // TODO: this cannot return actual post content because it is still in markdown format.  It would have to be run through remark first.  However, I like just giving the excerpt and then a link back to the article on the blog anyway.
 
 // https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl
+// https://kevincox.ca/2022/05/06/rss-feed-best-practices/
+// https://github.com/jpmonette/feed/blob/34dbde9aa47b85ae207ba4fefe4c5794b8ca43e2/src/rss2.ts#L81
 
 export async function generateRSSFeed(posts: Post[]) {
   // evergreen copyright year
@@ -17,7 +19,7 @@ export async function generateRSSFeed(posts: Post[]) {
   const feed = new Feed({
     title: siteConfig.meta.name,
     description: siteConfig.meta.tagline,
-    id: env.NEXT_PUBLIC_APP_URL,
+    id: `${env.NEXT_PUBLIC_APP_URL}\/`,
     link: env.NEXT_PUBLIC_APP_URL,
     language: 'en',
     image: `${env.NEXT_PUBLIC_IMGIX_URL}/assets/blog/authors/dan.jpeg`,
@@ -30,9 +32,11 @@ export async function generateRSSFeed(posts: Post[]) {
     // updated: Date.now(),
     // generator: "awesome", // optional, default = 'Feed for Node.js'
     feedLinks: {
-      json: `${env.NEXT_PUBLIC_APP_URL}/json`,
-      atom: `${env.NEXT_PUBLIC_APP_URL}/atom`,
+      //   json: `${env.NEXT_PUBLIC_APP_URL}/json`,
+      atom: `${env.NEXT_PUBLIC_APP_URL}/atom.xml`,
+      rss: `${env.NEXT_PUBLIC_APP_URL}/feed.xml`,
     },
+    feed: `${env.NEXT_PUBLIC_APP_URL}/feed.xml`,
     author: {
       name: 'Dan Stroot',
       email: 'dan@thestroots.com',

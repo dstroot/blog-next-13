@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:3000</id>
+    <id>http://localhost:3000/</id>
     <title>Dan Stroot · Blog</title>
-    <updated>2023-09-21T21:11:07.531Z</updated>
+    <updated>2023-09-22T01:19:36.501Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Stroot</name>
@@ -10,7 +10,7 @@
         <uri>http://localhost:3000</uri>
     </author>
     <link rel="alternate" href="http://localhost:3000"/>
-    <link rel="self" href="http://localhost:3000/atom"/>
+    <link rel="self" href="http://localhost:3000/feed.xml"/>
     <subtitle>I love building things</subtitle>
     <logo>https://danstroot.imgix.net/assets/blog/authors/dan.jpeg</logo>
     <icon>http://localhost:3000/img/favicon.png</icon>
