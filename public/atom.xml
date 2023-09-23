@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://localhost:3000/</id>
     <title>Dan Stroot · Blog</title>
-    <updated>2023-09-22T01:19:36.501Z</updated>
+    <updated>2023-09-23T14:27:41.288Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>Dan Stroot</name>
@@ -16,6 +16,18 @@
     <icon>http://localhost:3000/img/favicon.png</icon>
     <rights>All rights reserved 2023, Dan Stroot</rights>
     <category term="Technology"/>
+    <entry>
+        <title type="html"><![CDATA[Inspiration is a Time Machine]]></title>
+        <id>http://localhost:3000/posts/2023-09-23-inspiration-is-a-time-machine</id>
+        <link href="http://localhost:3000/posts/2023-09-23-inspiration-is-a-time-machine"/>
+        <updated>2023-09-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<img src="https://danstroot.imgix.net/assets/blog/img/delorean_bw.jpg" alt="post image" /><br><br>Companies say they want engaged employees. Engagement seems like a pretty low bar. Personally, I'd much rather be inspired. Inspiration goes far beyond engagement. The definition of inspiration is literally "the process of being mentally stimulated do or feel something, especially to do something creative."<br><br>This post <a href="http://localhost:3000/posts/2023-09-23-inspiration-is-a-time-machine">Inspiration is a Time Machine</a> first appeared on <a href=http://localhost:3000>Dan Stroot's Blog</a>]]></summary>
+        <author>
+            <name>Dan Stroot</name>
+            <email>dan.stroot@gmail.com</email>
+            <uri>http://localhost:3000</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Fintech Engineering Challenges]]></title>
         <id>http://localhost:3000/posts/2023-08-19-fintech-engineering-challenges</id>

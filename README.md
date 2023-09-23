@@ -1,4 +1,4 @@
-# Next.js Contentlayer Example
+# Next.js Blog with Contentlayer
 
 TODO:
 
@@ -41,3 +41,5 @@ TODO:
 10. No longer using next-sitemap - built it directly.
 11. Switched from rehype-prism to rehype-pretty-code
 12. Switched from SWC to Tanstack-Query (React Query)
+
+Phew...
