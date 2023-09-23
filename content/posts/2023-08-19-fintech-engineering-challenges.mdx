@@ -44,7 +44,15 @@ This is so critical that I once wrote a whitepaper on this topic alone. When flo
 
 If you use floating point numbers to represent currency, computers will have to round them, and the rounding errors will add up and become noticeable, even substantial. Imagine starting with $10.00 USD and dividing it equally into three payments, rounded to two decimals - you will have three $3.33 transactions. Add them back up and you have $9.99, not $10.00. You just made a penny disappear into thin air (0.1% of the total value!).
 
-Currency math is more closely related to integer math than it is to floating point math. Rounding errors on addition and subtraction are not allowed and division/multiplication should never create more accuracy than the original values. If money needs to be divided, and division isn&apos;t even, rounding should be apportioned according to well-understood business rules. In other words, in the example above you should end up with three transactions, two for $3.33 and one for $3.34. This is best accomplished with a well-tested [currency math library](https://metacpan.org/pod/Math::Currency) in your chosen language. Do not attempt to write this yourself.
+Currency math is more closely related to integer math than floating point math. Rounding errors on addition and subtraction are not allowed, and division/multiplication should never create more accuracy than the original values. If money needs to be divided, and division isn&apos;t even, rounding should be apportioned according to well-understood business rules. In other words, in the example above you should end up with three transactions, two for $3.33 and one for $3.34. This is best accomplished with a well-tested [currency math library](https://metacpan.org/pod/Math::Currency) in your chosen language. Do not attempt to write this yourself.
+
+To represent money use at a minimum 64-bit integers. If we represent one US Dollar $1.00 as 100 cents (in order to use whole numbers - more on this later) 64-bit integers can represent something close to 184.5 quadrillion dollars. While it may not be an issue for many people, the upper limit of a 64-bit integer becomes restrictive when there is a need to represent values _smaller_ than a cent. For example, in many countries, the price of a gallon/liter of gasoline requires three digits after the decimal point, and stock markets already require pricing increments of hundredths of cents, e.g., 0.0001. As you multiply to remove the decimal, the total amount you can store decreases.
+
+Don't ignore inflation. You will need more significant digits than you think - design it in.
+
+![Inflation](/assets/blog/img/zim-dollar.jpg)
+
+For the same reason, digital currencies are another use case for at a minimum 64-bit integers, where the smallest quantity of money can be represented on the order of micro-cents (10-6)… or even smaller. For these reasons a [commercial developer of financial software](https://tigerbeetle.com/) has decided to use 128-bit integers!
 
 Notes:
 
@@ -69,6 +77,8 @@ Martin Fowler calls this pattern [Event Sourcing](https://martinfowler.com/eaaDe
 We should always be able to start at zero, re-apply the transactions in order, and arrive at the same current account state. However, what happens if we have millions of accounts and billions of transactions? Can we easily and quickly validate our account values? Can we quickly spot errors?
 
 This is where **double entry accounting** comes into play. Double-entry accounting originated in the 13th century in Italy to ensure the accuracy of banking and financial records. In a double-entry system, the amounts recorded as debits _must always be equal_ to the amounts recorded as credits.
+
+Double entry accounting also avoids the use of negative numbers. In theory, all balances and transactions are represented by positive, non-zero figures. If you design your system for only positive mumbers you reduce or eliminate some sources of error.
 
 “Use a double-entry ledger” is probably the most valuable advice I could have sent myself prior to getting into fintech because it allows you to _reconcile all your data all the time_.
 
@@ -257,3 +267,4 @@ What metrics signal fraud attempts? From day one you will have to be vigilant ab
 - [An Elegant DB Schema for Double-Entry Accounting](https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/)
 - [Uber Ledger on DynamoDB and S3](https://www.youtube.com/watch?v=iN6mhI5hFt4&t=45s)
 - [Reconciliation: A game designed to frustrate the player](https://www.bitsaboutmoney.com/archive/a-game-that-intentionally-frustrates-the-player/)
+- [64-Bit Bank Balances ‘Ought to be Enough for Anybody’?](https://tigerbeetle.com/blog/2023-09-19-64-bit-bank-balances-ought-to-be-enough-for-anybody/)
