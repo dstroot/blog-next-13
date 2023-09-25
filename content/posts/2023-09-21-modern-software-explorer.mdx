@@ -1,6 +1,6 @@
 ---
 title: On Being a Modern Software Explorer
-excerpt: Having worked in financial services for most of my career I want to share some the software engineering challenges that are associated with tracking and moving money digitally. Most of these lessons have been learned the hard way. Hopefully they will be useful to anyone moving into the fintech space.
+excerpt: 'When hiring software engneers I look beyond technical talent. What I really want is someone who understands "the ecosystem" they work in. That is a broad, fuzzy term so let me explain what I mean.'
 coverImage: /assets/blog/img/2023-js-libraries.png
 date: '2023-09-21'
 published: false
@@ -12,56 +12,68 @@ ogImage:
 seoURL:
 ---
 
-When hirng software engneers I look beyond technical talent.
+When hiring software engneers I look beyond technical talent. What I really want is someone who understands "the ecosystem" they work in. That is a broad, fuzzy term so let me explain what I mean.
+
+## The Ecosystem
+
+Perhaps the most underated skill is what I call being a software explorer. Using open source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning between quality libraries and junk… this experience is a hard-won component of being a modern software engineer.
+
+If you build software, you’re well-versed in composition: grab a handful of existing libraries and tooling — a database here, a UI framework there, an HTTP library to round it all out — and arrange them together. You write your custom logic — the stuff unique to your project — and _let other people’s code do work that’s common across all projects_.
+
+It bears repeating - let other people’s code do work that’s common across all projects. The highest productivity software engineers I know are those who know how to "compose" sofware and who fully take advantage of developer tooling. They focus on business logic and what makes their system/application unique. Given the state of today's libraries and tooling you can have a new web application up and running in a day.
+
+However choosing and using the right libaries means being able to operate well in your chosen ecosystem.
+
+## Finding the "Right" Libraries
+
+Many libraries are very well known. But what if you want to add an RSS feed to your blog? Do you go read the RSS or ATOM specs and write your own? Do you search you language's package manager for the term "RSS"?
+
+If I do that on NPM, over a thousand packages are returned (try it!). However the first result is literally called "RSS" and was released seven years ago. The description reads "RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS." That looks promising - should I use it? Not so fast. First you have to know how to do due diligence:
+
+- When was the last release?
+- How often are releases?
+- How many open issues are there?
+- How many open pull requests?
+- How many "stars" on GitHub?
+- How many downloads?
+- How big is the package - how much will it inflate your project?
+- How does the code look?
+
+Every dependency you add to your project should save you time, but also could introduce vulnerabilities, issues, and frustration. Let's scan further. There is another package called "Feed" that was updated more recently, and has over 1,000 stars on GitHub. Is that one better? It seems more popular than RSS:
+
+![Feed vs. RSS Trend](/assets/blog/img/feed_vs_rss.jpg)
+
+Maybe Feed is the better choice? Knowing how to find libraries and do due diligence is a critical skill for a modern software engineer.
+
+## Community is everything to learning emerging skills.
+
+When learning a brand-new language, library, or framework there are not going to be any courses you can take. LinkedIn Learning will be a dry well. You need to hang out on Discord, or watch a few YouTube channels, or read a few blog posts. You have to get embedded into the community around the technology. You have to know where to turn for advice/help, how raise issues, how to contribute knowledge and use cases, etc.
+
+Operating within the broader communities of the tools and libraries you are using is also a critical skill for any software engineer.
 
 ## Language Proficiency
 
-Language proficiency is actually lower on my list - because of the emergence of AI assistants and of course Google.
+Language proficiency is lower on my list - yes, I expect software engineers to be capable, but knowing every edge case and corner of a language is just not as important anymore. We have always had places like Stack Overflow, but now we have the emergence of AI code assistants and of course we have always had Google.
+
+Generally, if you get stuck coding something a few good searches probably unblock you faster than being a language guru.
 
 ## Tooling Proficiency
 
-Tooling is critical to developer productivity, so does the engineer understand and take advantage of advanced tooling?
+Tooling is critical to developer productivity, so does the engineer understand and take advantage of advanced tooling? This is another area that separates good from great software engineers. Those who know how to setup and configure tools like Visual Studio Code with the right extentions and code snippets can be an order of magnitude faster and more productive. Many Javascript developers adopted Typescript not because of "type safety" but rather the developer experience of having intellisense for the codebase.
 
 ## Data
 
-How well do they conceptualize data? The adage "Data outlives code" certainly has been true in my career. This is certainly the case in enterprise applications, where data can sometimes migrate across several generations of an application. Data is likely to be be more valuable to the organization than the code that processes it.
+How well do they conceptualize data? The adage "data outlives code" certainly has been true in my career. This is certainly the case in enterprise applications, where data can sometimes migrate across several generations of an application. Data is likely to be be more valuable to the organization than the code that processes it.
 
 Data can also be a source of performance and/or stability issues. How many outages can you think of that were due to bad data over bad code? How many performance issues were in the data layer?
 
 How does the person think about data like application state, versus operational data like telemetry and logging, versus the base, underlying data storage layer?
 
+More importantly, how to they think about and manage test data? If bad data is a key source of operational issue in production code than having a robust set of test data become critical. But of course you can't just grab some production data because of privacy and security issues. Managing test data can also be what seprates good from great developers.
+
 ## Flexibility
 
 Does the engineer learn one "way" and stick to it? Or, do they jump on the latest and greatest libraries or paradigms before they have the opportunity to mature? I want an engineer that generally likes [boring technology](https://boringtechnology.club/), but isn't afraid to try new things once they have matured to a certain point. In the web space the velocity of change is much higher than most areas so engineers must be comfortable with change when it's warranted.
-
-## The ecosystem
-
-Perhaps the most underated skill is what I call being a software explorer. Using open source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning between quality projects and junk… this experience is a hard-won component of being a modern software explorer. It can take you further than you might realize.
-
-If you build modern software, you’re well-versed in composition: grab a handful of existing projects — a database here, a UI framework there, an HTTP library to round it all out — and arrange them together. You write your custom logic — the stuff unique to your project — and _let other people’s code do work that’s common across all projects_.
-
-## Community is everything to learning emerging skills.
-
-When learning a brand-new language, or framework, or what have you there are not going to be courses you can take. LinkedIn Learning will be a dry well. You need to hang out on Discord, or watch a few YouTube channels, or read a few blog posts. You have to get embedded into the community around the technology. You have to know where to turn for advice/help, how raise issues, how to contribute knowledge and use cases, etc.
-
-## How do you find the "right" libraries?
-
-Many libraries are very well known. But what if you want to add an RSS Feed to your blog? Do you gow read the RSS or ATOM specs and write your own? Do you search you language's package manager for the term "RSS"? If I do that on NPM, over a thousand packages are returned. However the first result is literally called "RSS" and was released seven years ago. The description reads "RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS." That looks really promising - should I use it?
-
-Not so fast. First you have to go look at the GitHub repo.
-
-- When was the last release?
-- How often are releases?
-- How many open issues are there?
-- Open pull requests?
-- How many "stars" on GitHub?
-- How many downloads?
-- How big is the package? I.e. how much will it inflate your project?
-- How does the code look?
-
-After all, every dependency you add to your project could save you time, but also could introduce vulnerabilities, issues, and frustration. Let's scan further. There is another package called "Feed" that was updated more recently, and has over 1,000 stars on GitHub. Is that one better? It seems more popular than RSS:
-
-![Feed vs. RSS Trend](/assets/blog/img/feed_vs_rss.jpg)
 
 ## Table of Contents
 
@@ -84,26 +96,3 @@ After all, every dependency you add to your project could save you time, but als
 | 12  | [Application Monitoring](#13)            |
 
 </div>
-
-## <a name='1'></a>Significant Digits/Rounding
-
-This is so critical that I once wrote a whitepaper on this topic alone. When floating point numbers (numbers that have a decimal point) are represented in binary, they lose precision. For example, ten cents (0.10) in binary is a repeating binary number that goes on forever like this:
-
-<div className="overflow-x-auto text-sm">
-  0.0001100110011001100110011001100110011...
-</div>
-
-### References
-
-- [Double-entry accounting for software engineers](https://www.balanced.software/double-entry-bookkeeping-for-programmers/)
-- [Storing Money and Float Precision](https://lashewi.medium.com/storing-currency-values-and-float-precision-99029c1e8b71)
-- [Event Sourcing](https://martinfowler.com/eaaDev/EventSourcing.html)
-- [Decimal and Thousands Separators](https://docs.oracle.com/cd/E19455-01/806-0169/overview-9/index.html)
-- [Books, an immutable double-entry accounting database service](https://developer.squareup.com/blog/books-an-immutable-double-entry-accounting-database-service/)
-- [Double-entry Bookkeeping for Programmers](https://dev.to/kallmanation/double-entry-bookkeeping-for-programmers-3ok9)
-- [An Engineer's Guide to Double-Entry Bookkeeping](https://anvil.works/blog/double-entry-accounting-for-engineers)
-- [Things I Wish I Knew Before Building a Ledger](https://www.andriosrobert.com/p/things-i-wish-i-knew-before-building)
-- [Twisp - The core accounting engine to power any financial product](https://www.twisp.com)
-- [An Elegant DB Schema for Double-Entry Accounting](https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/)
-- [Uber Ledger on DynamoDB and S3](https://www.youtube.com/watch?v=iN6mhI5hFt4&t=45s)
-- [Reconciliation: A game designed to frustrate the player](https://www.bitsaboutmoney.com/archive/a-game-that-intentionally-frustrates-the-player/)
