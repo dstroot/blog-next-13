@@ -8,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: ['/_next/static/', '/assets/'],
     },
     sitemap: `${env.NEXT_PUBLIC_APP_URL}/sitemap.xml`,
   }

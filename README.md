@@ -41,5 +41,15 @@ TODO:
 10. No longer using next-sitemap - built it directly.
 11. Switched from rehype-prism to rehype-pretty-code
 12. Switched from SWC to Tanstack-Query (React Query)
+13. About page is now markdown-based
 
 Phew...
+
+## Validation
+
+- Lighthouse - in DevTools
+- [Security Headers](https://securityheaders.com/)
+- [Google Indexing](https://search.google.com/search-console/index/drilldown?resource_id=sc-domain%3Adanstroot.com&item_key=CAMYCCAC&hl=en)
+- [Sitemap Validator](https://www.xml-sitemaps.com/validate-xml-sitemap.html)
+- [RSS Validator](https://validator.w3.org/feed/)
+- [robots.txt Validator](https://technicalseo.com/tools/robots-txt/)
