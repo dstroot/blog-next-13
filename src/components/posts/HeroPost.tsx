@@ -49,11 +49,9 @@ export const HeroPost = ({
       <div className="mb-12 flex flex-col gap-x-16 md:mb-16 md:flex-row">
         {/* Title and Avatar */}
         <div className="flex-none md:max-w-[45%]">
-          <div className="mb-4 text-3xl leading-tight group-hover:underline md:text-4xl">
-            <Link href={`/posts/${slug}`} className="text-balanced">
-              {title}
-            </Link>
-          </div>
+          <h2 className="text-balanced mb-4 text-3xl leading-tight group-hover:underline md:text-4xl">
+            <Link href={`/posts/${slug}`}>{title}</Link>
+          </h2>
           <div className="mb-4 md:mb-0">
             <Byline name={author.name} picture={author.picture} date={date} />
           </div>
