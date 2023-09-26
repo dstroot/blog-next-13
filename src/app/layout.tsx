@@ -2,6 +2,7 @@ import '@/styles/globals.css'
 
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
@@ -72,6 +73,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const nonce = headers().get('x-nonce')
+
   return (
     // scroll padding necessary for internal page links to leave room for navbar
     // Note: If you do not add suppressHydrationWarning to your <html> you will
@@ -80,7 +83,7 @@ export default function RootLayout({
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
         <Suspense>
-          <GoogleTagMgr nonce="" />
+          <GoogleTagMgr nonce={nonce} />
           <Analytics />
         </Suspense>
         <Providers>
