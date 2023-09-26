@@ -1,17 +1,17 @@
 // 'use client'
 
 // import { useEffect } from 'react'
-import { headers } from 'next/headers'
+// import { headers } from 'next/headers'
 // import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
 
 import { env } from '@/config/env.mjs'
 import { GTM_ID, pageview } from '@/lib/gtm'
 
-export const GoogleTagMgr = () => {
+export const GoogleTagMgr = ({ nonce }: { nonce: string | null }) => {
   //   const pathname = usePathname()
   //   const searchParams = useSearchParams()
-  const nonce = headers().get('x-nonce')
+  //   const nonce = headers().get('x-nonce')
 
   //   useEffect(() => {
   //     if (pathname) {
