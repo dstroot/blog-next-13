@@ -11,8 +11,8 @@ export const GoogleTagMgr = ({ nonce }: { nonce: string | null }) => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
-  // TODO - should separate the useEffect into a smaller client function. This could have
-  // 'use client' removed.
+  // TODO - should separate the useEffect into a smaller, separate client function.
+  // then this could have 'use client' removed.
   useEffect(() => {
     if (pathname) {
       pageview(pathname)
