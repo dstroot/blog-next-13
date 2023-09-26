@@ -2,7 +2,8 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
-import Balancer from 'react-wrap-balancer'
+
+// import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
 import { Byline } from '@/components/Byline'
@@ -60,8 +61,9 @@ export const PostPreview = ({
         </Link>
       </div>
       <div className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
-          <Balancer>{title}</Balancer>
+        <Link href={`/posts/${slug}`} className="text-balanced hover:underline">
+          {title}
+          {/* <Balancer>{title}</Balancer> */}
         </Link>
       </div>
       {/** FIXME */}

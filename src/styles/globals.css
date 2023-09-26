@@ -53,6 +53,9 @@
   * {
     @apply border-border;
   }
+  .text-balanced {
+    text-wrap: balance;
+  }
 }
 
 /**

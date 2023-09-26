@@ -19,7 +19,7 @@ export const config = {
   ],
 }
 export function middleware(request: NextRequest) {
-  //   const nonce = crypto.randomUUID()
+  const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
 
   const group = `
   {
@@ -33,6 +33,9 @@ export function middleware(request: NextRequest) {
   // https://developers.google.com/tag-platform/security/guides/csp
   // https://github.com/vercel/next.js/issues/55638
   // https://github.com/vercel/next.js/discussions/54907
+
+  // note: style-src requires 'unsafe-inline' mode because next/image adds inline styles.
+  //       I think <Link> does too. this means I can't use the nonce.
   const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';
@@ -41,16 +44,14 @@ export function middleware(request: NextRequest) {
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
   frame-ancestors 'self';
-  script-src 'self' 'unsafe-inline' ${
-    process.env.NODE_ENV === 'production' ? '' : "'unsafe-eval'"
-  }  *.google-analytics.com *.googletagmanager.com *.twitter.com https://va.vercel-scripts.com;
+  script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${
+    process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`
+  };
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
-  style-src ${
-    process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-inline' 'report-sample'"
-      : "'self' 'unsafe-inline'"
+  style-src 'self' 'unsafe-inline' ${
+    process.env.NODE_ENV === 'production' ? "'report-sample'" : ''
   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
-  img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com;
+  img-src * blob: data: https://ssl.gstatic.com https://www.gstatic.com www.googletagmanager.com;
   media-src 'none';
   connect-src 'self' ws://localhost:3000 https://vitals.vercel-insights.com https://www.google-analytics.com https://*.algolia.net https://*.algolianet.com https://gist.githubusercontent.com https://umami-production-3f4a.up.railway.app https://vercel-vitals.axiom.co;
   font-src 'self' https://fonts.gstatic.com data: ;
@@ -63,7 +64,7 @@ export function middleware(request: NextRequest) {
     .trim()
 
   const requestHeaders = new Headers()
-  //   requestHeaders.set('x-nonce', nonce)
+  requestHeaders.set('x-nonce', nonce)
   requestHeaders.set('Content-Security-Policy', ContentSecurityPolicy)
   requestHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin')
   requestHeaders.set('X-Frame-Options', 'SAMEORIGIN')
