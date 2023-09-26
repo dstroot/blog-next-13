@@ -60,8 +60,9 @@ export const PostPreview = ({
         </Link>
       </div>
       <div className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
-          <Balancer>{title}</Balancer>
+        <Link href={`/posts/${slug}`} className="text-balanced hover:underline">
+          {title}
+          {/* <Balancer>{title}</Balancer> */}
         </Link>
       </div>
       {/** FIXME */}

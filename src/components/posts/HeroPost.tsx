@@ -51,8 +51,9 @@ export const HeroPost = ({
         {/* Title and Avatar */}
         <div className="flex-none md:max-w-[45%]">
           <div className="mb-4 text-3xl leading-tight group-hover:underline md:text-4xl">
-            <Link href={`/posts/${slug}`}>
-              <Balancer className="hover:underline">{title}</Balancer>
+            <Link href={`/posts/${slug}`} className="text-balanced">
+              {title}
+              {/* <Balancer className="hover:underline">{title}</Balancer> */}
             </Link>
           </div>
           <div className="mb-4 md:mb-0">
