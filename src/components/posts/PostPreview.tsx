@@ -3,8 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
-// import Balancer from 'react-wrap-balancer'
-
 import { cn } from '@/lib/utils'
 import { Byline } from '@/components/Byline'
 import { MoreStats } from '@/components/MoreStats'
@@ -63,10 +61,9 @@ export const PostPreview = ({
       <div className="mb-3 text-3xl leading-snug">
         <Link href={`/posts/${slug}`} className="text-balanced hover:underline">
           {title}
-          {/* <Balancer>{title}</Balancer> */}
         </Link>
       </div>
-      {/** FIXME */}
+
       <Byline name={author.name} picture={author.picture} date={date} />
       <div className="my-4 leading-relaxed md:text-lg">{excerpt}</div>
       <ReadMore slug={slug} />

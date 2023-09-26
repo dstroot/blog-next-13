@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
-// import Balancer from 'react-wrap-balancer'
-
 import { Byline } from '@/components/Byline'
 import { MoreStats } from '@/components/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
@@ -54,7 +52,6 @@ export const HeroPost = ({
           <div className="mb-4 text-3xl leading-tight group-hover:underline md:text-4xl">
             <Link href={`/posts/${slug}`} className="text-balanced">
               {title}
-              {/* <Balancer className="hover:underline">{title}</Balancer> */}
             </Link>
           </div>
           <div className="mb-4 md:mb-0">
