@@ -74,6 +74,8 @@ export default function RootLayout({
 }) {
   return (
     // scroll padding necessary for internal page links to leave room for navbar
+    // Note: If you do not add suppressHydrationWarning to your <html> you will
+    // get warnings because next-themes updates that element.
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
