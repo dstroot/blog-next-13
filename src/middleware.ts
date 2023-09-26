@@ -34,6 +34,10 @@ export function middleware(request: NextRequest) {
   // https://github.com/vercel/next.js/issues/55638
   // https://github.com/vercel/next.js/discussions/54907
 
+  // script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${
+  // process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`
+  // };
+
   // note: style-src requires 'unsafe-inline' mode because next/image adds inline styles.
   //       I think <Link> does too. this means I can't use the nonce.
   const ContentSecurityPolicy = `
@@ -44,9 +48,9 @@ export function middleware(request: NextRequest) {
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
   frame-ancestors 'self';
-  script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${
-    process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`
-  };
+  script-src 'self' 'unsafe-inline' ${
+    process.env.NODE_ENV === 'production' ? '' : "'unsafe-eval'"
+  }  *.google-analytics.com *.googletagmanager.com *.twitter.com https://va.vercel-scripts.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' ${
     process.env.NODE_ENV === 'production' ? "'report-sample'" : ''
