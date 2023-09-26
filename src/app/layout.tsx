@@ -83,7 +83,7 @@ export default function RootLayout({
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
         <Suspense>
-          <GoogleTagMgr nonce={nonce} />
+          <GoogleTagMgr nonce={''} />
           <Analytics />
         </Suspense>
         <Providers>
