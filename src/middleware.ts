@@ -30,7 +30,9 @@ export function middleware(request: NextRequest) {
     ]
   }`.replace(/[\n\s]/g, '')
 
-  // developers.google.com/tag-platform/tag-manager/web/csp
+  // https://developers.google.com/tag-platform/security/guides/csp
+  // https://github.com/vercel/next.js/issues/55638
+  // https://github.com/vercel/next.js/discussions/54907
   const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';
@@ -39,10 +41,8 @@ export function middleware(request: NextRequest) {
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
   frame-ancestors 'self';
-  script-src ${
-    process.env.NODE_ENV === 'production'
-      ? "'self' 'unsafe-inline'"
-      : "'self' 'unsafe-inline' 'unsafe-eval'"
+  script-src 'self' 'unsafe-inline' ${
+    process.env.NODE_ENV === 'production' ? '' : "'unsafe-eval'"
   }  *.google-analytics.com *.googletagmanager.com *.twitter.com https://va.vercel-scripts.com;
   child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src ${
