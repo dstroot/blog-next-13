@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
-import Balancer from 'react-wrap-balancer'
+
+// import Balancer from 'react-wrap-balancer'
 
 // https://vercel.com/blog/react-wrap-balancer
 

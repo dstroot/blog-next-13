@@ -2,7 +2,8 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
-import Balancer from 'react-wrap-balancer'
+
+// import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
 import { Byline } from '@/components/Byline'

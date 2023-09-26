@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
-import Balancer from 'react-wrap-balancer'
+
+// import Balancer from 'react-wrap-balancer'
 
 import { Byline } from '@/components/Byline'
 import { MoreStats } from '@/components/MoreStats'
