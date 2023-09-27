@@ -73,7 +73,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  //   const nonce = headers().get('x-nonce')
+  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce')
   //   console.log(nonce)
 
   return (
@@ -84,10 +84,10 @@ export default function RootLayout({
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
         <Suspense>
-          <GoogleTagMgr nonce={''} />
+          <GoogleTagMgr nonce={nonce} />
           <Analytics />
         </Suspense>
-        <Providers>
+        <Providers nonce={nonce}>
           <SiteHeader />
           {children}
           <SiteFooter />

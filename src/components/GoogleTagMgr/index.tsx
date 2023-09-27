@@ -1,28 +1,10 @@
-'use client'
-
-import { useEffect } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
 
-import { env } from '@/config/env.mjs'
-import { GTM_ID, pageview } from '@/lib/gtm'
+import { GTM_ID } from '@/lib/gtm'
+
+// NOTE: you may need the accompanying "sendPageView" component for SPA's
 
 export const GoogleTagMgr = ({ nonce }: { nonce: string | null }) => {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  // TODO - should separate the useEffect into a smaller, separate client function.
-  // then this could have 'use client' removed.
-  useEffect(() => {
-    if (pathname) {
-      pageview(pathname)
-    }
-  }, [pathname, searchParams])
-
-  if (env.NEXT_PUBLIC_VERCEL_ENV !== 'production') {
-    return null
-  }
-
   return (
     <>
       <noscript>

@@ -5,10 +5,16 @@ import { ThemeProvider } from 'next-themes'
 
 const queryClient = new QueryClient()
 
-export const Providers = ({ children }: { children: React.ReactNode }) => {
+export const Providers = ({
+  nonce,
+  children,
+}: {
+  nonce: string
+  children: React.ReactNode
+}) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" nonce={''}>
+      <ThemeProvider attribute="class" nonce={nonce}>
         {children}
       </ThemeProvider>
     </QueryClientProvider>
