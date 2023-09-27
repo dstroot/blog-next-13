@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
+// import { headers } from 'next/headers'
 import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
@@ -73,7 +73,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const nonce = headers().get('x-nonce') ?? '' // 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce')
+  // TODO: This doesn't work yet. If I switch this to use the header, and switch the middleware
+  //       to "strict-dynamic" I get errors
+  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce') ?? ''
   //   console.log(nonce)
 
   return (
