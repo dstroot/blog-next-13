@@ -10,6 +10,7 @@ export interface NavLink {
   name: string
   href: string
   disabled?: boolean
+  prefetch?: boolean
   external?: boolean
   icon?: keyof typeof Icons
   label?: string
@@ -36,6 +37,7 @@ export function MainNav({ navLinks }: NavLinkProps) {
             )}
             href={link.href}
             key={link.name}
+            prefetch={link.prefetch ?? true}
           >
             {link.name}
           </Link>

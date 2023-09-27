@@ -33,6 +33,7 @@ export const Archive = ({ posts }: { posts: Post[] }) => {
                 <Link
                   className="hover:underline"
                   href={`/posts/${post.slugAsParams}`}
+                  prefetch={false}
                 >
                   {post.title}
                 </Link>

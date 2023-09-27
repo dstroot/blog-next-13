@@ -32,7 +32,7 @@ export const PostPreview = ({
   return (
     <>
       <div className="mb-5">
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/posts/${slug}`} prefetch={false}>
           <div aria-label={title} className="sm:mx-0">
             <div className="relative aspect-[2/1]">
               {/*
@@ -59,7 +59,11 @@ export const PostPreview = ({
         </Link>
       </div>
       <h2 className="text-balanced mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+        <Link
+          href={`/posts/${slug}`}
+          className="hover:underline"
+          prefetch={false}
+        >
           {title}
         </Link>
       </h2>

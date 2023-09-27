@@ -74,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   // TODO: This doesn't work yet. If I switch this to use the header, and switch the middleware
-  //       to "strict-dynamic" I get errors
+  //       to "strict-dynamic" I get errors. Could be due to the "afterinteractive" Script load for GTM.
   const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce') ?? ''
   //   console.log(nonce)
 

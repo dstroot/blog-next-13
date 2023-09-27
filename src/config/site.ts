@@ -6,6 +6,7 @@ type NavItem = {
   name: string
   href: string
   disabled?: boolean
+  prefetch?: boolean
   external?: boolean
   new: boolean
   icon?: IconKey
@@ -48,7 +49,13 @@ export const siteConfig = {
   mainNav: [
     { href: '/', name: 'Home', new: false, external: false },
     { href: '/about', name: 'About', new: false, external: false },
-    { href: '/archive', name: 'Archive', new: false, external: false },
+    {
+      href: '/archive',
+      name: 'Archive',
+      new: false,
+      prefetch: false,
+      external: false,
+    },
     { href: '/snippets', name: 'Snippets', new: false, external: false },
     // { href: '/uses', name: 'Uses', new: false, external: false },
   ] satisfies NavItem[],

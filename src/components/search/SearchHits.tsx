@@ -46,7 +46,7 @@ export const Hits = ({ ...props }) => {
 
 const PostCard = ({ hit }: { hit: Hit }) => {
   return (
-    <Link href={`/posts/${hit.slug}`}>
+    <Link href={`/posts/${hit.slug}`} prefetch={false}>
       <Card className="flex h-full flex-col bg-zinc-100 shadow-md dark:bg-zinc-800">
         <CardHeader className="">
           <Image
