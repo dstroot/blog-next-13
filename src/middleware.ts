@@ -19,8 +19,8 @@ export const config = {
   ],
 }
 export function middleware(request: NextRequest) {
-  //   const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
-  const nonce = btoa(crypto.randomUUID()) // this is working
+  const nonce = Buffer.from(crypto.randomUUID()).toString('base64')
+  //   const nonce = btoa(crypto.randomUUID()) // this is working
 
   const group = `
   {
