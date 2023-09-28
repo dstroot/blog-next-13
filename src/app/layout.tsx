@@ -1,15 +1,14 @@
 import '@/styles/globals.css'
 
-// import { Suspense } from 'react'
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
-
-// import { Analytics } from '@vercel/analytics/react'
+// import { headers } from 'next/headers'
+import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 import { absoluteUrl } from '@/lib/utils'
-// import { GoogleTagMgr } from '@/components/GoogleTagMgr'
+import { GoogleTagMgr } from '@/components/GoogleTagMgr'
 import { Hotkeys } from '@/components/Hotkeys'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
@@ -76,9 +75,8 @@ export default function RootLayout({
 }) {
   // TODO: This doesn't work yet. If I switch this to use the header, and switch the middleware
   //       to "strict-dynamic" I get errors. Could be due to the "afterinteractive" Script load for GTM.
-  //   const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce') ?? ''
-  const nonce = headers().get('x-nonce') ?? ''
-  //   console.log(nonce)
+  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce') ?? ''
+  //   const nonce = headers().get('x-nonce') ?? ''
 
   return (
     // scroll padding necessary for internal page links to leave room for navbar
@@ -87,10 +85,10 @@ export default function RootLayout({
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
-        {/* <Suspense>
+        <Suspense>
           <GoogleTagMgr nonce={nonce} />
           <Analytics />
-        </Suspense> */}
+        </Suspense>
         <Providers nonce={nonce}>
           <SiteHeader />
           {children}
