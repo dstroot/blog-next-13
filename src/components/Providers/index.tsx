@@ -13,10 +13,8 @@ export const Providers = ({
   children: React.ReactNode
 }) => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" nonce={nonce}>
-        {children}
-      </ThemeProvider>
-    </QueryClientProvider>
+    <ThemeProvider attribute="class" nonce={nonce}>
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    </ThemeProvider>
   )
 }
