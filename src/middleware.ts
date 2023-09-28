@@ -38,12 +38,8 @@ export function middleware(request: NextRequest) {
   //   process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`
   // };
 
-  // script-src 'self' 'unsafe-inline' ${
-  //   process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`
-  // }  *.google-analytics.com *.googletagmanager.com *.twitter.com https://va.vercel-scripts.com;
-
-  // note: style-src requires 'unsafe-inline' mode because next/image adds inline styles.
-  //       I think <Link> does too. this means I can't use the nonce.
+  // Note: style-src requires 'unsafe-inline' mode because next/image adds inline styles.
+  //       I think next/link does too. This means I can't use the nonce in style-src.
   const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';

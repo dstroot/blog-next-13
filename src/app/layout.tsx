@@ -2,7 +2,6 @@ import '@/styles/globals.css'
 
 import { Suspense } from 'react'
 import type { Metadata } from 'next'
-// import { headers } from 'next/headers'
 import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
@@ -73,15 +72,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // TODO: This doesn't work yet. If I switch this to use the header, and switch the middleware
-  //       to "strict-dynamic" I get errors. Could be due to the "afterinteractive" Script load for GTM.
-  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy' // headers().get('x-nonce') ?? ''
+  // NOTE: for now we are "faking" a nonce because actually pulling it from the header is breaking
+  //       the system (it errors in production on Vercel) and it's slower since the page becomes
+  //       dynamic. See note below.
+  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy'
+
+  // NOTE: headers() is a Dynamic Function whose returned values cannot be known ahead of time.
+  // Using it in a **layout or page** will opt a route into dynamic rendering at request time.
+  // This is not good for performance and server load...
+
   //   const nonce = headers().get('x-nonce') ?? ''
 
   return (
-    // scroll padding necessary for internal page links to leave room for navbar
+    // Note: Scroll padding necessary for internal page links to leave room for navbar
     // Note: If you do not add suppressHydrationWarning to your <html> you will
-    // get warnings because next-themes updates that element.
+    //       get warnings because next-themes updates that element.
     <html lang="en" className="scroll-pt-16" suppressHydrationWarning>
       <body className="grid min-h-screen grid-rows-[auto_1fr_auto] bg-background text-foreground antialiased">
         <Hotkeys />
