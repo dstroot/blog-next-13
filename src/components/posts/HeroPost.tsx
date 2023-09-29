@@ -32,14 +32,14 @@ export const HeroPost = ({
             {/*
             It usually is best practice to wrap images in a div and set height and width with it. HTML treats images as foreign objects so they don't follow the same rules as everything else. A simple div is the best way to work with an img as a normal block level element.
              */}
-            <div className="relative aspect-[2/1]">
+            <div className="relative aspect-[2/1] overflow-hidden">
               <Image
                 src={coverImage}
                 alt={`Hero image for ${title}`}
                 fill
                 sizes="(min-width: 1540px) 1488px, (min-width: 1280px) 1232px, (min-width: 1040px) 976px, (min-width: 780px) 720px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
                 priority={true}
-                className="overflow-hidden object-cover duration-300 ease-in-out group-hover:opacity-[85%]"
+                className="object-cover duration-200 ease-in-out group-hover:scale-[103%]"
               />
             </div>
             <MoreStats stats={stats} slug={slug} />
