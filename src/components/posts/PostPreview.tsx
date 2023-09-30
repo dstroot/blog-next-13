@@ -58,7 +58,7 @@ export const PostPreview = ({
           </div>
         </Link>
       </div>
-      <h2 className="text-balanced mb-3 text-3xl leading-snug">
+      <h2 className="text-balance mb-3 text-3xl leading-snug">
         <Link
           href={`/posts/${slug}`}
           className="hover:underline"
