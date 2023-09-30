@@ -17,7 +17,7 @@
     "@aws-sdk/lib-dynamodb": "^3.421.0",
     "@google-analytics/data": "^4.0.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
-    "@mantine/hooks": "^7.0.2",
+    "@mantine/hooks": "^7.1.0",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-avatar": "1.0.3",
     "@radix-ui/react-dialog": "1.0.4",
