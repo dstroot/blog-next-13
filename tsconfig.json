@@ -31,7 +31,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".src/types/**/*.ts",
-    ".contentlayer/generated"
-, "build-search.js"  ],
+    ".contentlayer/generated",
+    "build-search.js"
+  ],
   "exclude": ["node_modules"]
 }
