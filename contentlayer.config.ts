@@ -1,6 +1,7 @@
 import {
   defineDocumentType,
   defineNestedType,
+  LocalDocument,
   makeSource,
 } from 'contentlayer/source-files'
 import readingTime from 'reading-time'
@@ -89,15 +90,16 @@ const Post = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+      resolve: (doc: LocalDocument) => `/${doc._raw.flattenedPath}`,
     },
     slugAsParams: {
       type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
+      resolve: (doc: LocalDocument) =>
+        doc._raw.flattenedPath.split('/').slice(1).join('/'),
     },
     stats: {
       type: 'nested',
-      resolve: (doc) => {
+      resolve: (doc: LocalDocument) => {
         const content = doc.body.raw
         return readingTime(content)
       },
@@ -144,15 +146,16 @@ const Snippet = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+      resolve: (doc: LocalDocument) => `/${doc._raw.flattenedPath}`,
     },
     slugAsParams: {
       type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
+      resolve: (doc: LocalDocument) =>
+        doc._raw.flattenedPath.split('/').slice(1).join('/'),
     },
     stats: {
       type: 'nested',
-      resolve: (doc) => {
+      resolve: (doc: LocalDocument) => {
         const content = doc.body.raw
         return readingTime(content)
       },
@@ -178,11 +181,12 @@ export const Page = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc) => `/${doc._raw.flattenedPath}`,
+      resolve: (doc: LocalDocument) => `/${doc._raw.flattenedPath}`,
     },
     slugAsParams: {
       type: 'string',
-      resolve: (doc) => doc._raw.flattenedPath.split('/').slice(1).join('/'),
+      resolve: (doc: LocalDocument) =>
+        doc._raw.flattenedPath.split('/').slice(1).join('/'),
     },
   },
 }))
