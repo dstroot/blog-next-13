@@ -10,9 +10,7 @@ export const CustomImage = (props: React.HTMLAttributes<HTMLImageElement>) => {
   if (isInternalImage) {
     return (
       <div className="relative aspect-[2/1]">
-        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image
-          //   {...imgProps}
           src={src}
           alt={imgProps.alt}
           fill
@@ -26,7 +24,7 @@ export const CustomImage = (props: React.HTMLAttributes<HTMLImageElement>) => {
 
   return (
     <div className="relative aspect-[2/1]">
-      {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className="max-h-[384px]"
         src={imgProps.src + '?w=768'}
