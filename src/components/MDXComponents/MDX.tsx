@@ -19,7 +19,7 @@ type AspectRatioProps = React.ComponentProps<typeof AspectRatio>
 
 // add any mdx components you need here
 const components = {
-  pre: CodeBlock,
+  CodeBlock,
   //   Card: MdxCard,
   //   Callout,
 }

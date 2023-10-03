@@ -16,7 +16,7 @@ Here is the easiest way to implement "hot keys" in a Nextjs app. This example is
 
 In the example below I will use the "/" key to navigate to my application's search route from anywhere in my site.
 
-<CodeBlock>
+<CodeBlock title="hotkeys.ts">
 
 ```js title="hotkeys.ts"
 'use client'
@@ -38,7 +38,7 @@ export const Hotkeys = () => {
 
 Then simply import the Hotkeys component in your layout, or maybe in your site header component. Somewhere where it will be loaded on every page. For simplicity let's just add it to our layout:
 
-<CodeBlock>
+<CodeBlock title="layout.tsx">
 
 ```js title="layout.tsx"
 import '@/styles/globals.css'

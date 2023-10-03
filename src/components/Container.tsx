@@ -3,11 +3,11 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { cn } from '@/lib/utils'
 
-const ContainerVariants = cva('container', {
+const ContainerVariants = cva('container mx-auto p-4', {
   variants: {
     variant: {
-      default: 'container mx-auto p-4 md:p-6',
-      padded: 'container mx-auto p-4 md:p-6 mt-6 md:mt-12',
+      default: 'md:p-6',
+      padded: 'md:p-6 mt-6 md:mt-12',
     },
   },
   defaultVariants: {
