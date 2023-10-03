@@ -12,7 +12,9 @@ export const CustomImage = (props: React.HTMLAttributes<HTMLImageElement>) => {
       <div className="relative aspect-[2/1]">
         {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image
-          {...imgProps}
+          //   {...imgProps}
+          src={src}
+          alt={imgProps.alt}
           fill
           loading="lazy"
           sizes="(min-width: 1040px) 768px, (min-width: 780px) 720px, (min-width: 680px) 608px, calc(94.44vw - 15px)"
