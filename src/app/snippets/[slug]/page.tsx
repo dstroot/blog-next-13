@@ -74,10 +74,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
   // Parse the MDX file via the useMDXComponent hook.
   const Content = useMDXComponent(snippet.body.code)
-  const components = {
-    ...MDXComponents,
-    // Image: (props: ImageProps) => <NextImage {...props} />,
-  }
+  const components = { ...MDXComponents }
 
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${snippet._id}`
   const Icon = Icons[snippet.icon as IconKey]
