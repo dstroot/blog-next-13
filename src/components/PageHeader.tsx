@@ -20,8 +20,8 @@ const headerDescriptionVariants = cva('text-muted', {
   variants: {
     size: {
       default:
-        'text-center md:text-left text-lg md:text-xl text-muted-foreground',
-      lg: 'text-center md:text-left text-xl md:text-2xl text-muted-foreground',
+        'text-center text-lg md:text-xl text-muted-foreground md:text-left',
+      lg: 'px-4 mx-auto text-xl md:text-2xl text-muted-foreground md:text-left md:mx-0',
     },
   },
   defaultVariants: {
@@ -35,7 +35,6 @@ interface PageHeaderProps
     VariantProps<typeof headerDescriptionVariants> {
   title: string
   description?: string | null
-  descriptionAs?: React.ElementType
   balancedTitle?: boolean
   balancedDescription?: boolean
 }
@@ -43,27 +42,22 @@ interface PageHeaderProps
 export const PageHeader = ({
   title,
   description,
-  descriptionAs = 'h2',
   className,
   size,
   balancedTitle = false,
   balancedDescription = true,
-  ...props
 }: PageHeaderProps) => {
   const Title = balancedTitle ? Balancer : 'h1'
   const Description = balancedDescription ? Balancer : 'h2'
 
   return (
-    <div
-      className={cn('mb-6 grid w-full gap-1 md:mb-12', className)}
-      {...props}
-    >
+    <div className={cn('mb-6 grid w-full gap-1 md:mb-12', className)}>
       <Title as="h1" className={cn(headerTitleVariants({ size }))}>
         {title}
       </Title>
       {description && (
         <Description
-          as={descriptionAs}
+          as="h2"
           className={cn(headerDescriptionVariants({ size }))}
         >
           {description}
