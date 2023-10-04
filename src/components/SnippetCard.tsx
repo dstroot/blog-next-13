@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import type { Snippet } from 'contentlayer/generated'
 
-import { IconKey, Icons } from '@/components/Icons'
 import {
   Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
   CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card'
+import { IconKey, Icons } from '@/components/Icons'
 
 export const SnippetCard = (props: Snippet) => {
   const Icon = Icons[props.icon as IconKey]
@@ -41,7 +41,7 @@ export const SnippetCard = (props: Snippet) => {
           {props.tags
             ? props.tags.map((tag) => (
                 <span
-                  className="rounded-full bg-accent px-2 py-1 text-accent-foreground"
+                  className="truncate rounded-full bg-accent px-2 py-1 text-accent-foreground"
                   key={tag}
                 >
                   #{tag}
