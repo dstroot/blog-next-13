@@ -18,7 +18,7 @@ const headerTitleVariants = cva(
 )
 
 const headerDescriptionVariants = cva(
-  'px-4 md:px-0 text-balance text-center text-muted-foreground md:text-left',
+  'text-center md:text-left text-muted-foreground text-balance',
   {
     variants: {
       size: {
