@@ -12,38 +12,38 @@ ogImage:
 seoURL:
 ---
 
-When hiring software engneers I look beyond technical talent. What I really want is someone who understands "the ecosystem" they work in. That is a broad, fuzzy term so let me explain what I mean.
+When hiring software engineers, I look beyond just technical talent. What I really want to know is how this person operates within "the ecosystem" they work in. How do they learn? Do they know the players and thought leaders in their field? How do they discover and use new tooling and libraries? Do they explore their environment? I think of these engineers as "software explorers". They find the shiny new objects, vet them, and introduce them into the business context where they may have a large positive impact.
 
 ## Table of Contents
 
 <div className="px-2 w-full md:w-2/3 xl:w-1/2 overflow-x-auto">
 
-| No. | Section                                                       |
-| --- | ------------------------------------------------------------- |
-| 1   | [The Ecosystem](#the-ecosystem)                               |
-| 2   | [Finding the "Right" Libraries](#finding-the-right-libraries) |
-| 3   | [Reporting Periods](#reporting-periods)                       |
-| 4   | [Reconciliation](#4)                                          |
-| 5   | [Transaction States](#5)                                      |
-| 6   | [Immutability](#6)                                            |
+| No. | Section                                               |
+| --- | ----------------------------------------------------- |
+| 1   | [The Ecosystem](#the-ecosystem)                       |
+| 2   | [Navigating the Ecosystem](#navigating-the-ecosystem) |
+| 3   | [Community is Everything](#community-is-everything)   |
+| 4   | [Language Proficiency](#language-proficiency)         |
+| 5   | [Tooling Proficiency](#tooling-proficiency)           |
+| 6   | [Data Proficiency](#data-proficiency)                 |
 
 </div>
 
 ## The Ecosystem
 
-Perhaps the most underated skill is what I call being a software explorer. Using open source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning between quality libraries and junk… this experience is a hard-won component of being a modern software engineer.
+Using open-source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning between quality libraries and junk… this experience is a hard-won component of being a modern software engineer.
 
-If you build software, you’re well-versed in composition: grab a handful of existing libraries and tooling — a database here, a UI framework there, an HTTP library to round it all out — and arrange them together. You write your custom logic — the stuff unique to your project — and _let other people’s code do work that’s common across all projects_.
+If you build software, hopefully you’re well-versed in composition: grab a handful of existing libraries and tooling — a database here, a UI framework there, an HTTP library to round it all out — and arrange them together. You write your custom logic — the stuff unique to your project — and _let other people’s code do work that’s common across all projects_.
 
-It bears repeating - let other people’s code do work that’s common across all projects. The highest productivity software engineers I know are those who know how to "compose" sofware and who fully take advantage of developer tooling. They focus on business logic and what makes their system/application unique. Given the state of today's libraries and tooling you can have a new web application up and running in a day.
+It bears repeating - let other people’s code do work that’s common across all projects. The highest productivity software engineers I know are those who know how to "compose" software. They focus on business logic and what makes their system/application unique. Given the state of today's libraries and tooling you can have a new web application up and running in a day.
 
-However choosing and using the right libaries means being able to operate well in your chosen ecosystem.
+Choosing and using the right libraries means being able to operate well in your chosen ecosystem. You have to be a modern software explorer to know what's out there, and what is worth adopting and what is worth avoiding. This can have an outsized impact on your business.
 
-## Finding the "Right" Libraries
+## Navigating the Ecosystem
 
-Many libraries are very well known. But what if you want to add an RSS feed to your blog? Do you go read the RSS or ATOM specs and write your own? Do you search you language's package manager for the term "RSS"?
+Many libraries are very well known. But what if you want to add an RSS feed to your blog? Do you go read the RSS or ATOM specs and write your own? Do you search your language's package manager for the term "RSS"?
 
-If I do that on NPM, over a thousand packages are returned (try it!). However the first result is literally called "RSS" and was released seven years ago. The description reads "RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS." That looks promising - should I use it? Not so fast. First you have to know how to do due diligence:
+If I do that on NPM, the package manager in the JavaScript ecosystem, over a thousand packages are returned (try it!). The first result is literally called "RSS" and was released seven years ago. The description reads "RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS." That looks promising - should I use it? Not so fast. You have to know how to do due diligence:
 
 - When was the last release?
 - How often are releases?
@@ -51,63 +51,46 @@ If I do that on NPM, over a thousand packages are returned (try it!). However th
 - How many open pull requests?
 - How many "stars" on GitHub?
 - How many downloads?
+- Is it the work of a independent developer, or does it have a team behind it?
 - How big is the package - how much will it inflate your project?
 - How does the code look?
 
-Every dependency you add to your project should save you time, but also could introduce vulnerabilities, issues, and frustration. Let's scan further. There is another package called "Feed" that was updated more recently, and has over 1,000 stars on GitHub. Is that one better? It seems more popular than RSS:
+Every dependency you add to your project should save you time, but also could introduce vulnerabilities, issues, and frustration. Let's scan further. There is another package called "Feed" that was updated more recently and has over 1,000 stars on GitHub. Is that one better? It seems more popular than RSS:
 
 ![Feed vs. RSS Trend](/assets/blog/img/feed_vs_rss.jpg)
 
-Maybe Feed is the better choice? Knowing how to find libraries and do due diligence is a critical skill for a modern software engineer.
+Maybe Feed is the better choice? Knowing how to find libraries and conducting due diligence is a critical skill for a modern software engineer.
 
-## Community is everything to learning emerging skills.
+## Community is Everything
 
-When learning a brand-new language, library, or framework there are not going to be any courses you can take. LinkedIn Learning will be a dry well. You need to hang out on Discord, or watch a few YouTube channels, or read a few blog posts. You have to get embedded into the community around the technology. You have to know where to turn for advice/help, how raise issues, how to contribute knowledge and use cases, etc.
+When learning a brand-new language, library, or framework there are not going to be any courses you can take. LinkedIn Learning will be a dry well. You need to hang out on Discord, or watch a few YouTube channels, or read a few blog posts. You must get embedded into the community around the technology. You have to know where to turn for advice/help, how raise issues, how to contribute knowledge and use cases, etc.
 
-Operating within the broader communities of the tools and libraries you are using is also a critical skill for any software engineer.
+Operating within the broader communities of the tools and libraries you are using is also a critical skill for any software engineer. It can cut down on the due diligence you may need to do if "the community" has spoken and adopted a new library or tool and it can support you when you run into questions or issues.
 
 ## Language Proficiency
 
 Language proficiency is lower on my list - yes, I expect software engineers to be capable, but knowing every edge case and corner of a language is just not as important anymore. We have always had places like Stack Overflow, but now we have the emergence of AI code assistants and of course we have always had Google.
 
-Generally, if you get stuck coding something a few good searches probably unblock you faster than being a language guru.
+Generally, if you get stuck coding something a few good searches probably unblock you faster than anything else. My best engineers know several languages and aren't necessarily deep experts in all of them, yet they are incredibly productive because they know how to get answers fast. Soon, they will just need to be able to spot issues in machine generated code.
 
 ## Tooling Proficiency
 
-Tooling is critical to developer productivity, so does the engineer understand and take advantage of advanced tooling? This is another area that separates good from great software engineers. Those who know how to setup and configure tools like Visual Studio Code with the right extentions and code snippets can be an order of magnitude faster and more productive. Many Javascript developers adopted Typescript not because of "type safety" but rather the developer experience of having intellisense for the codebase.
+Tooling is critical to developer productivity, so does the engineer understand and take advantage of advanced tooling? This is another area that separates good from great software engineers.
 
-## Data
+Those who know how to setup and configure tools like Visual Studio Code with the right extensions and code snippets can be an order of magnitude faster and more productive. Many JavaScript developers adopted Typescript not because of "type safety" but rather the developer experience of having IntelliSense for the codebase.
 
-How well do they conceptualize data? The adage "data outlives code" certainly has been true in my career. This is certainly the case in enterprise applications, where data can sometimes migrate across several generations of an application. Data is likely to be be more valuable to the organization than the code that processes it.
+The most productive engineers are the ones who know their tools.
+
+## Data Proficiency
+
+The adage "data outlives code" certainly has been true in my career. This is certainly the case in enterprise applications, where data can sometimes migrate across several generations of an application. Data is likely to be more valuable to the organization than the code that processes it.
 
 Data can also be a source of performance and/or stability issues. How many outages can you think of that were due to bad data over bad code? How many performance issues were in the data layer?
 
-How does the person think about data like application state, versus operational data like telemetry and logging, versus the base, underlying data storage layer?
+How well do they conceptualize data? How does the person think about data like application state, versus operational data like telemetry and logging, versus the base, underlying data storage layer?
 
-More importantly, how to they think about and manage test data? If bad data is a key source of operational issue in production code than having a robust set of test data become critical. But of course you can't just grab some production data because of privacy and security issues. Managing test data can also be what seprates good from great developers.
+More importantly, how to they think about and manage test data? If bad data is a key source of operational issues in production code, then having a robust set of test data is critical. Of course, you can't just grab some production data because of privacy and security issues. Managing test data is what separates good from great software engineers.
 
 ## Flexibility
 
-Does the engineer learn one "way" and stick to it? Or, do they jump on the latest and greatest libraries or paradigms before they have the opportunity to mature? I want an engineer that generally likes [boring technology](https://boringtechnology.club/), but isn't afraid to try new things once they have matured to a certain point. In the web space the velocity of change is much higher than most areas so engineers must be comfortable with change when it's warranted.
-
-## Table of Contents
-
-<div className="px-2 w-full md:w-2/3 xl:w-1/2 overflow-x-auto">
-
-| No. | Section                                  |
-| --- | ---------------------------------------- |
-| 1   | [Significant Digits/Rounding](#1)        |
-| 2   | [Ledgers, Accounts and Transactions](#2) |
-| 3   | [Reporting Periods](#reporting-periods)  |
-| 4   | [Reconciliation](#4)                     |
-| 5   | [Transaction States](#5)                 |
-| 6   | [Immutability](#6)                       |
-| 7   | [Currency Codes](#7)                     |
-| 8   | [Time/Timestamps](#8)                    |
-| 9   | [Retry Logic](#9)                        |
-| 10  | [Architecture](#10)                      |
-| 11  | [Identity Management](#11)               |
-| 11  | [Testing and Release Management](#12)    |
-| 12  | [Application Monitoring](#13)            |
-
-</div>
+Does the engineer learn one "way" and stick to it? Or do they jump on the latest and greatest libraries or paradigms before they have the opportunity to mature? I want an engineer that generally likes [boring technology](https://boringtechnology.club/), but isn't afraid to try new things once they have matured to a certain point. In the web space the velocity of change is much higher than most areas so engineers must be comfortable with change when it's warranted.
