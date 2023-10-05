@@ -65,7 +65,6 @@ export default function SnippetsPage() {
       <PageHeader
         title="Snippets"
         description="Short solutions to discrete problems."
-        size="lg"
       />
 
       {/* Grid */}

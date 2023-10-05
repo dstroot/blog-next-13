@@ -64,7 +64,6 @@ export default function ArchivePage() {
       <PageHeader
         title="Archive"
         description="Here's all my posts in chronological order. Cheers!"
-        size="lg"
       />
       {posts.length > 0 && <Archive posts={posts} />}
     </Container>

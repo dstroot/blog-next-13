@@ -9,11 +9,7 @@ export const generateMetadata = () => {
 export default function AnalyticsPage() {
   return (
     <Container variant="padded">
-      <PageHeader
-        title="Analytics"
-        description="Measure what you treasure."
-        size="lg"
-      />
+      <PageHeader title="Analytics" description="Measure what you treasure." />
 
       <Stats />
       <div className="mt-6 flex flex-col p-6 text-lg">

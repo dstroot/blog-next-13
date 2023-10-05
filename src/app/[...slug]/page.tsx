@@ -87,7 +87,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <Container variant="padded">
-      <PageHeader title={page.title} description={page.description} size="lg" />
+      <PageHeader title={page.title} description={page.description} />
       <Mdx code={page.body.code} />
       <GitHubLink path={github} />
     </Container>

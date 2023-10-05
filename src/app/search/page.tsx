@@ -48,7 +48,7 @@ export const generateMetadata = () => {
 export default function Index() {
   return (
     <Container variant="padded">
-      <PageHeader title="Search" description="Find anything fast." size="lg" />
+      <PageHeader title="Search" description="Find anything fast." />
       <Search />
     </Container>
   )

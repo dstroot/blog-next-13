@@ -21,7 +21,7 @@ export default function Error({
 
   return (
     <Container variant="padded">
-      <PageHeader title="Error" description="Something went wrong!" size="lg" />
+      <PageHeader title="Error" description="Something went wrong!" />
       <p className="my-8">{error.message}</p>
       <Button
         onClick={
