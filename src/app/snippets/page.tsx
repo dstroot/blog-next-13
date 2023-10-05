@@ -66,7 +66,6 @@ export default function SnippetsPage() {
         title="Snippets"
         description="Short solutions to discrete problems."
         size="lg"
-        balancedDescription={false}
       />
 
       {/* Grid */}
