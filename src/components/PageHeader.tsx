@@ -1,33 +1,36 @@
 import { cva, type VariantProps } from 'class-variance-authority'
-import Balancer from 'react-wrap-balancer'
 
 import { cn } from '@/lib/utils'
 
-const headerTitleVariants = cva('font-bold tracking-tight', {
-  variants: {
-    size: {
-      default:
-        'mb-2 md:mb-4 text-center text-2xl font-bold leading-tight tracking-tighter md:text-left md:text-4xl md:leading-none lg:text-5xl',
-      lg: 'mb-2 md:mb-4 text-center text-4xl font-bold leading-tight tracking-tighter md:text-left md:text-6xl md:leading-none lg:text-7xl',
+const headerTitleVariants = cva(
+  ' mb-2 md:mb-4 text-balance text-center md:text-left font-bold md:leading-none leading-tight tracking-tighter',
+  {
+    variants: {
+      size: {
+        default: 'text-2xl md:text-4xl lg:text-5xl',
+        lg: 'text-4xl md:text-6xl lg:text-7xl',
+      },
+    },
+    defaultVariants: {
+      size: 'default',
     },
   },
-  defaultVariants: {
-    size: 'default',
-  },
-})
+)
 
-const headerDescriptionVariants = cva('text-muted', {
-  variants: {
-    size: {
-      default:
-        'text-center text-lg md:text-xl text-muted-foreground md:text-left',
-      lg: 'px-4 mx-auto text-xl md:text-2xl text-muted-foreground md:text-left md:mx-0',
+const headerDescriptionVariants = cva(
+  'px-4 md:px-0 text-balance text-center text-muted-foreground md:text-left',
+  {
+    variants: {
+      size: {
+        default: 'text-lg md:text-xl',
+        lg: 'text-xl md:text-2xl',
+      },
+    },
+    defaultVariants: {
+      size: 'default',
     },
   },
-  defaultVariants: {
-    size: 'default',
-  },
-})
+)
 
 interface PageHeaderProps
   extends React.HTMLAttributes<HTMLDivElement>,
@@ -35,8 +38,7 @@ interface PageHeaderProps
     VariantProps<typeof headerDescriptionVariants> {
   title: string
   description?: string | null
-  balancedTitle?: boolean
-  balancedDescription?: boolean
+  size?: 'default' | 'lg' | null | undefined
 }
 
 export const PageHeader = ({
@@ -44,24 +46,14 @@ export const PageHeader = ({
   description,
   className,
   size,
-  balancedTitle = false,
-  balancedDescription = true,
 }: PageHeaderProps) => {
-  const Title = balancedTitle ? Balancer : 'h1'
-  const Description = balancedDescription ? Balancer : 'h2'
-
   return (
-    <div className={cn('mb-6 grid w-full gap-1 md:mb-12', className)}>
-      <Title as="h1" className={cn(headerTitleVariants({ size }))}>
-        {title}
-      </Title>
+    <div className={cn('mb-6 w-full md:mb-12', className)}>
+      <h1 className={cn(headerTitleVariants({ size }))}>{title}</h1>
       {description && (
-        <Description
-          as="h2"
-          className={cn(headerDescriptionVariants({ size }))}
-        >
+        <h2 className={cn(headerDescriptionVariants({ size }))}>
           {description}
-        </Description>
+        </h2>
       )}
     </div>
   )
