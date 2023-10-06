@@ -30,7 +30,7 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "@t3-oss/env-nextjs": "^0.7.0",
     "@tanstack/react-query": "^4.35.7",
-    "@vercel/analytics": "^1.0.2",
+    "@vercel/analytics": "^1.1.0",
     "@vercel/og": "^0.5.17",
     "algoliasearch": "^4.20.0",
     "aws-crt": "^1.18.0",
