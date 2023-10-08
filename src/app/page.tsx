@@ -7,7 +7,7 @@ import { Intro } from '@/components/Intro'
 import { MoreStories } from '@/components/MoreStories'
 import { HeroPost } from '@/components/posts/HeroPost'
 
-// NOTE: metadata comes from layout - don't need anything else for the home page
+// NOTE: all metadata comes from layout - don't need anything else for the home page
 
 export default async function Home() {
   let posts = allPosts.sort((a, b) =>
