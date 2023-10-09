@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:3000
+@slug = 2023-09-23-inspiration-is-a-time-machine
+
+### Test OG Image API Route
+GET {{baseUrl}}/api/og
+
+### Test Stats API Route
+GET {{baseUrl}}/api/stats
+
+### Test Views API Route
+GET {{baseUrl}}//api/views/{{slug}}
+
+### Test Views API Route
+POST {{baseUrl}}//api/views/{{slug}}
+
+
+
+### Request 2
+[GET|POST] [REST API URL]
+[Request Headers]
+[Request Body]
+
+# https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# https://medium.com/refinitiv-developer-community/how-to-test-rest-api-with-visual-studio-code-rest-client-extensions-9f2e061d0299
