@@ -47,11 +47,11 @@ export function middleware(request: NextRequest) {
   worker-src 'self';
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
+  worker-src: 'none';
   frame-ancestors 'self';
   script-src 'self' 'unsafe-inline' ${
     process.env.NODE_ENV === 'production' ? '' : "'unsafe-eval'"
   }  *.google-analytics.com *.googletagmanager.com *.twitter.com https://va.vercel-scripts.com;
-  child-src *.youtube.com *.youtube-nocookie.com *.google.com *.twitter.com;
   style-src 'self' 'unsafe-inline' ${
     process.env.NODE_ENV === 'production' ? "'report-sample'" : ''
   } *.googleapis.com https://tagmanager.google.com https://fonts.googleapis.com;
@@ -62,6 +62,7 @@ export function middleware(request: NextRequest) {
   report-uri /api/csp;
   report-to csp-endpoint;
   block-all-mixed-content;
+  require-trusted-types-for 'none';
   ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
 `
     .replace(/\s{2,}/g, ' ')
