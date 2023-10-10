@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { put } from '@/lib/dynamodb'
 
 export async function POST(req: NextRequest) {
-  let params = { TableName: 'csp_reports', Item: {} }
+  let params = { TableName: 'csp_reports_v2', Item: {} }
   const cspReport = await req.json()
 
   console.log(cspReport)
