@@ -33,6 +33,7 @@ export function middleware(request: NextRequest) {
   // https://developers.google.com/tag-platform/security/guides/csp
   // https://github.com/vercel/next.js/issues/55638
   // https://github.com/vercel/next.js/discussions/54907
+  // https://cspvalidator.org/#url=https://www.danstroot.com/
 
   // script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${
   //   process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`
@@ -47,7 +48,7 @@ export function middleware(request: NextRequest) {
   worker-src 'self';
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
-  worker-src: 'none';
+  worker-src 'none';
   frame-ancestors 'self';
   script-src 'self' 'unsafe-inline' ${
     process.env.NODE_ENV === 'production' ? '' : "'unsafe-eval'"
