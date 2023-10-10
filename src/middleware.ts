@@ -42,7 +42,7 @@ export function middleware(request: NextRequest) {
   // };
 
   // Note: style-src requires 'unsafe-inline' mode because next/image adds inline styles.
-  //       I think next/link does too. This means I can't use the nonce in style-src.
+  //       I think next/link does too. This means we can't use the nonce in style-src.
   const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';
@@ -50,7 +50,6 @@ export function middleware(request: NextRequest) {
   worker-src 'self';
   form-action 'self';
   frame-src 'self' *.youtube-nocookie.com *.twitter.com https://ausi.github.io/;
-  worker-src 'none';
   frame-ancestors 'self';
   script-src 'self' 'unsafe-inline' ${
     process.env.NODE_ENV === 'production' ? '' : "'unsafe-eval'"
