@@ -34,6 +34,8 @@ export function middleware(request: NextRequest) {
   // https://github.com/vercel/next.js/issues/55638
   // https://github.com/vercel/next.js/discussions/54907
   // https://cspvalidator.org/#url=https://www.danstroot.com/
+  // https://csp-evaluator.withgoogle.com/
+  // https://securityheaders.com/?q=https%3A%2F%2Fwww.danstroot.com&followRedirects=on
 
   // script-src 'self' 'nonce-${nonce}' 'strict-dynamic' ${
   //   process.env.NODE_ENV === 'production' ? '' : `'unsafe-eval'`

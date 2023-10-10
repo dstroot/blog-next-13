@@ -7,10 +7,10 @@ GET {{baseUrl}}/api/og
 ### Test Stats API Route
 GET {{baseUrl}}/api/stats
 
-### Test Views API Route
+### Test Views API Route (get views)
 GET {{baseUrl}}/api/views/{{slug}}
 
-### Test Views API Route
+### Test Views API Route (increment view counter)
 POST {{baseUrl}}/api/views/{{slug}}
 
 ### Test POST CSP API Route
@@ -32,11 +32,6 @@ content-type: "application/json"
         "violated-directive": "connect-src"
     }
 }
-
-### Request 2
-[GET|POST] [REST API URL]
-[Request Headers]
-[Request Body]
 
 # https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 # https://medium.com/refinitiv-developer-community/how-to-test-rest-api-with-visual-studio-code-rest-client-extensions-9f2e061d0299
