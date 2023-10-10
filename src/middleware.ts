@@ -62,7 +62,6 @@ export function middleware(request: NextRequest) {
   report-uri /api/csp;
   report-to csp-endpoint;
   block-all-mixed-content;
-  require-trusted-types-for 'none';
   ${process.env.NODE_ENV === 'production' ? 'upgrade-insecure-requests;' : ''}
 `
     .replace(/\s{2,}/g, ' ')
