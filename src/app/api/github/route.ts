@@ -1,9 +1,9 @@
-import type { ServerRuntime } from 'next'
+// import type { ServerRuntime } from 'next'
 import { NextResponse } from 'next/server'
 
 import { env } from '@/config/env.mjs'
 
-export const runtime: ServerRuntime = 'edge' // 'nodejs' (default) | 'edge'
+// export const runtime: ServerRuntime = 'edge' // 'nodejs' (default) | 'edge'
 
 export async function GET() {
   const results = await fetch(encodeURI(env.GITHUB_API)).then((res) =>

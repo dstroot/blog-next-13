@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
 import { get, upd } from '@/lib/dynamodb'
 
@@ -7,10 +7,7 @@ const table = { TableName: process.env.TABLE_NAME }
 // export const runtime = 'edge'
 
 // GET
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function GET({ params }: { params: { slug: string } }) {
   const slug = params.slug
 
   const config = {
@@ -33,10 +30,7 @@ export async function GET(
 }
 
 // POST
-export async function POST(
-  req: NextRequest,
-  { params }: { params: { slug: string } },
-) {
+export async function POST({ params }: { params: { slug: string } }) {
   const slug = params.slug
 
   const config = {
