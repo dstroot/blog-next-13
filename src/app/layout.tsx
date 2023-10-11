@@ -12,6 +12,7 @@ import { Hotkeys } from '@/components/Hotkeys'
 import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
+// import { StylishNav } from '@/components/SiteHeader/StylishNav'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -96,6 +97,7 @@ export default function RootLayout({
         </Suspense>
         <Providers nonce={nonce}>
           <SiteHeader />
+          {/* <StylishNav /> */}
           {children}
           <SiteFooter />
           <TailwindIndicator />
