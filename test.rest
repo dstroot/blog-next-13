@@ -1,6 +1,9 @@
 @baseUrl = http://localhost:3000
 @slug = 2023-09-23-inspiration-is-a-time-machine
 
+### Test GitHub API Route
+GET {{baseUrl}}/api/github
+
 ### Test OG Image API Route
 GET {{baseUrl}}/api/og
 
