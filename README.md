@@ -23,7 +23,7 @@ TODO:
 - [ ] Any other API's to move over?
 - [x] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
 - [ ] Finish "uses" page.
-- [-] Add blur to images? No, effect is not smooth, see "blur" branch
+- [ ] Add blur to images? No, effect is not smooth, see "blur" branch
 - [x] Update script to feed Algolia Index
 - [x] Generate RSS Feed - images still need work.
 
@@ -53,3 +53,5 @@ Phew...
 - [Sitemap Validator](https://www.xml-sitemaps.com/validate-xml-sitemap.html)
 - [RSS Validator](https://validator.w3.org/feed/)
 - [robots.txt Validator](https://technicalseo.com/tools/robots-txt/)
+- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+- [CSP Validator](https://cspvalidator.org/#url=https://www.danstroot.com)
