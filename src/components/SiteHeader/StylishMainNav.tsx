@@ -25,14 +25,14 @@ export function StylishMainNav({ navLinks }: NavLinkProps) {
   const pathname = usePathname()
 
   return (
-    <div className="ml-4 hidden gap-4 md:flex">
+    <div className="ml-2 hidden gap-4 px-4 md:flex">
       {navLinks.map((link) => {
         const isActive = pathname === link.href
 
         return (
           <Link
             className={cn(
-              'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+              'block select-none space-y-1 rounded-full bg-zinc-400 px-4 py-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
               isActive ? 'bg-accent' : null,
             )}
             href={link.href}

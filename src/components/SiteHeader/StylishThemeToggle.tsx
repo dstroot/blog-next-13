@@ -41,12 +41,12 @@ export function StylishThemeToggle() {
               ) : null}
               <span className="sr-only">Toggle theme</span>
             </Button> */}
-            <button className="text-gs-background-1000 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gray-500 outline-none transition-colors hover:bg-gray-500 focus-visible:ring-1 focus-visible:ring-gray-400 disabled:opacity-50 disabled:hover:bg-gray-700">
+            <button className="text-gs-background-1000 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent outline-none hover:bg-gray-500 focus-visible:ring-1 focus-visible:ring-gray-400 disabled:opacity-50 disabled:hover:bg-gray-700">
               {resolvedTheme === 'light' ? (
-                <Icons.sun className="h-6 w-6" />
+                <Icons.sun className="h-4 w-4" />
               ) : null}
               {resolvedTheme === 'dark' ? (
-                <Icons.moon className="h-6 w-6" />
+                <Icons.moon className="h-4 w-4" />
               ) : null}
               <span className="sr-only">Toggle theme</span>
             </button>
