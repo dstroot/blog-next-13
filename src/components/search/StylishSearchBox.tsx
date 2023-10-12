@@ -7,7 +7,6 @@ export const StylishSearchBox = (props: StylishSearchBoxProps) => {
     <div className="my-12 flex items-center justify-center">
       <div className="absolute flex w-full justify-center px-6">
         <div className="min-h-12 relative z-10 flex w-full max-w-lg items-center justify-center gap-2 rounded-full bg-zinc-900 px-2 py-[2px] shadow-lg shadow-black/40 dark:bg-zinc-200 dark:shadow-white/40">
-          {/* <div className="flex items-center justify-center rounded-l-full"></div> */}
           <div className="flex min-w-0 flex-1 items-center self-end">
             <form className="h-full w-full [&_textarea]:pr-11">
               <div className="relative flex h-fit min-h-full w-full items-center transition-all duration-300">
@@ -34,8 +33,6 @@ export const StylishSearchBox = (props: StylishSearchBoxProps) => {
                 >
                   <span className="sr-only">Send</span>
                   <svg
-                    // width="16"
-                    // height="16"
                     viewBox="0 0 16 16"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
