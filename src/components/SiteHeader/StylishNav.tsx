@@ -4,16 +4,14 @@ import Link from 'next/link'
 import { siteConfig } from '@/config/site'
 import { Container } from '@/components/Container'
 import { Icons } from '@/components/Icons'
-import { MainNav } from '@/components/SiteHeader/MainNav'
-import { MobileNav } from '@/components/SiteHeader/MobileNav'
 import { StylishMainNav } from '@/components/SiteHeader/StylishMainNav'
+import { StylishMobileNav } from '@/components/SiteHeader/StylishMobileNav'
 import { StylishThemeToggle } from '@/components/SiteHeader/StylishThemeToggle'
-import { ThemeToggle } from '@/components/SiteHeader/ThemeToggle'
 
 export const StylishNav = () => {
   return (
     // <header className="sticky top-4 z-40 w-full bg-background/75 backdrop-blur">
-    <Container className="sticky top-0 z-40 mx-auto px-4 py-2 md:px-6">
+    <Container className="sticky top-0 z-40 mx-auto px-4 py-2">
       <header className="relative flex w-full items-center divide-x divide-zinc-600 rounded-full bg-zinc-900 px-4 py-2 shadow-lg shadow-black/40">
         <Link aria-label="Home" href="/" className="relative h-8 w-8">
           <Image
@@ -39,7 +37,7 @@ export const StylishNav = () => {
               <Icons.search className="h-4 w-4" />
             </Link>
             <StylishThemeToggle />
-            <MobileNav mainNavItems={siteConfig.mainNav} />
+            <StylishMobileNav mainNavItems={siteConfig.mainNav} />
           </nav>
         </div>
       </header>
