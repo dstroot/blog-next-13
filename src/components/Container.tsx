@@ -8,6 +8,7 @@ const ContainerVariants = cva('container mx-auto p-4', {
     variant: {
       default: 'md:p-6',
       padded: 'md:p-6 mt-6 md:mt-12',
+      thin: 'p-0',
     },
   },
   defaultVariants: {

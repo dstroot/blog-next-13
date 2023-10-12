@@ -11,7 +11,7 @@ import { StylishThemeToggle } from '@/components/SiteHeader/StylishThemeToggle'
 export const StylishNav = () => {
   return (
     // <header className="sticky top-4 z-40 w-full bg-background/75 backdrop-blur">
-    <Container className="sticky top-0 z-40 mx-auto px-4 py-2">
+    <Container variant="thin" className="sticky top-0 z-40 mx-auto px-4 py-2">
       <header className="relative flex w-full items-center divide-x divide-zinc-600 rounded-full bg-zinc-900 px-4 py-2 shadow-lg shadow-black/40">
         <Link aria-label="Home" href="/" className="relative h-8 w-8">
           <Image
