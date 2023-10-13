@@ -5,7 +5,7 @@ type StylishSearchBoxProps = {
 export const StylishSearchBox = (props: StylishSearchBoxProps) => {
   return (
     <div className="my-6 flex items-center justify-center md:my-12">
-      <div className="flex w-full justify-center px-6">
+      <div className="flex w-full justify-center">
         <div className="min-h-12 relative z-10 flex w-full max-w-lg items-center justify-center gap-2 rounded-full bg-zinc-900 px-2 py-[2px] shadow-lg shadow-black/40 dark:bg-zinc-200 dark:shadow-white/40">
           <div className="flex min-w-0 flex-1 items-center self-end">
             <form className="h-full w-full [&_textarea]:pr-11">
