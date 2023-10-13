@@ -23,7 +23,7 @@ TODO:
 - [ ] Any other API's to move over?
 - [x] Links in Nav are not recognizing the path they are on - active styles are only applied whne they've been clicked on. Need a component that recognizes the path client side.
 - [ ] Finish "uses" page.
-- [ ] Add blur to images? No, effect is not smooth, see "blur" branch
+- [ ] Add blur to images? No, effect is not smooth, see "blur" branch.
 - [x] Update script to feed Algolia Index
 - [x] Generate RSS Feed - images still need work.
 
@@ -55,3 +55,7 @@ Phew...
 - [robots.txt Validator](https://technicalseo.com/tools/robots-txt/)
 - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [CSP Validator](https://cspvalidator.org/#url=https://www.danstroot.com)
+
+## Monitoring
+
+- [Google Uptime](https://console.cloud.google.com/monitoring/uptime/dan-stroot-blog-JE8QKeR223k;duration=PT1H?hl=en&project=coastal-mercury-197923)

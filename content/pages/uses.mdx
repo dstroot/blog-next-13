@@ -42,7 +42,7 @@ description: When I get questions about the specifics of what hardware or softwa
 - [Nextjs](https://nextjs.org/) - My current most-used framework to build a react-based web app. Major players like The Washington Post, Loom, and Netflix have integrated Next.js into their tech stacks, demonstrating its capability to handle large-scale, high-traffic platforms. Even MrBeast, a content creator with 100 million YouTube subscribers and a massive social media footprint, built his storefront using Next.js.
 - [TypeScript](https://www.typescriptlang.org/) - I can't imagine building JavaScript projects without TypeScript.
 - [Prettier](https://prettier.io/) - I can't imagine life without it. I also use two plugins: '@ianvs/prettier-plugin-sort-imports' and `prettier-plugin-tailwindcss`.
-- [Vercel](https://vercel.com) - I've used many different hosting providers (AWS, Heroku, Netlify, Railway, etc.) and right now I find that Vercel "just works" for my Next.js projects. It provides both the front-end and back-end (serverless functions, edge functions, middleware) seamlessly. When you stop worrying about servers and just build functions things get _much_ easier.
+- [Vercel](https://vercel.com) - I've used many different hosting providers (AWS, Heroku, Netlify, Railway, etc.) and right now I find that Vercel "just works" for my Next.js projects. It provides both the front-end and back-end (serverless functions, edge functions, middleware) seamlessly. When you stop worrying about servers and just build functions things get _much_ easier. Almost everything I need to deploy is made easier with Vercel.
 - [imgIX](https://imgix.com/) - Fantastic image hosting - used for all the images in this site.
 
 #### Testing
@@ -59,7 +59,7 @@ description: When I get questions about the specifics of what hardware or softwa
 #### Data
 
 - [Prisma](https://www.prisma.io/) - A fantastic ORM for Node.js. Also, sequelize,Drizzle, kysely... Love using Prisma as migration engine/schema definition + Kysely for queries, using prisma-kysely to generate types.
-- [PlanetScale](https://planetscale.com) - Admittedly, I am a huge fan of [PostgreSQL](https://www.postgresql.org/). I tended to use [SQLite](https://www.sqlite.org/index.html) where one might use MySQL, and when I needed a "real" database I used Postgres. However I am finding PlanetScale to be really developer friendly, even if it is MySQL-based. Changes are handled more like Git merge requests vs. migrations. They also have an NPM package that allows to get your data via a HTTPS endpoint, instead of via a SQL connection. This means you can run on the edge.
+- [PlanetScale](https://planetscale.com) - Admittedly, I am a huge fan of [PostgreSQL](https://www.postgresql.org/). I tended to use [SQLite](https://www.sqlite.org/index.html) where one might use MySQL, and when I needed a "real" database I used Postgres. However I am finding PlanetScale to be really developer friendly, even if it is MySQL-based. Changes are handled more like Git merge requests vs. migrations. They also have an [NPM package](https://github.com/planetscale/database-js) that allows to get your data via a HTTPS endpoint, instead of via a SQL connection. This means you can **run on the edge**. 👀
 - [Upstash](https://upstash.com) - Easy, simple Redis and Kafka. 'Nuff said. If you need to rate limit your serverless API's (or monetize them) you need to track usage, Redis is great for that and Upstash provides packages to make things like rate limiting trivial to implement.
 - [Supabase]() -
 
@@ -85,6 +85,15 @@ description: When I get questions about the specifics of what hardware or softwa
 
 - [Contentlayer](https://contentlayer.dev/) - Contentlayer is a content SDK that validates and transforms your content (.md, .mdx) into type-safe JSON data you can easily import into your application.
 - [XState](https://xstate.js.org/) - Any time I have a complex state problem, I use this.
+
+
+Pusher
+Stripe
+Plausible
+Segment
+GrowthBook
+Loops
+Mux
 
 _This list is not comprehensive - just a robust sampling of tools I find really useful._
 

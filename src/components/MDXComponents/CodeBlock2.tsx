@@ -3,7 +3,6 @@ import { FC, ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
-// import * as ScrollArea from '@radix-ui/react-scroll-area'
 import { ScrollArea } from '../ui/scroll'
 
 type CodeBlockProps = React.DetailedHTMLProps<
@@ -55,18 +54,6 @@ export const CodeBlock = (props: CodeBlockProps) => {
           <ScrollArea>{props.children}</ScrollArea>
         </TabsContent>
       </Tabs>
-
-      {/*
-          <ScrollArea.Root className="w-full overflow-hidden bg-white dark:bg-[#0D1116]">
-            <ScrollArea.Viewport>
-              {props.children}
-            </ScrollArea.Viewport>
-            <ScrollArea.Scrollbar orientation="horizontal">
-              <ScrollArea.Thumb className="relative" />
-            </ScrollArea.Scrollbar>
-            <ScrollArea.Corner />
-          </ScrollArea.Root>
-     */}
     </Card>
   )
 }
