@@ -15,7 +15,6 @@ description: When I get questions about the specifics of what hardware or softwa
 
 | <h3 className=''>Contents</h3>              |
 | ------------------------------------------- |
-| [Services](#services)                       |
 | [Software Developent](#software-developent) |
 | [Code Editor](#code-editor)                 |
 | [Chrome Extensions](#chrome-extensions)     |
@@ -24,26 +23,20 @@ description: When I get questions about the specifics of what hardware or softwa
 
 </div>
 
-### Services
-
-- [Todoist](https://todoist.com) - My preferred todo list app
-- [Calendly](https://calendly.com) - For: "Grab a time whenever" link with consulting fees built-in.
-- [Cron](https://cron.com) - My calendar app and it allows me to share my availability with specific blocks of time.
-- [Hey](https://www.hey.com/) - HEY’s approach blocks senders by default - you have to allow them through. I use this for my personal eMail and it works well, once you learn it's ways.
-
 ### Software Developent
 
 #### Basic Infrastructure
 
 - [GitHub](https://github.com) - Where I host all my code. I also run CI/CD pipelines via GitHub Actions.
-- [Node.js](https://nodejs.org/en) - Since I spend a lot of time on front-end work I tend to use the Node.js ecosystem. Node.js is an asynchronous event-driven JavaScript runtime.
+- [Node.js](https://nodejs.org/en) - Since I spend a lot of time on front-end work I tend to use the Node.js ecosystem.
 - [pnpm](https://pnpm.io/) - pnpm is a fast, disk space efficient package manager. It is my current package manager of choice but I haven't really explored [bun](https://bun.sh/) yet.
 - [React](https://reactjs.org/) - The most widely used frontend framework in the world.
-- [Nextjs](https://nextjs.org/) - My current most-used framework to build a react-based web app. Major players like The Washington Post, Loom, and Netflix have integrated Next.js into their tech stacks, demonstrating its capability to handle large-scale, high-traffic platforms. Even MrBeast, a content creator with 100 million YouTube subscribers and a massive social media footprint, built his storefront using Next.js.
-- [TypeScript](https://www.typescriptlang.org/) - I can't imagine building JavaScript projects without TypeScript.
+- [Nextjs](https://nextjs.org/) - My current most-used framework to build a react-based web app. Major players like The Washington Post, Loom, and Netflix have integrated Next.js into their tech stacks, demonstrating its capability to handle large-scale, high-traffic platforms. MrBeast, a content creator with 100 million YouTube subscribers and a massive social media footprint, built his storefront using Next.js.
+- [TypeScript](https://www.typescriptlang.org/) - I can't imagine building JavaScript projects without TypeScript. Perhaps slows you down a bit at first but overall productivity is much higher. IntelliSense all the things.
 - [Prettier](https://prettier.io/) - I can't imagine life without it. I also use two plugins: '@ianvs/prettier-plugin-sort-imports' and `prettier-plugin-tailwindcss`.
 - [Vercel](https://vercel.com) - I've used many different hosting providers (AWS, Heroku, Netlify, Railway, etc.) and right now I find that Vercel "just works" for my Next.js projects. It provides both the front-end and back-end (serverless functions, edge functions, middleware) seamlessly. When you stop worrying about servers and just build functions things get _much_ easier. Almost everything I need to deploy is made easier with Vercel.
 - [imgIX](https://imgix.com/) - Fantastic image hosting - used for all the images in this site.
+- [Dash](https://kapeli.com/dash) - Dash gives your Mac instant offline access to 200+ API documentation sets
 
 #### Testing
 
@@ -60,40 +53,44 @@ description: When I get questions about the specifics of what hardware or softwa
 
 - [Prisma](https://www.prisma.io/) - A fantastic ORM for Node.js. Also, sequelize,Drizzle, kysely... Love using Prisma as migration engine/schema definition + Kysely for queries, using prisma-kysely to generate types.
 - [PlanetScale](https://planetscale.com) - Admittedly, I am a huge fan of [PostgreSQL](https://www.postgresql.org/). I tended to use [SQLite](https://www.sqlite.org/index.html) where one might use MySQL, and when I needed a "real" database I used Postgres. However I am finding PlanetScale to be really developer friendly, even if it is MySQL-based. Changes are handled more like Git merge requests vs. migrations. They also have an [NPM package](https://github.com/planetscale/database-js) that allows to get your data via a HTTPS endpoint, instead of via a SQL connection. This means you can **run on the edge**. 👀
-- [Upstash](https://upstash.com) - Easy, simple Redis and Kafka. 'Nuff said. If you need to rate limit your serverless API's (or monetize them) you need to track usage, Redis is great for that and Upstash provides packages to make things like rate limiting trivial to implement.
-- [Supabase]() -
+- [Upstash](https://upstash.com) - Easy, simple Redis and Kafka. If you need to rate limit your serverless API's (or monetize them) you need to track usage, Redis is great for that and Upstash provides packages to make things like rate limiting trivial to implement.
+- [Supabase](https://supabase.com/) - When you need/want PostgreSQL you probably want Supabase. I REALLY like the platform they have built.
 
 #### UI
 
+- [TailwindCSS](https://tailwindcss.com/) - A great way to keep styling consistent and stay productive. I was a hardcore Bootstrap user since it first came out because I am not a "CSS guy", I find it fiddly and browser inconsistencies infuriating. Tailwind is my new Bootstrap. It's a gamechanger. I like using unstyled components and then styling them with Tailwindcss.
 - [Reach UI](https://reach.tech/) - An accessibility-focused set of easy-to-use and easy-to-style components.
-- [shadcn/ui](https://ui.shadcn.com/) - Styled components (using Tailwind CSS) that you can copy and paste into your apps. Components use [radix-ui](https://www.radix-ui.com/) under the hood.
-- [radix-ui](https://www.radix-ui.com/) - Unstyled component library optimized for fast development, easy maintenance, and accessibility.
+- [shadcn/ui](https://ui.shadcn.com/) - Tailwind-styled components that you can copy and paste into your apps. Components use [radix-ui](https://www.radix-ui.com/) under the hood. Nicely done.
+- [Radix-ui](https://www.radix-ui.com/) - Unstyled component library optimized for fast development, easy maintenance, and accessibility.
 - [Headless UI](https://headlessui.com) - Unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
+- [TailwindUI](https://tailwindui.com/) - Components and templates, built by the makers of Tailwind CSS.
 - [PostCSS](https://postcss.org/) - I only use these plugins: `tailwindcss`, `autoprefixer`, and `postcss-import`
-- [TailwindCSS](https://tailwindcss.com/) - A great way to keep styling consistent and stay productive. I was a hardcore Bootstrap user since it first came out because I am not a "CSS guy", I find it fiddly and browser inconsistencies infuriating. Tailwind is my new Bootstrap. It's a gamechanger.
 
 #### Auth
 
 - [Clerk](https://clerk.com) - Integrate complete user management UIs and APIs, purpose-built for React, Next.js, and the Modern Web.
+- [Auth.js](https://authjs.dev/) - I have used Auth.js more than Clerk, but Auth.js is going through a transition and is being adapted to the Nextjs App Router. Clerk seems nicer right now.
 
 #### Analytics & Monitoring
 
 - [Fathom](https://usefathom.com/) - Fathom is a Google Analytics alternative that doesn’t compromise visitor privacy. My preferred tool for ethical analytics.
+- [Plausible](https://plausible.io/) - Easy to use and privacy-friendly Google Analytics alternative. No cookies and fully compliant with GDPR, CCPA and PECR.
 - [Axiom](https://axiom.co) - You need centralized logging to know when things go wrong.
+
+#### Notifcations & Messaging
+
+- [Pusher](https://pusher.com/) - Push notification service that scales.
+- [Twilio]() -
+- [Loops](https://loops.so/) - A better way to send marketing + transactional email
 
 #### General
 
 - [Contentlayer](https://contentlayer.dev/) - Contentlayer is a content SDK that validates and transforms your content (.md, .mdx) into type-safe JSON data you can easily import into your application.
 - [XState](https://xstate.js.org/) - Any time I have a complex state problem, I use this.
-
-
-Pusher
-Stripe
-Plausible
-Segment
-GrowthBook
-Loops
-Mux
+- [Stripe](https://stripe.com/) - Financial infrastructure for the Internet.
+- [Segment](https://segment.com/) - Customer data platform (CDP) that helps you collect, clean, and activate your customer data.
+- [GrowthBook](https://www.growthbook.io/) - Open source platform for feature flags and A/B testing.
+- [Mux](https://www.mux.com/) - The Internet's Video Infrastructure.
 
 _This list is not comprehensive - just a robust sampling of tools I find really useful._
 
@@ -186,10 +183,14 @@ _This list is not comprehensive - just a robust sampling of tools I find really 
 
 **PRODUCTIVITY**
 
+- [Hey](https://www.hey.com/) - HEY’s approach blocks senders by default - you have to allow them through. I use this for my personal eMail and it works well, once you learn it's ways.
 - [Obsidian](https://obsidian.md/) - Obsidian is the private and flexible writing app that adapts to the way you think.
 - [Dex](https://getdex.com/) - Dex brings together LinkedIn, email, and all your daily tools. Keep in touch, remember where you left off, and see everyone you know.
 - [Things](https://culturedcode.com/things/) - Things is the award-winning personal task manager that helps you plan your day, manage your projects, and make real progress toward your goals.
 - [Todoist](https://todoist.com/)
+- [Todoist](https://todoist.com) - My preferred todo list app
+- [Calendly](https://calendly.com) - For: "Grab a time whenever" link with consulting fees built-in.
+- [Cron](https://cron.com) - My calendar app and it allows me to share my availability with specific blocks of time.
 
 **VIDEO**
 
