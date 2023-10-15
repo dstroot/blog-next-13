@@ -56,8 +56,20 @@ export const siteConfig = {
       prefetch: false,
       external: false,
     },
-    { href: '/snippets', name: 'Snippets', new: false, external: false },
-    // { href: '/uses', name: 'Uses', new: false, external: false },
+    {
+      href: '/snippets',
+      name: 'Snippets',
+      new: false,
+      prefetch: false,
+      external: false,
+    },
+    {
+      href: '/uses',
+      name: 'Uses',
+      new: false,
+      prefetch: false,
+      external: false,
+    },
   ] satisfies NavItem[],
   footerNav: [
     {
