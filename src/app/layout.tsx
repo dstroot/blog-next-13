@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
   ogUrl.searchParams.set('mode', 'light')
 
   return {
-    metadataBase: new URL(env.NEXT_PUBLIC_IMGIX_URL),
+    metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
     title: {
       default: `${siteConfig.meta.name}`,
       template: `${siteConfig.meta.name} · %s`,
@@ -74,7 +74,7 @@ export default function RootLayout({
 }) {
   // NOTE: for now we are "faking" a nonce because actually pulling it from the header is breaking
   //       the system (it errors in production on Vercel) and it's slower since the page becomes
-  //       dynamic. See note below.
+  //       dynamic (meaning it re-renders each time). See note below.
   const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy'
 
   // NOTE: headers() is a Dynamic Function whose returned values cannot be known ahead of time.
