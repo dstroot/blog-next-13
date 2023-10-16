@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import type { GetCommandInput, UpdateCommandInput } from '@aws-sdk/lib-dynamodb'
 
 import { env } from '@/config/env.mjs'
 import { get, upd } from '@/lib/dynamodb'
@@ -14,7 +15,7 @@ export async function GET(
 ) {
   const slug = params.slug
 
-  const config = {
+  const config: GetCommandInput = {
     ...table,
     Key: {
       slug: slug,
@@ -40,7 +41,7 @@ export async function POST(
 ) {
   const slug = params.slug
 
-  const config = {
+  const config: UpdateCommandInput = {
     ...table,
     Key: {
       slug: slug,
