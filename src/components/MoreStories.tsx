@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useIntersection } from '@mantine/hooks'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import type { Post } from 'contentlayer/generated'
@@ -14,27 +14,23 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
   const chunkSize = 6
 
   // get another chunk of posts to display
-  const fetchMorePosts = async (page: number) => {
-    return posts.slice((page - 1) * chunkSize, page * chunkSize)
+  const fetchPosts = async ({ pageParam }: { pageParam: number }) => {
+    return posts.slice((pageParam - 1) * chunkSize, pageParam * chunkSize)
   }
 
   // setup infinite query
-  const { data, fetchNextPage } = useInfiniteQuery(
-    ['query'],
-    async ({ pageParam = 1 }) => {
-      const response = await fetchMorePosts(pageParam)
-      return response
+  const { data, fetchNextPage } = useInfiniteQuery({
+    queryKey: ['posts'],
+    queryFn: fetchPosts,
+    initialPageParam: 1,
+    getNextPageParam: (_, pages) => {
+      return pages.length + 1
     },
-    {
-      getNextPageParam: (_, pages) => {
-        return pages.length + 1
-      },
-      initialData: {
-        pages: [posts.slice(0, chunkSize)],
-        pageParams: [1],
-      },
+    initialData: {
+      pages: [posts.slice(0, chunkSize)],
+      pageParams: [1],
     },
-  )
+  })
 
   // create ref
   const lastPostRef = useRef<HTMLElement>(null)
