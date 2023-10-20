@@ -1,6 +1,6 @@
 ---
 title: On Being a Modern Software Explorer
-excerpt: 'When hiring software engneers I look beyond technical talent. What I really want is someone who understands "the ecosystem" they work in. That is a broad, fuzzy term so let me explain what I mean.'
+excerpt: 'When hiring software engneers I look beyond technical talent. What I really want is someone who understands "the ecosystem" they work in.'
 coverImage: /assets/blog/img/2023-js-libraries.png
 date: '2023-09-21'
 published: false
@@ -12,7 +12,13 @@ ogImage:
 seoURL:
 ---
 
-When hiring software engineers, I look beyond just technical talent. What I really want to know is how this person operates within "the ecosystem" they work in. How do they learn? Do they know the players and thought leaders in their field? How do they discover and use new tooling and libraries? Do they explore their environment? I think of these engineers as "software explorers". They find the shiny new objects, vet them, and introduce them into the business context where they may have a large positive impact.
+When hiring software engineers, I look beyond technical talent. What I really want to know is how this person operates within "the ecosystem" they work in. How do they learn? Do they know the players and thought leaders in their field? How do they discover and use new tooling and libraries? Do they like to "explore" their environment?
+
+I want an engineer that understands [boring technology](https://boringtechnology.club/), but isn't afraid to try new things once they have matured to a certain point. In the web space the velocity of change is much higher than most areas, so engineers must be comfortable with change when it's warranted.
+
+I think of these engineers as modern "software explorers". They find the shiny new objects, vet them, and introduce them into the business - where they could have a significant impact.
+
+Here are the areas that I like to probe:
 
 ## Table of Contents
 
@@ -23,27 +29,31 @@ When hiring software engineers, I look beyond just technical talent. What I real
 | 1   | [The Ecosystem](#the-ecosystem)                       |
 | 2   | [Navigating the Ecosystem](#navigating-the-ecosystem) |
 | 3   | [Community is Everything](#community-is-everything)   |
-| 4   | [Language Proficiency](#language-proficiency)         |
-| 5   | [Tooling Proficiency](#tooling-proficiency)           |
-| 6   | [Data Proficiency](#data-proficiency)                 |
+| 4   | [Tooling Proficiency](#tooling-proficiency)           |
+| 5   | [Data Proficiency](#data-proficiency)                 |
+| 6   | [Language Proficiency](#language-proficiency)         |
 
 </div>
 
 ## The Ecosystem
 
-Using open-source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning between quality libraries and junk… this experience is a hard-won component of being a modern software engineer.
+Using open-source code is a skill: knowing how to navigate repos and someone else’s code, understanding how to troubleshoot and navigate communities to get help, discerning quality libraries - this experience is hard-won knowledge of modern software engineers.
 
-If you build software, hopefully you’re well-versed in composition: grab a handful of existing libraries and tooling — a database here, a UI framework there, an HTTP library to round it all out — and arrange them together. You write your custom logic — the stuff unique to your project — and _let other people’s code do work that’s common across all projects_.
+If you build software, hopefully you’re well-versed in composition: grab a handful of existing libraries and tooling — a database here, a UI framework there — and arrange them together. Then you write your custom logic — the stuff unique to your project. Importantly, you _let other people’s code do the work that’s common across all projects_.
 
-It bears repeating - let other people’s code do work that’s common across all projects. The highest productivity software engineers I know are those who know how to "compose" software. They focus on business logic and what makes their system/application unique. Given the state of today's libraries and tooling you can have a new web application up and running in a day.
+It bears repeating: let other people’s code do work that’s common. The highest productivity software engineers I know are ones who are experts at "composing" software. Given the state of today's libraries and tooling you can have a new web application up and running in a day. Then they focus on what makes their system/application unique.
 
-Choosing and using the right libraries means being able to operate well in your chosen ecosystem. You have to be a modern software explorer to know what's out there, and what is worth adopting and what is worth avoiding. This can have an outsized impact on your business.
+Choosing and using the right libraries means being able to operate well in your chosen ecosystem. You have to know what's out there, and what is worth adopting and what is worth avoiding. This ability has an outsized impact on your business.
 
 ## Navigating the Ecosystem
 
 Many libraries are very well known. But what if you want to add an RSS feed to your blog? Do you go read the RSS or ATOM specs and write your own? Do you search your language's package manager for the term "RSS"?
 
-If I do that on NPM, the package manager in the JavaScript ecosystem, over a thousand packages are returned (try it!). The first result is literally called "RSS" and was released seven years ago. The description reads "RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS." That looks promising - should I use it? Not so fast. You have to know how to do due diligence:
+If I do that on NPM, the package manager in the JavaScript ecosystem, over a thousand packages are returned ([try it!](https://www.npmjs.com/search?q=rss)). The first result is literally called "RSS" and was released seven years ago. The description reads:
+
+> "RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS."
+
+That looks promising - should we use it? Not so fast. Sofware engineers have to know how to perform due diligence:
 
 - When was the last release?
 - How often are releases?
@@ -55,31 +65,27 @@ If I do that on NPM, the package manager in the JavaScript ecosystem, over a tho
 - How big is the package - how much will it inflate your project?
 - How does the code look?
 
-Every dependency you add to your project should save you time, but also could introduce vulnerabilities, issues, and frustration. Let's scan further. There is another package called "Feed" that was updated more recently and has over 1,000 stars on GitHub. Is that one better? It seems more popular than RSS:
+Every dependency you add to your project could introduce vulnerabilities, issues, and frustration.
+
+Let's scan further. There is another package called "Feed" that was updated more recently and has over 1,000 stars on GitHub. Is that one better? It seems more popular than RSS:
 
 ![Feed vs. RSS Trend](/assets/blog/img/feed_vs_rss.jpg)
 
-Maybe Feed is the better choice? Knowing how to find libraries and conducting due diligence is a critical skill for a modern software engineer.
+Maybe Feed is the better choice? Knowing how to find the best libraries and how to conduct due diligence are critical skills for a modern software engineer.
 
 ## Community is Everything
 
-When learning a brand-new language, library, or framework there are not going to be any courses you can take. LinkedIn Learning will be a dry well. You need to hang out on Discord, or watch a few YouTube channels, or read a few blog posts. You must get embedded into the community around the technology. You have to know where to turn for advice/help, how raise issues, how to contribute knowledge and use cases, etc.
+When learning a brand-new language, library, or framework there are not going to be any courses you can take. LinkedIn Learning will be a dry well. You need to hang out on Discord, or watch a few YouTube channels, or read a few blog posts. You must be embedded into the community around the technology. You have to know where to turn for advice/help, how raise issues, how to contribute knowledge and use cases, etc.
 
-Operating within the broader communities of the tools and libraries you are using is also a critical skill for any software engineer. It can cut down on the due diligence you may need to do if "the community" has spoken and adopted a new library or tool and it can support you when you run into questions or issues.
-
-## Language Proficiency
-
-Language proficiency is lower on my list - yes, I expect software engineers to be capable, but knowing every edge case and corner of a language is just not as important anymore. We have always had places like Stack Overflow, but now we have the emergence of AI code assistants and of course we have always had Google.
-
-Generally, if you get stuck coding something a few good searches probably unblock you faster than anything else. My best engineers know several languages and aren't necessarily deep experts in all of them, yet they are incredibly productive because they know how to get answers fast. Soon, they will just need to be able to spot issues in machine generated code.
+Operating within the communities of the tools and libraries you are using is also a critical skill for any software engineer. It can cut down on the due diligence you may need to do if "the community" has spoken and adopted a new library or tool and it can support you when you run into questions or issues.
 
 ## Tooling Proficiency
 
 Tooling is critical to developer productivity, so does the engineer understand and take advantage of advanced tooling? This is another area that separates good from great software engineers.
 
-Those who know how to setup and configure tools like Visual Studio Code with the right extensions and code snippets can be an order of magnitude faster and more productive. Many JavaScript developers adopted Typescript not because of "type safety" but rather the developer experience of having IntelliSense for the codebase.
+Those who know how to setup and configure tools like Visual Studio Code with the right extensions and code snippets are an order of magnitude faster and more productive. Many JavaScript developers adopted Typescript not because of "type safety" but rather the developer experience of having IntelliSense for the codebase.
 
-The most productive engineers are the ones who know their tools.
+Put simply, the most productive engineers are the ones who know how to extract the maximum productivity from their tools.
 
 ## Data Proficiency
 
@@ -89,8 +95,14 @@ Data can also be a source of performance and/or stability issues. How many outag
 
 How well do they conceptualize data? How does the person think about data like application state, versus operational data like telemetry and logging, versus the base, underlying data storage layer?
 
-More importantly, how to they think about and manage test data? If bad data is a key source of operational issues in production code, then having a robust set of test data is critical. Of course, you can't just grab some production data because of privacy and security issues. Managing test data is what separates good from great software engineers.
+More importantly, how to they think about and manage test data? If bad data is a key source of operational issues in production code, then having a robust set of test data is critical. Of course, you can't just grab some production data because of privacy and security issues. Managing test data is another area separates good from great software engineers.
 
-## Flexibility
+## Language Proficiency
 
-Does the engineer learn one "way" and stick to it? Or do they jump on the latest and greatest libraries or paradigms before they have the opportunity to mature? I want an engineer that generally likes [boring technology](https://boringtechnology.club/), but isn't afraid to try new things once they have matured to a certain point. In the web space the velocity of change is much higher than most areas so engineers must be comfortable with change when it's warranted.
+Language proficiency is lower on my list - yes, I expect software engineers to be capable, but knowing every edge case and corner of a language is just not as important anymore. We have always had things like Google and Stack Overflow, but now we have the emergence of AI code assistants.
+
+Generally, if you get stuck coding something a few good searches probably unblock you faster than anything else. My best engineers know several languages and aren't necessarily deep experts in all of them, yet they are incredibly productive because they know how to get answers fast. Soon, they will just need to be able to spot issues in machine generated code.
+
+## Summary
+
+There are lots of software engineers out there. Recruiting is always challenging. I think this is a good start to help you spot the great ones. What might I have missed? Do you have any advice to share?

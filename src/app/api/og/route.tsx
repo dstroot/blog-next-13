@@ -33,7 +33,6 @@ export async function GET(req: Request) {
   const headersList = headers()
   let ip = headersList.get('x-forwarded-for')
   ip = ip ?? '1.1.1.1'
-  console.log(ip)
   const { success } = await ratelimit.limit(ip)
 
   if (!success) {
