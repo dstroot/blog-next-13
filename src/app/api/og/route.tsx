@@ -2,7 +2,10 @@
 /* eslint-disable @next/next/no-img-element */
 
 import type { ServerRuntime } from 'next'
+import { headers } from 'next/headers'
 import { ImageResponse } from 'next/server'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
 
 import { siteConfig } from '@/config/site'
 import { ogImageSchema } from '@/lib/validations/og'
@@ -13,9 +16,29 @@ export const runtime: ServerRuntime = 'edge'
 const IMAGE_WIDTH = 1200
 const IMAGE_HEIGHT = 630
 
+// Create a new ratelimiter that allows 10 requests per
+// 10 seconds and times out in 1 second
+const ratelimit = new Ratelimit({
+  redis: Redis.fromEnv(),
+  limiter: Ratelimit.slidingWindow(10, '10 s'),
+  analytics: true,
+  timeout: 1000, // 1 second
+  prefix: '@upstash/ratelimit',
+})
+
 export async function GET(req: Request) {
   const avatarUrl =
     'https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=128&h=128'
+
+  const headersList = headers()
+  let ip = headersList.get('x-forwarded-for')
+  ip = ip ?? '1.1.1.1'
+  console.log(ip)
+  const { success } = await ratelimit.limit(ip)
+
+  if (!success) {
+    return errorResponse('Rate limit exceeded.')
+  }
 
   try {
     const url = new URL(req.url)
