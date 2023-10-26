@@ -195,7 +195,7 @@ export default makeSource({
   contentDirPath: './content',
   documentTypes: [Post, Snippet, Page],
   mdx: {
-    remarkPlugins: [emoji, remarkGfm],
+    remarkPlugins: [emoji, [remarkGfm]],
     rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
 })
