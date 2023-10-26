@@ -2,6 +2,9 @@ const { withContentlayer } = require('next-contentlayer')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    webpackBuildWorker: true,
+  },
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],

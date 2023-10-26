@@ -3,7 +3,7 @@
 
 import type { ServerRuntime } from 'next'
 // import { headers } from 'next/headers'
-import { ImageResponse } from 'next/server'
+import { ImageResponse } from 'next/og'
 
 // import { Ratelimit } from '@upstash/ratelimit'
 // import { Redis } from '@upstash/redis'

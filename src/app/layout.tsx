@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 
 import { Suspense } from 'react'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 
 import { env } from '@/config/env.mjs'
@@ -13,6 +13,17 @@ import { Providers } from '@/components/Providers'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
 import { TailwindIndicator } from '@/components/TailwindIndicator'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+}
 
 export async function generateMetadata(): Promise<Metadata> {
   const url = absoluteUrl('/api/og')
@@ -40,10 +51,6 @@ export async function generateMetadata(): Promise<Metadata> {
       },
     ],
     creator: 'Dan Stroot',
-    themeColor: [
-      { media: '(prefers-color-scheme: light)', color: 'white' },
-      { media: '(prefers-color-scheme: dark)', color: 'black' },
-    ],
     openGraph: {
       type: 'website',
       locale: 'en_US',
