@@ -1,0 +1,72 @@
+---
+title: 'SQL to Select a random row from a database table'
+published: true
+date: '2023-10-29'
+summary: "There are lots of ways to select a random record or row from a database table. Here are some example SQL statements that don't require additional application logic, but each database server requires different SQL syntax."
+icon: postgres
+tags:
+  - SQL
+  #   - Javascript
+  #   - React Hook
+  #   - React Component
+#   - CSS
+#   - HTML
+---
+
+Select a random row with MySQL:
+
+<CodeBlock>
+
+```sql title="MySQL.sql"
+SELECT column FROM table
+ORDER BY RAND()
+LIMIT 1
+```
+
+</CodeBlock>
+
+Select a random row with PostgreSQL:
+
+<CodeBlock>
+
+```sql title="PostgreSQL.sql"
+SELECT column FROM table
+ORDER BY RANDOM()
+LIMIT 1
+```
+
+</CodeBlock>
+
+Select a random row with Microsoft SQL Server:
+
+<CodeBlock>
+
+```sql title="SQLServer.sql"
+SELECT TOP 1 column FROM table
+ORDER BY NEWID()
+```
+
+</CodeBlock>
+
+You may find that `ORDER BY RAND()` in MySQL or `ORDER BY RANDOM()` is PostgreSQL do not yield great performance on very large tables. Another approach you can take in that situation is to do two separate queries: a count and then an offset. Like this:
+
+`SELECT count(*) AS n FROM table`
+
+Then you pick a random number between 0 and n and use it as the OFFSET value:
+
+<CodeBlock>
+
+```sql title="Alternative.sql"
+SELECT column FROM table
+LIMIT 1 OFFSET :randomValue
+```
+
+</CodeBlock>
+
+The LIMIT and OFFSET statements work in both MySQL and PostgreSQL, other database engines have similar functionality.
+
+You'll have to pick that random value using your programming language of choice. This approach may not be that much faster so you should see how fast the original random query is compared to this approach.
+
+### References
+
+- [Select a random row from a database table](https://www.petefreitag.com/item/466.cfm)
