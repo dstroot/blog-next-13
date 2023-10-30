@@ -1,6 +1,6 @@
 import quotes from '@/app/quotes/quotes.json'
 
-type Quote = {
+export type Quote = {
   quote: string
   author: string
   publication: string | null

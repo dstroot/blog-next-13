@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
+import { type Quote } from '@/lib/getRandomQuote'
+
 export function Quote(randomQuote: Quote) {
   const router = useRouter()
   const [fade, setFade] = useState(false)
