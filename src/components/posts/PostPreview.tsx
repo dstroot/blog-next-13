@@ -51,7 +51,7 @@ export const PostPreview = ({
                   'overflow-hidden object-cover transition-opacity	duration-300',
                   isLoading ? 'opacity-0' : 'opacity-100',
                 )}
-                onLoadingComplete={() => setIsLoading(false)}
+                onLoad={() => setIsLoading(false)}
               />
             </div>
             <MoreStats stats={stats} slug={slug} />
