@@ -3,6 +3,8 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { Quote } from '@/components/Quote'
 
+export const dynamic = 'force-dynamic'
+
 export const generateMetadata = () => {
   return { title: 'Quotes' }
 }
