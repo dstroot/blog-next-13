@@ -16,8 +16,7 @@ export default function QuotesPage() {
     <Container variant="padded">
       <PageHeader
         title="Quotes"
-        description="Thoughts. Beautifully expressed."
-          //Inspiring words from great minds.
+        description="Inspiring words. Beautifully expressed."
       />
       <Quote {...randomQuote} />
     </Container>
