@@ -3,25 +3,29 @@
     "quote": "“If your actions inspire others to dream more, learn more, do more and become more, you are a leader.”",
     "author": "John Quincy Adams",
     "publication": null,
-    "category": "main"
+    "category": "main",
+    "comments": "People who choose to follow leaders because they provide meaning, direction and inspiration. If you can inspire people then you are a leader no matter your formal role or position. I like this quote because it cuts right to the essence of leadership."
   },
   {
     "quote": "“Time magnifies the margin between success and failure. It will multiply whatever you feed it. Good habits make time your ally. Bad habits make time your enemy.”",
     "author": "James Clear",
     "publication": "Atomic Habits",
-    "category": "main"
+    "category": "main",
+    "comments": "A good habit, over a long period of time, will have an incredible effect. Many authors write books by writing only a few hours per day. Athletes may train only a few days per week. This quote connects the value of time with your habits in a stark way."
   },
   {
     "quote": "“If you think education is expensive, try ignorance.”",
     "author": "Eppie Lederer (Ann Landers)",
     "publication": null,
-    "category": "main"
+    "category": "main",
+    "comments": "Testing..."
   },
   {
     "quote": "“Live as if you were to die tomorrow. Learn as if you were to live forever.”",
     "author": "Mahatma Ghandi",
     "publication": null,
-    "category": "main"
+    "category": "main",
+    "comments": "I love the juxtaposition of lifetime learning, increasing your knowledge and wisdom - coupled with the idea of living for today. Life is a balancing act. You have to enjoy life and live in the moment, while also investing the future."
   },
   {
     "quote": "“I forgive a man's ignorance for it can be cured with knowledge. Stupidity, on the other hand, is a death sentence.”",
@@ -39,7 +43,8 @@
     "quote": "“It's hard to show your skill as a sailor when there is no wind.”",
     "author": "Richard P. Rumelt",
     "publication": "Good Strategy Bad Strategy: The Difference and Why It Matters",
-    "category": "main"
+    "category": "main",
+    "comments": "Sometimes you may find yourself in a role situation that simply doesn't align with your talents. When that is the case you can't shine or distinguish yourself. You have to align your role to your strengths."
   },
   {
     "quote": "“No one can make you feel inferior without your consent.”",
@@ -48,7 +53,7 @@
     "category": "main"
   },
   {
-    "quote": "“It is a strange, nonintuitive fact of our existence that photons of light have no color, sound waves no sound, and scent molecules no odor. While we have the overwhelming impression that the greenness of the trees and the blueness of the sky are streaming through our eyes as through an open window the waves of light impacting on the retina are colorless, just as the waves of sound impacting on the eardrum are silent, and scent molecules have no smell. Our brain only receives input as electrical impulses and it creates the world we experience, inside our heads.”",
+    "quote": "“It is a strange, nonintuitive fact of our existence that photons of light have no color, sound waves no sound, and molecules no odor. While we have the overwhelming impression that the greenness of the trees and the blueness of the sky are streaming through our eyes as through an open window the waves of light impacting on the retina are colorless, just as the waves of sound impacting on the eardrum are silent, and scent molecules have no smell. Our brain only receives input as electrical impulses and it creates the world we experience, inside our heads.”",
     "author": "Bill Bryson",
     "publication": "The Body",
     "category": "main"
@@ -166,5 +171,5 @@
     "author": "Steve Jobs",
     "publication": null,
     "category": "main"
-  }  
+  }
 ]

@@ -5,6 +5,7 @@ export type Quote = {
   author: string
   publication: string | null
   category: string
+  comments?: string
 }
 
 const prevQuoteObj = {
