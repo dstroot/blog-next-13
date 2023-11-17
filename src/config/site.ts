@@ -70,13 +70,13 @@ export const siteConfig = {
       prefetch: false,
       external: false,
     },
-    // {
-    //   href: '/quotes',
-    //   name: 'Quotes',
-    //   new: false,
-    //   prefetch: false,
-    //   external: false,
-    // },
+    {
+      href: '/quotes',
+      name: 'Quotes',
+      new: false,
+      prefetch: false,
+      external: false,
+    },
   ] satisfies NavItem[],
   footerNav: [
     {
