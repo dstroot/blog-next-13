@@ -17,7 +17,7 @@ export function Quote(randomQuote: Quote) {
 
   return (
     <section
-      className={`flex flex-col items-center transition-opacity duration-500 ease-in-out ${
+      className={`flex flex-col transition-opacity duration-500 ease-in-out ${
         fade ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -59,7 +59,7 @@ export function Quote(randomQuote: Quote) {
 
       <button
         type="button"
-        className="mb-2 mr-2 mt-6 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-0 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:mt-16"
+        className="mb-2 mr-2 mt-8 w-44 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-0 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:mt-16"
         onClick={() => {
           setIsOpen(false)
           setFade(true)
