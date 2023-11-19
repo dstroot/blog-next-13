@@ -12,7 +12,6 @@ export function Quote(randomQuote: Quote) {
   const router = useRouter()
   const [fade, setFade] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-
   const Icon = Icons['chevronRight' as IconKey]
 
   return (
@@ -61,9 +60,9 @@ export function Quote(randomQuote: Quote) {
         type="button"
         className="mb-2 mr-2 mt-8 w-44 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-0 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:mt-16"
         onClick={() => {
+          setTimeout(() => router.refresh(), 500)
           setIsOpen(false)
           setFade(true)
-          setTimeout(() => router.refresh(), 500)
           setTimeout(() => setFade(false), 800)
         }}
       >
