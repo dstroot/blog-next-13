@@ -38,7 +38,7 @@
     "author": "Tristan Harris, head of the Center for Humane Technology (and a former Google design ethicist)",
     "publication": null,
     "category": "main",
-    "comments": "Many of us struggle with Social Media. From FOMO to feelings we may be addicted. How many of us reach for our phones the minute we wake up and start scrolling through posts and news? Somehow we have to regain control; yet this quote speaks to precisely how difficult that will be."
+    "comments": "Many of us struggle with Social Media. How many of us reach for our phones the minute we wake up and start scrolling through posts and news? Somehow we have to regain control; yet this quote speaks to precisely how difficult that will be."
   },
   {
     "quote": "“It's hard to show your skill as a sailor when there is no wind.”",
@@ -59,21 +59,21 @@
     "author": "Bill Bryson",
     "publication": "The Body",
     "category": "main",
-    "comments": "Our brains sit silent and alone in the dark, inside our skull. They have no contact with the outside world. They only receive electrical impulses. From those impulses they create the world we think we see, hear, touch, and smell. Not only that, but those electrical impulses take time to reach our brain, and time to be incorporated into the reality our brain creates for us. So, the brain must predict/invent the future in order for us to perceive the present. Otherwise, the ball would hit us in the face before we moved to catch it. Philosophers have asked the question how do we know our brain is not just sitting in a jar, being fed electrical signals as part of an elaborate simulation? The answer is disturbing because it's conceivable we wouldn't know the difference. This is the core concept explored the Matrix movies."
+    "comments": "Our brains sit silent and alone in the dark, inside our skull. They have no contact with the outside world. They only receive electrical impulses. From those impulses they create the world we think we see, hear, touch, and smell. Not only that, but those electrical impulses take time to reach our brain, and time to be incorporated into the reality our brain creates for us. So, the brain must predict/invent the future in order for us to perceive the present. Otherwise, the ball would hit us in the face before we moved to catch it. Philosophers have asked the question how do we know our brain is not just sitting in a jar, being fed electrical signals as part of an elaborate simulation? The answer is disturbing because it's conceivable we wouldn't know the difference. This concept is explored the Matrix movies."
   },
   {
     "quote": "“Whereas culture’s focus leans toward conformity to a common core of behaviors, teams focus on the opposite. Teams aren’t about sameness—they aren’t, at their best, about marching in lockstep. Instead, they’re about unlocking what is unique about each of us, in the service of something shared. A team, at its finest, insists on the unique contribution of each of its members, and is the best way we humans have ever come up with of harnessing those distinctive contributions together in the service of something that none of us could do alone.”",
     "author": "Marcus Buckingham, Ashley Goodall",
     "publication": "Nine Lies About Work",
     "category": "main",
-    "comments": "I think of teams like the movie “Ocean's Eleven”. Each person brings a unique, authentic self to the team. Each has a unique set of experiences and talents. So much corporate cultural development and team structure seems to forget this - and pushes a common set of skills and ignores (or worse) discourages uniqueness. I love this quote because it aligns with how I view teams."
+    "comments": "I love this quote because it aligns with how I view teams. I think of teams like the movie “Ocean's Eleven”. Each person brings a unique, authentic self to the team. Each has a unique set of experiences and talents. So much corporate cultural development and team structure seems to forget this - and pushes a common set of skills and ignores (or worse, discourages) uniqueness. "
   },
   {
     "quote": "“Truth and power can travel together only so far. Sooner or later they go their separate paths.”",
     "author": "Yuval Noah Harari",
     "publication": "21 Lessons for the 21st Century",
     "category": "main",
-    "comments": "This quote seems so relevant in today's world. I used to look up to our leaders and I expected them to tell me the truth. I know, how naive. I was so disappointed when Bill Clinton lied publicly about his relationship with Monica Lewinsky. The issue for me was not that he had an affair, but the fact he lied about it to the public. Today I guess I now expect leaders to lie and that makes the world a darker place."
+    "comments": "This quote is so relevant in today's world. I used to look up to our leaders and I expected them to tell me the truth. I know, how naive. I was so disappointed when Bill Clinton lied publicly about his relationship with Monica Lewinsky. The issue to me was not that he had an affair, but the fact he lied about it to the public. Today I expect leaders to lie, and that makes the world a darker place."
   },
   {
     "quote": "“I will give you childhood, so that you might know innocence. Age, so you will know the prize of youth. Children, so that you will care for the future. Toil, so that you will know the value of a day. The body’s failings, so that you will know its worth. Death, so that you will cherish the bittersweet beauty of life.”",
@@ -107,13 +107,15 @@
     "quote": "“...the more firmly you believe it ought to be possible to find time for everything, the less pressure you’ll feel to ask whether any given activity is the best use for a portion of your time.”",
     "author": "Oliver Burkeman",
     "publication": "Four Thousand Weeks",
-    "category": "main"
+    "category": "main",
+    "comments": "This quote hits at exactly a problem I struggled with for a long time. I viewed it as a productivity issue (I need to get more productive!) vs. a an issue of culling my to do list down (How do I say no to more things?). The ability to say no is the real superpower you want to have."
   },
   {
     "quote": "“There is only one way, that we know of, to discern falsehoods from truths, one way to see if our model of the world has errors. That method is to actively seek evidence that contradicts our beliefs. Finding evidence that supports our beliefs is helpful, but not definitive. Finding contrary evidence, however, is proof that the model in our head is not right and needs to be modified. Actively looking for evidence to disprove our beliefs is the scientific method. It is the only approach we know of that can get us closer to the truth.”",
     "author": "Jeff Hawkins and Richard Dawkins",
     "publication": "A Thousand Brains",
-    "category": "main"
+    "category": "main",
+    "comments": "Instead of using Google to find evidence to support our views, if we used the scientific method and looked for contradictory evidence we'd all have a more balanced view of the world, and it would be more accurate."
   },
   {
     "quote": "“I’ve heard people talk about data as the new oil but for most companies it’s a lot closer uranium. Hard to find people who can to handle or process it correctly, nontrivial security, plus liabilities if PII is involved, expensive to store, and a generally underwhelming return on effort relative to the anticipated utility.”",
@@ -168,7 +170,7 @@
     "author": "William B. Irvine",
     "publication": "A Guide to the Good Life",
     "category": "main",
-    "comments": "This is THE formula for happiness. This is it. It's right here. You just read it."
+    "comments": "This is THE formula for happiness. This is it. It's right here. You just read it. Alternative: “Any man who does not think that what he has is more than ample, is an unhappy man, even if he is the master of the whole world.” - Seneca, Letters from a Stoic."
   },
   {
     "quote": "“When I set a task for myself, I complete it. Therefore, I am careful not to start difficult and impractical tasks, because I love leisure.”",
