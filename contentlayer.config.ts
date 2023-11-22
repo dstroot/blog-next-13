@@ -202,7 +202,6 @@ export default makeSource({
   contentDirPath: './content',
   documentTypes: [Post, Snippet, Page],
   mdx: {
-    // @ts-expect-error
     remarkPlugins: [[emoji, emojiOptions], [remarkGfm]],
     rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
