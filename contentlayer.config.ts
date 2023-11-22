@@ -7,7 +7,7 @@ import {
 import readingTime from 'reading-time'
 import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
-import emoji from 'remark-emoji'
+import emoji, { type RemarkEmojiOptions } from 'remark-emoji'
 import remarkGfm from 'remark-gfm'
 
 // https://claritydev.net/blog/copy-to-clipboard-button-nextjs-mdx-rehype
@@ -16,6 +16,13 @@ const rehypePrettyCodeOptions: Options = {
   // Themes list: https://github.com/shikijs/shiki/blob/main/docs/themes.md
   theme: 'one-dark-pro',
   keepBackground: false,
+}
+
+const emojiOptions: RemarkEmojiOptions = {
+  // https://github.com/rhysd/remark-emoji
+  accessible: false,
+  padSpaceAfter: false,
+  emoticon: false,
 }
 
 const Author = defineNestedType(() => ({
@@ -195,7 +202,8 @@ export default makeSource({
   contentDirPath: './content',
   documentTypes: [Post, Snippet, Page],
   mdx: {
-    remarkPlugins: [emoji, [remarkGfm]],
+    // @ts-expect-error
+    remarkPlugins: [[emoji, emojiOptions], [remarkGfm]],
     rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
 })
