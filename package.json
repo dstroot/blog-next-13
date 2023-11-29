@@ -16,8 +16,8 @@
     "tough-cookie": "4.1.3"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.460.0",
-    "@aws-sdk/lib-dynamodb": "^3.460.0",
+    "@aws-sdk/client-dynamodb": "^3.461.0",
+    "@aws-sdk/lib-dynamodb": "^3.461.0",
     "@google-analytics/data": "^4.1.0",
     "@mantine/hooks": "^7.2.2",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
