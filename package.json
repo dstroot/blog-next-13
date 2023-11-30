@@ -16,9 +16,9 @@
     "tough-cookie": "4.1.3"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.461.0",
-    "@aws-sdk/lib-dynamodb": "^3.461.0",
-    "@google-analytics/data": "^4.1.0",
+    "@aws-sdk/client-dynamodb": "^3.462.0",
+    "@aws-sdk/lib-dynamodb": "^3.462.0",
+    "@google-analytics/data": "^4.2.0",
     "@mantine/hooks": "^7.2.2",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-avatar": "1.0.4",
@@ -30,7 +30,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@t3-oss/env-nextjs": "^0.7.1",
-    "@tanstack/react-query": "^5.8.9",
+    "@tanstack/react-query": "^5.10.0",
     "@upstash/ratelimit": "^1.0.0",
     "@upstash/redis": "^1.25.1",
     "@vercel/analytics": "^1.1.1",
@@ -59,8 +59,8 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@tailwindcss/typography": "^0.5.9",
-    "@types/eslint": "^8.44.7",
-    "@types/node": "^20.10.0",
+    "@types/eslint": "^8.44.8",
+    "@types/node": "^20.10.1",
     "@types/react": "^18.2.39",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
