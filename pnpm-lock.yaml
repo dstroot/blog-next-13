@@ -6,17 +6,17 @@ settings:
 
 dependencies:
   '@aws-sdk/client-dynamodb':
-    specifier: ^3.473.0
-    version: 3.473.0(aws-crt@1.19.0)
+    specifier: ^3.474.0
+    version: 3.474.0(aws-crt@1.20.0)
   '@aws-sdk/lib-dynamodb':
-    specifier: ^3.473.0
-    version: 3.473.0(@aws-sdk/client-dynamodb@3.473.0)
+    specifier: ^3.474.0
+    version: 3.474.0(@aws-sdk/client-dynamodb@3.474.0)
   '@google-analytics/data':
     specifier: ^4.3.0
     version: 4.3.0(encoding@0.1.13)
   '@mantine/hooks':
-    specifier: ^7.3.1
-    version: 7.3.1(react@18.2.0)
+    specifier: ^7.3.2
+    version: 7.3.2(react@18.2.0)
   '@radix-ui/react-aspect-ratio':
     specifier: ^1.0.3
     version: 1.0.3(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
@@ -48,8 +48,8 @@ dependencies:
     specifier: ^0.7.1
     version: 0.7.1(typescript@5.3.3)(zod@3.22.4)
   '@tanstack/react-query':
-    specifier: ^5.13.4
-    version: 5.13.4(react@18.2.0)
+    specifier: ^5.14.0
+    version: 5.14.0(react@18.2.0)
   '@upstash/ratelimit':
     specifier: ^1.0.0
     version: 1.0.0
@@ -63,11 +63,11 @@ dependencies:
     specifier: ^0.6.1
     version: 0.6.1
   algoliasearch:
-    specifier: ^4.21.1
-    version: 4.21.1
+    specifier: ^4.22.0
+    version: 4.22.0
   aws-crt:
-    specifier: ^1.19.0
-    version: 1.19.0
+    specifier: ^1.20.0
+    version: 1.20.0
   class-variance-authority:
     specifier: ^0.7.0
     version: 0.7.0
@@ -109,7 +109,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-instantsearch:
     specifier: ^7.4.1
-    version: 7.4.1(algoliasearch@4.21.1)(react-dom@18.2.0)(react@18.2.0)
+    version: 7.4.1(algoliasearch@4.22.0)(react-dom@18.2.0)(react@18.2.0)
   reading-time:
     specifier: ^1.5.0
     version: 1.5.0
@@ -201,98 +201,98 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@algolia/cache-browser-local-storage@4.21.1:
-    resolution: {integrity: sha512-vUkac/vgj8inyGR/IgunRjTOQ6IlBwl7afFkIfUZRqbqKKXBs+A/g5wgH+UnAlCSW8wjFRAIfCzuvSRb1/qjsQ==}
+  /@algolia/cache-browser-local-storage@4.22.0:
+    resolution: {integrity: sha512-uZ1uZMLDZb4qODLfTSNHxSi4fH9RdrQf7DXEzW01dS8XK7QFtFh29N5NGKa9S+Yudf1vUMIF+/RiL4i/J0pWlQ==}
     dependencies:
-      '@algolia/cache-common': 4.21.1
+      '@algolia/cache-common': 4.22.0
     dev: false
 
-  /@algolia/cache-common@4.21.1:
-    resolution: {integrity: sha512-HUo4fRk8KXFMyCASW0k+Kl8iXBoRPdqAjV9OVaFibTNg1dbwnpe6eIxbSTM6AJ2X82ic/8x3GuAO8zF/E515PA==}
+  /@algolia/cache-common@4.22.0:
+    resolution: {integrity: sha512-TPwUMlIGPN16eW67qamNQUmxNiGHg/WBqWcrOoCddhqNTqGDPVqmgfaM85LPbt24t3r1z0zEz/tdsmuq3Q6oaA==}
     dev: false
 
-  /@algolia/cache-in-memory@4.21.1:
-    resolution: {integrity: sha512-+l2pLg6yIwRaGNtv41pGF/f/e9Qk80FeYE41f4OXS9lb5vpyrxzqM5nUaffWk/ZSFrPDuw5J2E226c//tIIffA==}
+  /@algolia/cache-in-memory@4.22.0:
+    resolution: {integrity: sha512-kf4Cio9NpPjzp1+uXQgL4jsMDeck7MP89BYThSvXSjf2A6qV/0KeqQf90TL2ECS02ovLOBXkk98P7qVarM+zGA==}
     dependencies:
-      '@algolia/cache-common': 4.21.1
+      '@algolia/cache-common': 4.22.0
     dev: false
 
-  /@algolia/client-account@4.21.1:
-    resolution: {integrity: sha512-AC6SjA9n38th73gAUqcjsuxNUChpwaflaAhPL0qO9cUICN67njpQrnYaoSVZ/yx0opG5zQFRKbpEcuPGj0XjhQ==}
+  /@algolia/client-account@4.22.0:
+    resolution: {integrity: sha512-Bjb5UXpWmJT+yGWiqAJL0prkENyEZTBzdC+N1vBuHjwIJcjLMjPB6j1hNBRbT12Lmwi55uzqeMIKS69w+0aPzA==}
     dependencies:
-      '@algolia/client-common': 4.21.1
-      '@algolia/client-search': 4.21.1
-      '@algolia/transporter': 4.21.1
+      '@algolia/client-common': 4.22.0
+      '@algolia/client-search': 4.22.0
+      '@algolia/transporter': 4.22.0
     dev: false
 
-  /@algolia/client-analytics@4.21.1:
-    resolution: {integrity: sha512-q6AxvAcBl4fNZXZsMwRRQXcsxUv0PK5eUAz/lHDvgkMWAg6cP7Fl+WIq0fHcG7cJA4EHf2sT5fV6Z+yUlf7NfA==}
+  /@algolia/client-analytics@4.22.0:
+    resolution: {integrity: sha512-os2K+kHUcwwRa4ArFl5p/3YbF9lN3TLOPkbXXXxOvDpqFh62n9IRZuzfxpHxMPKAQS3Et1s0BkKavnNP02E9Hg==}
     dependencies:
-      '@algolia/client-common': 4.21.1
-      '@algolia/client-search': 4.21.1
-      '@algolia/requester-common': 4.21.1
-      '@algolia/transporter': 4.21.1
+      '@algolia/client-common': 4.22.0
+      '@algolia/client-search': 4.22.0
+      '@algolia/requester-common': 4.22.0
+      '@algolia/transporter': 4.22.0
     dev: false
 
-  /@algolia/client-common@4.21.1:
-    resolution: {integrity: sha512-LOH7ncYwY/x7epOgxc/MIuV7m3qzl00wIjDG5/9rgImFpkV0X+D/ndJI9DmPsIx7yaTLd5xv/XYuKLcvrUR0eQ==}
+  /@algolia/client-common@4.22.0:
+    resolution: {integrity: sha512-BlbkF4qXVWuwTmYxVWvqtatCR3lzXwxx628p1wj1Q7QP2+LsTmGt1DiUYRuy9jG7iMsnlExby6kRMOOlbhv2Ag==}
     dependencies:
-      '@algolia/requester-common': 4.21.1
-      '@algolia/transporter': 4.21.1
+      '@algolia/requester-common': 4.22.0
+      '@algolia/transporter': 4.22.0
     dev: false
 
-  /@algolia/client-personalization@4.21.1:
-    resolution: {integrity: sha512-u2CyQjHbyVwPqM5eSXd/o+rh1Pk949P/MO6s+OxyEGg6/R2YpYvmsafVZl9Q+xqT8pFaf5QygfcqlSdMUDHV5Q==}
+  /@algolia/client-personalization@4.22.0:
+    resolution: {integrity: sha512-pEOftCxeBdG5pL97WngOBi9w5Vxr5KCV2j2D+xMVZH8MuU/JX7CglDSDDb0ffQWYqcUN+40Ry+xtXEYaGXTGow==}
     dependencies:
-      '@algolia/client-common': 4.21.1
-      '@algolia/requester-common': 4.21.1
-      '@algolia/transporter': 4.21.1
+      '@algolia/client-common': 4.22.0
+      '@algolia/requester-common': 4.22.0
+      '@algolia/transporter': 4.22.0
     dev: false
 
-  /@algolia/client-search@4.21.1:
-    resolution: {integrity: sha512-3KqSmMkQmF+ACY/Ms5TdcvrcK8iqgQP/N0EPnNUUP4LMUzAACpLLTdzA+AtCuc6oaz5ITtGJBVdPUljj5Jf/Lg==}
+  /@algolia/client-search@4.22.0:
+    resolution: {integrity: sha512-bn4qQiIdRPBGCwsNuuqB8rdHhGKKWIij9OqidM1UkQxnSG8yzxHdb7CujM30pvp5EnV7jTqDZRbxacbjYVW20Q==}
     dependencies:
-      '@algolia/client-common': 4.21.1
-      '@algolia/requester-common': 4.21.1
-      '@algolia/transporter': 4.21.1
+      '@algolia/client-common': 4.22.0
+      '@algolia/requester-common': 4.22.0
+      '@algolia/transporter': 4.22.0
     dev: false
 
   /@algolia/events@4.0.1:
     resolution: {integrity: sha512-FQzvOCgoFXAbf5Y6mYozw2aj5KCJoA3m4heImceldzPSMbdyS4atVjJzXKMsfX3wnZTFYwkkt8/z8UesLHlSBQ==}
     dev: false
 
-  /@algolia/logger-common@4.21.1:
-    resolution: {integrity: sha512-9AyYpR2OO9vPkkDlpTtW2/6nX+RmMd7LUwzJiAF3uN+BYUiQqgXEp+oGaH8UC0dgetmK7wJO6hw4b39cnTdEpw==}
+  /@algolia/logger-common@4.22.0:
+    resolution: {integrity: sha512-HMUQTID0ucxNCXs5d1eBJ5q/HuKg8rFVE/vOiLaM4Abfeq1YnTtGV3+rFEhOPWhRQxNDd+YHa4q864IMc0zHpQ==}
     dev: false
 
-  /@algolia/logger-console@4.21.1:
-    resolution: {integrity: sha512-9wizQiQ8kL4DiBmT82i403UwacNuv+0hpfsfaWYZQrGjpzG+yvXETWM4AgwFZLj007esuKQiGfOPUoYFZNkGGA==}
+  /@algolia/logger-console@4.22.0:
+    resolution: {integrity: sha512-7JKb6hgcY64H7CRm3u6DRAiiEVXMvCJV5gRE672QFOUgDxo4aiDpfU61g6Uzy8NKjlEzHMmgG4e2fklELmPXhQ==}
     dependencies:
-      '@algolia/logger-common': 4.21.1
+      '@algolia/logger-common': 4.22.0
     dev: false
 
-  /@algolia/requester-browser-xhr@4.21.1:
-    resolution: {integrity: sha512-9NudesJLuXtRHV+JD8fTkrsdVj/oAPQbtLnxBbSQeMduzV6+a7W+G9VuWo5fwFymCdXR8/Hb6jy8D1owQIq5Gw==}
+  /@algolia/requester-browser-xhr@4.22.0:
+    resolution: {integrity: sha512-BHfv1h7P9/SyvcDJDaRuIwDu2yrDLlXlYmjvaLZTtPw6Ok/ZVhBR55JqW832XN/Fsl6k3LjdkYHHR7xnsa5Wvg==}
     dependencies:
-      '@algolia/requester-common': 4.21.1
+      '@algolia/requester-common': 4.22.0
     dev: false
 
-  /@algolia/requester-common@4.21.1:
-    resolution: {integrity: sha512-KtX2Ep3C43XxoN3xKw755cdf9enE6gPgzh6ufZQRJBl4rYCOoXbiREU6noDYX/Nq+Q+sl03V37WAp0YgtIlh9g==}
+  /@algolia/requester-common@4.22.0:
+    resolution: {integrity: sha512-Y9cEH/cKjIIZgzvI1aI0ARdtR/xRrOR13g5psCxkdhpgRN0Vcorx+zePhmAa4jdQNqexpxtkUdcKYugBzMZJgQ==}
     dev: false
 
-  /@algolia/requester-node-http@4.21.1:
-    resolution: {integrity: sha512-EcD8cY6Bh2iMySpqXglTKU9+pt+km1ws3xF0V7CGMIUzW1HmN/ZVhi4apCBY4tEMytbyARv0XRTPsolSC4gSSw==}
+  /@algolia/requester-node-http@4.22.0:
+    resolution: {integrity: sha512-8xHoGpxVhz3u2MYIieHIB6MsnX+vfd5PS4REgglejJ6lPigftRhTdBCToe6zbwq4p0anZXjjPDvNWMlgK2+xYA==}
     dependencies:
-      '@algolia/requester-common': 4.21.1
+      '@algolia/requester-common': 4.22.0
     dev: false
 
-  /@algolia/transporter@4.21.1:
-    resolution: {integrity: sha512-KGLFKz8krzOWRwcbR4FT49Grh1dES/mG8dHABEojbvrfUb6kUFxkAee/aezp2GIxuNx+gpQjRn1IzOsqbUZL0A==}
+  /@algolia/transporter@4.22.0:
+    resolution: {integrity: sha512-ieO1k8x2o77GNvOoC+vAkFKppydQSVfbjM3YrSjLmgywiBejPTvU1R1nEvG59JIIUvtSLrZsLGPkd6vL14zopA==}
     dependencies:
-      '@algolia/cache-common': 4.21.1
-      '@algolia/logger-common': 4.21.1
-      '@algolia/requester-common': 4.21.1
+      '@algolia/cache-common': 4.22.0
+      '@algolia/logger-common': 4.22.0
+      '@algolia/requester-common': 4.22.0
     dev: false
 
   /@algolia/ui-components-highlight-vdom@1.2.2:
@@ -366,15 +366,15 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@aws-sdk/client-dynamodb@3.473.0(aws-crt@1.19.0):
-    resolution: {integrity: sha512-yGjjIVaD5dHDveHkbmQTtx3orQE6M9xQbF6+SC2jj+SDCUty7zYMdIHrdxdNeK+xW1Hpub8udgy+f1ZNzKjSJg==}
+  /@aws-sdk/client-dynamodb@3.474.0(aws-crt@1.20.0):
+    resolution: {integrity: sha512-lEUmxBdJ6f2uwbUDyojvF0aXXBzhLJcM6h6t9zgkyA6+N4CueTrtqpgXignideR5+AEgRAQD3JO2MkYRvQuBYQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/client-sts': 3.473.0(aws-crt@1.19.0)
-      '@aws-sdk/core': 3.468.0
-      '@aws-sdk/credential-provider-node': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/client-sts': 3.474.0(aws-crt@1.20.0)
+      '@aws-sdk/core': 3.474.0
+      '@aws-sdk/credential-provider-node': 3.474.0(aws-crt@1.20.0)
       '@aws-sdk/middleware-endpoint-discovery': 3.470.0
       '@aws-sdk/middleware-host-header': 3.468.0
       '@aws-sdk/middleware-logger': 3.468.0
@@ -385,7 +385,7 @@ packages:
       '@aws-sdk/types': 3.468.0
       '@aws-sdk/util-endpoints': 3.470.0
       '@aws-sdk/util-user-agent-browser': 3.468.0
-      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.20.0)
       '@smithy/config-resolver': 2.0.21
       '@smithy/fetch-http-handler': 2.3.1
       '@smithy/hash-node': 2.0.17
@@ -416,13 +416,13 @@ packages:
       - aws-crt
     dev: false
 
-  /@aws-sdk/client-sso@3.470.0(aws-crt@1.19.0):
-    resolution: {integrity: sha512-iMXqdXuypE3OK0rggbvSz7vBGlLDG418dNidHhdaeLluMTG/GfHbh1fLOlavhYxRwrsPrtYvFiVkxXFGzXva4w==}
+  /@aws-sdk/client-sso@3.474.0(aws-crt@1.20.0):
+    resolution: {integrity: sha512-6toUmQUIHkDM/P2/nyLEO/mcWOIPByTlegqX9VCHhYh9Fs5MDT2nit7I6fZzBjZjB5oVTwKjbzgxae9cE3bhqw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/core': 3.468.0
+      '@aws-sdk/core': 3.474.0
       '@aws-sdk/middleware-host-header': 3.468.0
       '@aws-sdk/middleware-logger': 3.468.0
       '@aws-sdk/middleware-recursion-detection': 3.468.0
@@ -431,7 +431,7 @@ packages:
       '@aws-sdk/types': 3.468.0
       '@aws-sdk/util-endpoints': 3.470.0
       '@aws-sdk/util-user-agent-browser': 3.468.0
-      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.20.0)
       '@smithy/config-resolver': 2.0.21
       '@smithy/fetch-http-handler': 2.3.1
       '@smithy/hash-node': 2.0.17
@@ -460,26 +460,25 @@ packages:
       - aws-crt
     dev: false
 
-  /@aws-sdk/client-sts@3.473.0(aws-crt@1.19.0):
-    resolution: {integrity: sha512-ttRZs+sW96cpuoVdys4KZ81yXq4c6xyhGOZIRUpi/YiwB1gnNvCEo5CDFL7PSdW/bjI2ovyUgu8EArq+7KlLwA==}
+  /@aws-sdk/client-sts@3.474.0(aws-crt@1.20.0):
+    resolution: {integrity: sha512-qPPMbrDVAUJgYiFWVewFG7dg0VyMfuGNNK4IC1nZr0eXejUTbdm8cio6IZ8OkWtK+A+L+wx1vX5686WYVgQ0dQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-crypto/sha256-browser': 3.0.0
       '@aws-crypto/sha256-js': 3.0.0
-      '@aws-sdk/core': 3.468.0
-      '@aws-sdk/credential-provider-node': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/core': 3.474.0
+      '@aws-sdk/credential-provider-node': 3.474.0(aws-crt@1.20.0)
       '@aws-sdk/middleware-host-header': 3.468.0
       '@aws-sdk/middleware-logger': 3.468.0
       '@aws-sdk/middleware-recursion-detection': 3.468.0
-      '@aws-sdk/middleware-sdk-sts': 3.468.0
-      '@aws-sdk/middleware-signing': 3.468.0
       '@aws-sdk/middleware-user-agent': 3.470.0
       '@aws-sdk/region-config-resolver': 3.470.0
       '@aws-sdk/types': 3.468.0
       '@aws-sdk/util-endpoints': 3.470.0
       '@aws-sdk/util-user-agent-browser': 3.468.0
-      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.20.0)
       '@smithy/config-resolver': 2.0.21
+      '@smithy/core': 1.1.0
       '@smithy/fetch-http-handler': 2.3.1
       '@smithy/hash-node': 2.0.17
       '@smithy/invalid-dependency': 2.0.15
@@ -500,6 +499,7 @@ packages:
       '@smithy/util-defaults-mode-browser': 2.0.22
       '@smithy/util-defaults-mode-node': 2.0.29
       '@smithy/util-endpoints': 1.0.7
+      '@smithy/util-middleware': 2.0.8
       '@smithy/util-retry': 2.0.8
       '@smithy/util-utf8': 2.0.2
       fast-xml-parser: 4.2.5
@@ -508,11 +508,15 @@ packages:
       - aws-crt
     dev: false
 
-  /@aws-sdk/core@3.468.0:
-    resolution: {integrity: sha512-ezUJR9VvknKoXzNZ4wvzGi1jdkmm+/1dUYQ9Sw4r8bzlJDTsUnWbyvaDlBQh81RuhLtVkaUfTnQKoec0cwlZKQ==}
+  /@aws-sdk/core@3.474.0:
+    resolution: {integrity: sha512-eVRdeB+AoTNSzfc4viHfr0jfkHujSlf4ToExJtTuxS1wlgmIyyxRNrVKxbf0K78YK/TXRsRlJPoS5QCD5h1S2w==}
     engines: {node: '>=14.0.0'}
     dependencies:
+      '@smithy/core': 1.1.0
+      '@smithy/protocol-http': 3.0.11
+      '@smithy/signature-v4': 2.0.18
       '@smithy/smithy-client': 2.1.18
+      '@smithy/types': 2.7.0
       tslib: 2.6.2
     dev: false
 
@@ -526,13 +530,13 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/credential-provider-ini@3.470.0(aws-crt@1.19.0):
-    resolution: {integrity: sha512-eF22iPO6J2jY+LbuTv5dW0hZBmi6ksRDFFd/zT6TLasrzH2Ex+gAfN3c7rFHF+XAubL0JXFUKFA3UAwoZpO9Zg==}
+  /@aws-sdk/credential-provider-ini@3.474.0(aws-crt@1.20.0):
+    resolution: {integrity: sha512-3Y2fHI4ZCNjdOO47Vh/xBgLXOrKm3KwBkYkBKKT2g02FUGNT8NLjJg8WBo3D4RQX2h34qx4mtW5nTY6YcGP80Q==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-sdk/credential-provider-env': 3.468.0
       '@aws-sdk/credential-provider-process': 3.468.0
-      '@aws-sdk/credential-provider-sso': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/credential-provider-sso': 3.474.0(aws-crt@1.20.0)
       '@aws-sdk/credential-provider-web-identity': 3.468.0
       '@aws-sdk/types': 3.468.0
       '@smithy/credential-provider-imds': 2.1.4
@@ -544,14 +548,14 @@ packages:
       - aws-crt
     dev: false
 
-  /@aws-sdk/credential-provider-node@3.470.0(aws-crt@1.19.0):
-    resolution: {integrity: sha512-paySXwzGxBVU+2cVUkRIXafKhYhtO2fJJ3MotR6euvRONK/dta+bhEc5Z4QnTo/gNLoELK/QUC0EGoF+oPfk8g==}
+  /@aws-sdk/credential-provider-node@3.474.0(aws-crt@1.20.0):
+    resolution: {integrity: sha512-3OVVVGnb8Ru5hWeeHkg76YZT5mrufweIiWr6ge5zn7FYxc7WkyqIJ0XehqUqG5VQfaYhqh7uq/zmk8OE2B04lQ==}
     engines: {node: '>=14.0.0'}
     dependencies:
       '@aws-sdk/credential-provider-env': 3.468.0
-      '@aws-sdk/credential-provider-ini': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/credential-provider-ini': 3.474.0(aws-crt@1.20.0)
       '@aws-sdk/credential-provider-process': 3.468.0
-      '@aws-sdk/credential-provider-sso': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/credential-provider-sso': 3.474.0(aws-crt@1.20.0)
       '@aws-sdk/credential-provider-web-identity': 3.468.0
       '@aws-sdk/types': 3.468.0
       '@smithy/credential-provider-imds': 2.1.4
@@ -574,12 +578,12 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/credential-provider-sso@3.470.0(aws-crt@1.19.0):
-    resolution: {integrity: sha512-biGDSh9S9KDR9Tl/8cCPn9g5KPNkXg/CIJIOk3X+6valktbJ2UVYBzi0ZX4vZiudt5ry/Hsu6Pgo+KN1AmBWdg==}
+  /@aws-sdk/credential-provider-sso@3.474.0(aws-crt@1.20.0):
+    resolution: {integrity: sha512-ik4rzhQtcRLSHB/MLQfi/dSpILxPd3zITb79DIEnqT3gpZRNjoARkZ3Hi68pujkU2530NYf8NcFwLCWoV1hS7Q==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@aws-sdk/client-sso': 3.470.0(aws-crt@1.19.0)
-      '@aws-sdk/token-providers': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/client-sso': 3.474.0(aws-crt@1.20.0)
+      '@aws-sdk/token-providers': 3.470.0(aws-crt@1.20.0)
       '@aws-sdk/types': 3.468.0
       '@smithy/property-provider': 2.0.16
       '@smithy/shared-ini-file-loader': 2.2.7
@@ -607,14 +611,14 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/lib-dynamodb@3.473.0(@aws-sdk/client-dynamodb@3.473.0):
-    resolution: {integrity: sha512-UaUPzVgICSlYPzL7dpHSvxAlvROlh0j1DKPndawbadZghTva4Q+gRapabi3+N/NUH/v45S2EXTqvZ6x319bTYw==}
+  /@aws-sdk/lib-dynamodb@3.474.0(@aws-sdk/client-dynamodb@3.474.0):
+    resolution: {integrity: sha512-uZOuqdue5b85NF5XQGR3vRlKBzUMfSab4YCHovo5E06UYwstS5KGDvjV+29uoK43QEcaGtXA9VTWJugIC6cgyA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@aws-sdk/client-dynamodb': ^3.0.0
     dependencies:
-      '@aws-sdk/client-dynamodb': 3.473.0(aws-crt@1.19.0)
-      '@aws-sdk/util-dynamodb': 3.473.0(@aws-sdk/client-dynamodb@3.473.0)
+      '@aws-sdk/client-dynamodb': 3.474.0(aws-crt@1.20.0)
+      '@aws-sdk/util-dynamodb': 3.474.0(@aws-sdk/client-dynamodb@3.474.0)
       '@smithy/smithy-client': 2.1.18
       '@smithy/types': 2.7.0
       tslib: 2.6.2
@@ -661,16 +665,6 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/middleware-sdk-sts@3.468.0:
-    resolution: {integrity: sha512-xRy8NKfHbmafHwdbotdWgHBvRs0YZgk20GrhFJKp43bkqVbJ5bNlh3nQXf1DeFY9fARR84Bfotya4fwCUHWgZg==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@aws-sdk/middleware-signing': 3.468.0
-      '@aws-sdk/types': 3.468.0
-      '@smithy/types': 2.7.0
-      tslib: 2.6.2
-    dev: false
-
   /@aws-sdk/middleware-signing@3.468.0:
     resolution: {integrity: sha512-s+7fSB1gdnnTj5O0aCCarX3z5Vppop8kazbNSZADdkfHIDWCN80IH4ZNjY3OWqaAz0HmR4LNNrovdR304ojb4Q==}
     engines: {node: '>=14.0.0'}
@@ -706,7 +700,7 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/token-providers@3.470.0(aws-crt@1.19.0):
+  /@aws-sdk/token-providers@3.470.0(aws-crt@1.20.0):
     resolution: {integrity: sha512-rzxnJxEUJiV69Cxsf0AHXTqJqTACITwcSH/PL4lWP4uvtzdrzSi3KA3u2aWHWpOcdE6+JFvdICscsbBSo3/TOg==}
     engines: {node: '>=14.0.0'}
     dependencies:
@@ -720,7 +714,7 @@ packages:
       '@aws-sdk/types': 3.468.0
       '@aws-sdk/util-endpoints': 3.470.0
       '@aws-sdk/util-user-agent-browser': 3.468.0
-      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.19.0)
+      '@aws-sdk/util-user-agent-node': 3.470.0(aws-crt@1.20.0)
       '@smithy/config-resolver': 2.0.21
       '@smithy/fetch-http-handler': 2.3.1
       '@smithy/hash-node': 2.0.17
@@ -759,13 +753,13 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/util-dynamodb@3.473.0(@aws-sdk/client-dynamodb@3.473.0):
-    resolution: {integrity: sha512-QIs5/iji+6z9ty9vBnIHlGRpq50vTUvK86sMLnnDjxb5YL5wFUGRS4GI7Pimlu/iqVA6fk0M0iStRRnih46gYg==}
+  /@aws-sdk/util-dynamodb@3.474.0(@aws-sdk/client-dynamodb@3.474.0):
+    resolution: {integrity: sha512-I4wZTpmd8UJUV6siJ4pB2dbv/RzlC8bRAqOj0m/w0ZoDGt9UpVWfC7b+s7jaGSsD8I1vuuQ/CLw58RgESX9anQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@aws-sdk/client-dynamodb': ^3.0.0
     dependencies:
-      '@aws-sdk/client-dynamodb': 3.473.0(aws-crt@1.19.0)
+      '@aws-sdk/client-dynamodb': 3.474.0(aws-crt@1.20.0)
       tslib: 2.6.2
     dev: false
 
@@ -794,7 +788,7 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@aws-sdk/util-user-agent-node@3.470.0(aws-crt@1.19.0):
+  /@aws-sdk/util-user-agent-node@3.470.0(aws-crt@1.20.0):
     resolution: {integrity: sha512-QxsZ9iVHcBB/XRdYvwfM5AMvNp58HfqkIrH88mY0cmxuvtlIGDfWjczdDrZMJk9y0vIq+cuoCHsGXHu7PyiEAQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -806,7 +800,7 @@ packages:
       '@aws-sdk/types': 3.468.0
       '@smithy/node-config-provider': 2.1.8
       '@smithy/types': 2.7.0
-      aws-crt: 1.19.0
+      aws-crt: 1.20.0
       tslib: 2.6.2
     dev: false
 
@@ -1514,13 +1508,13 @@ packages:
   /@httptoolkit/websocket-stream@6.0.1:
     resolution: {integrity: sha512-A0NOZI+Glp3Xgcz6Na7i7o09+/+xm2m0UCU8gdtM2nIv6/cjLmhMZMqehSpTlgbx9omtLmV8LVqOskPEyWnmZQ==}
     dependencies:
-      '@types/ws': 8.5.9
+      '@types/ws': 8.5.10
       duplexify: 3.7.1
       inherits: 2.0.4
-      isomorphic-ws: 4.0.1(ws@8.14.2)
+      isomorphic-ws: 4.0.1(ws@8.15.1)
       readable-stream: 2.3.8
       safe-buffer: 5.2.1
-      ws: 8.14.2
+      ws: 8.15.1
       xtend: 4.0.2
     transitivePeerDependencies:
       - bufferutil
@@ -1788,8 +1782,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@mantine/hooks@7.3.1(react@18.2.0):
-    resolution: {integrity: sha512-pbbqPpVou/13xbt/dYYNphPpbDE2XfPN9mUHBoGZgv9FM8IkziNMIOo4PtNlqqqYsyp1lfQIQVKKT+DLZt1C8Q==}
+  /@mantine/hooks@7.3.2(react@18.2.0):
+    resolution: {integrity: sha512-xgumuuI3PBWXff5N02HCI7PEy25mDEdyXDQklUYK93J6FKwpcosyZnGVitoUrV1gLtYYa9ZudeAWdhHuh/CpOg==}
     peerDependencies:
       react: ^18.2.0
     dependencies:
@@ -2965,6 +2959,19 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@smithy/core@1.1.0:
+    resolution: {integrity: sha512-k1zaT5S4K0bG67Q5TmPZ6PdWNQBTMQErChuDvTi+NTx21kKDt+/4YRidsK6nDbHizN6fn1bafUxrougZdKrpxA==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@smithy/middleware-endpoint': 2.2.3
+      '@smithy/middleware-retry': 2.0.24
+      '@smithy/middleware-serde': 2.0.15
+      '@smithy/protocol-http': 3.0.11
+      '@smithy/smithy-client': 2.1.18
+      '@smithy/types': 2.7.0
+      tslib: 2.6.2
+    dev: false
+
   /@smithy/credential-provider-imds@2.1.4:
     resolution: {integrity: sha512-cwPJN1fa1YOQzhBlTXRavABEYRRchci1X79QRwzaNLySnIMJfztyv1Zkst0iZPLMnpn8+CnHu3wOHS11J5Dr3A==}
     engines: {node: '>=14.0.0'}
@@ -3356,16 +3363,16 @@ packages:
       tailwindcss: 3.3.6
     dev: true
 
-  /@tanstack/query-core@5.13.4:
-    resolution: {integrity: sha512-8+rJucXvC/xlr4OrxHhEIob/cTlbT4fgmz1VsvB0D12FRStKaXeLORNGcOhSAynRd2NL74SV/Qq0IIb4DedLcA==}
+  /@tanstack/query-core@5.14.0:
+    resolution: {integrity: sha512-OEri9fVDYT8XEqgh/dc6fFp1niyqu+MDY+Vp/LwU+scdk9xQLZ7KdUMEUh/sqTEjRM5BlFzAhAv+EIYcvSxt0Q==}
     dev: false
 
-  /@tanstack/react-query@5.13.4(react@18.2.0):
-    resolution: {integrity: sha512-3HjvkFFriEQwffUXtKHPiwkfFXUGbs46YATTzzyK1+Pw6Ekd3kwzS50e45qdamWuEXmXxyo5S1zp534LdFG0Rw==}
+  /@tanstack/react-query@5.14.0(react@18.2.0):
+    resolution: {integrity: sha512-+qCooNZr7aGr6a0UEblfEgDSO1y+H7h7JnT4nUlbyfgCGE695lmBiqTciuW1C1Jr6J6Z2bwyd6YmBDKFKszWhA==}
     peerDependencies:
       react: ^18.0.0
     dependencies:
-      '@tanstack/query-core': 5.13.4
+      '@tanstack/query-core': 5.14.0
       react: 18.2.0
     dev: false
 
@@ -3524,8 +3531,8 @@ packages:
     resolution: {integrity: sha512-dqId9J8K/vGi5Zr7oo212BGii5m3q5Hxlkwy3WpYuKPklmBEvsbMYYyLxAQpSffdLl/gdW0XUpKWFvYmyoWCoQ==}
     dev: true
 
-  /@types/ws@8.5.9:
-    resolution: {integrity: sha512-jbdrY0a8lxfdTp/+r7Z4CkycbOFN8WX+IOchLJr3juT/xzbJ8URyTVSJ/hvNdadTgM1mnedb47n+Y31GsFnQlg==}
+  /@types/ws@8.5.10:
+    resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
     dependencies:
       '@types/node': 20.10.4
     dev: false
@@ -3749,32 +3756,32 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /algoliasearch-helper@3.16.0(algoliasearch@4.21.1):
+  /algoliasearch-helper@3.16.0(algoliasearch@4.22.0):
     resolution: {integrity: sha512-RxOtBafSQwyqD5BLO/q9VsVw/zuNz8kjb51OZhCIWLr33uvKB+vrRis+QK+JFlNQXbXf+w28fsTWiBupc1pHew==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
     dependencies:
       '@algolia/events': 4.0.1
-      algoliasearch: 4.21.1
+      algoliasearch: 4.22.0
     dev: false
 
-  /algoliasearch@4.21.1:
-    resolution: {integrity: sha512-Ym0MGwOcjQhZ+s1N/j0o94g3vQD0MzNpWsfJLyPVCt0zHflbi0DwYX+9GPmTJ4BzegoxWMyCPgcmpd3R+VlOzQ==}
+  /algoliasearch@4.22.0:
+    resolution: {integrity: sha512-gfceltjkwh7PxXwtkS8KVvdfK+TSNQAWUeNSxf4dA29qW5tf2EGwa8jkJujlT9jLm17cixMVoGNc+GJFO1Mxhg==}
     dependencies:
-      '@algolia/cache-browser-local-storage': 4.21.1
-      '@algolia/cache-common': 4.21.1
-      '@algolia/cache-in-memory': 4.21.1
-      '@algolia/client-account': 4.21.1
-      '@algolia/client-analytics': 4.21.1
-      '@algolia/client-common': 4.21.1
-      '@algolia/client-personalization': 4.21.1
-      '@algolia/client-search': 4.21.1
-      '@algolia/logger-common': 4.21.1
-      '@algolia/logger-console': 4.21.1
-      '@algolia/requester-browser-xhr': 4.21.1
-      '@algolia/requester-common': 4.21.1
-      '@algolia/requester-node-http': 4.21.1
-      '@algolia/transporter': 4.21.1
+      '@algolia/cache-browser-local-storage': 4.22.0
+      '@algolia/cache-common': 4.22.0
+      '@algolia/cache-in-memory': 4.22.0
+      '@algolia/client-account': 4.22.0
+      '@algolia/client-analytics': 4.22.0
+      '@algolia/client-common': 4.22.0
+      '@algolia/client-personalization': 4.22.0
+      '@algolia/client-search': 4.22.0
+      '@algolia/logger-common': 4.22.0
+      '@algolia/logger-console': 4.22.0
+      '@algolia/requester-browser-xhr': 4.22.0
+      '@algolia/requester-common': 4.22.0
+      '@algolia/requester-node-http': 4.22.0
+      '@algolia/transporter': 4.22.0
     dev: false
 
   /ansi-purge@1.0.0:
@@ -3968,8 +3975,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /aws-crt@1.19.0:
-    resolution: {integrity: sha512-pBRSpy4TsL/fxW7Lp1xpN1FhnxvtBXFYx3Njo/j/m8GSV3Ytq/mBetYq7vhDb7CJQmFJCWod9I0yShqjiSUuyQ==}
+  /aws-crt@1.20.0:
+    resolution: {integrity: sha512-K7b7vVroFEvYr3J17Q1R8MOXEowPrWVQRiFqRZHJXwdrPT6ICmnGzt0ZoGj3nZzp1KbDjSKIggdoq4VwsGmyYQ==}
     requiresBuild: true
     dependencies:
       '@aws-sdk/util-utf8-browser': 3.259.0
@@ -3977,7 +3984,7 @@ packages:
       axios: 1.6.2
       buffer: 6.0.3
       crypto-js: 4.2.0
-      mqtt: 4.3.7
+      mqtt: 4.3.8
       process: 0.11.10
     transitivePeerDependencies:
       - bufferutil
@@ -5749,7 +5756,7 @@ packages:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
     dev: false
 
-  /instantsearch.js@4.62.0(algoliasearch@4.21.1):
+  /instantsearch.js@4.62.0(algoliasearch@4.22.0):
     resolution: {integrity: sha512-zq8kQpLR8xuWH59UtkJmr0iJs/M0VlvBVeMzVmpwkbfUNPpAcYPSjxw0iBR4QgqeyOUqWnZfhLJHUVmD+H+lLg==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
@@ -5761,8 +5768,8 @@ packages:
       '@types/google.maps': 3.54.10
       '@types/hogan.js': 3.0.5
       '@types/qs': 6.9.10
-      algoliasearch: 4.21.1
-      algoliasearch-helper: 3.16.0(algoliasearch@4.21.1)
+      algoliasearch: 4.22.0
+      algoliasearch-helper: 3.16.0(algoliasearch@4.22.0)
       hogan.js: 3.0.2
       htm: 3.1.1
       preact: 10.19.3
@@ -6019,12 +6026,12 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
-  /isomorphic-ws@4.0.1(ws@8.14.2):
+  /isomorphic-ws@4.0.1(ws@8.15.1):
     resolution: {integrity: sha512-BhBvN2MBpWTaSHdWRb/bwdZJ1WaehQ2L1KngkCkfLUGF0mAWAT1sQUQacEmQ0jXkFw/czDXPNQSL5u2/Krsz1w==}
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 8.14.2
+      ws: 8.15.1
     dev: false
 
   /iterator.prototype@1.1.2:
@@ -6859,8 +6866,8 @@ packages:
       - supports-color
     dev: false
 
-  /mqtt@4.3.7:
-    resolution: {integrity: sha512-ew3qwG/TJRorTz47eW46vZ5oBw5MEYbQZVaEji44j5lAUSQSqIEoul7Kua/BatBW0H0kKQcC9kwUHa1qzaWHSw==}
+  /mqtt@4.3.8:
+    resolution: {integrity: sha512-2xT75uYa0kiPEF/PE0VPdavmEkoBzMT/UL9moid0rAvlCtV48qBwxD62m7Ld/4j8tSkIO1E/iqRl/S72SEOhOw==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     dependencies:
@@ -7509,21 +7516,21 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-instantsearch-core@7.4.1(algoliasearch@4.21.1)(react@18.2.0):
+  /react-instantsearch-core@7.4.1(algoliasearch@4.22.0)(react@18.2.0):
     resolution: {integrity: sha512-Nk47IJaCrIecoAfH1vdLStvdOflN+O+TiHqUoLU2NMlQ6cK4OoCQTHG5Vyc1DaiO4uctBkvjcCQhhzZOdk0tRg==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
     dependencies:
       '@babel/runtime': 7.23.5
-      algoliasearch: 4.21.1
-      algoliasearch-helper: 3.16.0(algoliasearch@4.21.1)
-      instantsearch.js: 4.62.0(algoliasearch@4.21.1)
+      algoliasearch: 4.22.0
+      algoliasearch-helper: 3.16.0(algoliasearch@4.22.0)
+      instantsearch.js: 4.62.0(algoliasearch@4.22.0)
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  /react-instantsearch@7.4.1(algoliasearch@4.21.1)(react-dom@18.2.0)(react@18.2.0):
+  /react-instantsearch@7.4.1(algoliasearch@4.22.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-iTykjIyXjLNpywvnmO79uYsyHYeNRaiqE8FMpqAsKXDDrzURqYqvVF1BoOLnYZAQ0qP9zhZETPXj89kALne9uQ==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
@@ -7531,11 +7538,11 @@ packages:
       react-dom: '>= 16.8.0 < 19'
     dependencies:
       '@babel/runtime': 7.23.5
-      algoliasearch: 4.21.1
-      instantsearch.js: 4.62.0(algoliasearch@4.21.1)
+      algoliasearch: 4.22.0
+      instantsearch.js: 4.62.0(algoliasearch@4.22.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-instantsearch-core: 7.4.1(algoliasearch@4.21.1)(react@18.2.0)
+      react-instantsearch-core: 7.4.1(algoliasearch@4.22.0)(react@18.2.0)
     dev: false
 
   /react-is@16.13.1:
@@ -8875,8 +8882,8 @@ packages:
         optional: true
     dev: false
 
-  /ws@8.14.2:
-    resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
+  /ws@8.15.1:
+    resolution: {integrity: sha512-W5OZiCjXEmk0yZ66ZN82beM5Sz7l7coYxpRkzS+p9PP+ToQry8szKh+61eNktr7EA9DOwvFGhfC605jDHbP6QQ==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
