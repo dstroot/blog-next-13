@@ -52,7 +52,19 @@ You may find that `ORDER BY RAND()` in MySQL or `ORDER BY RANDOM()` is PostgreSQ
 
 `SELECT count(*) AS n FROM table`
 
-Then you pick a random number between 0 and n and use it as the OFFSET value:
+Then you pick a random number between 0 and n:
+
+<CodeBlock>
+
+```js title="random.js"
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min
+}
+```
+
+</CodeBlock>
+
+and use it as the OFFSET value:
 
 <CodeBlock>
 
