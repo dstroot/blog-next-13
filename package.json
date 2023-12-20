@@ -40,7 +40,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "contentlayer": "^0.3.4",
-    "date-fns": "2.3.0",
+    "date-fns": "3.0.1",
     "encoding": "^0.1.13",
     "feed": "^4.2.2",
     "millify": "^6.1.0",
