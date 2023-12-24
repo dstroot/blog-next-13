@@ -48,8 +48,8 @@ dependencies:
     specifier: ^0.7.1
     version: 0.7.1(typescript@5.3.3)(zod@3.22.4)
   '@tanstack/react-query':
-    specifier: ^5.14.2
-    version: 5.14.2(react@18.2.0)
+    specifier: ^5.14.6
+    version: 5.14.6(react@18.2.0)
   '@upstash/ratelimit':
     specifier: ^1.0.0
     version: 1.0.0
@@ -3374,8 +3374,8 @@ packages:
     resolution: {integrity: sha512-QmoJvC72sSWs3hgGis8JdmlDvqLfYGWUK4UG6OR9Q6t28JMN9m2FDwKPqoSJ9YVocELCSjMt/FGjEiLfk8000Q==}
     dev: false
 
-  /@tanstack/react-query@5.14.2(react@18.2.0):
-    resolution: {integrity: sha512-SbOzV7UBW8ED3tOnyn6kqNGscnOAfoxShYlbvaQo/5528mDZKpvrwoL/1du1/ukSC6RMAiKmx95SrYqlwPzWDw==}
+  /@tanstack/react-query@5.14.6(react@18.2.0):
+    resolution: {integrity: sha512-+INnJdq/904d+K2XQjqdIC58glpNGfQ8Xz93M6WBeJs5FPGFV8SEuFVzPtW/bKZ/Hu7hAiJpbFLDg5Lysvwmuw==}
     peerDependencies:
       react: ^18.0.0
     dependencies:
