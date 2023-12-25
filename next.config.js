@@ -44,10 +44,11 @@ const nextConfig = {
   },
 }
 
-// module.exports = withContentlayer(nextConfig)
-
-module.exports = withPlugins([
-  [withBundleAnalyzer],
-  [withContentlayer(nextConfig)],
-  // your other plugins here
-])
+module.exports = withPlugins(
+  [
+    [withBundleAnalyzer],
+    [withContentlayer],
+    // your other plugins here
+  ],
+  nextConfig,
+)
