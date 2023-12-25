@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "ANALYZE=true next build",
     "postbuild": "node ./build-search.js",
     "start": "next start",
     "lint": "next lint"
@@ -45,6 +45,7 @@
     "feed": "^4.2.2",
     "millify": "^6.1.0",
     "next": "^14.0.4",
+    "next-compose-plugins": "^2.2.1",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
     "plaiceholder": "^3.0.0",
@@ -57,6 +58,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@tailwindcss/typography": "^0.5.9",
     "@types/eslint": "^8.56.0",
