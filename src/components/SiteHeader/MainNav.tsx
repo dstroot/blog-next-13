@@ -25,7 +25,7 @@ export function MainNav({ navLinks }: NavLinkProps) {
   const pathname = usePathname()
 
   return (
-    <div className="ml-4 hidden gap-4 md:flex">
+    <div className="ml-4 hidden gap-2 md:flex">
       {navLinks.map((link) => {
         const isActive = pathname === link.href
 
