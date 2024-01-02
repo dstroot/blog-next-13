@@ -36,7 +36,7 @@
     "@vercel/analytics": "^1.1.1",
     "@vercel/og": "^0.6.1",
     "algoliasearch": "^4.22.0",
-    "aws-crt": "^1.20.0",
+    "aws-crt": "^1.20.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "contentlayer": "^0.3.4",
