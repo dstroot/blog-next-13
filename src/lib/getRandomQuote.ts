@@ -10,13 +10,13 @@ export type Quote = {
 
 let myArray: number[] = []
 
-function saveIndex(addIndex: number) {
+function saveIndex(newItem: number) {
   // if array is more than five items, remove first one
   if (myArray.length === 5 && myArray.length > 1) {
     myArray.shift()
   }
 
-  myArray.push(addIndex)
+  myArray.push(newItem)
 }
 
 export function getRandomQuote(): Quote {
