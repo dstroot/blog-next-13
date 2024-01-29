@@ -17,11 +17,11 @@ const propertyId = env.ANALYTICS_PROPERTY_ID
 
 export async function GET() {
   // formats
-  let today = new Date().getTime() - 60 * 60 * 24 * 60 * 1000
-  let day = new Date(today).getDate()
-  let month = new Date(today).getMonth() + 1
-  let year = new Date(today).getFullYear()
-  let dayFormat = `${year}-${month}-${day}`
+  const today = new Date().getTime() - 60 * 60 * 24 * 60 * 1000
+  const day = new Date(today).getDate()
+  const month = new Date(today).getMonth() + 1
+  const year = new Date(today).getFullYear()
+  const dayFormat = `${year}-${month}-${day}`
 
   const totalReport = await analyticsDataClient.runReport({
     property: 'properties/' + propertyId,

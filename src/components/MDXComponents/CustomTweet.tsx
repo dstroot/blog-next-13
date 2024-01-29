@@ -7,7 +7,7 @@ import { env } from '@/config/env.mjs'
 // import { Tweet } from '@/components/Tweet'
 
 export const CustomTweet = ({ id }: { id: string }) => {
-  let [tweet, setTweet] = useState({ status: 500 })
+  const [tweet, setTweet] = useState({ status: 500 })
   const URL = `${env.NEXT_PUBLIC_APP_URL}/api/tweet/${id}`
 
   useEffect(() => {

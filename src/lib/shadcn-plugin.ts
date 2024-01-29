@@ -3,7 +3,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 import plugin from 'tailwindcss/plugin'
 
 export const shadcnPlugin = plugin(
-  function ({ addBase }) {
+  ({ addBase }) => {
     // add css variable definitions to the base layer
     addBase({
       ':root': {

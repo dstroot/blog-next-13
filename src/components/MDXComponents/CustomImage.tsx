@@ -1,8 +1,8 @@
 import Image, { ImageProps } from 'next/image'
 
 export const CustomImage = (props: React.HTMLAttributes<HTMLImageElement>) => {
-  let imgProps = props as unknown as ImageProps
-  let src = imgProps.src as string
+  const imgProps = props as unknown as ImageProps
+  const src = imgProps.src as string
 
   // external images start with http*, website images start with /
   const isInternalImage = src && src.startsWith('/')

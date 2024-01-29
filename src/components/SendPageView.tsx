@@ -13,7 +13,7 @@ export const SendPageView = (props: SendPageViewProps) => {
 
   useEffect(() => {
     setTimeout(() => {
-      let path = encodeURIComponent(props.slug)
+      const path = encodeURIComponent(props.slug)
 
       if (typeof path === 'undefined') {
         console.log('usePageView: path undefined')

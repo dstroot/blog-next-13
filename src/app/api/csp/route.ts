@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
   }
 
   // create item
-  let item = cspReport['csp-report']
+  const item = cspReport['csp-report']
   item.id = crypto.randomUUID()
   item.timestamp = new Date().toISOString()
 

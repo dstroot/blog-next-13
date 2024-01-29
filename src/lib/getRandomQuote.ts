@@ -8,7 +8,7 @@ export type Quote = {
   comments?: string
 }
 
-let myArray: number[] = []
+const myArray: number[] = []
 
 function saveIndex(newItem: number) {
   // if array is more than five items, remove first one
