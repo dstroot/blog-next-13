@@ -7,8 +7,8 @@ export async function POST(req: NextRequest) {
   let params = { TableName: 'csp_reports_v2', Item: {} }
   const cspReport = await req.json()
 
-  console.log(cspReport)
-  console.log(params)
+  //   console.log(cspReport)
+  //   console.log(params)
 
   // validate we have a report
   if (!cspReport.hasOwnProperty('csp-report')) {
