@@ -19,8 +19,8 @@
     }
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.504.0",
-    "@aws-sdk/lib-dynamodb": "^3.504.0",
+    "@aws-sdk/client-dynamodb": "^3.506.0",
+    "@aws-sdk/lib-dynamodb": "^3.506.0",
     "@google-analytics/data": "^4.3.0",
     "@mantine/hooks": "^7.5.1",
     "@radix-ui/react-aspect-ratio": "^1.0.3",
@@ -33,7 +33,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@t3-oss/env-nextjs": "^0.8.0",
-    "@tanstack/react-query": "^5.18.0",
+    "@tanstack/react-query": "^5.18.1",
     "@vercel/analytics": "^1.1.2",
     "@vercel/og": "^0.6.2",
     "algoliasearch": "^4.22.1",
@@ -65,7 +65,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "@types/eslint": "^8.56.2",
     "@types/node": "^20.11.16",
-    "@types/react": "^18.2.51",
+    "@types/react": "^18.2.52",
     "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
