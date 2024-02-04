@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": ">=20.11.0"
+    "node": "20.9.0"
   },
   "overrides": {
     "tough-cookie": "4.1.3",
