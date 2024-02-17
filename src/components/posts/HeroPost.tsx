@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Post } from 'contentlayer/generated'
+// import { Post } from 'contentlayer/generated'
+import { Post } from 'velite/generated'
 
 import { Byline } from '@/components/Byline'
-import { MoreStats } from '@/components/MoreStats'
+import { MoreStats } from '@/components/posts/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
 
 interface HeroPostProps {
@@ -13,7 +14,7 @@ interface HeroPostProps {
   excerpt: string
   author: Post['author']
   slug: string
-  stats: Post['stats']
+  stats: Post['metadata']
 }
 export const HeroPost = ({
   title,
@@ -49,7 +50,7 @@ export const HeroPost = ({
       <div className="mb-12 flex flex-col gap-x-16 md:mb-16 md:flex-row">
         {/* Title and Avatar */}
         <div className="flex-none md:max-w-[45%]">
-          <h2 className="text-balance mb-4 text-3xl leading-tight group-hover:underline md:text-4xl">
+          <h2 className="mb-4 text-balance text-3xl leading-tight group-hover:underline md:text-4xl">
             <Link href={`/posts/${slug}`}>{title}</Link>
           </h2>
           <div className="mb-4 md:mb-0">

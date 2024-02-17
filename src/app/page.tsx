@@ -1,5 +1,6 @@
-import { allPosts } from 'contentlayer/generated'
+// import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
+import { posts } from 'velite/generated'
 
 import { generateRSSFeed } from '@/lib/feed'
 import { Container } from '@/components/Container'
@@ -10,21 +11,23 @@ import { HeroPost } from '@/components/posts/HeroPost'
 // NOTE: all metadata comes from layout - don't need anything else for the home page
 
 export default async function Home() {
-  let posts = allPosts.sort((a, b) =>
+  let sortedPosts = posts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
 
   // Remove any unpublished posts
-  posts = posts.filter((posts) => posts.published)
+  sortedPosts = sortedPosts.filter((posts) => posts.published)
 
   // Remove any future posts
-  posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
+  sortedPosts = sortedPosts.filter(
+    (posts) => Date.parse(posts.date) <= Date.now(),
+  )
 
   // Generate RSS feed
-  await generateRSSFeed(posts)
+  //   await generateRSSFeed(sortedPosts)
 
-  const heroPost = posts[0]
-  const morePosts = posts.slice(1)
+  const heroPost = sortedPosts[0]
+  const morePosts = sortedPosts.slice(1)
 
   return (
     <Container variant="padded">
@@ -34,9 +37,9 @@ export default async function Home() {
         coverImage={heroPost.coverImage}
         date={heroPost.date}
         author={heroPost.author}
-        slug={heroPost.slugAsParams}
+        slug={heroPost.slug}
         excerpt={heroPost.excerpt}
-        stats={heroPost.stats}
+        stats={heroPost.metadata}
       />
       <MoreStories posts={morePosts} />
     </Container>

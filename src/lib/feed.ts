@@ -1,6 +1,6 @@
 import fs from 'fs'
-import { Post } from 'contentlayer/generated'
 import { Feed } from 'feed'
+import type { Post } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
@@ -47,12 +47,12 @@ export async function generateRSSFeed(posts: Post[]) {
   // Add each article to the feed
   posts.forEach((post) => {
     // link back to our site
-    const afterContent = `<br><br>This post <a href="${env.NEXT_PUBLIC_APP_URL}/posts/${post.slugAsParams}">${post.title}</a> first appeared on <a href=${env.NEXT_PUBLIC_APP_URL}>Dan Stroot's Blog</a>`
+    const afterContent = `<br><br>This post <a href="${env.NEXT_PUBLIC_APP_URL}/posts/${post.slug}">${post.title}</a> first appeared on <a href=${env.NEXT_PUBLIC_APP_URL}>Dan Stroot's Blog</a>`
 
     feed.addItem({
       title: post.title,
       id: `${env.NEXT_PUBLIC_APP_URL}${post.slug}`,
-      link: `${env.NEXT_PUBLIC_APP_URL}/posts/${post.slugAsParams}`,
+      link: `${env.NEXT_PUBLIC_APP_URL}/posts/${post.slug}`,
       description: `<img src="${env.NEXT_PUBLIC_IMGIX_URL}${post.coverImage}" alt="post image" /><br><br>${post.excerpt}${afterContent}`,
       //   content: post.content,
       author: [

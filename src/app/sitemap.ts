@@ -1,17 +1,12 @@
 import { MetadataRoute } from 'next'
-import {
-  allPosts,
-  allSnippets,
-  type Post,
-  type Snippet,
-} from 'contentlayer/generated'
+import { posts, snippets, type Post, type Snippet } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Posts
-  const posts = allPosts
+  const sitePosts = posts
     .filter((post) => post.published)
     .map((post: Post) => ({
       url: `${env.NEXT_PUBLIC_APP_URL}${post.slug}`,
@@ -21,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
   // Snippets
-  const snippets = allSnippets
+  const siteSnippets = snippets
     .filter((snippet) => snippet.published)
     .map((snippet: Snippet) => ({
       url: `${env.NEXT_PUBLIC_APP_URL}${snippet.slug}`,
@@ -38,5 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...navRoutes, ...posts, ...snippets]
+  return [...navRoutes, ...sitePosts, ...siteSnippets]
 }

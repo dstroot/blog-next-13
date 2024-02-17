@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import type { Snippet } from 'contentlayer/generated'
+// import type { Snippet } from 'contentlayer/generated'
+import type { Snippet } from 'velite/generated'
 
 import {
   Card,
@@ -14,7 +15,8 @@ export const SnippetCard = (props: Snippet) => {
   const Icon = Icons[props.icon as IconKey]
 
   return (
-    <Link href={`/snippets/${props.slugAsParams}`}>
+    // <Link href={`/snippets/${props.slugAsParams}`}>
+    <Link href={`/snippets/${props.slug}`}>
       <Card className="flex h-full flex-col bg-zinc-100 shadow-md dark:bg-zinc-900">
         <CardHeader className="">
           <CardTitle>

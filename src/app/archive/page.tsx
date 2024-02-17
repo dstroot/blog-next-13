@@ -1,5 +1,6 @@
-import { allPosts } from 'contentlayer/generated'
+// import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
+import { posts } from 'velite/generated'
 
 import { absoluteUrl } from '@/lib/utils'
 import { Archive } from '@/components/Archive'
@@ -49,15 +50,17 @@ export const generateMetadata = () => {
 }
 
 export default function ArchivePage() {
-  let posts = allPosts.sort((a, b) =>
+  let sortedPosts = posts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
 
   // Remove any unpublished posts
-  posts = posts.filter((posts) => posts.published)
+  sortedPosts = sortedPosts.filter((posts) => posts.published)
 
   // Remove any future posts
-  posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
+  sortedPosts = sortedPosts.filter(
+    (posts) => Date.parse(posts.date) <= Date.now(),
+  )
 
   return (
     <Container variant="padded">

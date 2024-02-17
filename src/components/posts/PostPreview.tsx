@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Post } from 'contentlayer/generated'
+// import { Post } from 'contentlayer/generated'
+import { Post } from 'velite/generated'
 
 import { cn } from '@/lib/utils'
 import { Byline } from '@/components/Byline'
-import { MoreStats } from '@/components/MoreStats'
+import { MoreStats } from '@/components/posts/MoreStats'
 import { ReadMore } from '@/components/posts/ReadMore'
 
 interface PostPreviewProps {
@@ -15,7 +16,7 @@ interface PostPreviewProps {
   excerpt: string
   author: Post['author']
   slug: string
-  stats: Post['stats']
+  stats: Post['metadata']
 }
 
 export const PostPreview = ({
@@ -58,7 +59,7 @@ export const PostPreview = ({
           </div>
         </Link>
       </div>
-      <h2 className="text-balance mb-3 text-3xl leading-snug">
+      <h2 className="mb-3 text-balance text-3xl leading-snug">
         <Link
           href={`/posts/${slug}`}
           className="hover:underline"
