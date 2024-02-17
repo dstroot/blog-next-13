@@ -1,4 +1,6 @@
-import rehypePrettyCode from 'rehype-pretty-code'
+import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
+import rehypeSlug from 'rehype-slug'
+import emoji, { type RemarkEmojiOptions } from 'remark-emoji'
 import { defineCollection, defineConfig, s } from 'velite'
 
 // const slugify = (input: string) =>
@@ -9,10 +11,6 @@ import { defineCollection, defineConfig, s } from 'velite'
 
 // const icon = s.enum(["github", "instagram", "medium", "twitter", "youtube"]);
 
-// const count = s
-//   .object({ total: s.number(), posts: s.number() })
-//   .default({ total: 0, posts: 0 });
-
 // const meta = s
 //   .object({
 //     title: s.string().optional(),
@@ -20,6 +18,19 @@ import { defineCollection, defineConfig, s } from 'velite'
 //     keywords: s.array(s.string()).optional(),
 //   })
 //   .default({})
+
+const rehypePrettyCodeOptions: Options = {
+  // Themes list: https://github.com/shikijs/shiki/blob/main/docs/themes.md
+  theme: 'one-dark-pro',
+  keepBackground: false,
+}
+
+const emojiOptions: RemarkEmojiOptions = {
+  // https://github.com/rhysd/remark-emoji
+  accessible: false,
+  padSpaceAfter: false,
+  emoticon: false,
+}
 
 const pages = defineCollection({
   name: 'Page',
@@ -45,15 +56,11 @@ const snippets = defineCollection({
     .object({
       title: s.string().max(99),
       summary: s.string().max(399),
-      // slug: s.slug("snippets"),
       icon: s.string().max(50),
       date: s.string().max(10), // s.coerce.date(),
-      // file: s.file(), // input file relpath, output file public path.
       metadata: s.metadata(), // extract markdown reading-time, word-count, etc.
       published: s.boolean().default(false),
       tags: s.array(s.string()).default([]),
-      // meta: meta,
-      // code: s.mdx(),
       content: s.mdx(),
     })
     .transform((data, { meta }) => ({
@@ -105,11 +112,7 @@ export default defineConfig({
   collections: { posts, pages, snippets },
   // note: GFM is already included as default
   mdx: {
-    rehypePlugins: [rehypePrettyCode],
+    remarkPlugins: [[emoji, emojiOptions]],
+    rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
-  //   prepare: ({ categories, tags, posts }) => {
-  //     const docs = posts.filter(
-  //       (i) => process.env.NODE_ENV !== 'production' || !i.draft,
-  //     )
-  //   },
 })
