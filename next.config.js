@@ -39,16 +39,15 @@ const nextConfig = {
       },
     ]
   },
-  webpack: (config) => {
-    config.plugins.push(new VeliteWebpackPlugin())
-    return config
-  },
+  //   webpack: (config) => {
+  //     config.plugins.push(new VeliteWebpackPlugin())
+  //     return config
+  //   },
 }
 
 module.exports = withPlugins(
   [
     [withBundleAnalyzer],
-    // [withContentlayer],
     // your other plugins here
   ],
   nextConfig,
