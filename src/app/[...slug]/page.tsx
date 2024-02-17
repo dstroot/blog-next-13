@@ -1,13 +1,11 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
-// import { allPages } from 'contentlayer/generated'
 import { pages } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
 import { MDXContent } from '@/lib/mdx-content'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
-// import { Mdx } from '@/components/MDXComponents/MDX'
 import { PageHeader } from '@/components/PageHeader'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 
@@ -85,13 +83,12 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${page.permalink}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${page.permalink}.mdx`
 
   return (
     <Container variant="padded">
       <PageHeader title={page.title} description={page.description} />
 
-      {/* <Mdx code={page.body.code} /> */}
       <div className="converted-html">
         <MDXContent code={page.content} />
       </div>

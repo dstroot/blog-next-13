@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react'
 import { useIntersection } from '@mantine/hooks'
 import { useInfiniteQuery } from '@tanstack/react-query'
-// import type { Post } from 'contentlayer/generated'
 import type { Post } from 'velite/generated'
 
 import { PostPreview } from '@/components/posts/PostPreview'

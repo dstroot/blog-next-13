@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query'
 import millify from 'millify'
 
 import { cn } from '@/lib/utils'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 interface StatsCardProps {
   name: string

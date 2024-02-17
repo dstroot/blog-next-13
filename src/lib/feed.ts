@@ -51,8 +51,8 @@ export async function generateRSSFeed(posts: Post[]) {
 
     feed.addItem({
       title: post.title,
-      id: `${env.NEXT_PUBLIC_APP_URL}${post.slug}`,
-      link: `${env.NEXT_PUBLIC_APP_URL}/posts/${post.slug}`,
+      id: `${env.NEXT_PUBLIC_APP_URL}${post.permalink}`,
+      link: `${env.NEXT_PUBLIC_APP_URL}${post.permalink}`,
       description: `<img src="${env.NEXT_PUBLIC_IMGIX_URL}${post.coverImage}" alt="post image" /><br><br>${post.excerpt}${afterContent}`,
       //   content: post.content,
       author: [

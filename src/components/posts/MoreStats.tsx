@@ -1,6 +1,5 @@
 'use client'
 
-// import type { ReadTimeResults } from 'reading-time'
 import { useViewCount } from '@/hooks/useViewCount'
 import { ReadStats } from '@/components/posts/ReadStats'
 import { Views } from '@/components/posts/Views'

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-// import { Post } from 'contentlayer/generated'
 import { Post } from 'velite/generated'
 
 import { cn } from '@/lib/utils'

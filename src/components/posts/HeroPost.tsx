@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-// import { Post } from 'contentlayer/generated'
 import { Post } from 'velite/generated'
 
 import { Byline } from '@/components/Byline'

@@ -1,4 +1,3 @@
-// import { allSnippets } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 import { snippets } from 'velite/generated'
 
@@ -50,10 +49,6 @@ export const generateMetadata = () => {
 }
 
 export default function SnippetsPage() {
-  //   let snippets = allSnippets.sort((a, b) =>
-  //     compareDesc(new Date(a.date), new Date(b.date)),
-  //   )
-
   // sort snippets by date
   let sortedSnippets = snippets.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),

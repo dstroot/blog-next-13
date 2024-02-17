@@ -34,7 +34,7 @@ const pages = defineCollection({
       ...data,
       // computed fields
       slug: meta.file.stem!.replace('/index', ''), // filename based slug
-      permalink: `${meta.file.stem!.replace('/index', '')}`,
+      permalink: `/pages/${meta.file.stem!.replace('/index', '')}`,
     })),
 })
 

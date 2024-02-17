@@ -1,4 +1,3 @@
-// import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 import { posts } from 'velite/generated'
 
@@ -57,6 +56,7 @@ export default function ArchivePage() {
   // Remove any unpublished posts
   sortedPosts = sortedPosts.filter((posts) => posts.published)
 
+
   // Remove any future posts
   sortedPosts = sortedPosts.filter(
     (posts) => Date.parse(posts.date) <= Date.now(),
@@ -68,7 +68,7 @@ export default function ArchivePage() {
         title="Archive"
         description="Here's all my posts in chronological order. Cheers!"
       />
-      {posts.length > 0 && <Archive posts={posts} />}
+      {posts.length > 0 && <Archive posts={sortedPosts} />}
     </Container>
   )
 }

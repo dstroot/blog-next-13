@@ -1,5 +1,3 @@
-// import type { ReadTimeResults } from 'reading-time'
-
 interface ReadStatsProps {
   stats: {
     readingTime: number

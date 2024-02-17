@@ -1,16 +1,11 @@
 import { type Metadata } from 'next'
-// import NextImage, { ImageProps } from 'next/image'
 import { notFound } from 'next/navigation'
-// import { allPosts } from 'contentlayer/generated'
 import { posts } from 'velite/generated'
-
-// import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import { env } from '@/config/env.mjs'
 import { MDXContent } from '@/lib/mdx-content'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
-// import { MDXComponents } from '@/components/MDXComponents'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 import { PostHeader } from '@/components/posts/PostHeader'
 import { SendPageView } from '@/components/SendPageView'
@@ -68,15 +63,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   // 404 if the post does not exist.
   if (!post) notFound()
 
-  // Parse the MDX file via the useMDXComponent hook.
-  //   const Content = useMDXComponent(post.body.code)
-
-  //   const components = {
-  //     ...MDXComponents,
-  //     // Image: (props: ImageProps) => <NextImage {...props} />,
-  //   }
-
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${post.slug}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${post.permalink}.mdx`
 
   return (
     <Container variant="padded">
@@ -91,10 +78,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         />
         <div className="mx-auto max-w-3xl">
           <div className="converted-html">
-            {/* <Content components={components} /> */}
             <MDXContent code={post.content} />
           </div>
-          <Sharable slug={post.slug} title={post.title} />
+          <Sharable slug={post.permalink} title={post.title} />
         </div>
         <GitHubLink path={github} />
       </article>

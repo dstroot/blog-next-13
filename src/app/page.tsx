@@ -24,7 +24,7 @@ export default async function Home() {
   )
 
   // Generate RSS feed
-  //   await generateRSSFeed(sortedPosts)
+  await generateRSSFeed(sortedPosts)
 
   const heroPost = sortedPosts[0]
   const morePosts = sortedPosts.slice(1)

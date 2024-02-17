@@ -1,8 +1,5 @@
 import { type Metadata } from 'next'
-// import NextImage, { ImageProps } from 'next/image'
 import { notFound } from 'next/navigation'
-// import { useMDXComponent } from 'next-contentlayer/hooks'
-// import { allSnippets } from 'contentlayer/generated'
 import { snippets } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
@@ -11,14 +8,9 @@ import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { DateFormatter } from '@/components/DateFormatter'
 import { IconKey, Icons } from '@/components/Icons'
-// import { MDXComponents } from '@/components/MDXComponents'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
-
-// export const generateStaticParams = async () => {
-//   return allSnippets.map((snippet) => ({ slug: snippet.slugAsParams }))
-// }
 
 export const generateStaticParams = async () => {
   return snippets.map((snippet) => ({ slug: snippet.slug }))
@@ -69,21 +61,12 @@ export async function generateMetadata({
 
 const SnippetLayout = ({ params }: { params: { slug: string } }) => {
   // Find the post for the current slug.
-  //   const snippet = allSnippets.find(
-  //     (snippet) => snippet.slugAsParams === params.slug,
-  //   )
-
-  // Find the post for the current slug.
   const snippet = snippets.find((snippet) => snippet.slug === params.slug)
 
   // 404 if the snippet does not exist.
   if (!snippet) notFound()
 
-  //   // Parse the MDX file via the useMDXComponent hook.
-  //   const Content = useMDXComponent(snippet.body.code)
-  //   const components = { ...MDXComponents }
-
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${snippet.permalink}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${snippet.permalink}.mdx`
   const Icon = Icons[snippet.icon as IconKey]
 
   return (
@@ -122,7 +105,6 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
         <article>
           <div className="converted-html">
-            {/* <Content components={components} /> */}
             <MDXContent code={snippet.content} />
           </div>
           <Sharable slug={snippet.slug} title={snippet.title} />
