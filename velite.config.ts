@@ -83,7 +83,7 @@ const posts = defineCollection({
       }),
       seoURL: s.string().optional().nullish(),
       metadata: s.metadata(),
-      content: s.markdown(),
+      content: s.mdx(),
     })
     .transform((data, { meta }) => ({
       ...data,
