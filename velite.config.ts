@@ -103,6 +103,7 @@ export default defineConfig({
     clean: true,
   },
   collections: { posts, pages, snippets },
+  // note: GFM is already included as default
   mdx: {
     rehypePlugins: [rehypePrettyCode],
   },
