@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-// const { withContentlayer } = require('next-contentlayer')
 const withPlugins = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -59,7 +57,7 @@ module.exports = withPlugins(
 class VeliteWebpackPlugin {
   static started = false
   apply(/** @type {import('webpack').Compiler} */ compiler) {
-    // executed three times in nextjs
+    // executed three times in nextjs:
     // twice for the server (nodejs / edge runtime) and once for the client
     compiler.hooks.beforeCompile.tap('VeliteWebpackPlugin', async () => {
       if (VeliteWebpackPlugin.started) return
