@@ -74,16 +74,16 @@ input[type='search']::-webkit-search-cancel-button {
  * rehype-code-titles & code
  */
 
-[data-rehype-pretty-code-title] {
-  @apply absolute right-6 top-3 mt-0 text-base text-gray-900 dark:text-gray-200;
+figcaption[data-rehype-pretty-code-title] {
+  @apply absolute right-6 top-3 !mt-0 text-base text-gray-900 dark:text-gray-200;
 }
 
 [data-rehype-pretty-code-fragment] > pre {
   @apply my-0 overflow-x-auto rounded-none font-mono text-base;
 }
 
-[data-rehype-pretty-code-figure] {
-  @apply mb-0 mt-0;
+figure[data-rehype-pretty-code-figure] {
+  @apply !mb-0 !mt-0;
 }
 
 /**
@@ -93,13 +93,6 @@ input[type='search']::-webkit-search-cancel-button {
 .converted-html {
   @apply prose prose-lg mb-8 max-w-none break-words dark:prose-invert prose-a:text-blue-700 prose-a:no-underline hover:prose-a:text-blue-500 prose-img:m-0 dark:prose-a:text-blue-300 dark:hover:prose-a:text-blue-500;
 }
-
-/* .converted-html > figure {
-  margin-top: 0;
-  margin-bottom: 0;
-} */
-
-/* .converted-html :where(figure):not(:where([class~=not-prose],[class~=not-prose] *))  */
 
 .footnotes {
   @apply text-sm;

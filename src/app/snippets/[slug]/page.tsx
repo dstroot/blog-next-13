@@ -97,7 +97,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
             Words: {snippet.metadata.wordCount}
           </p>
           <p className="hidden rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700 md:block">
-            Time: {snippet.metadata.readingTime}
+            Time: {snippet.metadata.readingTime} min read
           </p>
         </div>
 
