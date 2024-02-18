@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { withContentlayer } = require('next-contentlayer')
 const withPlugins = require('next-compose-plugins')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -17,7 +15,6 @@ const nextConfig = {
       },
     },
   },
-
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -42,13 +39,31 @@ const nextConfig = {
       },
     ]
   },
+  //   webpack: (config) => {
+  //     config.plugins.push(new VeliteWebpackPlugin())
+  //     return config
+  //   },
 }
 
 module.exports = withPlugins(
   [
     [withBundleAnalyzer],
-    [withContentlayer],
     // your other plugins here
   ],
   nextConfig,
 )
+
+class VeliteWebpackPlugin {
+  static started = false
+  apply(/** @type {import('webpack').Compiler} */ compiler) {
+    // executed three times in nextjs:
+    // twice for the server (nodejs / edge runtime) and once for the client
+    compiler.hooks.beforeCompile.tap('VeliteWebpackPlugin', async () => {
+      if (VeliteWebpackPlugin.started) return
+      VeliteWebpackPlugin.started = true
+      const dev = compiler.options.mode === 'development'
+      const { build } = await import('velite')
+      await build({ watch: dev, clean: !dev })
+    })
+  }
+}

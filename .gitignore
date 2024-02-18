@@ -15,6 +15,9 @@
 # contentlayer
 /.contentlayer/
 
+# velite
+/.velite/
+
 # production
 /build
 

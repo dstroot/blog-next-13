@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { useIntersection } from '@mantine/hooks'
 import { useInfiniteQuery } from '@tanstack/react-query'
-import type { Post } from 'contentlayer/generated'
+import type { Post } from 'velite/generated'
 
 import { PostPreview } from '@/components/posts/PostPreview'
 
@@ -57,29 +57,29 @@ export const MoreStories = ({ posts }: MoreStoriesProps) => {
           // if we are at the end include the ref for infinite scrolling
           if (index === _posts.length - 2) {
             return (
-              <div key={`${post._id}`} ref={ref}>
+              <div key={`${post.slug}`} ref={ref}>
                 <PostPreview
                   title={post.title}
                   coverImage={post.coverImage}
                   date={post.date}
                   author={post.author}
-                  slug={post.slugAsParams}
+                  slug={post.slug}
                   excerpt={post.excerpt}
-                  stats={post.stats}
+                  stats={post.metadata}
                 />
               </div>
             )
           }
           return (
-            <div key={`${post._id}`}>
+            <div key={`${post.slug}`}>
               <PostPreview
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
-                slug={post.slugAsParams}
+                slug={post.slug}
                 excerpt={post.excerpt}
-                stats={post.stats}
+                stats={post.metadata}
               />
             </div>
           )

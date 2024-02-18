@@ -1,7 +1,7 @@
-import { Post } from 'contentlayer/generated'
+import type { Post } from 'velite/generated'
 
 import { Byline } from '@/components/Byline'
-import { MoreStats } from '@/components/MoreStats'
+import { MoreStats } from '@/components/posts/MoreStats'
 import { PostImage } from '@/components/posts/PostImage'
 import { PostTitle } from '@/components/posts/PostTitle'
 
@@ -11,7 +11,7 @@ interface PostHeaderProps {
   date: string
   author: Post['author']
   slug: string
-  stats: Post['stats']
+  stats: Post['metadata']
 }
 export const PostHeader = ({
   title,

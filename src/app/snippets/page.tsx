@@ -1,5 +1,5 @@
-import { allSnippets } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
+import { snippets } from 'velite/generated'
 
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
@@ -49,14 +49,16 @@ export const generateMetadata = () => {
 }
 
 export default function SnippetsPage() {
-  let snippets = allSnippets.sort((a, b) =>
+  // sort snippets by date
+  let sortedSnippets = snippets.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
+
   // Remove any unpublished snippets
-  snippets = snippets.filter((snippet) => snippet.published)
+  sortedSnippets = sortedSnippets.filter((snippet) => snippet.published)
 
   // Remove any future snippets
-  snippets = snippets.filter(
+  sortedSnippets = sortedSnippets.filter(
     (snippet) => Date.parse(snippet.date) <= Date.now(),
   )
 
@@ -69,8 +71,8 @@ export default function SnippetsPage() {
 
       {/* Grid */}
       <div className="mb-6 grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
-        {snippets.map((snippet, _idx) => (
-          <SnippetCard key={snippet.slugAsParams} {...snippets[_idx]} />
+        {sortedSnippets.map((snippet, _idx) => (
+          <SnippetCard key={snippet.slug} {...snippets[_idx]} />
         ))}
       </div>
     </Container>

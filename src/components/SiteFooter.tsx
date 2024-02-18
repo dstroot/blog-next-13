@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { env } from '@/config/env.mjs'
+// import { env } from '@/config/env.mjs'
 import { siteConfig } from '@/config/site'
 import { Container } from '@/components/Container'
 import { SocialLinks } from '@/components/SocialLinks'
