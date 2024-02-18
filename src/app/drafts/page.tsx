@@ -1,5 +1,6 @@
-import { allPosts } from 'contentlayer/generated'
+// import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
+import { posts } from 'velite/generated'
 
 import { Container } from '@/components/Container'
 import { Intro } from '@/components/Intro'
@@ -7,14 +8,14 @@ import { MoreStories } from '@/components/MoreStories'
 import { HeroPost } from '@/components/posts/HeroPost'
 
 export default function DraftsPage() {
-  let posts = allPosts.sort((a, b) =>
+  let sortedPosts = posts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
   // Remove any published posts
-  posts = posts.filter((posts) => !posts.published)
+  sortedPosts = sortedPosts.filter((posts) => !posts.published)
 
-  const heroPost = posts[0]
-  const morePosts = posts.slice(1)
+  const heroPost = sortedPosts[0]
+  const morePosts = sortedPosts.slice(1)
 
   return (
     <Container variant="padded">
@@ -24,9 +25,9 @@ export default function DraftsPage() {
         coverImage={heroPost.coverImage}
         date={heroPost.date}
         author={heroPost.author}
-        slug={heroPost.slugAsParams}
+        slug={heroPost.slug}
         excerpt={heroPost.excerpt}
-        stats={heroPost.stats}
+        stats={heroPost.metadata}
       />
       <MoreStories posts={morePosts} />
     </Container>

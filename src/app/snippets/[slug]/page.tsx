@@ -1,21 +1,19 @@
 import { type Metadata } from 'next'
-import NextImage, { ImageProps } from 'next/image'
 import { notFound } from 'next/navigation'
-import { allSnippets } from 'contentlayer/generated'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { snippets } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
+import { MDXContent } from '@/lib/mdx-content'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { DateFormatter } from '@/components/DateFormatter'
 import { IconKey, Icons } from '@/components/Icons'
-import { MDXComponents } from '@/components/MDXComponents'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
 
 export const generateStaticParams = async () => {
-  return allSnippets.map((snippet) => ({ slug: snippet.slugAsParams }))
+  return snippets.map((snippet) => ({ slug: snippet.slug }))
 }
 
 export async function generateMetadata({
@@ -23,9 +21,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const snippet = allSnippets.find(
-    (snippet) => snippet.slugAsParams === params.slug,
-  )
+  const snippet = snippets.find((snippet) => snippet.slug === params.slug)
 
   if (!snippet) {
     return {}
@@ -65,18 +61,12 @@ export async function generateMetadata({
 
 const SnippetLayout = ({ params }: { params: { slug: string } }) => {
   // Find the post for the current slug.
-  const snippet = allSnippets.find(
-    (snippet) => snippet.slugAsParams === params.slug,
-  )
+  const snippet = snippets.find((snippet) => snippet.slug === params.slug)
 
   // 404 if the snippet does not exist.
   if (!snippet) notFound()
 
-  // Parse the MDX file via the useMDXComponent hook.
-  const Content = useMDXComponent(snippet.body.code)
-  const components = { ...MDXComponents }
-
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${snippet._id}`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${snippet.permalink}.mdx`
   const Icon = Icons[snippet.icon as IconKey]
 
   return (
@@ -104,10 +94,10 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
             />
           </p>
           <p className="hidden rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700 md:block">
-            Words: {snippet.stats.words}
+            Words: {snippet.metadata.wordCount}
           </p>
           <p className="hidden rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-700 md:block">
-            Time: {snippet.stats.text}
+            Time: {snippet.metadata.readingTime}
           </p>
         </div>
 
@@ -115,13 +105,13 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
 
         <article>
           <div className="converted-html">
-            <Content components={components} />
+            <MDXContent code={snippet.content} />
           </div>
           <Sharable slug={snippet.slug} title={snippet.title} />
         </article>
         <GitHubLink path={github} />
       </div>
-      <SendPageView slug={snippet.slugAsParams} />
+      <SendPageView slug={snippet.slug} />
     </Container>
   )
 }

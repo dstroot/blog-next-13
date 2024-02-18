@@ -26,6 +26,8 @@ TODO:
 - [ ] Add blur to images? No, effect is not smooth, see "blur" branch.
 - [x] Update script to feed Algolia Index
 - [x] Generate RSS Feed - images still need work.
+- [ ] Github emoji support (see test snippet)
+- [ ] Code blocks are funky (file name is incorrect)
 
 ## Changelog
 

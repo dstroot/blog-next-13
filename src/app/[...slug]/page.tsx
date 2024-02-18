@@ -1,17 +1,17 @@
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { allPages } from 'contentlayer/generated'
+import { pages } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
+import { MDXContent } from '@/lib/mdx-content'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
-import { Mdx } from '@/components/MDXComponents/MDX'
 import { PageHeader } from '@/components/PageHeader'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 
 async function getPageFromParams(params: PageProps['params']) {
   const slug = params?.slug?.join('/') ?? ''
-  const page = allPages.find((page) => page.slugAsParams === slug)
+  const page = pages.find((page) => page.slug === slug)
 
   if (!page) {
     null
@@ -65,8 +65,8 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<PageProps['params'][]> {
-  return allPages.map((page) => ({
-    slug: page.slugAsParams.split('/'),
+  return pages.map((page) => ({
+    slug: page.slug.split('/'),
   }))
 }
 
@@ -83,12 +83,16 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/${page._id}`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${page.permalink}.mdx`
 
   return (
     <Container variant="padded">
       <PageHeader title={page.title} description={page.description} />
-      <Mdx code={page.body.code} />
+
+      <div className="converted-html">
+        <MDXContent code={page.content} />
+      </div>
+
       <GitHubLink path={github} />
     </Container>
   )

@@ -1,6 +1,6 @@
 const algoliasearch = require('algoliasearch')
 const dotenv = require('dotenv')
-const allPosts = require('./.contentlayer/generated/Post/_index.json')
+const posts = require('./.velite/posts.json')
 
 const BASE_URL = 'https://danstroot.com'
 
@@ -14,7 +14,7 @@ const TinySimpleHash = (s) => {
 // format search index data
 function transformPostsToSearchObjects(posts) {
   const promises = posts.map(async (post) => {
-    const path = `${BASE_URL}/api/views/${post.slugAsParams}`
+    const path = `${BASE_URL}/api/views/${post.slug}`
     const results = await fetch(path).then((res) => res.json())
 
     return {
@@ -22,10 +22,10 @@ function transformPostsToSearchObjects(posts) {
       title: post.title,
       excerpt: post.excerpt,
       content: post.body,
-      slug: post.slugAsParams,
+      slug: post.slug,
       image: post.coverImage,
       date: post.date,
-      readingTime: post.stats.text,
+      readingTime: `${post.metadata.readingTime} min read`,
       views: results.viewCount,
     }
   })
@@ -36,13 +36,15 @@ function transformPostsToSearchObjects(posts) {
   dotenv.config({ path: './.env.local' })
 
   // Remove any unpublished posts
-  let posts = allPosts.filter((posts) => posts.published)
+  let filteredPosts = posts.filter((posts) => posts.published)
 
   // Remove any future posts
-  posts = posts.filter((posts) => Date.parse(posts.date) <= Date.now())
+  filteredPosts = filteredPosts.filter(
+    (posts) => Date.parse(posts.date) <= Date.now(),
+  )
 
   // Transform the posts
-  const transformed = await transformPostsToSearchObjects(posts)
+  const transformed = await transformPostsToSearchObjects(filteredPosts)
 
   try {
     // Initialize Algolia client

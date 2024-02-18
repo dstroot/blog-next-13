@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Post } from 'contentlayer/generated'
 import { parseISO } from 'date-fns'
+import type { Post } from 'velite/generated'
 
 import { DateFormatter } from './DateFormatter'
 
@@ -22,7 +22,7 @@ export const Archive = ({ posts }: { posts: Post[] }) => {
         }
 
         return (
-          <div key={`${post._id}-${index}`}>
+          <div key={`${post.slug}-${index}`}>
             {changed && (
               <h3 className="mb-2 mt-4 text-xl font-bold leading-tight tracking-tighter md:text-2xl">
                 {year}
@@ -32,7 +32,7 @@ export const Archive = ({ posts }: { posts: Post[] }) => {
               <div className="truncate">
                 <Link
                   className="hover:underline"
-                  href={`/posts/${post.slugAsParams}`}
+                  href={`/posts/${post.slug}`}
                   prefetch={false}
                 >
                   {post.title}
