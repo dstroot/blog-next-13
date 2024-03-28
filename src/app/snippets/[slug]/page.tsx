@@ -107,7 +107,7 @@ const SnippetLayout = ({ params }: { params: { slug: string } }) => {
           <div className="converted-html">
             <MDXContent code={snippet.content} />
           </div>
-          <Sharable slug={snippet.slug} title={snippet.title} />
+          <Sharable slug={snippet.permalink} title={snippet.title} />
         </article>
         <GitHubLink path={github} />
       </div>
