@@ -41,6 +41,12 @@ const pages = defineCollection({
       description: s.string().max(299),
       content: s.mdx(),
     })
+    // .transform((data, { meta }) => ({
+    //   ...data,
+    //   slug: `/${data.slug}`,
+    //   permalink: `/pages/${data.slug}`,
+    //   path: meta.path,
+    // }))
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
