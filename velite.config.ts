@@ -48,7 +48,7 @@ const pages = defineCollection({
         .replace('/Volumes/T7/Code/blog-next-13/content/pages/', '')
         .slice(0, -4), // filename based slug
       permalink: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content', '')
+        .replace('/Volumes/T7/Code/blog-next-13/content/pages', '')
         .slice(0, -4), // filename based permalink
     })),
 })

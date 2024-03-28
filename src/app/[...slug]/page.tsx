@@ -83,7 +83,7 @@ export default async function Page({ params }: PageProps) {
     notFound()
   }
 
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${page.permalink}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/pages${page.permalink}.mdx`
 
   return (
     <Container variant="padded">
