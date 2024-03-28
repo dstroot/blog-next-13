@@ -41,17 +41,15 @@ const pages = defineCollection({
       description: s.string().max(299),
       content: s.mdx(),
     })
-    // .transform((data, { meta }) => ({
-    //   ...data,
-    //   slug: `/${data.slug}`,
-    //   permalink: `/pages/${data.slug}`,
-    //   path: meta.path,
-    // }))
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
-      slug: meta.file.stem!.replace('/index', ''), // filename based slug
-      permalink: `/pages/${meta.file.stem!.replace('/index', '')}`,
+      slug: `${meta.path!}`
+        .replace('/Volumes/T7/Code/blog-next-13/content/pages/', '')
+        .slice(0, -4), // filename based slug
+      permalink: `${meta.path!}`
+        .replace('/Volumes/T7/Code/blog-next-13/content/', '')
+        .slice(0, -4), // filename based permalink
     })),
 })
 
@@ -72,8 +70,12 @@ const snippets = defineCollection({
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
-      slug: meta.file.stem!.replace('/index', ''), // filename based slug
-      permalink: `/snippets/${meta.file.stem!.replace('/index', '')}`,
+      slug: `${meta.path!}`
+        .replace('/Volumes/T7/Code/blog-next-13/content/snippets/', '')
+        .slice(0, -4), // filename based slug
+      permalink: `${meta.path!}`
+        .replace('/Volumes/T7/Code/blog-next-13/content/', '')
+        .slice(0, -4), // filename based permalink
     })),
 })
 
@@ -101,8 +103,12 @@ const posts = defineCollection({
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
-      slug: meta.file.stem!.replace('/index', ''), // filename based slug
-      permalink: `/posts/${meta.file.stem!.replace('/index', '')}`,
+      slug: `${meta.path!}`
+        .replace('/Volumes/T7/Code/blog-next-13/content/posts/', '')
+        .slice(0, -4), // filename based slug
+      permalink: `${meta.path!}`
+        .replace('/Volumes/T7/Code/blog-next-13/content/', '')
+        .slice(0, -4), // filename based permalink
     })),
 })
 
