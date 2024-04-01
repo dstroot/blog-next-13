@@ -101,6 +101,9 @@ dependencies:
   request:
     specifier: ^2.88.2
     version: 2.88.2
+  sharp:
+    specifier: ^0.33.3
+    version: 0.33.3
   tailwind-merge:
     specifier: 2.2.2
     version: 2.2.2
