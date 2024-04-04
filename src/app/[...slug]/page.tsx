@@ -11,7 +11,9 @@ import { GitHubLink } from '@/components/posts/GitHubLink'
 
 async function getPageFromParams(params: PageProps['params']) {
   const slug = params?.slug?.join('/') ?? ''
+  console.log(slug)
   const page = pages.find((page) => page.slug === slug)
+  //   console.log(page)
 
   if (!page) {
     null
@@ -78,12 +80,13 @@ interface PageProps {
 
 export default async function Page({ params }: PageProps) {
   const page = await getPageFromParams(params)
+  //   console.log(page)
 
   if (!page) {
     notFound()
   }
 
-  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content${page.permalink}.mdx`
+  const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/pages${page.permalink}.mdx`
 
   return (
     <Container variant="padded">
