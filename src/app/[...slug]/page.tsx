@@ -11,7 +11,7 @@ import { GitHubLink } from '@/components/posts/GitHubLink'
 
 async function getPageFromParams(params: PageProps['params']) {
   const slug = params?.slug?.join('/') ?? ''
-  console.log(slug)
+  //   console.log(slug)
   const page = pages.find((page) => page.slug === slug)
   //   console.log(page)
 
