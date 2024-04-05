@@ -9,14 +9,20 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 
+interface PageProps {
+  params: {
+    slug: string[]
+  }
+}
+
 async function getPageFromParams(params: PageProps['params']) {
   const slug = params?.slug?.join('/') ?? ''
-  //   console.log(slug)
+  //   console.log('Slug: ' + slug)
   const page = pages.find((page) => page.slug === slug)
-  //   console.log(page)
+  //   console.log("Page: " + page)
 
   if (!page) {
-    null
+    return null
   }
 
   return page
@@ -69,22 +75,16 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<PageProps['params'][]> {
   return pages.map((page) => ({
     slug: page.slug.split('/'),
+    // slug: page.slug,
   }))
-}
-
-interface PageProps {
-  params: {
-    slug: string[]
-  }
 }
 
 export default async function Page({ params }: PageProps) {
   const page = await getPageFromParams(params)
   //   console.log(page)
 
-  if (!page) {
-    notFound()
-  }
+  // 404 if the post does not exist.
+  if (!page) notFound()
 
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/pages${page.permalink}.mdx`
 
