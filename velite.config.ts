@@ -40,16 +40,13 @@ const pages = defineCollection({
       title: s.string().max(99),
       description: s.string().max(299),
       content: s.mdx(),
+      slug: s.path(),
     })
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
-      slug: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content/pages/', '')
-        .slice(0, -4), // filename based slug
-      permalink: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content/pages', '')
-        .slice(0, -4), // filename based permalink
+      slug: `${data.slug!}`.replace('pages/', ''),
+      permalink: `${data.slug!}`.replace('pages', ''),
     })),
 })
 
@@ -66,16 +63,13 @@ const snippets = defineCollection({
       published: s.boolean().default(false),
       tags: s.array(s.string()).default([]),
       content: s.mdx(),
+      slug: s.path(),
     })
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
-      slug: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content/snippets/', '')
-        .slice(0, -4), // filename based slug
-      permalink: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content', '')
-        .slice(0, -4), // filename based permalink
+      slug: `${data.slug!}`.replace('snippets/', ''),
+      permalink: `/${data.slug}`,
     })),
 })
 
@@ -99,18 +93,20 @@ const posts = defineCollection({
       seoURL: s.string().optional().nullish(),
       metadata: s.metadata(),
       content: s.mdx(),
+      slug: s.path(),
     })
     .transform((data, { meta }) => ({
       ...data,
       // computed fields
-      slug: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content/posts/', '')
-        .slice(0, -4), // filename based slug
-      permalink: `${meta.path!}`
-        .replace('/Volumes/T7/Code/blog-next-13/content', '')
-        .slice(0, -4), // filename based permalink
+      slug: `${data.slug!}`.replace('posts/', ''),
+      permalink: `/${data.slug}`,
     })),
 })
+
+/*
+    "slug": "2010-01-15-lessons-from-haiti",
+    "permalink": "/posts/2010-01-15-lessons-from-haiti"
+*/
 
 export default defineConfig({
   root: 'content',
