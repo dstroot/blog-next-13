@@ -15,10 +15,15 @@ interface PageProps {
   }
 }
 
-async function getPageFromParams(params: PageProps['params']) {
-  const slug = params?.slug?.join('/') ?? ''
+function getPageFromParams(params: PageProps['params']) {
+  //   console.log('Params: ' + params.slug)
+  //   const slug = params?.slug?.join('/') ?? ''
   //   console.log('Slug: ' + slug)
-  const page = pages.find((page) => page.slug === slug)
+  //   const page = pages.find((page: { slug: string }) => page.slug === slug)
+  const page = pages.find(
+    (page: { slug: string }) => page.slug === params.slug[0],
+  )
+
   //   console.log("Page: " + page)
 
   if (!page) {
@@ -35,7 +40,7 @@ NOTE: OG image is created by the og api route, there is no real
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const page = await getPageFromParams(params)
+  const page = getPageFromParams(params)
 
   if (!page) {
     return {}
@@ -46,6 +51,8 @@ export async function generateMetadata({
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('mode', 'light')
 
+  //   console.log('Meta: ' + absoluteUrl(page.permalink))
+
   return {
     title: page.title,
     description: page.description,
@@ -53,7 +60,7 @@ export async function generateMetadata({
       title: page.title,
       description: page.description,
       type: 'article',
-      url: absoluteUrl(page.slug),
+      url: absoluteUrl(page.permalink),
       images: [
         {
           url: ogUrl.toString(),
@@ -72,19 +79,25 @@ export async function generateMetadata({
   }
 }
 
+// this version strips the leading /page
 export async function generateStaticParams(): Promise<PageProps['params'][]> {
   return pages.map((page) => ({
     slug: page.slug.split('/'),
-    // slug: page.slug,
   }))
 }
 
-export default async function Page({ params }: PageProps) {
-  const page = await getPageFromParams(params)
-  //   console.log(page)
+export default function Page({ params }: PageProps) {
+  // Find the page for the current slug.
+  const page = getPageFromParams(params)
 
   // 404 if the post does not exist.
   if (!page) notFound()
+
+  //   // Remove the /pages prefix from the slug
+  //   const formattedPage = {
+  //     ...page,
+  //     slug: page.slug.replace(/^\/pages/, ''),
+  //   }
 
   const github = `${env.NEXT_PUBLIC_GITHUB_REPO}/blob/master/content/pages${page.permalink}.mdx`
 
