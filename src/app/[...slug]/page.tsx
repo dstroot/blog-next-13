@@ -43,8 +43,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   const url = absoluteUrl('/api/og')
   const ogUrl = new URL(url)
 
-  //   const url = absoluteUrl('/')
-  //   const ogUrl = new URL(`${url}/api/og`)
+  // const url = absoluteUrl('/')
+  // const ogUrl = new URL(`${url}/api/og`)
 
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('mode', 'light')
@@ -83,8 +83,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
 export function generateStaticParams(): PageProps['params'][] {
   return pages.map((page) => ({
-    // slug: page.permalink.split('/'),
-    slug: page.slug.split('/'),
+    slug: page.permalink.split('/'),
+    // slug: page.slug.split('/'),
   }))
 }
 
