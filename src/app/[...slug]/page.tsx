@@ -74,9 +74,11 @@ export function generateMetadata({ params }: PageProps): Metadata {
 }
 
 export function generateStaticParams(): PageProps['params'][] {
-  return pages.map((page) => ({
-    slug: page.slug.split('/'),
+  const list = pages.map((page) => ({
+    slug: page.slug.split('/'), // split string on "/" into array
   }))
+
+  return list
 }
 
 export default function Page({ params }: PageProps) {
