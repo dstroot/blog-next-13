@@ -17,13 +17,9 @@ interface PageProps {
 
 function getPageFromParams(params: PageProps['params']) {
   //   console.log('Params: ' + params.slug)
-  //   const slug = params?.slug?.join('/') ?? ''
+  const slug = params?.slug?.join('/') ?? ''
   //   console.log('Slug: ' + slug)
-  //   const page = pages.find((page: { slug: string }) => page.slug === slug)
-  const page = pages.find(
-    (page: { slug: string }) => page.slug === params.slug[0],
-  )
-
+  const page = pages.find((page: { slug: string }) => page.slug === slug)
   //   console.log("Page: " + page)
 
   if (!page) {
@@ -79,7 +75,6 @@ export async function generateMetadata({
   }
 }
 
-// this version strips the leading /page
 export async function generateStaticParams(): Promise<PageProps['params'][]> {
   return pages.map((page) => ({
     slug: page.slug.split('/'),
@@ -89,6 +84,9 @@ export async function generateStaticParams(): Promise<PageProps['params'][]> {
 export default function Page({ params }: PageProps) {
   // Find the page for the current slug.
   const page = getPageFromParams(params)
+  //   const page = pages.find(
+  //     (page: { slug: string }) => page.slug === params.slug[0],
+  //   )
 
   // 404 if the post does not exist.
   if (!page) notFound()
