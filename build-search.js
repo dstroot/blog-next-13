@@ -1,7 +1,6 @@
 const algoliasearch = require('algoliasearch')
 const dotenv = require('dotenv')
 const posts = require('./.velite/posts.json')
-
 const BASE_URL = 'https://danstroot.com'
 
 // hash a string
@@ -21,7 +20,7 @@ function transformPostsToSearchObjects(posts) {
       objectID: Math.abs(TinySimpleHash(post.date + post.slug)),
       title: post.title,
       excerpt: post.excerpt,
-      content: post.body,
+      content: post.content,
       slug: post.slug,
       image: post.coverImage,
       date: post.date,
@@ -58,7 +57,7 @@ function transformPostsToSearchObjects(posts) {
 
     const algoliaResponse = await index.saveObjects(transformed, {})
 
-    // check the output of the response in the console
+    // output of the response in the console
     console.log(
       `🎉 Sucessfully added ${algoliaResponse.objectIDs.length} records to Algolia search.`,
     )
