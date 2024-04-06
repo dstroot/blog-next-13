@@ -5,16 +5,13 @@
   "scripts": {
     "dev": "velite --watch && next dev",
     "build": "velite --clean && next build",
-    "postbuild": "node ./build-search.js",
+    "index": "node ./build-search.js",
     "start": "next start",
     "lint": "next lint",
     "content": "velite --clean"
   },
   "engines": {
     "node": "18.x"
-  },
-  "overrides": {
-    "tough-cookie": "4.1.3"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "3.549.0",
