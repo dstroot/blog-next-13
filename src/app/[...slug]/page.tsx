@@ -9,16 +9,32 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { GitHubLink } from '@/components/posts/GitHubLink'
 
+interface PageProps {
+  params: {
+    slug: string[]
+  }
+}
+
+function getPageFromParams(params: PageProps['params']) {
+  const slug = params?.slug?.join('/') ?? ''
+  const page = pages.find(
+    // (page: { permalink: string }) => page.permalink === slug,
+    (page: { slug: string }) => page.slug === slug,
+  )
+
+  if (!page) {
+    return null
+  }
+
+  return page
+}
+
 /*
 NOTE: OG image is created by the og api route, there is no real
       image associated with non-blog posts. So we generate one.
 */
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  const page = pages.find((page: { slug: string }) => page.slug === params.slug)
+export function generateMetadata({ params }: PageProps): Metadata {
+  const page = getPageFromParams(params)
 
   if (!page) {
     return {}
@@ -26,6 +42,10 @@ export async function generateMetadata({
 
   const url = absoluteUrl('/api/og')
   const ogUrl = new URL(url)
+
+  //   const url = absoluteUrl('/')
+  //   const ogUrl = new URL(`${url}/api/og`)
+
   ogUrl.searchParams.set('title', page.title)
   ogUrl.searchParams.set('mode', 'light')
 
@@ -57,13 +77,24 @@ export async function generateMetadata({
   }
 }
 
-export const generateStaticParams = async () => {
-  return pages.map((page) => ({ slug: page.slug }))
+// export const generateStaticParams = async () => {
+//   return pages.map((page) => ({ slug: page.slug }))
+// }
+
+export function generateStaticParams(): PageProps['params'][] {
+  return pages.map((page) => ({
+    // slug: page.permalink.split('/'),
+    slug: page.slug.split('/'),
+  }))
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+// export default function Page({ params }: { params: { slug: string } }) {
+//   // Find the page for the current slug.
+//   const page = pages.find((page: { slug: string }) => page.slug === params.slug)
+
+export default function Page({ params }: PageProps) {
   // Find the page for the current slug.
-  const page = pages.find((page: { slug: string }) => page.slug === params.slug)
+  const page = getPageFromParams(params)
 
   // 404 if the post does not exist.
   if (!page) notFound()
