@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import * as Collapsible from '@radix-ui/react-collapsible'
+import { type Quote } from 'velite/generated'
 
-import { type Quote } from '@/lib/getRandomQuote'
 import { cn } from '@/lib/utils'
 import { IconKey, Icons } from '@/components/Icons'
 

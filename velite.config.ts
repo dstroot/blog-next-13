@@ -1,6 +1,7 @@
 import rehypePrettyCode, { type Options } from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import emoji, { type RemarkEmojiOptions } from 'remark-emoji'
+// import { v4 as uuidv4 } from 'uuid'
 import { defineCollection, defineConfig, s } from 'velite'
 
 // const slugify = (input: string) =>
@@ -103,10 +104,18 @@ const posts = defineCollection({
     })),
 })
 
-/*
-    "slug": "2010-01-15-lessons-from-haiti",
-    "permalink": "/posts/2010-01-15-lessons-from-haiti"
-*/
+const quotes = defineCollection({
+  name: 'Quote',
+  pattern: 'quotes/quotes.json',
+  schema: s.object({
+    // id: s.string().uuid(uuidv4()),
+    quote: s.string().max(999),
+    author: s.string(),
+    publication: s.string().nullish(),
+    category: s.string().max(99).default('main'),
+    comments: s.string().nullish(),
+  }),
+})
 
 export default defineConfig({
   root: 'content',
@@ -117,7 +126,7 @@ export default defineConfig({
     name: '[name]-[hash:6].[ext]',
     clean: true,
   },
-  collections: { posts, pages, snippets },
+  collections: { quotes, posts, pages, snippets },
   // note: GFM is already included as default
   mdx: {
     remarkPlugins: [[emoji, emojiOptions]],

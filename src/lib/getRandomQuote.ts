@@ -1,12 +1,4 @@
-import quotes from '@/app/quotes/quotes.json'
-
-export type Quote = {
-  quote: string
-  author: string
-  publication: string | null
-  category: string
-  comments?: string
-}
+import { quotes, type Quote } from 'velite/generated'
 
 const myArray: number[] = []
 
