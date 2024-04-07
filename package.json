@@ -3,8 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "velite && next dev",
-    "build": "velite && next build",
+    "dev": "velite dev && next dev",
+    "build": "velite build && next build",
     "index": "node ./build-search.js",
     "start": "next start",
     "lint": "next lint",
