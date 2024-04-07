@@ -3,12 +3,13 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "velite --watch && next dev",
-    "build": "velite --clean && next build",
+    "dev": "velite && next dev",
+    "build": "velite && next build",
     "index": "node ./build-search.js",
     "start": "next start",
     "lint": "next lint",
-    "content": "velite --clean"
+    "content": "velite --clean",
+    "watch": "velite --watch"
   },
   "engines": {
     "node": "20.x"
