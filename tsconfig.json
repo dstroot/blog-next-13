@@ -32,6 +32,6 @@
     ".next/types/**/*.ts",
     ".src/types/**/*.ts",
     "build-search.js"
-  ],
+, "src/app/parallax/page.tsx"  ],
   "exclude": ["node_modules"]
 }
