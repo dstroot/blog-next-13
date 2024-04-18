@@ -2,6 +2,7 @@ export const YouTube = ({ link }: { link: string }) => {
   const url = new URL(link)
   return (
     <iframe
+      title="YouTube iFrame Component"
       className="aspect-video w-full"
       src={'https://www.youtube-nocookie.com/embed/' + url.pathname}
       // frameBorder="0"
