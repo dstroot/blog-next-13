@@ -29,7 +29,7 @@ export const PostImage = ({
         sizes="(max-width: 1280px) 90vw, 1496px"
         priority={true}
         className={cn(
-          'overflow-hidden object-cover transition-opacity	duration-300',
+          'overflow-hidden object-cover transition-opacity	duration-150',
           isLoading ? 'opacity-0' : 'opacity-100',
         )}
         onLoad={() => setIsLoading(false)}
