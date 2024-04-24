@@ -101,6 +101,11 @@ const config: Config = {
                 cite: {
                   fontSize: '1.0rem',
                 },
+                hr: {
+                  marginTop: '.75rem',
+                  marginBottom: '1.25rem',
+                  border: '0.5px solid',
+                },
               },
             ],
           },
