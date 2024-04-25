@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import Image from 'next/image'
 
-import { cn } from '@/lib/utils'
+// import { cn } from '@/lib/utils'
 
 export const PostImage = ({
   title,
@@ -12,7 +12,7 @@ export const PostImage = ({
   title: string
   coverImage: string
 }) => {
-  const [isLoading, setIsLoading] = useState(true)
+  //   const [isLoading, setIsLoading] = useState(true)
   {
     /*
     It usually is best practice to wrap images in a div and set height and width with it.
@@ -28,11 +28,12 @@ export const PostImage = ({
         fill
         sizes="(max-width: 1280px) 90vw, 1496px"
         priority={true}
-        className={cn(
-          'overflow-hidden object-cover transition-opacity	duration-150',
-          isLoading ? 'opacity-0' : 'opacity-100',
-        )}
-        onLoad={() => setIsLoading(false)}
+        className="overflow-hidden object-cover"
+        // className={cn(
+        //   'overflow-hidden object-cover transition-opacity	duration-150',
+        //   isLoading ? 'opacity-0' : 'opacity-100',
+        // )}
+        // onLoad={() => setIsLoading(false)}
       />
     </div>
   )
