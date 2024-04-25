@@ -104,7 +104,7 @@ const config: Config = {
                 hr: {
                   marginTop: '.75rem',
                   marginBottom: '1.25rem',
-                  border: '0.5px solid',
+                  border: '0.75px solid',
                 },
               },
             ],
