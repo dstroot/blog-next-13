@@ -1,4 +1,3 @@
-// import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 import { posts } from 'velite/generated'
 
