@@ -107,14 +107,22 @@ const posts = defineCollection({
 const quotes = defineCollection({
   name: 'Quote',
   pattern: 'quotes/quotes.json',
-  schema: s.object({
-    // id: s.string().uuid(uuidv4()),
-    quote: s.string().max(999),
-    author: s.string(),
-    publication: s.string().nullish(),
-    category: s.string().max(99).default('main'),
-    comments: s.string().nullish(),
-  }),
+  schema: s
+    .object({
+      id: s.number(),
+      quote: s.string().max(999),
+      author: s.string(),
+      publication: s.string().nullish(),
+      category: s.string().max(99).default('main'),
+      comments: s.string().nullish(),
+    })
+    .transform((data, { meta }) => ({
+      ...data,
+      // computed fields
+      slug: `${data.id!}`,
+      permalink: `/${data.id}`,
+      //   newSlug: data.id + 1,
+    })),
 })
 
 export default defineConfig({

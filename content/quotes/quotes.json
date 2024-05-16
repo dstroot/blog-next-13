@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "quote": "“If your actions inspire others to dream more, learn more, do more and become more, you are a leader.”",
     "author": "John Quincy Adams",
     "publication": null,
@@ -7,6 +8,7 @@
     "comments": "People choose to follow leaders because they provide meaning, inspiration and purpose. If you can inspire people then you are a leader no matter your formal role or position. I like this quote because it cuts right to the essence of leadership."
   },
   {
+    "id": 2,
     "quote": "“Time magnifies the margin between success and failure. It will multiply whatever you feed it. Good habits make time your ally. Bad habits make time your enemy.”",
     "author": "James Clear",
     "publication": "Atomic Habits",
@@ -14,6 +16,7 @@
     "comments": "A good habit, over a long period of time, will have an incredible effect. Many authors write books by writing only a few hours per day. Athletes may train only a few days per week. This quote connects the value of time with your habits in a stark way."
   },
   {
+    "id": 3,
     "quote": "“If you think education is expensive, try ignorance.”",
     "author": "Eppie Lederer (Ann Landers)",
     "publication": null,
@@ -21,6 +24,7 @@
     "comments": "The authorship of this quote is somewhat disputed, and Ann Landers credits Derek Bok, president of Harvard University. In any case I love the succinct twist on the value of education and the cost of ignorance. I hope we can improve the quality of our schools and access to education for everyone - it is so fundamental to our future."
   },
   {
+    "id": 4,
     "quote": "“Live as if you were to die tomorrow. Learn as if you were to live forever.”",
     "author": "Mahatma Ghandi",
     "publication": null,
@@ -28,12 +32,14 @@
     "comments": "I love the juxtaposition of lifetime learning, increasing your knowledge and wisdom - coupled with the idea of living for today. Life is a balancing act. You have to enjoy life and live in the moment, while also investing the future."
   },
   {
+    "id": 5,
     "quote": "“I forgive a man's ignorance for it can be cured with knowledge. Stupidity, on the other hand, is a death sentence.”",
     "author": "Unknown",
     "publication": null,
     "category": "main"
   },
   {
+    "id": 6,
     "quote": "“Each time you open a social media app, there are “a thousand people on the other side of the screen” paid to keep you there — it’s unrealistic to expect users to resist the assault on their time and attention by means of willpower alone.”",
     "author": "Tristan Harris, head of the Center for Humane Technology (and a former Google design ethicist)",
     "publication": null,
@@ -41,6 +47,7 @@
     "comments": "Many of us struggle with Social Media. How many of us reach for our phones the minute we wake up and start scrolling through posts and news? Then we begin to feel vaguely anxious and concerned. Somehow we have to regain control; yet this quote speaks to precisely how difficult that will be."
   },
   {
+    "id": 7,
     "quote": "“It's hard to show your skill as a sailor when there is no wind.”",
     "author": "Richard P. Rumelt",
     "publication": "Good Strategy Bad Strategy: The Difference and Why It Matters",
@@ -48,6 +55,7 @@
     "comments": "Sometimes you may find yourself in a role or situation that simply doesn't align with your talents. When that is the case you can't shine or distinguish yourself. You have to align your role to your strengths. What puts the wind in your sails?"
   },
   {
+    "id": 8,
     "quote": "“No one can make you feel inferior without your consent.”",
     "author": "Eleanor Roosevelt",
     "publication": null,
@@ -55,6 +63,7 @@
     "comments": "One of my favorite quotes. In today's world it is easier than ever for others to attack our thoughts and comments online. Yet no matter what anyone else says no one can hurt you with words unless you allow them. In grade school I was taught the nursery rhyme 'sticks and stones may break my bones but words will never hurt me'. This has stood with me my whole life as a defense against name calling and verbal bullying. Eleanor's is the adult version."
   },
   {
+    "id": 9,
     "quote": "“It is a strange, nonintuitive fact of our existence that photons of light have no color, sound waves no sound, and molecules no odor. While we have the overwhelming impression that the greenness of the trees and the blueness of the sky are streaming through our eyes as through an open window the waves of light impacting on the retina are colorless, just as the waves of sound impacting on the eardrum are silent, and scent molecules have no smell. Our brain only receives input as electrical impulses and it creates the world we experience, inside our heads.”",
     "author": "Bill Bryson",
     "publication": "The Body",
@@ -62,6 +71,7 @@
     "comments": "Our brains sit silent and alone in the dark, inside our skull. They have no contact with the outside world. They only receive electrical impulses. From those impulses they create the world we think we see, hear, touch, and smell. Not only that, but those electrical impulses take time to reach our brain, and time to be incorporated into the reality our brain creates for us. So, the brain must predict/invent the future in order for us to perceive the present. Otherwise, the ball would hit us in the face before we moved to catch it. Philosophers have asked the question how do we know our brain is not just sitting in a jar, being fed electrical signals as part of an elaborate simulation? The answer is disturbing because it's conceivable we wouldn't know the difference. This concept is explored by The Matrix series of movies."
   },
   {
+    "id": 10,
     "quote": "“Whereas culture’s focus leans toward conformity to a common core of behaviors, teams focus on the opposite. Teams aren’t about sameness—they aren’t, at their best, about marching in lockstep. Instead, they’re about unlocking what is unique about each of us, in the service of something shared. A team, at its finest, insists on the unique contribution of each of its members, and is the best way we humans have ever come up with of harnessing those distinctive contributions together in the service of something that none of us could do alone.”",
     "author": "Marcus Buckingham, Ashley Goodall",
     "publication": "Nine Lies About Work",
@@ -69,6 +79,7 @@
     "comments": "I love this quote because it aligns with how I view teams. I think of teams like the movie “Ocean's Eleven”. Each person brings a unique, authentic self to the team. Each has a unique set of experiences and talents. The essential magic of a team is that it makes weirdness useful. So much corporate cultural development and team structure seems to forget this - and pushes a common set of skills and ignores (or worse, discourages) uniqueness."
   },
   {
+    "id": 11,
     "quote": "“Truth and power can travel together only so far. Sooner or later they go their separate paths.”",
     "author": "Yuval Noah Harari",
     "publication": "21 Lessons for the 21st Century",
@@ -76,6 +87,7 @@
     "comments": "This quote is so relevant in today's world. I used to look up to our leaders and I expected them to tell me the truth. I know, how naive. I was so disappointed when Bill Clinton lied publicly about his relationship with Monica Lewinsky. The issue to me was not that he had an affair, but the fact he lied about it to the public. Today I expect leaders to lie, and that makes the world a darker place."
   },
   {
+    "id": 12,
     "quote": "“I will give you childhood, so that you might know innocence. Age, so you will know the prize of youth. Children, so that you will care for the future. Toil, so that you will know the value of a day. The body’s failings, so that you will know its worth. Death, so that you will cherish the bittersweet beauty of life.”",
     "author": "Justin Cronin",
     "publication": "The Ferryman",
@@ -83,6 +95,7 @@
     "comments": "Just a beautiful quote. The book itself explores what it might mean if one didn't age. Would life have the same meaning?"
   },
   {
+    "id": 13,
     "quote": "“Those who travel with the current will always feel they are good swimmers; those who swim against the current may never realize they are better swimmers than they imagine.”",
     "author": "Shankar Vedantam",
     "publication": "The Hidden Brain",
@@ -90,6 +103,7 @@
     "comments": "This quote speaks to me about how hard it is to drive change. It can feel like you are swimming against the current and going nowhere, while those who drift with current seem to make effortless progress. Here's to those swimming against the current - you are making more progress than you think!"
   },
   {
+    "id": 14,
     "quote": "“Why, exactly, are we rendered so uncomfortable by concentrating on things that matter — the things we thought we wanted to do with our lives — that we’d rather flee into distractions, which, by definition, are what we don’t want to be doing with our lives? When you try to focus on something you deem important, you’re forced to face your limits, an experience that feels especially uncomfortable precisely because the task at hand is one you value so much.”",
     "author": "Oliver Burkeman",
     "publication": "Four Thousand Weeks",
@@ -97,6 +111,7 @@
     "comments": "I am a big procrastinator. The bigger and more import the project, the more I procrastinate. I always seemed to have to push myself, and I felt ashamed. If this is important to me then why am I avoiding it? I used to joke that I work best under pressure. This quote helped me understand my behavior, and also to no longer be ashamed."
   },
   {
+    "id": 15,
     "quote": "“Not a word passes between us, not because we have nothing to say, but because we don’t have to say anything — that’s how it is between people who are each other’s first memories.”",
     "author": "Khaled Hosseini",
     "publication": "The Kite Runner",
@@ -104,6 +119,7 @@
     "comments": "The feeling of having a lifelong friend. One who knows you completely from your earliest childhood. I wish that feeling for everyone. This quote reminds of that feeling."
   },
   {
+    "id": 16,
     "quote": "“...the more firmly you believe it ought to be possible to find time for everything, the less pressure you’ll feel to ask whether any given activity is the best use for a portion of your time.”",
     "author": "Oliver Burkeman",
     "publication": "Four Thousand Weeks",
@@ -111,6 +127,7 @@
     "comments": "This quote hits at exactly a problem I struggled with for a long time. I viewed it as a productivity issue vs. a an issue of culling my to do list down (How do I say no to more things?). The ability to say no is the real superpower."
   },
   {
+    "id": 17,
     "quote": "“There is only one way, that we know of, to discern falsehoods from truths, one way to see if our model of the world has errors. That method is to actively seek evidence that contradicts our beliefs. Finding evidence that supports our beliefs is helpful, but not definitive. Finding contrary evidence, however, is proof that the model in our head is not right and needs to be modified. Actively looking for evidence to disprove our beliefs is the scientific method. It is the only approach we know of that can get us closer to the truth.”",
     "author": "Jeff Hawkins and Richard Dawkins",
     "publication": "A Thousand Brains",
@@ -118,12 +135,14 @@
     "comments": "Instead of using Google to find evidence to support our views, if we used the scientific method and looked for contradictory evidence we'd all have a more balanced view of the world, and it would be more accurate."
   },
   {
+    "id": 18,
     "quote": "“I’ve heard people talk about data as the new oil but for most companies it’s a lot closer uranium. Hard to find people who can to handle or process it correctly, nontrivial security, plus liabilities if PII is involved, expensive to store, and a generally underwhelming return on effort relative to the anticipated utility.”",
     "author": "Unknown",
     "publication": null,
     "category": "main"
   },
   {
+    "id": 19,
     "quote": "“... the core challenge of managing our limited time isn’t about how to get everything done — that’s never going to happen — but how to decide most wisely what not to do, and how to feel at peace about not doing it.”",
     "author": "Oliver Burkeman",
     "publication": "Four Thousand Weeks",
@@ -131,6 +150,7 @@
     "comments": "I have been focused (obsessed?) with productivity from my earliest days in my career. As a consultant my time was billed by the hour, and I was very sensitive that my clients get their money's worth. I naively thought to succeed it was about my personal productivity. Only much later did I realize it was about what I decided NOT to do that made the difference. Only much later did I learn to feel at peace saying 'no'. This is a great book that drives straight at this concept."
   },
   {
+    "id": 20,
     "quote": "“The basis of our governments being the opinion of the people, the very first object should be to keep that right; and were it left to me to decide whether we should have a government without newspapers or newspapers without a government, I should not hesitate a moment to prefer the latter.”",
     "author": "Thomas Jefferson",
     "publication": "Letter to Edward Carrington; January 16, 1787",
@@ -138,6 +158,7 @@
     "comments": "Hard to believe that today our politicians actively discredit the news. Also, it's hard to believe that our news sources are degraded to the point that the attacks don't even seem unreasonable. We need a well-informed public for democracy to thrive."
   },
   {
+    "id": 21,
     "quote": "“People don't care how much you know until they know how much you care.”",
     "author": "Theodore Roosevelt",
     "publication": null,
@@ -145,6 +166,7 @@
     "comments": "True leaders already know this. This also makes me think of Simon Sinek's 'Start with Why'. Martin Luther King said “I have a dream” not “I have a plan”. He started with what he cared about, and if you cared about what he cared about then you wanted to be part of the change he wanted to create. The “why” must come before the “how”."
   },
   {
+    "id": 22,
     "quote": "“He taught me religion is a lever. With a slight force at a clever angle: immense power to shift tides of humanity.”",
     "author": "Pierce Brown",
     "publication": "Dark Age",
@@ -152,6 +174,7 @@
     "comments": "I distinguish between 'personal' religion and 'organized' religion. The personal need for religion reflects the fear of death, the need for purpose in our lives, and the desire for cosmic meaning. I believe we all experience a desire for a personal spirituality/religion. Organized religion mostly reflects the societal need for a unifying moral-metaphysical structure, a shared narrative, a glue to bind a complex society together. Religions are vantage points from which to view the world. Organized religions are frequently become aligned with politics and used to push a comingled political/religious agenda which (in my view) is unhealthy. It is this reason that the founders of the United States advocated for the separation of church and state."
   },
   {
+    "id": 23,
     "quote": "“To be prepared against surprise is to be trained. To be prepared for surprise is to be educated.”",
     "author": "James Carse",
     "publication": "Finite and Infinite Games",
@@ -159,6 +182,7 @@
     "comments": "The concept in this book is that some games are 'infinite games' - the play is simply to make the game continue. It's an interesting distinction. In this quote, I appreciated this concept of being prepared 'for' surprise. This is how you take advantage in a rapidly changing world. Medical school is education, first aid is training. Education requires fundamental understanding, which can be used to grasp and respond to a nearly infinite variety of threats; training involves singular actions, which are useful only against anticipated challenges. Education is resilient, training is robust."
   },
   {
+    "id": 24,
     "quote": "“The first casualty of war is the truth.”",
     "author": "Senator Hiram Warren Johnson",
     "publication": "1918",
@@ -166,6 +190,7 @@
     "comments": "This simple quote applies to so many daily situations. We often take the news from the side we favor at face value and dismiss the perspective of the 'other side'. It's easy to 'go to war' against a neighbor or coworker and bend the truth to your views. We have to be open to listening to both sides of every conflict. “After all, in the midst of armed conflicts, facts are bound to be just as susceptible to injury as ships and men, if not more so.” - Amor Towles, A Gentleman in Moscow"
   },
   {
+    "id": 25,
     "quote": "“One of the things we’ve got, though, is this very moment, and we have an important choice with respect to it: We can either spend this moment wishing it could be different, or we can embrace this moment. If we habitually do the former, we will spend much of our life in a state of dissatisfaction; if we habitually do the latter, we will enjoy our life.”",
     "author": "William B. Irvine",
     "publication": "A Guide to the Good Life",
@@ -173,6 +198,7 @@
     "comments": "This is THE formula for happiness. This is it. It's right here. You just read it. Alternative: “Any man who does not think that what he has is more than ample, is an unhappy man, even if he is the master of the whole world.” - Seneca, Letters from a Stoic."
   },
   {
+    "id": 26,
     "quote": "“When I set a task for myself, I complete it. Therefore, I am careful not to start difficult and impractical tasks, because I love leisure.”",
     "author": "George S. Clason",
     "publication": "The Richest Man in Babylon",
@@ -180,6 +206,7 @@
     "comments": "I chuckle at this quote but it hits at the heart of focus. Only start projects that you are fully committed to, otherwise say no. Saying yes to too many things means you will be unhappy, and none of them will get your full talents and focus. Or, put another way, the more you focus on using your time well, the more each day begins to feel like something you have to get through, en route to some calmer, better, more fulfilling point in the future, which never actually arrives."
   },
   {
+    "id": 27,
     "quote": "“Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.”",
     "author": "Steve Jobs",
     "publication": null,
@@ -187,6 +214,7 @@
     "comments": "Another Steve Jobs quote that is simple and to the point. From great work comes great personal satisfaction. Great work requires great dedication and focus - and this comes from 'loving' what you do. I think of 'love' in this context as being 'all in'."
   },
   {
+    "id": 28,
     "quote": "“Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do.”",
     "author": "Steve Jobs",
     "publication": null,
@@ -194,6 +222,7 @@
     "comments": "This is my all-time favorite quote. When I need to be inspired I read this. Then I read it again. Steve Jobs, who died at the age of 56, saw things differently. This quote speaks to being authentic to yourself, the deep challenge of changing the status quo, and the fine line between genius and crazy. Ted Lasso put the quote “Believe” on the locker room wall. This is the quote I would put up. (https://www.youtube.com/watch?v=mtftHaK9tYY)"
   },
   {
+    "id": 29,
     "quote": "“...it is not the most intellectual of the species that survives; it is not the strongest that survives; but the species that survives is the one that is able best to adapt and adjust to the changing environment in which it finds itself.”",
     "author": "Professor Leon C. Megginson, Louisiana State University, paraphrasing Charles Darwin",
     "publication": null,
@@ -201,6 +230,7 @@
     "comments": "We all know that change is inevitable — but not everybody likes change. Afraid of being marginalized, people often make fun of newfangled ideas, technology, slang, music, fashion, and whatever else they aren't accustomed to. Many people fight change because they see change as diminishing their importance in the future, which is true if THEY don't change as well. Darwin made clear that adaptability is the key to survival. If you aren't evolving at the same pace as the world around you then you are falling behind and losing relevance."
   },
   {
+    "id": 30,
     "quote": "“The will to succeed is important, but what’s more important is the will to prepare.”",
     "author": "Bobby Knight, head coach of the Indiana Hoosiers, 1971 — 2000",
     "publication": null,
@@ -208,6 +238,7 @@
     "comments": "Maybe you have heard that “success is where preparation and opportunity meet”? I believe opportunities come along all the time - but can we see them? Are we prepared to act on them? I love the term “the will to prepare” because it absolutely takes will, and faith, to prepare for an opportunity that you can't yet see. Another take: “By failing to prepare you are preparing to fail.” — Benjamin Franklin"
   },
   {
+    "id": 31,
     "quote": "“The meaning of life isn’t a ready-made product. There is no divine script, and nothing outside me can give meaning to my life. It is I who imbue everything with meaning through my free choices and through my own feelings.”",
     "author": "Yuval Noah Harari",
     "publication": "21 Lessons for the 21st Century",
@@ -215,6 +246,7 @@
     "comments": "Products are marketed by telling you how they will change you life. “Buy this car and you will be successful; beautiful people watch with envy as you drive by.” However if you buy the product you quickly realize you are still you. You can't buy a meaningful life. You need to follow your own internal compass and hopefully leave the world a better place than when you arrived."
   },
   {
+    "id": 32,
     "quote": "“The price good men pay for indifference to public affairs is to be ruled by inferior men.”",
     "author": "Plato",
     "publication": "The Republic",
@@ -222,6 +254,7 @@
     "comments": "Yes, the quote is a bit sexist but I think times were different in Plato's day. I really struggle with trying to understand how AI generated content, weaponized by social media, is going to impact our democracy. Every faction has their own “truth” which of course is different from the others. How are we supposed to tell the difference between the “good guys [people]” and the “bad guys [people]” if we don’t have an objective and shared way of seeing and measuring truth? Worse, it seems the silent majority has just checked out of the craziness and would rather watch the Golden Bachelor or TikTok. Otherwise how do we explain how so many underqualified politicians are being elected?"
   },
   {
+    "id": 33,
     "quote": "“Associate with people who are likely to improve you. Welcome those whom you are capable of improving.”",
     "author": "Seneca",
     "publication": "Letters From a Stoic",
@@ -229,6 +262,7 @@
     "comments": "The people you surround yourself with change you. Most of us do not realize how much we want to fit in, and therefore how much we mimic and imitate those around us. Seneca was a great teacher, but before that he was a great student. The people around you should allow you to be both."
   },
   {
+    "id": 34,
     "quote": "“Conflict is essential to human life, whether between different aspects of oneself, between oneself and the environment, between different individuals or between different groups. It follows that the aim of healthy living is not the direct elimination of conflict, which is possible only by forcible suppression of one or other of its antagonistic components, but the toleration of it — the capacity to bear the tensions of doubt and of unsatisfied need and the willingness to hold judgement in suspense until finer and finer solutions can be discovered which integrate more and more the claims of both sides. It is the psychologist's job to make possible the acceptance of such an idea so that the richness of the varieties of experience, whether within the unit of the single personality or in the wider unit of the group, can come to expression.”",
     "author": "Marion Milner",
     "publication": "'The Toleration of Conflict', Occupational Psychology, 17, 1, January 1943",
@@ -236,6 +270,7 @@
     "comments": "I think tolerating conflict so that we may come together and find a better solution is a challenging concept today. Social Media often divides us further — '...the willingness to hold judgement in suspense until finer and finer solutions can be discovered which integrate more and more the claims of both sides.' is what we need from Social Media instead."
   },
   {
+    "id": 35,
     "quote": "“Define the outcomes you want from your team and its members, and then look for each person’s strength signs to figure out how each person can reach those outcomes most efficiently, most amazingly, most creatively, and most joyfully. The moment you realize you’re in the outcomes business is the moment you turn each person’s uniqueness from a bug into a feature.”",
     "author": "Marcus Buckingham, Ashley Goodall",
     "publication": "Nine Lies About Work",
