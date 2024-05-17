@@ -4,6 +4,8 @@ import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 import { QuoteMasonry } from '@/components/QuoteMasonry'
 
+export const dynamic = 'force-dynamic'
+
 // TODO: implement this
 export const generateMetadata = () => {
   return { title: 'Quotes' }
