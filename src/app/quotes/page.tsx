@@ -24,15 +24,11 @@ export default function QuotesPage() {
       {/* <Quote {...randomQuote} /> */}
 
       {/* Grid */}
-      <div className="mb-6 grid w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="mb-6 grid	w-full grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
         {quotes.map((quote, _idx) => (
-          //   <p className="text-balance border-gray-500 text-lg font-medium italic text-gray-900 dark:text-white md:text-lg">
-          //     {quote.quote}
-          //   </p>
-
-          <a href={`/quotes/${quote.id}`}>
+          <a key={_idx} href={`/quotes/${quote.id}`}>
             <div className="border border-gray-500">
-              <p className="text-balance p-6 text-lg font-medium italic text-gray-900 dark:text-white md:text-lg">
+              <p className="h-24 truncate text-balance p-6 text-base font-medium italic text-gray-900 dark:text-white md:text-lg">
                 {quote.quote}
               </p>
             </div>
