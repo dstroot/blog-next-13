@@ -276,5 +276,13 @@
     "publication": "Nine Lies About Work",
     "category": "main",
     "comments": "It has always felt right to recognize we are each unique and we bring our own skills, views and ways of working to bear. It is our individuality, when combined well, that makes teams resilient."
+  },
+  {
+    "id": 36,
+    "quote": "“The chains of command that once guaranteed reliability now constrained our pace; the departmental dividers and security clearances that had kept our data safe now inhibited the exchanges we needed to fight an agile enemy; the competitive internal culture that used to keep us vigilant now made us dysfunctional; the rules and limitations that once prevented accidents now prevented creativity.”",
+    "author": "General Stanley McChrystal, Tantum Collins, David Silverman, and Chris Fussell",
+    "publication": "Team of Teams",
+    "category": "main",
+    "comments": "The issues preventing success of the US Military in Afganistan are the same issues facing your company. Can you react fast enough to an smaller, decentralized, more agile competitor? Are the culture and practices that made you successful in the past fast enought and flexible enought for today and the future? By the time you collect and analyze market and competitor data and push it up to the management committee or board to make a decision is it already stale?"
   }
 ]
