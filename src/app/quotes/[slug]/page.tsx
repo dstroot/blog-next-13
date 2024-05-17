@@ -6,7 +6,7 @@ import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 // import { GitHubLink } from '@/components/posts/GitHubLink'
-import { Quote2 } from '@/components/Quote2'
+import { Quote } from '@/components/Quote'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
 
@@ -14,6 +14,7 @@ export const generateStaticParams = async () => {
   return quotes.map((quote) => ({ slug: quote.slug }))
 }
 
+// TODO: implement this
 export async function generateMetadata({
   params,
 }: {
@@ -78,7 +79,7 @@ const QuoteLayout = ({ params }: { params: { slug: string } }) => {
         title="Quotes"
         description="Inspiring words. Beautifully expressed."
       />
-      <Quote2 quote={quote} newSlug={newSlug} />
+      <Quote quote={quote} newSlug={newSlug} />
 
       <hr className="my-6" />
 

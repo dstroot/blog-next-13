@@ -1,38 +1,31 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { type Quote } from 'velite/generated'
 
 import { cn } from '@/lib/utils'
 import { IconKey, Icons } from '@/components/Icons'
 
-export function Quote(randomQuote: Quote) {
-  const router = useRouter()
-  const [fade, setFade] = useState(false)
+export function Quote({ quote, newSlug }: { quote: Quote; newSlug: number }) {
   const [isOpen, setIsOpen] = useState(false)
   const Icon = Icons['chevronRight' as IconKey]
 
   return (
-    <section
-      className={`flex flex-col transition-opacity duration-500 ease-in-out ${
-        fade ? 'opacity-0' : 'opacity-100'
-      }`}
-    >
+    <section className="flex flex-col">
       <div className="grow">
         <blockquote className="border-l-8 border-gray-400 px-4 py-2 dark:border-gray-600 md:px-8">
           <p className="text-balance text-xl font-medium italic text-gray-900 dark:text-white md:text-2xl">
-            {randomQuote.quote}
+            {quote.quote}
           </p>
           <p className="text pt-8 font-medium italic leading-relaxed text-muted-foreground md:text-xl">
             {' '}
-            &mdash; {randomQuote.author}
-            {randomQuote.publication ? ', ' + randomQuote.publication : null}
+            &mdash; {quote.author}
+            {quote.publication ? ', ' + quote.publication : null}
           </p>
         </blockquote>
 
-        {randomQuote.comments ? (
+        {quote.comments ? (
           <Collapsible.Root
             open={isOpen}
             onOpenChange={setIsOpen}
@@ -50,24 +43,19 @@ export function Quote(randomQuote: Quote) {
               </div>
             </Collapsible.Trigger>
             <Collapsible.Content className="CollapsibleContent mt-4 text-muted-foreground">
-              {randomQuote.comments}
+              {quote.comments}
             </Collapsible.Content>
           </Collapsible.Root>
         ) : null}
       </div>
 
-      <button
+      <a
+        href={`/quotes/${newSlug}`}
         type="button"
-        className="mb-2 mr-2 mt-8 w-52 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-0 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:mt-16"
-        onClick={() => {
-          setTimeout(() => router.refresh(), 500)
-          setIsOpen(false)
-          setFade(true)
-          setTimeout(() => setFade(false), 800)
-        }}
+        className="mb-2 mt-8 w-52 rounded-full bg-gray-900 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-0 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:mt-16"
       >
         Another Quote Please
-      </button>
+      </a>
     </section>
   )
 }
