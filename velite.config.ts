@@ -120,8 +120,7 @@ const quotes = defineCollection({
       ...data,
       // computed fields
       slug: `${data.id!}`,
-      permalink: `/${data.id}`,
-      //   newSlug: data.id + 1,
+      permalink: `/quotes/${data.id}`,
     })),
 })
 

@@ -5,7 +5,6 @@ import { quotes } from 'velite/generated'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
-// import { GitHubLink } from '@/components/posts/GitHubLink'
 import { Quote } from '@/components/Quote'
 import { SendPageView } from '@/components/SendPageView'
 import { Sharable } from '@/components/Sharable'
@@ -30,7 +29,6 @@ export async function generateMetadata({
   const ogUrl = new URL(url)
   ogUrl.searchParams.set('title', quote.quote)
   ogUrl.searchParams.set('mode', 'light')
-  //   ogUrl.searchParams.set('icon', snippet.icon)
 
   return {
     title: quote.quote,
@@ -84,7 +82,6 @@ const QuoteLayout = ({ params }: { params: { slug: string } }) => {
       <hr className="my-6" />
 
       <Sharable slug={quote.permalink} title={quote.quote} />
-      {/* <GitHubLink path={github} /> */}
       <SendPageView slug={quote.slug} />
     </Container>
   )
