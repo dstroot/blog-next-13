@@ -1,4 +1,3 @@
-// import { useEffect } from 'react'
 import { quotes } from 'velite/generated'
 
 import { Container } from '@/components/Container'
@@ -8,19 +7,6 @@ import { PageHeader } from '@/components/PageHeader'
 export const generateMetadata = () => {
   return { title: 'Quotes' }
 }
-
-// useEffect(() => {
-//   // Handler to call on window resize
-//   function handleResize() {
-//     // do stuff
-//   }
-//   // Add event listener
-//   window.addEventListener('resize', handleResize)
-//   // Call handler right away so state gets updated with initial window size
-//   handleResize()
-//   // Remove event listener on cleanup
-//   return () => window.removeEventListener('resize', handleResize)
-// }, []) // Empty array ensures that effect is only run on mount
 
 export default function QuotesPage() {
   let firstColumn = quotes.filter((_, index) => index % 3 === 0)
@@ -39,8 +25,8 @@ export default function QuotesPage() {
       />
       <div className="converted-html grid grid-cols-1 gap-x-8 md:grid-cols-2 lg:grid-cols-3">
         <div className="grid auto-rows-min gap-y-0">
-          {firstColumn.map((quote, _idx) => (
-            <a href={`/quotes/${quote.id}`}>
+          {firstColumn.map((quote) => (
+            <a key={quote.id} href={`/quotes/${quote.id}`}>
               <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%]">
                 {quote.quote}
               </blockquote>
@@ -49,7 +35,7 @@ export default function QuotesPage() {
         </div>
         <div className="grid auto-rows-min gap-y-0">
           {secondColumn.map((quote, _idx) => (
-            <a href={`/quotes/${quote.id}`}>
+            <a key={quote.id} href={`/quotes/${quote.id}`}>
               <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%]">
                 {quote.quote}
               </blockquote>
@@ -58,7 +44,7 @@ export default function QuotesPage() {
         </div>
         <div className="grid auto-rows-min gap-y-0">
           {thirdColumn.map((quote, _idx) => (
-            <a href={`/quotes/${quote.id}`}>
+            <a key={quote.id} href={`/quotes/${quote.id}`}>
               <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%]">
                 {quote.quote}
               </blockquote>
