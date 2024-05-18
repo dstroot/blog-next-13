@@ -13,10 +13,6 @@ export default function QuotesPage() {
   let secondColumn = quotes.filter((_, index) => index % 3 === 1)
   let thirdColumn = quotes.filter((_, index) => index % 3 === 2)
 
-  //   console.log(firstColumn)
-  //   console.log(secondColumn)
-  //   console.log(thirdColumn)
-
   return (
     <Container variant="padded">
       <PageHeader
@@ -27,7 +23,7 @@ export default function QuotesPage() {
         <div className="grid auto-rows-min gap-y-0">
           {firstColumn.map((quote) => (
             <a key={quote.id} href={`/quotes/${quote.id}`}>
-              <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%]">
+              <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%] hover:bg-gray-100 hover:dark:bg-gray-800">
                 {quote.quote}
               </blockquote>
             </a>
@@ -36,7 +32,7 @@ export default function QuotesPage() {
         <div className="grid auto-rows-min gap-y-0">
           {secondColumn.map((quote, _idx) => (
             <a key={quote.id} href={`/quotes/${quote.id}`}>
-              <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%]">
+              <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%] hover:bg-gray-100 hover:dark:bg-gray-800">
                 {quote.quote}
               </blockquote>
             </a>
@@ -45,7 +41,7 @@ export default function QuotesPage() {
         <div className="grid auto-rows-min gap-y-0">
           {thirdColumn.map((quote, _idx) => (
             <a key={quote.id} href={`/quotes/${quote.id}`}>
-              <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%]">
+              <blockquote className="text-balance duration-200 ease-in-out hover:scale-[103%] hover:bg-gray-100 hover:dark:bg-gray-800">
                 {quote.quote}
               </blockquote>
             </a>
