@@ -1,7 +1,7 @@
 'use client'
 
-import { Masonry } from 'masonic'
 // import dynamic from 'next/dynamic'
+import { Masonry } from 'masonic'
 import { type Quote } from 'velite/generated'
 
 // const Masonry = dynamic(() => import('masonic').then((mod) => mod.Masonry), {
