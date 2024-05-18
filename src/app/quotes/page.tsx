@@ -1,11 +1,49 @@
 import { quotes } from 'velite/generated'
 
+import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
 import { PageHeader } from '@/components/PageHeader'
 
-// TODO: implement this
+/*
+NOTE: OG image is created by the og api route, there is no real
+      image associated with the snippets route. So we generate one.
+*/
 export const generateMetadata = () => {
-  return { title: 'Quotes' }
+  const page = {
+    title: 'Quotes',
+    description: 'Inspiring words. Beautifully expressed.',
+    slug: 'quotes',
+  }
+
+  const url = absoluteUrl('/api/og')
+  const ogUrl = new URL(url)
+  ogUrl.searchParams.set('title', page.title)
+  ogUrl.searchParams.set('mode', 'light')
+
+  return {
+    title: page.title,
+    description: page.description,
+    openGraph: {
+      title: page.title,
+      description: page.description,
+      type: 'article',
+      url: absoluteUrl(page.slug),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: page.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.title,
+      description: page.description,
+      images: [ogUrl.toString()],
+    },
+  }
 }
 
 export default function QuotesPage() {
