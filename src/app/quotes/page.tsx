@@ -1,4 +1,4 @@
-import { quotes } from 'velite/generated'
+import { quotes, type Quote } from 'velite/generated'
 
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
@@ -47,9 +47,19 @@ export const generateMetadata = () => {
 }
 
 export default function QuotesPage() {
-  let firstColumn = quotes.filter((_, index) => index % 3 === 0)
-  let secondColumn = quotes.filter((_, index) => index % 3 === 1)
-  let thirdColumn = quotes.filter((_, index) => index % 3 === 2)
+  function shuffleArray(array: Quote[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[array[i], array[j]] = [array[j], array[i]]
+    }
+
+    return array
+  }
+
+  shuffleArray(quotes)
+  const firstColumn = quotes.filter((_, index) => index % 3 === 0)
+  const secondColumn = quotes.filter((_, index) => index % 3 === 1)
+  const thirdColumn = quotes.filter((_, index) => index % 3 === 2)
 
   return (
     <Container variant="padded">
