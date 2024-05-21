@@ -56,7 +56,6 @@ export default function ArchivePage() {
   // Remove any unpublished posts
   sortedPosts = sortedPosts.filter((posts) => posts.published)
 
-
   // Remove any future posts
   sortedPosts = sortedPosts.filter(
     (posts) => Date.parse(posts.date) <= Date.now(),

@@ -15,8 +15,8 @@ importers:
         specifier: 3.577.0
         version: 3.577.0(@aws-sdk/client-dynamodb@3.577.0)
       '@google-analytics/data':
-        specifier: 4.6.0
-        version: 4.6.0(encoding@0.1.13)
+        specifier: 4.7.0
+        version: 4.7.0(encoding@0.1.13)
       '@mantine/hooks':
         specifier: 7.9.2
         version: 7.9.2(react@18.3.1)
@@ -78,8 +78,8 @@ importers:
         specifier: 4.2.2
         version: 4.2.2
       framer-motion:
-        specifier: ^11.2.4
-        version: 11.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^11.2.5
+        version: 11.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       millify:
         specifier: 6.1.0
         version: 6.1.0
@@ -102,8 +102,8 @@ importers:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
       react-instantsearch:
-        specifier: 7.8.1
-        version: 7.8.1(algoliasearch@4.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 7.9.0
+        version: 7.9.0(algoliasearch@4.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       request:
         specifier: ^2.88.2
         version: 2.88.2
@@ -678,8 +678,8 @@ packages:
   '@floating-ui/utils@0.2.1':
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
 
-  '@google-analytics/data@4.6.0':
-    resolution: {integrity: sha512-Qjg2hER/u3/mKvOHeMIRbeAXjR4i6mFC45oRUdk8aF/R/hJHrCYR0BRVXdtQKxHnT0XH/HG+oaFHXN2aiLSd9Q==}
+  '@google-analytics/data@4.7.0':
+    resolution: {integrity: sha512-ObTEfzGlih2+7UV282tjSp7UbXhG5viKpUmUvRRDtm5Be6xqBqYVR3rTjekmMHrXKxIDDjwI0WVOmvF+KlLE1g==}
     engines: {node: '>=14.0.0'}
 
   '@grpc/grpc-js@1.10.8':
@@ -1647,8 +1647,8 @@ packages:
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
-  '@types/google.maps@3.55.8':
-    resolution: {integrity: sha512-aSyvlCRXzF9Jtjqq4zmA24sczKZ0QWJnn4zRrkufCoohHulS6LCf4KsF22eAlnHBuVYwEhQoMXIufUS7kXF5uA==}
+  '@types/google.maps@3.55.9':
+    resolution: {integrity: sha512-phaOMtezbT3NaXPKiI3m0OosUS7Nly0auw3Be5s/CgMWLVoDAUP1Yb/Ld0TRoRp8ibrlT4VqM5kmzfvUA0UNLQ==}
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
@@ -1840,8 +1840,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  algoliasearch-helper@3.19.0:
-    resolution: {integrity: sha512-AaSb5DZDMZmDQyIy6lf4aL0OZGgyIdqvLIIvSuVQOIOqfhrYSY7TvotIFI2x0Q3cP3xUpTd7lI1astUC4aXBJw==}
+  algoliasearch-helper@3.20.0:
+    resolution: {integrity: sha512-6EVhAmVug0+hdRHWbubF7hLHHhLoQ8NjLk6iS6d4k5chWawpS5EDexrF6Jx/hPZvUKIeNrzsbTpjAkcvrjNLHg==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
 
@@ -1957,8 +1957,8 @@ packages:
   aws-sign2@0.7.0:
     resolution: {integrity: sha512-08kcGqnYf/YmjoRhfxyu+CLxBjUtHLXLXX/vUfx9l2LYzG3c1m61nrpyFUZI6zeS+Li/wWMMidD9KgrqtGq3mA==}
 
-  aws4@1.12.0:
-    resolution: {integrity: sha512-NmWvPnx0F1SfrQbYwOi7OeaNGokp9XhzNioJ/CSBs8Qa4vxug81mhJEAVZwxXuBmYB5KDRfMq/F3RR0BIU7sWg==}
+  aws4@1.13.0:
+    resolution: {integrity: sha512-3AungXC4I8kKsS9PuS4JH2nc+0bVY/mjgrephHTIi8fpEeGsTHBUJeosp0Wc1myYMElmD0B3Oc4XL/HVJ4PV2g==}
 
   axe-core@4.7.0:
     resolution: {integrity: sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==}
@@ -2573,8 +2573,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@11.2.4:
-    resolution: {integrity: sha512-D+EXd0lspaZijv3BJhAcSsyGz+gnvoEdnf+QWkPZdhoFzbeX/2skrH9XSVFb0osgUnCajW8x1frjhLuKwa/Reg==}
+  framer-motion@11.2.5:
+    resolution: {integrity: sha512-X22i42hWY423wx2C1TlQlC4UnWonD+udND0qX1Fkt0dDlreSmuNY76obO6Y2d/UdJPhqVd5Zn6g1jAIwF6Xx9A==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -2823,11 +2823,11 @@ packages:
   inline-style-parser@0.2.3:
     resolution: {integrity: sha512-qlD8YNDqyTKTyuITrDOffsl6Tdhv+UC4hcdAVuQsK4IMQ99nSgd1MIA/Q+jQYoh9r3hVUXhYh7urSRmXPkW04g==}
 
-  instantsearch-ui-components@0.5.0:
-    resolution: {integrity: sha512-iDdbAbPDyKZOCdOd4aiMkMVJ1WFhc+QU0dM0EIgfZqDYHFuw8XfyLakRK+S7YcQi4bomoqWZ4FiQ/gTFFWo4rQ==}
+  instantsearch-ui-components@0.6.0:
+    resolution: {integrity: sha512-Jj3F9D46ef8VtzVZTgWsy79P25Q5nhI5XzK0NqfUVVI5yI3vA/3NkvKYtBHBlz50DDyBm6t9kIn/ZfpOwENm2A==}
 
-  instantsearch.js@4.68.1:
-    resolution: {integrity: sha512-h1TmKTO9K3aid6m/4JlLPDnlun/GDniGALxljrFctNHR7zIRP1SsNJtqcAevID49BVlpFSGqwtrtZ7JgpWQJJg==}
+  instantsearch.js@4.69.0:
+    resolution: {integrity: sha512-P05f8efIaRvzT5JXXSQ5tG7unW6CNB3yZt2I7gZVVnglZYz0NM2/7TbzqJwp1IAWwLdS/jQwrmPxvc2njACiZw==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 6'
 
@@ -3589,8 +3589,8 @@ packages:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  preact@10.21.0:
-    resolution: {integrity: sha512-aQAIxtzWEwH8ou+OovWVSVNlFImL7xUCwJX3YMqA3U8iKCNC34999fFOnWjYNsylgfPgMexpbk7WYOLtKr/mxg==}
+  preact@10.22.0:
+    resolution: {integrity: sha512-RRurnSjJPj4rp5K6XoP45Ui33ncb7e4H7WiOHVpjbkvqvA3U+N8Z6Qbo0AE6leGYBV66n8EhEaFixvIu3SkxFw==}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -3690,14 +3690,14 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
-  react-instantsearch-core@7.8.1:
-    resolution: {integrity: sha512-5vrrukKlGYWk3bUw+q3PqV8qNmqaOhi44wyMDBYdy3ZfS9d4WrfI0tst5qHjJPg/+PeOCR7aedWEgshGUq5W4g==}
+  react-instantsearch-core@7.9.0:
+    resolution: {integrity: sha512-8E7PHCuDZK7SqvSzQAwgiqb3ATc8T2xMk5GDNDAMLay6+QfL6EYulQH2EZK0l/aGWWi1adqzbdbCLT/PZHyi6w==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
 
-  react-instantsearch@7.8.1:
-    resolution: {integrity: sha512-Tw2PKU+fgrnT5uWA7vsz/fkT6QG/lfEuNcjj6bUsqGOijhx67TBaDmOyvGG9wVCZoSZFJtbcqUNsXORafBpH/w==}
+  react-instantsearch@7.9.0:
+    resolution: {integrity: sha512-6cmglu1+fysL1EsD1T29McKQQtjBb0z2b3mv/nVmp86MhhHTTNRwg3UW2Ucbch+MuIL1xUHeo6V0G5r39w0SQw==}
     peerDependencies:
       algoliasearch: '>= 3.1 < 5'
       react: '>= 16.8.0 < 19'
@@ -5122,7 +5122,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.1': {}
 
-  '@google-analytics/data@4.6.0(encoding@0.1.13)':
+  '@google-analytics/data@4.7.0(encoding@0.1.13)':
     dependencies:
       google-gax: 4.3.3(encoding@0.1.13)
     transitivePeerDependencies:
@@ -5438,15 +5438,15 @@ snapshots:
 
   '@radix-ui/number@1.0.1':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
 
   '@radix-ui/primitive@1.0.1':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
 
   '@radix-ui/react-arrow@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -5496,7 +5496,7 @@ snapshots:
 
   '@radix-ui/react-collection@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5509,14 +5509,14 @@ snapshots:
 
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
 
   '@radix-ui/react-context@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
@@ -5546,14 +5546,14 @@ snapshots:
 
   '@radix-ui/react-direction@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
 
   '@radix-ui/react-dismissable-layer@1.0.5(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5583,14 +5583,14 @@ snapshots:
 
   '@radix-ui/react-focus-guards@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
 
   '@radix-ui/react-focus-scope@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.2)(react@18.3.1)
@@ -5602,7 +5602,7 @@ snapshots:
 
   '@radix-ui/react-id@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
@@ -5610,7 +5610,7 @@ snapshots:
 
   '@radix-ui/react-menu@2.0.6(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
@@ -5660,7 +5660,7 @@ snapshots:
 
   '@radix-ui/react-popper@1.1.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@floating-ui/react-dom': 2.0.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-arrow': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
@@ -5679,7 +5679,7 @@ snapshots:
 
   '@radix-ui/react-portal@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -5689,7 +5689,7 @@ snapshots:
 
   '@radix-ui/react-presence@1.0.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       react: 18.3.1
@@ -5700,7 +5700,7 @@ snapshots:
 
   '@radix-ui/react-primitive@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-slot': 1.0.2(@types/react@18.3.2)(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -5710,7 +5710,7 @@ snapshots:
 
   '@radix-ui/react-roving-focus@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.2)(react@18.3.1)
@@ -5771,14 +5771,14 @@ snapshots:
 
   '@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
 
   '@radix-ui/react-use-controllable-state@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
@@ -5786,7 +5786,7 @@ snapshots:
 
   '@radix-ui/react-use-escape-keydown@1.0.3(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
@@ -5794,21 +5794,21 @@ snapshots:
 
   '@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
 
   '@radix-ui/react-use-previous@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.2
 
   '@radix-ui/react-use-rect@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/rect': 1.0.1
       react: 18.3.1
     optionalDependencies:
@@ -5816,7 +5816,7 @@ snapshots:
 
   '@radix-ui/react-use-size@1.0.1(@types/react@18.3.2)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.2)(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
@@ -5824,7 +5824,7 @@ snapshots:
 
   '@radix-ui/react-visually-hidden@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
       '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -5834,7 +5834,7 @@ snapshots:
 
   '@radix-ui/rect@1.0.1':
     dependencies:
-      '@babel/runtime': 7.24.5
+      '@babel/runtime': 7.23.9
 
   '@resvg/resvg-wasm@2.4.0': {}
 
@@ -6165,7 +6165,7 @@ snapshots:
 
   '@types/estree@1.0.5': {}
 
-  '@types/google.maps@3.55.8': {}
+  '@types/google.maps@3.55.9': {}
 
   '@types/hast@3.0.4':
     dependencies:
@@ -6386,7 +6386,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  algoliasearch-helper@3.19.0(algoliasearch@4.23.3):
+  algoliasearch-helper@3.20.0(algoliasearch@4.23.3):
     dependencies:
       '@algolia/events': 4.0.1
       algoliasearch: 4.23.3
@@ -6544,7 +6544,7 @@ snapshots:
 
   aws-sign2@0.7.0: {}
 
-  aws4@1.12.0: {}
+  aws4@1.13.0: {}
 
   axe-core@4.7.0: {}
 
@@ -7315,7 +7315,7 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.2.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.2.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       tslib: 2.6.2
     optionalDependencies:
@@ -7658,23 +7658,23 @@ snapshots:
 
   inline-style-parser@0.2.3: {}
 
-  instantsearch-ui-components@0.5.0:
+  instantsearch-ui-components@0.6.0:
     dependencies:
       '@babel/runtime': 7.24.5
 
-  instantsearch.js@4.68.1(algoliasearch@4.23.3):
+  instantsearch.js@4.69.0(algoliasearch@4.23.3):
     dependencies:
       '@algolia/events': 4.0.1
       '@types/dom-speech-recognition': 0.0.1
-      '@types/google.maps': 3.55.8
+      '@types/google.maps': 3.55.9
       '@types/hogan.js': 3.0.5
       '@types/qs': 6.9.15
       algoliasearch: 4.23.3
-      algoliasearch-helper: 3.19.0(algoliasearch@4.23.3)
+      algoliasearch-helper: 3.20.0(algoliasearch@4.23.3)
       hogan.js: 3.0.2
       htm: 3.1.1
-      instantsearch-ui-components: 0.5.0
-      preact: 10.21.0
+      instantsearch-ui-components: 0.6.0
+      preact: 10.22.0
       qs: 6.9.7
       search-insights: 2.13.0
 
@@ -8690,7 +8690,7 @@ snapshots:
       picocolors: 1.0.0
       source-map-js: 1.2.0
 
-  preact@10.21.0: {}
+  preact@10.22.0: {}
 
   prelude-ls@1.2.1: {}
 
@@ -8745,24 +8745,24 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
-  react-instantsearch-core@7.8.1(algoliasearch@4.23.3)(react@18.3.1):
+  react-instantsearch-core@7.9.0(algoliasearch@4.23.3)(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.24.5
       algoliasearch: 4.23.3
-      algoliasearch-helper: 3.19.0(algoliasearch@4.23.3)
-      instantsearch.js: 4.68.1(algoliasearch@4.23.3)
+      algoliasearch-helper: 3.20.0(algoliasearch@4.23.3)
+      instantsearch.js: 4.69.0(algoliasearch@4.23.3)
       react: 18.3.1
       use-sync-external-store: 1.2.2(react@18.3.1)
 
-  react-instantsearch@7.8.1(algoliasearch@4.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-instantsearch@7.9.0(algoliasearch@4.23.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.24.5
       algoliasearch: 4.23.3
-      instantsearch-ui-components: 0.5.0
-      instantsearch.js: 4.68.1(algoliasearch@4.23.3)
+      instantsearch-ui-components: 0.6.0
+      instantsearch.js: 4.69.0(algoliasearch@4.23.3)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-instantsearch-core: 7.8.1(algoliasearch@4.23.3)(react@18.3.1)
+      react-instantsearch-core: 7.9.0(algoliasearch@4.23.3)(react@18.3.1)
 
   react-is@16.13.1: {}
 
@@ -8907,7 +8907,7 @@ snapshots:
   request@2.88.2:
     dependencies:
       aws-sign2: 0.7.0
-      aws4: 1.12.0
+      aws4: 1.13.0
       caseless: 0.12.0
       combined-stream: 1.0.8
       extend: 3.0.2

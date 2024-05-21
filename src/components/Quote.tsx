@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import * as Collapsible from '@radix-ui/react-collapsible'
 import { type Quote } from 'velite/generated'
 
@@ -49,13 +50,13 @@ export function Quote({ quote, newSlug }: { quote: Quote; newSlug: number }) {
         ) : null}
       </div>
 
-      <a
+      <Link
         href={`/quotes/${newSlug}`}
         type="button"
         className="mb-2 mt-8 w-52 rounded-full bg-gray-900 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring-0 focus:ring-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 md:mt-16"
       >
         Another Quote Please
-      </a>
+      </Link>
     </section>
   )
 }
