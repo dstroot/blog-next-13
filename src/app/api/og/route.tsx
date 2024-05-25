@@ -12,7 +12,7 @@ import { siteConfig } from '@/config/site'
 import { ogImageSchema } from '@/lib/validations/og'
 import { IconKey, Icons } from '@/components/Icons'
 
-export const runtime: ServerRuntime = 'edge'
+// export const runtime: ServerRuntime = 'edge'
 
 const IMAGE_WIDTH = 1200
 const IMAGE_HEIGHT = 630
