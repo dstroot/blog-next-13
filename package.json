@@ -17,7 +17,6 @@
   "dependencies": {
     "@aws-sdk/client-dynamodb": "3.585.0",
     "@aws-sdk/lib-dynamodb": "3.585.0",
-    "@eslint/compat": "^1.0.1",
     "@google-analytics/data": "4.7.0",
     "@mantine/hooks": "7.10.0",
     "@radix-ui/react-aspect-ratio": "1.0.3",
@@ -56,6 +55,8 @@
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.0.1",
+    "@eslint/eslintrc": "^3.1.0",
     "@ianvs/prettier-plugin-sort-imports": "4.2.1",
     "@next/bundle-analyzer": "14.2.3",
     "@tailwindcss/typography": "0.5.13",
