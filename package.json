@@ -18,7 +18,7 @@
     "@aws-sdk/client-dynamodb": "3.585.0",
     "@aws-sdk/lib-dynamodb": "3.585.0",
     "@google-analytics/data": "4.7.0",
-    "@mantine/hooks": "7.10.0",
+    "@mantine/hooks": "7.10.1",
     "@radix-ui/react-aspect-ratio": "1.0.3",
     "@radix-ui/react-avatar": "1.0.4",
     "@radix-ui/react-collapsible": "1.0.3",
