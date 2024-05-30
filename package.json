@@ -7,7 +7,7 @@
     "build": "velite build && next build",
     "index": "node ./build-search.js",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint",
     "content": "velite --clean",
     "watch": "velite --watch"
   },
