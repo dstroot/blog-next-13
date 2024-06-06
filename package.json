@@ -15,8 +15,8 @@
     "node": "20.x"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "3.588.0",
-    "@aws-sdk/lib-dynamodb": "3.588.0",
+    "@aws-sdk/client-dynamodb": "3.590.0",
+    "@aws-sdk/lib-dynamodb": "3.590.0",
     "@google-analytics/data": "4.7.0",
     "@mantine/hooks": "7.10.1",
     "@radix-ui/react-aspect-ratio": "1.0.3",
@@ -61,7 +61,7 @@
     "@next/bundle-analyzer": "14.2.3",
     "@tailwindcss/typography": "0.5.13",
     "@types/eslint": "8.56.10",
-    "@types/node": "20.14.1",
+    "@types/node": "20.14.2",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@typescript-eslint/eslint-plugin": "7.12.0",
@@ -71,15 +71,15 @@
     "eslint": "9.4.0",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-tailwindcss": "3.17.0",
+    "eslint-plugin-tailwindcss": "3.17.3",
     "postcss": "8.4.38",
-    "prettier": "3.3.0",
+    "prettier": "3.3.1",
     "prettier-plugin-tailwindcss": "0.6.1",
     "rehype-pretty-code": "0.13.2",
     "rehype-slug": "6.0.0",
     "remark-emoji": "5.0.0",
     "remark-gfm": "4.0.0",
-    "tailwindcss": "3.4.3",
+    "tailwindcss": "3.4.4",
     "typescript": "5.4.5",
     "velite": "0.1.0-rc.3"
   }
