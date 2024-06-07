@@ -10,6 +10,7 @@ import { HeroPost } from '@/components/posts/HeroPost'
 // NOTE: all metadata comes from layout - don't need anything else for the home page
 
 export default async function Home() {
+  // Sort posts by date
   let sortedPosts = posts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   )
@@ -25,8 +26,8 @@ export default async function Home() {
   // Generate RSS feed
   await generateRSSFeed(sortedPosts)
 
-  const heroPost = sortedPosts[0]
-  const morePosts = sortedPosts.slice(1)
+  const heroPost = sortedPosts[0] // first post
+  const morePosts = sortedPosts.slice(1) // the rest
 
   return (
     <Container variant="padded">
