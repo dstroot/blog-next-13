@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 
-import type { ServerRuntime } from 'next'
+// import type { ServerRuntime } from 'next'
 // import { headers } from 'next/headers'
 import { ImageResponse } from 'next/og'
 
@@ -46,6 +46,17 @@ export async function GET(req: Request) {
       Object.fromEntries(url.searchParams),
     )
     const { mode, title, description, location, icon } = parsedValues
+
+    if (!description) {
+      throw new Error('No description provided.')
+    }
+
+    // console.log(mode)
+    // console.log(title)
+    // console.log(description)
+    // console.log(location)
+    // console.log(icon)
+
     const paint = mode === 'dark' ? '#fff' : '#000'
     const Icon = Icons[icon as IconKey]
 
@@ -112,9 +123,11 @@ export async function GET(req: Request) {
       },
     )
   } catch (error) {
-    error instanceof Error
-      ? console.log(`${error.message}`)
-      : console.log(error)
+    if (error instanceof Error) {
+      console.log(`${error.message}`)
+      return errorResponse(error.message)
+    }
+
     return errorResponse('Failed to generate an image.')
   }
 }
