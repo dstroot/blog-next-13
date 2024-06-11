@@ -43,6 +43,7 @@ export function middleware(request: NextRequest) {
 
   // Note: style-src requires 'unsafe-inline' mode because next/image adds inline styles.
   //       I think next/link does too. This means we can't use the nonce in style-src.
+  
   const ContentSecurityPolicy = `
   default-src 'self';
   base-uri 'self';

@@ -17,7 +17,6 @@ import { TailwindIndicator } from '@/components/TailwindIndicator'
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  //   maximumScale: 1,  // allow user to scale or prevent it
   colorScheme: 'light dark',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
@@ -79,15 +78,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // NOTE: for now we are "faking" a nonce because actually pulling it from the header is breaking
-  //       the system (it errors in production on Vercel) and it's slower since the page becomes
-  //       dynamic (meaning it re-renders each time). See note below.
-  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy'
-
+  // NOTE: for now we are "faking" a nonce because actually pulling it from the
+  // header is breaking the system (it errors in production on Vercel) and it's
+  // slower since the page becomes dynamic (meaning it re-renders each time).
   // NOTE: headers() is a Dynamic Function whose returned values cannot be known ahead of time.
   // Using it in a **layout or page** will opt a route into dynamic rendering at request time.
   // This is not good for performance and server load...
 
+  const nonce = 'OTJkMDkzYzItOTkyMi00MGJmLWJhZTQtMTMxYjY5ZGY5YjQy'
   //   const nonce = headers().get('x-nonce') ?? ''
 
   return (
