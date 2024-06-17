@@ -12,7 +12,11 @@ tags:
 #   - HTML
 ---
 
-> 2023-06-01: "X" has cut off free api access. You have to pay $100/mo for API access now so I no longer endorse this approach.
+> 2024-06-16 Update: OK, just use [react-tweet](https://react-tweet.vercel.app/next). Somehow it gets around the twitter API debacle and does everything my custom component did including supporting light and dark modes. Just use it!
+
+> 2023-06-01 Update: "X" has cut off free api access. You have to pay $100/mo for API access now so I no longer endorse this approach.
+
+---
 
 So, you are using Next.js with .mdx to render static pages and you want to embed a Tweet? What if you simply paste in Twitter's "embed code" - all done? You can also use the Tweet component from mdx-embed, which is a React component that you can use in your .mdx files. Or, you can roll you own for an even better solution.
 
@@ -31,7 +35,7 @@ Unfortunately, When it works I still see console warnings:
 
 In any case, here it is:
 
-<blockquote class="twitter-tweet">
+<blockquote className="twitter-tweet">
   <p lang="en" dir="ltr">
     Boom! 💥 just finished my first{' '}
     <a href="https://twitter.com/GatsbyJS?ref_src=twsrc%5Etfw">@gatsbyjs</a>{' '}
@@ -40,22 +44,26 @@ In any case, here it is:
     Introducing... Gatsby Theme GatStats.
     <br />
     <br />
-    If you&#39;d like <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">
+    If you&#39;d like{' '}
+    <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">
       #dataviz
-    </a> for your <a href="https://twitter.com/hashtag/tech?src=hash&amp;ref_src=twsrc%5Etfw">
+    </a>{' '}
+    for your{' '}
+    <a href="https://twitter.com/hashtag/tech?src=hash&amp;ref_src=twsrc%5Etfw">
       #tech
-    </a> blog have a look 👀
+    </a>{' '}
+    blog have a look 👀
     <br />
     <br />
     👉 <a href="https://t.co/viyC822cqI">https://t.co/viyC822cqI</a>{' '}
     <a href="https://t.co/98tohJkO8W">pic.twitter.com/98tohJkO8W</a>
   </p>
-  &mdash; Paul Scanlon (@PaulieScanlon) <a href="https://twitter.com/PaulieScanlon/status/1201514996838141952?ref_src=twsrc%5Etfw">December 2, 2019</a>
-</blockquote> <script
-  async
-  src="https://platform.twitter.com/widgets.js"
-  charset="utf-8"
-></script>
+  &mdash; Paul Scanlon (@PaulieScanlon){' '}
+  <a href="https://twitter.com/PaulieScanlon/status/1201514996838141952?ref_src=twsrc%5Etfw">
+    December 2, 2019
+  </a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js"></script>
 
 If that works for you then you are done. However, With Core Web Vitals becoming one of the biggest factors in search ranking using the classic Twitter embed iframe is not the best solution; it is slow to load and triggers Content Layout Shift (CLS) which hurts your Core Web Vitals score.
 
@@ -97,9 +105,9 @@ I decided to try a middle ground. I will create a component that renders itself 
 2. Let's create a custom Next.js API to fetch the tweet. For the component above to retrieve a tweet we can re-use Lee's code and turn it into an API. This will return the Tweet data in JSON format.
 3. Finally we will use a tailwind styled component to render the tweet. I want this component to render a beautiful Tweet, with dynamic light/dark modes. In this case it's our `<Tweet>` component. This is also based off Lee's code.
 
-Let me show you the results first. Here is my version:
+Let me show you the results first. ~~Here is my version.~~ Here is the react-tweet version:
 
-<CustomTweet id="531834493922189313" />
+<Tweet id="531834493922189313" />
 
 ### The Code
 

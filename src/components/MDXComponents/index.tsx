@@ -1,8 +1,10 @@
+import { Tweet } from 'react-tweet'
+
 /* ---  Custom MDX Components --- */
 import { CodeBlock } from './CodeBlock'
 import { CustomImage } from './CustomImage'
 import { CustomLink } from './CustomLink'
-import { CustomTweet } from './CustomTweet'
+// import { CustomTweet } from './CustomTweet'
 import { IPhone } from './IPhone'
 import { Step } from './Step'
 import { YouTube } from './YouTube'
@@ -15,7 +17,8 @@ export const MDXComponents = {
   // add MDX components
   CodeBlock,
   YouTube,
-  CustomTweet,
+  Tweet,
+  //   CustomTweet,
   Step,
   IPhone,
 }
