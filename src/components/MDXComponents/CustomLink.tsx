@@ -1,4 +1,6 @@
-import Link, { LinkProps } from 'next/link'
+import Link from 'next/link'
+
+import { Icons } from '@/components/Icons'
 
 export const CustomLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
   const a = props as HTMLHyperlinkElementUtils
@@ -7,11 +9,21 @@ export const CustomLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
 
   if (isInternalLink) {
     return (
-      <Link href={href} {...props}>
+      <Link href={href} prefetch={false} {...props}>
         {props.children}
       </Link>
     )
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline"
+    >
+      <span className="mr-1">{props.children}</span>
+      <Icons.externalLink className="mb-1 inline-block h-4 w-4" />
+    </a>
+  )
 }
