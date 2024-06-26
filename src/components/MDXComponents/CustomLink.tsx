@@ -16,12 +16,7 @@ export const CustomLink = (props: React.HTMLAttributes<HTMLAnchorElement>) => {
   }
 
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:underline"
-    >
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <span className="mr-1">{props.children}</span>
       <Icons.externalLink className="mb-1 inline-block h-4 w-4" />
     </a>
