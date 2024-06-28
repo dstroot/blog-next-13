@@ -56,7 +56,9 @@ const PostCard = ({ hit }: { hit: Hit }) => {
             alt={`Cover Image for ${hit.title}`}
             className="mb-4"
           />
-          <CardTitle className="line-clamp-1">{hit.title}</CardTitle>
+          <CardTitle className="line-clamp-1 overflow-hidden text-ellipsis pb-1">
+            {hit.title}
+          </CardTitle>
         </CardHeader>
 
         <CardContent className="flex-grow">
