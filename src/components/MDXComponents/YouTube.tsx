@@ -1,6 +1,7 @@
 export const YouTube = ({ link, short }: { link: string; short: boolean }) => {
   const url = new URL(link)
 
+  // handle YouTube shorts (9/16 aspect vs 16/9)
   if (short) {
     return (
       <iframe

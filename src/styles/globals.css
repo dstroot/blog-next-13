@@ -91,7 +91,7 @@ figure[data-rehype-pretty-code-figure] {
  */
 
 .converted-html {
-  @apply prose prose-lg mb-8 max-w-none break-words text-foreground dark:prose-invert prose-a:font-normal prose-a:no-underline hover:prose-a:text-blue-500 prose-img:m-0 dark:hover:prose-a:text-blue-500;
+  @apply prose prose-lg mb-8 max-w-none break-words text-foreground dark:prose-invert prose-a:font-normal prose-a:text-blue-800 prose-a:no-underline hover:prose-a:text-blue-500 prose-img:m-0 dark:prose-a:text-blue-200 dark:hover:prose-a:text-blue-500;
 }
 
 .footnotes {
