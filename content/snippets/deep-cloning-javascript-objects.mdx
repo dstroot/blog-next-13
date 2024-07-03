@@ -1,0 +1,55 @@
+---
+title: 'Deep Cloning Objects in JavaScript'
+published: true
+date: '2024-07-03'
+summary: 'The global structuredClone() method creates a deep clone of a given value using the structured clone algorithm.'
+icon: js
+tags:
+  - Javascript
+#   - React Hook
+#   - React Component
+#   - CSS
+#   - HTML
+---
+
+Did you know, there's now a native way in JavaScript to do deep copies of objects? That's right, the `structuredClone` function is built into the JavaScript runtime:
+
+<CodeBlock>
+
+```js title="deep.js"
+const calendarEvent = {
+  title: 'Builder.io Conf',
+  date: new Date(123),
+  attendees: ['Steve'],
+}
+
+// 😍
+const copied = structuredClone(calendarEvent)
+```
+
+</CodeBlock>
+
+In the example above we not only copied the object, but also the nested array, and even the Date object. And it all works precisely as expected, plus structuredClone can:
+
+- Clone infinitely nested objects and arrays
+- Clone circular references (really! but why?)
+- Clone a wide variety of JavaScript types, such as `Date`, `Set`, `Map`, `Error`, `RegExp`, `ArrayBuffer`, `Blob`, `File`, `ImageData`, and many more
+- Transfer any transferable objects
+
+It is important to note we are talking about a **deep** copy. If you just need to do a shallow copy, aka a copy that does not copy nested objects or arrays, then we can just do an object spread:
+
+<CodeBlock>
+
+```js title="shallow.js"
+const simpleEvent = {
+  title: 'Builder.io Conf',
+}
+// ✅ no problem, there are no nested objects or arrays
+const shallowCopy = { ...calendarEvent }
+```
+
+</CodeBlock>
+
+### References
+
+- [MDN: structuredClone() global function](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)
