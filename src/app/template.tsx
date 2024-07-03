@@ -13,3 +13,10 @@ export default function Template({ children }: { children: React.ReactNode }) {
     </motion.div>
   )
 }
+
+// Supported easing functions are:
+
+// anticipate
+// backIn/backOut/backInOut
+// circIn/circOut/circInOut
+// easeIn/easeOut/easeInOut
