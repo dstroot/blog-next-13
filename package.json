@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "3.609.0",
-    "@aws-sdk/lib-dynamodb": "3.609.0",
+    "@aws-sdk/lib-dynamodb": "3.610.0",
     "@google-analytics/data": "4.7.0",
     "@mantine/hooks": "7.11.1",
     "@radix-ui/react-aspect-ratio": "1.1.0",
