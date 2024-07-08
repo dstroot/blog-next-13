@@ -136,7 +136,7 @@ export default defineConfig({
   collections: { quotes, posts, pages, snippets },
   // note: GFM is already included as default
   mdx: {
-    remarkPlugins: [[emoji, emojiOptions]],
+    remarkPlugins: [[emoji, emojiOptions] as any],
     rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]],
   },
 })
