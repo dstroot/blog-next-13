@@ -12,19 +12,19 @@ ogImage:
 seoURL:
 ---
 
-Today I read that hospitals in Germany said they would cancel elective procedures; in Britain, doctors in the National Health Service were unable to gain access to thier systems. Sky News, a major news channel in Britain, could not operate. At JPMorgan Chase there were delays in processing trades because bankers could not log into their work systems. At Disneyland Paris screens displaying wait times for rides went down. Alaska State Troopers told ABC News there have been 911 outages across the state.
+Today I read that hospitals in Germany said they would cancel elective procedures; in Britain, doctors in the National Health Service were unable to gain access to their systems. Sky News, a major news channel in Britain, could not operate. At JPMorgan Chase there were delays in processing trades because bankers could not log into their work systems. At Disneyland Paris screens displaying wait times for rides went down. Alaska State Troopers told ABC News there have been 911 outages across the state.
 
-I am truly sorry for all the CIO's, CTO's CISO's, and of course the technology teams that have had to address the CrowdStrike issue today. I know what your are facing and I wish you a fast recovery and nothing but the best during this crisis.
+I am truly sorry for all the CIO's, CTO's CISO's, and of course the technology teams that have had to address the CrowdStrike issue today. I know what you are facing and I wish you a fast recovery and nothing but the best during this crisis.
 
-Previously, I wrote about "black swan" technology risks, including technology supply chain risks, in [Risky Business](/posts/2022-03-05-risky-business). As part of any technology risk assessment program we always look very hard at third-party risk, especially software in use that could be "weaponized" against us. Anti-virus software is always something that stood out.
+Previously, I wrote about "black swan" technology risks, including technology supply chain risks, in [Risky Business](/posts/2022-03-05-risky-business). As part of any technology risk assessment program we always look closely at third-party risk, especially software that could be "weaponized" against us. Anti-virus software is always something that stands out. This risk is not new: In 2010 [McAfee caused a global IT meltdown](https://www.zdnet.com/article/defective-mcafee-update-causes-worldwide-meltdown-of-xp-pcs/) due to a faulty update. Fun fact: CTO at the time was George Kurtz, current CEO of CrowdStrike.
 
-Anti-virus software works by using a pattern, or signature file that contains patterns of known viruses and if a file is found that matches the pattern, the anti-virius software neutralizes that file. If the pattern were ever corrupted, or poisoned in a way that targets system files, it's game over.
+Anti-virus software generally works by using a signature file that contains patterns of known viruses and if a file is found that matches a pattern, the anti-virus software neutralizes that file. If the signature file could be corrupted, or poisoned in a way that targets system files, it's game over. Or in this case, if a bad kernel driver corrupts your system then it's also game over (Note to Microsoft: "drivers" which cause a BSOD should be disabled _automatically_ on next boot). Interestingly, CrowdStrike only uses a kernel-level driver for Microsoft Windows, not MacOS, or Linux.
 
-Then of course there are the hidden costs in terms of system instability, CPU usage, power usage, heat, and sluggish system performance for all your users due to running anti-malware software. Scanning for viruses consumes significant system resources, slowing down the performance of the system it is meant to protect, and possibly destabilizing it.
+Then of course there are the hidden costs in terms of system instability, CPU usage, power usage, heat, and sluggish system performance for all your users due to running anti-malware software. Scanning for viruses consumes, or validating system calls, uses significant resources, slowing down the performance of the system it is meant to protect, and possibly destabilizing it.
 
 All Anti-malware software, including solutions like CrowdStrike, faces numerous technical limitations:
 
-1. **Zero-Day Threats**: Traditional antivirus solutions rely on _known_ signatures to detect malware. By definition, Zero-day threats evade these signature-based detections because they haven't been included in the signature file yet. Virus definitions and heuristics need to be constantly updated to recognize the latest threats. This requires ongoing research and quick dissemination of updates to users. CrowdStrike attempts to mitigate many of these limitations through advanced techniques such as machine learning, threat intelligence integration, and behavioral analysis, but it is not immune to the inherent challenges.
+1. **Zero-Day Threats**: Traditional antivirus solutions rely on _known_ signatures to detect malware. By definition "Zero-day" threats evade these signature-based detections because they haven't been included in the signature file yet. Virus definitions and heuristics need to be constantly updated to recognize the latest threats. This requires ongoing research and quick dissemination of updates to users. CrowdStrike attempts to mitigate many of these limitations through advanced techniques such as machine learning, threat intelligence integration, and behavioral analysis, but it is not immune to the inherent challenges.
 
 2. **Behavioral Detection Limitations**: While behavioral detection can identify unknown threats by monitoring suspicious activities, it can sometimes result in higher false positive rates and may not detect all types of malware.
 
@@ -36,11 +36,11 @@ All Anti-malware software, including solutions like CrowdStrike, faces numerous 
 
 6. **Fileless Malware**: This type of malware does not write any code to the disk, making it harder to detect since it operates entirely in memory.
 
-7. **Compatibility Issues**: Antivirus software must work seamlessly with various operating systems, applications, and other security tools. Incompatibilities can lead to instability, vulnerabilities, and/or reduced effectiveness.
+7. **Performance and Compatibility Issues**: Antivirus software must work seamlessly with various operating systems, applications, and other security tools. Incompatibilities can lead to instability, vulnerabilities, and/or reduced effectiveness.
 
 ## Consider Application Whitelisting
 
-What if I told you that you could eliminate:
+What if I told you that you could reduce or eliminate:
 
 - The cost of anti-malware software,
 - The performance impact of anti-malware software,
@@ -55,13 +55,13 @@ What if I told you that you could eliminate:
 
 Key points about application whitelisting:
 
-1. **Better Stability and Performance**: It doesn't require a virus signature file, or a scanning engine to be running. It doesn't destablize a system or use excessing resources.
+1. **Better Stability and Performance**: It doesn't require a virus signature file, or a scanning engine to be running. No third-party kernel drivers. It doesn't destabilize a system or use excessive resources.
 
-1. **Improved Security Control**: It protects against malware and unauthorized software by ensuring that **only** trusted applications can run. By restricting the execution of software to a predefined set of applications, organizations can significantly reduce the risk of zero-day cyber attacks and improve their overall security posture.
+1. **Improved Security Control**: It protects against malware and unauthorized software by ensuring that **only** trusted applications can run. By restricting the execution of software to a predefined set of applications, organizations can significantly reduce the risk of zero-day attacks and improve their overall security posture.
 
 1. **Policy Enforcement**: Whitelisting goes beyond just stopping malware - it enforces organizational policies regarding which software is permitted for use, aiding in compliance with regulatory requirements. Something anti-malware does not address.
 
-1. **Built-in to Microsoft Windows**: Microsoft has built into it's group policy a capability called "Software Restriction Policies" that only requires configuration and a management process to work. The management process involves continuously monitoring to detect and manage changes in the application landscape, ensuring that only verified updates and new applications are allowed. This effort can be funded from the savings of not buying, deploying, and supporting corporate anti-malware software.
+1. **Built-in to Microsoft Windows**: Microsoft has built into its group policy a capability called "Software Restriction Policies" that only requires configuration and a management process to work. The management process involves continuously monitoring to detect and manage changes in the application landscape, ensuring that only verified updates and new applications are allowed. This effort can be funded from the savings of not buying, deploying, and supporting corporate anti-malware software.
 
 ## Summary
 
@@ -69,9 +69,17 @@ Application whitelisting "flips the script". Instead of trying to detect and pre
 
 ![Airport Chaos](/assets/blog/img/crowdstrike_outage.jpg)
 
+<span className="text-sm">
+  A blue error screen, also known as the "Blue Screen of Death" inside Newark
+  International Airport, after United Airlines and other airlines grounded
+  flights due to a worldwide tech outage caused by an update to Crowdstrike's
+  "Falcon Sensor" software. Newark, New Jersey, U.S., July 19, 2024.
+  REUTERS/Bing Guan
+</span>
+
 ### References
 
-- [Crowdstrike: Statement on Falcon Content Update for Windows Hosts](https://www.crowdstrike.com/blog/statement-on-windows-sensor-update/)
+- [CrowdStrike: Statement on Falcon Content Update for Windows Hosts](https://www.crowdstrike.com/blog/statement-on-windows-sensor-update/)
 - [Flights and Businesses Are Struggling to Recover After Microsoft Windows Outage](https://www.nytimes.com/live/2024/07/19/business/global-tech-outage)
 - [CrowdStrike outage sparks global chaos with airline, bank and other disruptions](https://abcnews.go.com/US/american-airlines-issues-global-ground-stop-flights/story?id=112092372)
 - [What is CrowdStrike, the company linked to the global outage?](https://www.cnn.com/2024/07/19/tech/crowdstrike-update-global-outage-explainer/index.html)
