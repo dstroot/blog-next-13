@@ -14,29 +14,25 @@ seoURL:
 
 Today I read that hospitals in Germany said they would cancel elective procedures; in Britain, doctors in the National Health Service were unable to gain access to their systems. Sky News, a major news channel in Britain, could not operate. At JPMorgan Chase there were delays in processing trades because bankers could not log into their work systems. At Disneyland Paris screens displaying wait times for rides went down. Alaska State Troopers told ABC News there have been 911 outages across the state.
 
-I am truly sorry for all the CIO's, CTO's CISO's, and of course the technology teams that have had to address the CrowdStrike issue today. I know what you are facing and I wish you a fast recovery and nothing but the best during this crisis.
+I am truly sorry for all the CIO's, CTO's CISO's, and of course the technology teams that have had to address the CrowdStrike issue today. I know what you are facing, and I wish you a fast recovery and nothing but the best during this crisis.
 
-Previously, I wrote about "black swan" technology risks, including technology supply chain risks, in [Risky Business](/posts/2022-03-05-risky-business). As part of any technology risk assessment program we always look closely at third-party risk, especially software that could be "weaponized" against us. Anti-virus software is always something that stands out. This risk is not new: In 2010 [McAfee caused a global IT meltdown](https://www.zdnet.com/article/defective-mcafee-update-causes-worldwide-meltdown-of-xp-pcs/) due to a faulty update. Fun fact: CTO at the time was George Kurtz, current CEO of CrowdStrike.
+Previously, I wrote about "black swan" technology risks, including technology supply chain risks, in [Risky Business](/posts/2022-03-05-risky-business). Within any technology risk assessment program third-party software risk, especially software that could be "weaponized" against you, is critical to examine. Anti-virus software is always something that stands out. This risk is not new: In 2010 [McAfee caused a global IT meltdown](https://www.zdnet.com/article/defective-mcafee-update-causes-worldwide-meltdown-of-xp-pcs/) due to a faulty update. Fun fact: McAfee CTO at the time was George Kurtz, current CEO of CrowdStrike.
 
-Anti-virus software generally works by using a signature file that contains patterns of known viruses and if a file is found that matches a pattern, the anti-virus software neutralizes that file. If the signature file could be corrupted, or poisoned in a way that targets system files, it's game over. Or in this case, if a bad kernel driver corrupts your system then it's also game over (Note to Microsoft: "drivers" which cause a BSOD should be disabled _automatically_ on next boot). Interestingly, CrowdStrike only uses a kernel-level driver for Microsoft Windows, not MacOS, or Linux.
+Anti-virus software generally works by using a signature file that contains patterns of known viruses and if a file is found that matches a pattern, the anti-virus software "neutralizes" that file. If the signature file could be corrupted, or poisoned in a way that targets system files, it's game over. Or in this case, if a bad kernel driver corrupts your system then it's also game over. Interestingly, CrowdStrike only uses a kernel-level driver for Microsoft Windows, not MacOS, or Linux. (Note to Microsoft: drivers which cause errors should be disabled _automatically_ on next boot).
 
-Then of course there are the hidden costs in terms of system instability, CPU usage, power usage, heat, and sluggish system performance for all your users due to running anti-malware software. Scanning for viruses consumes, or validating system calls, uses significant resources, slowing down the performance of the system it is meant to protect, and possibly destabilizing it.
+Then there are hidden costs in terms of system instability, CPU usage, power usage, heat, and sluggish system performance for all your users, all the time. Scanning for viruses, or validating system calls, consumes significant resources, slowing down the performance of the system it is meant to protect, and possibly destabilizing it.
 
-All Anti-malware software, including solutions like CrowdStrike, faces numerous technical limitations:
+All Anti-malware software, including solutions like CrowdStrike, faces numerous technical limitations. To name a few:
 
-1. **Zero-Day Threats**: Traditional antivirus solutions rely on _known_ signatures to detect malware. By definition "Zero-day" threats evade these signature-based detections because they haven't been included in the signature file yet. Virus definitions and heuristics need to be constantly updated to recognize the latest threats. This requires ongoing research and quick dissemination of updates to users. CrowdStrike attempts to mitigate many of these limitations through advanced techniques such as machine learning, threat intelligence integration, and behavioral analysis, but it is not immune to the inherent challenges.
+1. **Zero-Day Threats and Fileless Malware**: Traditional antivirus solutions rely on _known_ signatures to detect malware. By definition "Zero-day" threats evade these signature-based detections because they haven't been included in the signature file yet. Virus definitions and heuristics need to be constantly updated to recognize the latest threats. This requires ongoing research and quick dissemination of updates to users. Fileless malware does not write any code to the disk, making it harder to detect since it operates entirely in memory. CrowdStrike attempts to mitigate many of these limitations through advanced techniques such as machine learning, threat intelligence integration, and behavioral analysis, but it is not immune to the inherent challenges.
 
-2. **Behavioral Detection Limitations**: While behavioral detection can identify unknown threats by monitoring suspicious activities, it can sometimes result in higher false positive rates and may not detect all types of malware.
+2. **Behavioral Detection Limitations**: While behavioral detection can identify unknown threats by monitoring suspicious activities, it can sometimes result in higher false positive rates and may not detect all types of malware. False positives (legitimate files flagged as malicious) and false negatives (malicious files not detected) can both be problematic.
 
-3. **False Positives and False Negatives**: No antivirus solution is perfect. False positives (legitimate files flagged as malicious) and false negatives (malicious files not detected) can both be problematic.
+3. **Evolving Evasion Techniques**: Polymorphic malware can alter its code each time it infects a new system, making it difficult for signature-based detection methods to recognize the threat. Other techniques to evade detection, such as obfuscation, packing, and using anti-analysis methods to prevent their malware from being detected are always evolving and improving.
 
-4. **Evasion Techniques**: Some polymorphic malware can alter its code each time it infects a new system, making it difficult for signature-based detection methods to recognize the threat. Other techniques are also used to evade detection, such as obfuscation, packing, and using anti-analysis methods to prevent their malware from being detected.
+4. **Encrypted and Compressed Files**: Malware can be hidden in encrypted files or compressed files which are challenging to scan and analyze without using elevated system rights and impacting system performance.
 
-5. **Encrypted and Compressed Files**: Malware can be hidden in encrypted files (impossible to scan) or compressed files - which are challenging to scan and analyze without impacting system performance.
-
-6. **Fileless Malware**: This type of malware does not write any code to the disk, making it harder to detect since it operates entirely in memory.
-
-7. **Performance and Compatibility Issues**: Antivirus software must work seamlessly with various operating systems, applications, and other security tools. Incompatibilities can lead to instability, vulnerabilities, and/or reduced effectiveness.
+5. **Performance and Compatibility**: Antivirus software must work seamlessly with various operating systems, applications, and other security tools. Incompatibilities can lead to instability, vulnerabilities, and/or reduced effectiveness.
 
 ## Consider Application Whitelisting
 
@@ -51,7 +47,7 @@ What if I told you that you could reduce or eliminate:
 - The risk of a poisoned signature file,
 - and numerous other challenges?
 
-**Application whitelisting** is a security practice that involves creating a list of approved applications that are permitted to run on a computer. Only the applications on the whitelist are allowed to be executed, while all other applications are blocked by default. This method prevents the execution of unauthorized or malicious software and _it's built into Microsoft Windows_ group policy.
+**Application whitelisting** is a security practice that involves creating a list of approved applications that are permitted to run on a computer. Only the applications on the whitelist are allowed to be executed, while all other applications are blocked by default. This method prevents the execution of all unauthorized, and _it's built into Microsoft Windows_ group policy.
 
 Key points about application whitelisting:
 
@@ -65,7 +61,9 @@ Key points about application whitelisting:
 
 ## Summary
 
-Application whitelisting "flips the script". Instead of trying to detect and prevent malware, it only allows known, good applications to execute. **Everything else** is blocked by default. Save money, improve your security, and avoid this:
+Application whitelisting "flips the script". Instead of trying to detect and prevent malware, it only allows known, good applications to execute. **Everything else** is blocked by default.
+
+Save money, improve your security, and avoid this:
 
 ![Airport Chaos](/assets/blog/img/crowdstrike_outage.jpg)
 
@@ -83,10 +81,14 @@ Application whitelisting "flips the script". Instead of trying to detect and pre
 - [Flights and Businesses Are Struggling to Recover After Microsoft Windows Outage](https://www.nytimes.com/live/2024/07/19/business/global-tech-outage)
 - [CrowdStrike outage sparks global chaos with airline, bank and other disruptions](https://abcnews.go.com/US/american-airlines-issues-global-ground-stop-flights/story?id=112092372)
 - [What is CrowdStrike, the company linked to the global outage?](https://www.cnn.com/2024/07/19/tech/crowdstrike-update-global-outage-explainer/index.html)
+- [Wikipedia: 2024 CrowdStrike incident](https://en.wikipedia.org/wiki/2024_CrowdStrike_incident)
 - [How to create an Application Whitelist Policy in Windows](https://www.bleepingcomputer.com/tutorials/create-an-application-whitelist-policy-in-windows/)
 
 ---
 
-Image Credit: **A blue screen is seen at self-checkout terminals of a supermarket in Sydney on July 19, 2024.**
+Image Credit: **Crashed Supermarket Terminal in Sydney**
 
-<span className="text-sm">Saeed Khan/AFP via Getty Images</span>
+<span className="text-sm">
+  A blue error screen on a self-checkout terminal of a supermarket in Sydney.
+  July 19, 2024. Saeed Khan/AFP via Getty Images
+</span>
