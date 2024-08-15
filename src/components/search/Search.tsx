@@ -1,6 +1,6 @@
 'use client'
 
-import algoliasearch from 'algoliasearch/lite'
+import { liteClient } from 'algoliasearch/lite'
 import { InstantSearch, useInstantSearch } from 'react-instantsearch'
 
 import { env } from '@/config/env.mjs'
@@ -11,10 +11,7 @@ export const generateMetadata = () => {
   return { title: 'Search' }
 }
 
-// App Router Support - I don't need this since I built custom components
-// https://www.algolia.com/doc/guides/building-search-ui/going-further/server-side-rendering/react/#app-router-experimental
-
-const searchClient = algoliasearch(
+const searchClient = liteClient(
   env.NEXT_PUBLIC_ALGOLIA_APP_ID,
   env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY,
 )
