@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
+import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
@@ -13,7 +14,7 @@ import {
 import { Icons } from '@/components/Icons'
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme()
+  const { resolvedTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -46,15 +47,24 @@ export function ThemeToggle() {
             align="end"
             className="bg-gray-50 dark:bg-gray-900"
           >
-            <DropdownMenuItem onClick={() => setTheme('light')}>
+            <DropdownMenuItem
+              className={cn(theme === 'light' && 'bg-accent')}
+              onClick={() => setTheme('light')}
+            >
               <Icons.sun className="mr-2 h-4 w-4" />
               <span>Light</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme('dark')}>
+            <DropdownMenuItem
+              className={cn(theme === 'dark' && 'bg-accent')}
+              onClick={() => setTheme('dark')}
+            >
               <Icons.moon className="mr-2 h-4 w-4" />
               <span>Dark</span>
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme('system')}>
+            <DropdownMenuItem
+              className={cn(theme === 'system' && 'bg-accent')}
+              onClick={() => setTheme('system')}
+            >
               <Icons.laptop className="mr-2 h-4 w-4" />
               <span>System</span>
             </DropdownMenuItem>
