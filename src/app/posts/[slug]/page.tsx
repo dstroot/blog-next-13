@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { posts } from 'velite/generated'
 
 import { env } from '@/config/env.mjs'
+import imgixLoader, { LoaderProps } from '@/lib/imgixLoader'
 import { MDXContent } from '@/lib/mdx-content'
 import { absoluteUrl } from '@/lib/utils'
 import { Container } from '@/components/Container'
@@ -27,8 +28,13 @@ export async function generateMetadata({
   }
 
   // setup og image url
-  const ogImgParams = '?auto=format&fit=crop&w=1200&h=630'
-  const ogImgUrl = post.ogImage.url + ogImgParams
+  const imgProps: LoaderProps = {
+    src: post.ogImage.url,
+    width: 1200,
+    quality: 75,
+  }
+  const imgURL = imgixLoader(imgProps)
+  const ogImgUrl = imgURL
 
   return {
     title: post.title,

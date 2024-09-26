@@ -6,7 +6,7 @@ function normalizeSrc(src: string) {
   return src[0] === '/' ? src.slice(1) : src
 }
 
-interface LoaderProps {
+export interface LoaderProps {
   src: string
   width: number
   quality: number
@@ -22,7 +22,7 @@ export default function imgixLoader({ src, width, quality }: LoaderProps) {
   params.set('w', params.get('w') || width.toString())
 
   if (quality) {
-    params.set('q', params.get('w') || '75')
+    params.set('q', params.get('q') || '75')
   } else {
     params.set('q', '75')
   }

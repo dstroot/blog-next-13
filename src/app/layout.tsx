@@ -29,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const ogUrl = new URL(url)
   ogUrl.searchParams.set('location', siteConfig.meta.location)
   ogUrl.searchParams.set('mode', 'light')
+  //   ogUrl.searchParams.set('description', siteConfig.meta.description)
 
   return {
     metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from 'next/og'
-import { type NextRequest } from 'next/server'
 
 import { siteConfig } from '@/config/site'
 import { ogImageSchema } from '@/lib/validations/og'
@@ -10,9 +9,10 @@ import { IconKey, Icons } from '@/components/Icons'
 const IMAGE_WIDTH = 1200
 const IMAGE_HEIGHT = 630
 
-export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic' // don't cache
+export const runtime = 'edge' // image response requires edge
 
-export async function GET(req: NextRequest) {
+export async function GET(req: Request) {
   const avatarUrl =
     'https://danstroot.imgix.net/assets/blog/authors/dan.jpeg?auto=format&fit=max&w=128&h=128'
 
@@ -21,17 +21,20 @@ export async function GET(req: NextRequest) {
     const parsedValues = ogImageSchema.parse(
       Object.fromEntries(url.searchParams),
     )
+
     const { mode, title, description, location, icon } = parsedValues
 
-    if (!description) {
-      throw new Error('No description provided.')
-    }
-
+    //TODO Delete
+    // console.log(parsedValues)
     // console.log(mode)
     // console.log(title)
     // console.log(description)
     // console.log(location)
     // console.log(icon)
+
+    // if (!description) {
+    //   throw new Error('No description provided.')
+    // }
 
     const paint = mode === 'dark' ? '#fff' : '#000'
     const Icon = Icons[icon as IconKey]
