@@ -18,8 +18,8 @@
     "eslint": "^9.8.0"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "3.664.0",
-    "@aws-sdk/lib-dynamodb": "3.664.0",
+    "@aws-sdk/client-dynamodb": "3.665.0",
+    "@aws-sdk/lib-dynamodb": "3.665.0",
     "@google-analytics/data": "4.8.0",
     "@mantine/hooks": "7.13.2",
     "@radix-ui/react-aspect-ratio": "1.1.0",
@@ -72,7 +72,7 @@
     "@typescript-eslint/parser": "8.8.0",
     "autoprefixer": "10.4.20",
     "dotenv": "16.4.5",
-    "eslint": "9.11.1",
+    "eslint": "9.12.0",
     "eslint-config-next": "14.2.14",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-tailwindcss": "3.17.4",
